@@ -2,7 +2,7 @@ name: Update Boss Data
 
 on:
   schedule:
-    - cron: '*/5 * * * *'   # Runs every 5 minutes
+    - cron: '*/3 * * * *'   # Runs every 5 minutes
   workflow_dispatch:  # Allows you to run it manually to test
 
 jobs:
