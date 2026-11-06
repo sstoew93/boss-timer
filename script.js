@@ -177,26 +177,26 @@ function updateTimers() {
       const seconds = Math.floor((timeToMin % (1000 * 60)) / 1000);
       
       element.textContent = `${hours}h ${minutes}m ${seconds}s`;
-      element.style.color = "#4ade80"; // Green
+      element.style.color = "#c9d1d9"; // Reset to normal text color
       
       statusElement.textContent = "💀 DEAD";
-      statusElement.className = "status-dead";
+      statusElement.className = "status-badge status-dead";
 
     } else if (timeToMax > 0) {
       // --- SPAWN WINDOW IS OPEN ---
-      element.textContent = "CHECK NOW";
-      element.style.color = "#fbbf24"; // Yellow/Orange
+      element.textContent = "MAY SPAWN";
+      element.style.color = "#d29922"; // Yellow/Orange text
       
-      statusElement.textContent = "🟡 POSSIBLE";
-      statusElement.className = "status-window";
+      statusElement.textContent = "🟡 HUNT NOW";
+      statusElement.className = "status-badge status-window";
 
     } else {
       // --- BOSS IS ALIVE (MAX TIME PASSED) ---
       element.textContent = "SPAWNED";
-      element.style.color = "#4ade80"; // Green
+      element.style.color = "#3fb950"; // Green text
       
       statusElement.textContent = "🟢 ALIVE";
-      statusElement.className = "status-alive";
+      statusElement.className = "status-badge status-alive";
     }
   });
 }
