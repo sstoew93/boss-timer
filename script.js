@@ -26,15 +26,34 @@ fetch('data.json')
   .catch(error => console.error('Error loading data:', error));
 
 // Helper to format date exactly as requested: 10.11.2026 г., 00:26:25 ч.
+// Helper to format date exactly in Bulgarian Time Zone
 function formatDate(dateString) {
     const d = new Date(dateString);
-    const day = String(d.getDate()).padStart(2, '0');
-    const month = String(d.getMonth() + 1).padStart(2, '0');
-    const year = d.getFullYear();
-    const hours = String(d.getHours()).padStart(2, '0');
-    const minutes = String(d.getMinutes()).padStart(2, '0');
-    const seconds = String(d.getSeconds()).padStart(2, '0');
-    return `${day}.${month}.${year} г., ${hours}:${minutes}:${seconds} ч.`;
+    
+    // Force the display to Bulgarian time
+    const options = {
+        timeZone: 'Europe/Sofia',
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: false
+    };
+    
+    const formatter = new Intl.DateTimeFormat('en-GB', options);
+    const parts = formatter.formatToParts(d);
+    
+    // Extract the parts manually to build your exact requested format
+    const day = parts.find(p => p.type === 'day').value;
+    const month = parts.find(p => p.type === 'month').value;
+    const year = parts.find(p => p.type === 'year').value;
+    const hour = parts.find(p => p.type === 'hour').value;
+    const minute = parts.find(p => p.type === 'minute').value;
+    const second = parts.find(p => p.type === 'second').value;
+
+    return `${day}.${month}.${year} г., ${hour}:${minute}:${second} ч.`;
 }
 
 // Toggle dropdown visibility
