@@ -1,4 +1,5 @@
-const SECRET_PASSWORD = "NewOrder"; 
+// --- PASSWORD LOGIC ---
+const SECRET_PASSWORD = "megamu123"; 
 
 function checkPassword() {
     const input = document.getElementById('password-input').value;
@@ -16,9 +17,7 @@ function checkPassword() {
 }
 
 document.getElementById('password-input').addEventListener('keypress', function (e) {
-    if (e.key === 'Enter') {
-        checkPassword();
-    }
+    if (e.key === 'Enter') checkPassword();
 });
 
 if (sessionStorage.getItem('isLoggedIn') === 'true') {
@@ -38,7 +37,7 @@ function loadData() {
     fetch('data.json')
       .then(response => response.json())
       .then(data => {
-        allData = data.sort((a, b) => new Date(a.next_spawn) - new Date(b.next_spawn));
+        allData = data; // Data is already sorted by earliest_spawn from Python
         
         allData.forEach(item => {
           uniqueServers.add(item.server);
@@ -54,7 +53,16 @@ function loadData() {
       .catch(error => console.error('Error loading data:', error));
 }
 
-function formatDate(dateString) {
+// Function to format date nicely (e.g., 05.11, 21:51)
+function formatShortDate(dateString) {
+    const d = new Date(dateString);
+    const options = { timeZone: 'Europe/Sofia', day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' };
+    const formatter = new Intl.DateTimeFormat('en-GB', options);
+    const parts = formatter.formatToParts(d);
+    return `${parts.find(p => p.type === 'day').value}.${parts.find(p => p.type === 'month').value}, ${parts.find(p => p.type === 'hour').value}:${parts.find(p => p.type === 'minute').value}`;
+}
+
+function formatFullDate(dateString) {
     const d = new Date(dateString);
     const options = { timeZone: 'Europe/Sofia', day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', hourCycle: 'h23' };
     const formatter = new Intl.DateTimeFormat('en-GB', options);
@@ -66,19 +74,14 @@ function toggleDropdown(id) {
     document.getElementById(id).classList.toggle("show");
 }
 
-// --- THE FIX IS HERE ---
 window.onclick = function(event) {
-    // If the click is NOT inside any element with the class "dropdown"
     if (!event.target.closest('.dropdown')) {
         const dropdowns = document.getElementsByClassName("dropdown-content");
         for (let i = 0; i < dropdowns.length; i++) {
-            if (dropdowns[i].classList.contains('show')) {
-                dropdowns[i].classList.remove('show');
-            }
+            if (dropdowns[i].classList.contains('show')) dropdowns[i].classList.remove('show');
         }
     }
 }
-// -----------------------
 
 function buildFilters(containerId, items, type) {
   const container = document.getElementById(containerId);
@@ -115,8 +118,14 @@ function renderTable() {
   filteredData.forEach(item => {
     const row = document.createElement('tr');
     
-    const formattedLastKill = formatDate(item.last_kill);
-    const formattedNextSpawn = formatDate(item.next_spawn);
+    const formattedLastKill = formatShortDate(item.last_kill);
+    const fullLastKill = formatFullDate(item.last_kill);
+    const fullEarliest = formatFullDate(item.earliest_spawn);
+    const fullLatest = formatFullDate(item.latest_spawn);
+    
+    // Format the spawn window beautifully
+    const windowStr = `${formatShortDate(item.earliest_spawn)} <br><span style="color:#888;font-size:12px;">to</span><br> ${formatShortDate(item.latest_spawn)}`;
+    
     const timerId = `timer-${item.server}-${item.boss}`.replace(/[^a-zA-Z0-9-]/g, '');
     const statusId = `status-${item.server}-${item.boss}`.replace(/[^a-zA-Z0-9-]/g, '');
 
@@ -127,12 +136,12 @@ function renderTable() {
       <td>${item.killer}</td>
       <td>
         <div class="tooltip">${formattedLastKill}
-          <span class="tooltiptext">Raw Website Time (Brazil): ${item.raw_date}</span>
+          <span class="tooltiptext">Full BG Time: ${fullLastKill}<br><br>Raw Brazil: ${item.raw_date}</span>
         </div>
       </td>
       <td>
-        <div class="tooltip">${formattedNextSpawn}
-          <span class="tooltiptext">Calculated as: <br>BG Kill Time + ${item.respawn_hours} hours</span>
+        <div class="tooltip">${windowStr}
+          <span class="tooltiptext">Earliest: ${fullEarliest}<br>Latest: ${fullLatest}<br><br>Fixed Math: Kill Time + ${item.min_hours}h to ${item.max_hours}h</span>
         </div>
       </td>
       <td class="countdown" id="${timerId}">Calculating...</td>
@@ -142,7 +151,8 @@ function renderTable() {
     countdownTimers.push({
       elementId: timerId,
       statusId: statusId, 
-      nextSpawnTime: new Date(item.next_spawn).getTime()
+      earliestSpawnTime: new Date(item.earliest_spawn).getTime(),
+      latestSpawnTime: new Date(item.latest_spawn).getTime()
     });
   });
   
@@ -157,22 +167,36 @@ function updateTimers() {
     const statusElement = document.getElementById(timer.statusId);
     if (!element || !statusElement) return; 
 
-    const distance = timer.nextSpawnTime - now;
+    const timeToMin = timer.earliestSpawnTime - now;
+    const timeToMax = timer.latestSpawnTime - now;
 
-    if (distance < 0) {
-      element.textContent = "WINDOW OPEN!";
-      element.style.color = "#fbbf24"; 
-      statusElement.textContent = "🟢 ALIVE";
-      statusElement.className = "status-alive";
-    } else {
-      const hours = Math.floor(distance / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    if (timeToMin > 0) {
+      // --- BOSS IS DEAD ---
+      const hours = Math.floor(timeToMin / (1000 * 60 * 60));
+      const minutes = Math.floor((timeToMin % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeToMin % (1000 * 60)) / 1000);
       
       element.textContent = `${hours}h ${minutes}m ${seconds}s`;
-      element.style.color = "#4ade80"; 
+      element.style.color = "#4ade80"; // Green
+      
       statusElement.textContent = "💀 DEAD";
       statusElement.className = "status-dead";
+
+    } else if (timeToMax > 0) {
+      // --- SPAWN WINDOW IS OPEN ---
+      element.textContent = "WINDOW OPEN";
+      element.style.color = "#fbbf24"; // Yellow/Orange
+      
+      statusElement.textContent = "🟡 WINDOW OPEN";
+      statusElement.className = "status-window";
+
+    } else {
+      // --- BOSS IS ALIVE (MAX TIME PASSED) ---
+      element.textContent = "SPAWNED";
+      element.style.color = "#4ade80"; // Green
+      
+      statusElement.textContent = "🟢 ALIVE";
+      statusElement.className = "status-alive";
     }
   });
 }
