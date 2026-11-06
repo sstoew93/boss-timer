@@ -9,7 +9,7 @@
         h1 { text-align: center; }
         .subtitle { text-align: center; color: #888; font-size: 14px; margin-bottom: 20px; }
         
-        .top-bar { max-width: 1000px; margin: 0 auto 20px auto; display: flex; gap: 15px; align-items: center; flex-wrap: wrap; }
+        .top-bar { max-width: 1100px; margin: 0 auto 20px auto; display: flex; gap: 15px; align-items: center; flex-wrap: wrap; }
         .search-container { flex-grow: 1; }
         .search-container input { width: 100%; padding: 10px 15px; border-radius: 5px; border: 1px solid #444; background: #2a2a2a; color: #fff; font-size: 16px; outline: none; }
         .search-container input:focus { border-color: #4ade80; }
@@ -22,7 +22,7 @@
         .checkbox-container { padding: 10px; display: flex; flex-direction: column; gap: 8px; }
         .checkbox-container label { display: flex; align-items: center; gap: 8px; cursor: pointer; }
         
-        table { width: 100%; max-width: 1000px; margin: 0 auto; border-collapse: collapse; background: #2a2a2a; }
+        table { width: 100%; max-width: 1100px; margin: 0 auto; border-collapse: collapse; background: #2a2a2a; }
         th, td { padding: 12px; border: 1px solid #444; text-align: left; font-size: 14px; }
         th { background: #333; }
         
@@ -30,26 +30,17 @@
         .tooltip .tooltiptext { visibility: hidden; width: 220px; background-color: #000; color: #fff; text-align: center; border-radius: 6px; padding: 5px; position: absolute; z-index: 1; bottom: 125%; left: 50%; margin-left: -110px; opacity: 0; transition: opacity 0.3s; font-size: 12px; border: 1px solid #555;}
         .tooltip:hover .tooltiptext { visibility: visible; opacity: 1; }
 
+        /* Status Styling */
         .status-dead { color: #f87171; font-weight: bold; }
+        .status-window { color: #fbbf24; font-weight: bold; }
         .status-alive { color: #4ade80; font-weight: bold; }
 
         /* LOGIN SCREEN STYLING */
-        #login-screen {
-            display: flex; flex-direction: column; align-items: center; justify-content: center;
-            height: 60vh; text-align: center;
-        }
-        #login-screen input {
-            padding: 12px; font-size: 16px; border-radius: 5px; border: 1px solid #444;
-            background: #2a2a2a; color: #fff; margin-bottom: 10px; width: 250px; text-align: center;
-        }
-        #login-screen button {
-            padding: 12px 20px; font-size: 16px; border-radius: 5px; border: none;
-            background: #4ade80; color: #000; font-weight: bold; cursor: pointer;
-        }
+        #login-screen { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 60vh; text-align: center; }
+        #login-screen input { padding: 12px; font-size: 16px; border-radius: 5px; border: 1px solid #444; background: #2a2a2a; color: #fff; margin-bottom: 10px; width: 250px; text-align: center; }
+        #login-screen button { padding: 12px 20px; font-size: 16px; border-radius: 5px; border: none; background: #4ade80; color: #000; font-weight: bold; cursor: pointer; }
         #login-screen button:hover { background: #22c55e; }
         #error-msg { color: #f87171; margin-top: 10px; display: none; }
-        
-        /* Hide main content initially */
         #app-content { display: none; }
     </style>
 </head>
@@ -64,10 +55,10 @@
         <div id="error-msg">Incorrect password. Try again.</div>
     </div>
 
-    <!-- MAIN APP CONTENT (Hidden by default) -->
+    <!-- MAIN APP CONTENT -->
     <div id="app-content">
         <h1>🐉 MEGAMU Boss Respawn Timers</h1>
-        <div class="subtitle">Note: Respawn times are approximate. Hover over dates to see original website time.</div>
+        <div class="subtitle">Respawn times are windows (Min - Max). Hover over times for details.</div>
         
         <div class="top-bar">
             <div class="search-container">
@@ -94,9 +85,9 @@
                     <th>BOSS</th>
                     <th>STATUS</th>
                     <th>LAST KILLER</th>
-                    <th>LAST KILL (BG TIME)</th>
-                    <th>NEXT SPAWN (APPROX)</th>
-                    <th>REMAINING TIME</th>
+                    <th>LAST KILL (BG)</th>
+                    <th>SPAWN WINDOW (BG)</th>
+                    <th>TIME REMAINING</th>
                 </tr>
             </thead>
             <tbody id="boss-table-body"></tbody>
