@@ -184,10 +184,10 @@ function updateTimers() {
 
     } else if (timeToMax > 0) {
       // --- SPAWN WINDOW IS OPEN ---
-      element.textContent = "WINDOW OPEN";
+      element.textContent = "CHECK NOW";
       element.style.color = "#fbbf24"; // Yellow/Orange
       
-      statusElement.textContent = "🟡 WINDOW OPEN";
+      statusElement.textContent = "🟡 POSSIBLE";
       statusElement.className = "status-window";
 
     } else {
