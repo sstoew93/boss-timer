@@ -7,59 +7,49 @@
     <style>
         body { font-family: Arial, sans-serif; background: #1a1a1a; color: #eee; padding: 20px; }
         h1 { text-align: center; }
+        .subtitle { text-align: center; color: #888; font-size: 14px; margin-bottom: 20px; }
         
-        /* Top Bar Layout */
         .top-bar { max-width: 1000px; margin: 0 auto 20px auto; display: flex; gap: 15px; align-items: center; flex-wrap: wrap; }
-        
-        /* Search Bar */
         .search-container { flex-grow: 1; }
-        .search-container input {
-            width: 100%; padding: 10px 15px; border-radius: 5px; border: 1px solid #444;
-            background: #2a2a2a; color: #fff; font-size: 16px; outline: none;
-        }
+        .search-container input { width: 100%; padding: 10px 15px; border-radius: 5px; border: 1px solid #444; background: #2a2a2a; color: #fff; font-size: 16px; outline: none; }
         .search-container input:focus { border-color: #4ade80; }
 
-        /* Dropdowns */
         .dropdown { position: relative; display: inline-block; }
-        .dropbtn {
-            background-color: #333; color: white; padding: 10px 15px; font-size: 16px;
-            border: 1px solid #444; border-radius: 5px; cursor: pointer; min-width: 150px; text-align: left;
-        }
+        .dropbtn { background-color: #333; color: white; padding: 10px 15px; font-size: 16px; border: 1px solid #444; border-radius: 5px; cursor: pointer; min-width: 150px; text-align: left; }
         .dropbtn:hover { background-color: #444; }
-        .dropdown-content {
-            display: none; position: absolute; background-color: #2a2a2a; min-width: 200px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5); z-index: 1;
-            border: 1px solid #444; border-radius: 5px; max-height: 300px; overflow-y: auto;
-        }
+        .dropdown-content { display: none; position: absolute; background-color: #2a2a2a; min-width: 200px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5); z-index: 1; border: 1px solid #444; border-radius: 5px; max-height: 300px; overflow-y: auto; }
         .dropdown-content.show { display: block; }
         .checkbox-container { padding: 10px; display: flex; flex-direction: column; gap: 8px; }
         .checkbox-container label { display: flex; align-items: center; gap: 8px; cursor: pointer; }
         
-        /* Table styling */
         table { width: 100%; max-width: 1000px; margin: 0 auto; border-collapse: collapse; background: #2a2a2a; }
         th, td { padding: 12px; border: 1px solid #444; text-align: left; font-size: 14px; }
         th { background: #333; }
-        .countdown { font-weight: bold; color: #4ade80; }
+        
+        /* Tooltip styling */
+        .tooltip { position: relative; display: inline-block; border-bottom: 1px dotted #888; cursor: help; }
+        .tooltip .tooltiptext { visibility: hidden; width: 220px; background-color: #000; color: #fff; text-align: center; border-radius: 6px; padding: 5px; position: absolute; z-index: 1; bottom: 125%; left: 50%; margin-left: -110px; opacity: 0; transition: opacity 0.3s; font-size: 12px; border: 1px solid #555;}
+        .tooltip:hover .tooltiptext { visibility: visible; opacity: 1; }
+
+        /* Status Styling */
+        .status-dead { color: #f87171; font-weight: bold; }
+        .status-alive { color: #4ade80; font-weight: bold; }
     </style>
 </head>
 <body>
     <h1>🐉 MEGAMU Boss Respawn Timers</h1>
+    <div class="subtitle">Note: Respawn times are approximate. Hover over dates to see original website time.</div>
     
     <div class="top-bar">
-        <!-- Search Bar -->
         <div class="search-container">
             <input type="text" id="search-bar" placeholder="Search by server, boss, or killer...">
         </div>
-
-        <!-- Server Dropdown -->
         <div class="dropdown">
             <button class="dropbtn" onclick="toggleDropdown('server-dropdown')">Filter Servers ▼</button>
             <div id="server-dropdown" class="dropdown-content">
                 <div id="server-filters" class="checkbox-container"></div>
             </div>
         </div>
-
-        <!-- Boss Dropdown -->
         <div class="dropdown">
             <button class="dropbtn" onclick="toggleDropdown('boss-dropdown')">Filter Bosses ▼</button>
             <div id="boss-dropdown" class="dropdown-content">
@@ -73,14 +63,14 @@
             <tr>
                 <th>SERVER</th>
                 <th>BOSS</th>
+                <th>STATUS</th> <!-- NEW COLUMN ADDED HERE -->
                 <th>LAST KILLER</th>
-                <th>NEXT SPAWN</th>
+                <th>LAST KILL (BG TIME)</th>
+                <th>NEXT SPAWN (APPROX)</th>
                 <th>REMAINING TIME</th>
             </tr>
         </thead>
-        <tbody id="boss-table-body">
-            <!-- Data will be loaded here -->
-        </tbody>
+        <tbody id="boss-table-body"></tbody>
     </table>
     <script src="script.js"></script>
 </body>
