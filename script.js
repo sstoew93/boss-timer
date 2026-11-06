@@ -6,7 +6,6 @@ let countdownTimers = [];
 fetch('data.json')
   .then(response => response.json())
   .then(data => {
-    // Data is already sorted by Next Spawn from Python, but we sort again just in case
     allData = data.sort((a, b) => new Date(a.next_spawn) - new Date(b.next_spawn));
     
     allData.forEach(item => {
@@ -22,32 +21,12 @@ fetch('data.json')
   })
   .catch(error => console.error('Error loading data:', error));
 
-// Perfectly format date to Bulgarian Time Zone
 function formatDate(dateString) {
     const d = new Date(dateString);
-    
-    const options = {
-        timeZone: 'Europe/Sofia',
-        day: '2-digit',
-        month: '2-digit',
-        year: 'numeric',
-        hour: '2-digit',
-        minute: '2-digit',
-        second: '2-digit',
-        hourCycle: 'h23' // Forces 00:00:00 instead of 24:00:00
-    };
-    
+    const options = { timeZone: 'Europe/Sofia', day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', hourCycle: 'h23' };
     const formatter = new Intl.DateTimeFormat('en-GB', options);
     const parts = formatter.formatToParts(d);
-    
-    const day = parts.find(p => p.type === 'day').value;
-    const month = parts.find(p => p.type === 'month').value;
-    const year = parts.find(p => p.type === 'year').value;
-    const hour = parts.find(p => p.type === 'hour').value;
-    const minute = parts.find(p => p.type === 'minute').value;
-    const second = parts.find(p => p.type === 'second').value;
-
-    return `${day}.${month}.${year} г., ${hour}:${minute}:${second} ч.`;
+    return `${parts.find(p => p.type === 'day').value}.${parts.find(p => p.type === 'month').value}.${parts.find(p => p.type === 'year').value} г., ${parts.find(p => p.type === 'hour').value}:${parts.find(p => p.type === 'minute').value}:${parts.find(p => p.type === 'second').value} ч.`;
 }
 
 function toggleDropdown(id) {
@@ -58,10 +37,7 @@ window.onclick = function(event) {
     if (!event.target.matches('.dropbtn')) {
         const dropdowns = document.getElementsByClassName("dropdown-content");
         for (let i = 0; i < dropdowns.length; i++) {
-            let openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-            }
+            if (dropdowns[i].classList.contains('show')) dropdowns[i].classList.remove('show');
         }
     }
 }
@@ -70,10 +46,7 @@ function buildFilters(containerId, items, type) {
   const container = document.getElementById(containerId);
   items.forEach(item => {
     const label = document.createElement('label');
-    label.innerHTML = `
-      <input type="checkbox" value="${item}" data-type="${type}" checked onchange="renderTable()">
-      ${item}
-    `;
+    label.innerHTML = `<input type="checkbox" value="${item}" data-type="${type}" checked onchange="renderTable()"> ${item}`;
     container.appendChild(label);
   });
 }
@@ -92,37 +65,46 @@ function renderTable() {
   const filteredData = allData.filter(item => {
     const matchesServer = checkedServers.includes(item.server);
     const matchesBoss = checkedBosses.includes(item.boss);
-    
-    // Search by Server, Boss, OR Killer
-    const matchesSearch = item.server.toLowerCase().includes(searchText) || 
-                          item.boss.toLowerCase().includes(searchText) || 
-                          item.killer.toLowerCase().includes(searchText);
-    
+    const matchesSearch = item.server.toLowerCase().includes(searchText) || item.boss.toLowerCase().includes(searchText) || item.killer.toLowerCase().includes(searchText);
     return matchesServer && matchesBoss && matchesSearch;
   });
 
   if (filteredData.length === 0) {
-    tbody.innerHTML = '<tr><td colspan="5" style="text-align:center;">No results found.</td></tr>';
+    // Updated colspan to 7 to match the new number of columns
+    tbody.innerHTML = '<tr><td colspan="7" style="text-align:center;">No results found.</td></tr>';
     return;
   }
 
-  // Render rows
   filteredData.forEach(item => {
     const row = document.createElement('tr');
+    
+    const formattedLastKill = formatDate(item.last_kill);
     const formattedNextSpawn = formatDate(item.next_spawn);
     const timerId = `timer-${item.server}-${item.boss}`.replace(/[^a-zA-Z0-9-]/g, '');
+    const statusId = `status-${item.server}-${item.boss}`.replace(/[^a-zA-Z0-9-]/g, '');
 
     row.innerHTML = `
       <td>${item.server}</td>
       <td>${item.boss}</td>
+      <td id="${statusId}" class="status-dead">💀 DEAD</td> <!-- Status Cell -->
       <td>${item.killer}</td>
-      <td>${formattedNextSpawn}</td>
+      <td>
+        <div class="tooltip">${formattedLastKill}
+          <span class="tooltiptext">Raw Website Time (Brazil): ${item.raw_date}</span>
+        </div>
+      </td>
+      <td>
+        <div class="tooltip">${formattedNextSpawn}
+          <span class="tooltiptext">Calculated as: <br>BG Kill Time + ${item.respawn_hours} hours</span>
+        </div>
+      </td>
       <td class="countdown" id="${timerId}">Calculating...</td>
     `;
     tbody.appendChild(row);
 
     countdownTimers.push({
       elementId: timerId,
+      statusId: statusId, // Store the status element ID
       nextSpawnTime: new Date(item.next_spawn).getTime()
     });
   });
@@ -135,20 +117,29 @@ function updateTimers() {
   
   countdownTimers.forEach(timer => {
     const element = document.getElementById(timer.elementId);
-    if (!element) return; 
+    const statusElement = document.getElementById(timer.statusId);
+    if (!element || !statusElement) return; 
 
     const distance = timer.nextSpawnTime - now;
 
     if (distance < 0) {
-      element.textContent = "SPAWNED!";
-      element.style.color = "#f87171"; // Red
+      // Timer is up, boss is potentially alive
+      element.textContent = "WINDOW OPEN!";
+      element.style.color = "#fbbf24"; // Orange
+      
+      statusElement.textContent = "🟢 ALIVE";
+      statusElement.className = "status-alive";
     } else {
+      // Timer is counting down, boss is dead
       const hours = Math.floor(distance / (1000 * 60 * 60));
       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
       
       element.textContent = `${hours}h ${minutes}m ${seconds}s`;
       element.style.color = "#4ade80"; // Green
+      
+      statusElement.textContent = "💀 DEAD";
+      statusElement.className = "status-dead";
     }
   });
 }
