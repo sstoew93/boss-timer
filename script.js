@@ -6,31 +6,26 @@ let countdownTimers = [];
 fetch('data.json')
   .then(response => response.json())
   .then(data => {
-    // Sort data initially by Next Spawn time (Ascending - Soonest first)
+    // Data is already sorted by Next Spawn from Python, but we sort again just in case
     allData = data.sort((a, b) => new Date(a.next_spawn) - new Date(b.next_spawn));
     
-    // Find unique servers and bosses
     allData.forEach(item => {
       uniqueServers.add(item.server);
       uniqueBosses.add(item.boss);
     });
 
-    // Build the checkboxes inside the dropdowns
     buildFilters('server-filters', Array.from(uniqueServers).sort(), 'server');
     buildFilters('boss-filters', Array.from(uniqueBosses).sort(), 'boss');
 
-    // Render table and start timers
     renderTable();
     setInterval(updateTimers, 1000);
   })
   .catch(error => console.error('Error loading data:', error));
 
-// Helper to format date exactly as requested: 10.11.2026 г., 00:26:25 ч.
-// Helper to format date exactly in Bulgarian Time Zone
+// Perfectly format date to Bulgarian Time Zone
 function formatDate(dateString) {
     const d = new Date(dateString);
     
-    // Force the display to Bulgarian time
     const options = {
         timeZone: 'Europe/Sofia',
         day: '2-digit',
@@ -39,13 +34,12 @@ function formatDate(dateString) {
         hour: '2-digit',
         minute: '2-digit',
         second: '2-digit',
-        hour12: false
+        hourCycle: 'h23' // Forces 00:00:00 instead of 24:00:00
     };
     
     const formatter = new Intl.DateTimeFormat('en-GB', options);
     const parts = formatter.formatToParts(d);
     
-    // Extract the parts manually to build your exact requested format
     const day = parts.find(p => p.type === 'day').value;
     const month = parts.find(p => p.type === 'month').value;
     const year = parts.find(p => p.type === 'year').value;
@@ -56,12 +50,10 @@ function formatDate(dateString) {
     return `${day}.${month}.${year} г., ${hour}:${minute}:${second} ч.`;
 }
 
-// Toggle dropdown visibility
 function toggleDropdown(id) {
     document.getElementById(id).classList.toggle("show");
 }
 
-// Close dropdowns when clicking outside of them
 window.onclick = function(event) {
     if (!event.target.matches('.dropbtn')) {
         const dropdowns = document.getElementsByClassName("dropdown-content");
@@ -74,7 +66,6 @@ window.onclick = function(event) {
     }
 }
 
-// Build checkboxes
 function buildFilters(containerId, items, type) {
   const container = document.getElementById(containerId);
   items.forEach(item => {
@@ -87,10 +78,8 @@ function buildFilters(containerId, items, type) {
   });
 }
 
-// Add event listener for the search bar
 document.getElementById('search-bar').addEventListener('input', renderTable);
 
-// Render the table based on filters and search
 function renderTable() {
   const tbody = document.getElementById('boss-table-body');
   tbody.innerHTML = ''; 
@@ -100,12 +89,11 @@ function renderTable() {
   const checkedBosses = Array.from(document.querySelectorAll('#boss-filters input:checked')).map(cb => cb.value);
   const searchText = document.getElementById('search-bar').value.toLowerCase().trim();
 
-  // Filter data
   const filteredData = allData.filter(item => {
     const matchesServer = checkedServers.includes(item.server);
     const matchesBoss = checkedBosses.includes(item.boss);
     
-    // Search in Server, Boss, AND Killer
+    // Search by Server, Boss, OR Killer
     const matchesSearch = item.server.toLowerCase().includes(searchText) || 
                           item.boss.toLowerCase().includes(searchText) || 
                           item.killer.toLowerCase().includes(searchText);
@@ -118,7 +106,7 @@ function renderTable() {
     return;
   }
 
-  // Build table rows
+  // Render rows
   filteredData.forEach(item => {
     const row = document.createElement('tr');
     const formattedNextSpawn = formatDate(item.next_spawn);
@@ -142,7 +130,6 @@ function renderTable() {
   updateTimers();
 }
 
-// Update the live countdown timers
 function updateTimers() {
   const now = new Date().getTime();
   
