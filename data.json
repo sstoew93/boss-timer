@@ -132,17 +132,6 @@
     "raw_date": "2026-11-05 00:26:35"
   },
   {
-    "server": "Sv19",
-    "boss": "Lord Silvester",
-    "last_kill": "2026-11-03T02:31:38+02:00",
-    "killer": "Zegui",
-    "earliest_spawn": "2026-11-06T23:36:38+02:00",
-    "latest_spawn": "2026-11-06T23:36:38+02:00",
-    "min_hours": 93.1,
-    "max_hours": 93.1,
-    "raw_date": "2026-11-02 21:31:38"
-  },
-  {
     "server": "Sv10",
     "boss": "Selupan",
     "last_kill": "2026-11-05T13:47:02+02:00",
@@ -1505,6 +1494,17 @@
     "min_hours": 93.1,
     "max_hours": 93.1,
     "raw_date": "2026-11-06 16:58:57"
+  },
+  {
+    "server": "Sv19",
+    "boss": "Lord Silvester",
+    "last_kill": "2026-11-07T00:53:28+02:00",
+    "killer": "cbNx",
+    "earliest_spawn": "2026-11-10T21:58:28+02:00",
+    "latest_spawn": "2026-11-10T21:58:28+02:00",
+    "min_hours": 93.1,
+    "max_hours": 93.1,
+    "raw_date": "2026-11-06 19:53:28"
   },
   {
     "server": "Sv19",
