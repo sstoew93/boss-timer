@@ -1,25 +1,67 @@
+// --- PASSWORD LOGIC ---
+// Change "megamu123" to whatever password you want!
+const SECRET_PASSWORD = "megamu123"; 
+
+function checkPassword() {
+    const input = document.getElementById('password-input').value;
+    const errorMsg = document.getElementById('error-msg');
+    
+    if (input === SECRET_PASSWORD) {
+        // Correct password: hide login, show app, and load data
+        document.getElementById('login-screen').style.display = 'none';
+        document.getElementById('app-content').style.display = 'block';
+        
+        // Save login state so if they refresh, they don't have to type it again
+        sessionStorage.setItem('isLoggedIn', 'true');
+        
+        loadData(); // Start the app
+    } else {
+        // Wrong password
+        errorMsg.style.display = 'block';
+        document.getElementById('password-input').value = ''; // Clear input
+    }
+}
+
+// Allow pressing "Enter" to submit password
+document.getElementById('password-input').addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+        checkPassword();
+    }
+});
+
+// Check if they already logged in this session
+if (sessionStorage.getItem('isLoggedIn') === 'true') {
+    document.getElementById('login-screen').style.display = 'none';
+    document.getElementById('app-content').style.display = 'block';
+    loadData();
+}
+// ----------------------
+
+// --- APP LOGIC ---
 let allData = []; 
 let uniqueServers = new Set();
 let uniqueBosses = new Set();
 let countdownTimers = []; 
 
-fetch('data.json')
-  .then(response => response.json())
-  .then(data => {
-    allData = data.sort((a, b) => new Date(a.next_spawn) - new Date(b.next_spawn));
-    
-    allData.forEach(item => {
-      uniqueServers.add(item.server);
-      uniqueBosses.add(item.boss);
-    });
+function loadData() {
+    fetch('data.json')
+      .then(response => response.json())
+      .then(data => {
+        allData = data.sort((a, b) => new Date(a.next_spawn) - new Date(b.next_spawn));
+        
+        allData.forEach(item => {
+          uniqueServers.add(item.server);
+          uniqueBosses.add(item.boss);
+        });
 
-    buildFilters('server-filters', Array.from(uniqueServers).sort(), 'server');
-    buildFilters('boss-filters', Array.from(uniqueBosses).sort(), 'boss');
+        buildFilters('server-filters', Array.from(uniqueServers).sort(), 'server');
+        buildFilters('boss-filters', Array.from(uniqueBosses).sort(), 'boss');
 
-    renderTable();
-    setInterval(updateTimers, 1000);
-  })
-  .catch(error => console.error('Error loading data:', error));
+        renderTable();
+        setInterval(updateTimers, 1000);
+      })
+      .catch(error => console.error('Error loading data:', error));
+}
 
 function formatDate(dateString) {
     const d = new Date(dateString);
@@ -70,7 +112,6 @@ function renderTable() {
   });
 
   if (filteredData.length === 0) {
-    // Updated colspan to 7 to match the new number of columns
     tbody.innerHTML = '<tr><td colspan="7" style="text-align:center;">No results found.</td></tr>';
     return;
   }
@@ -86,7 +127,7 @@ function renderTable() {
     row.innerHTML = `
       <td>${item.server}</td>
       <td>${item.boss}</td>
-      <td id="${statusId}" class="status-dead">💀 DEAD</td> <!-- Status Cell -->
+      <td id="${statusId}" class="status-dead">💀 DEAD</td>
       <td>${item.killer}</td>
       <td>
         <div class="tooltip">${formattedLastKill}
@@ -104,7 +145,7 @@ function renderTable() {
 
     countdownTimers.push({
       elementId: timerId,
-      statusId: statusId, // Store the status element ID
+      statusId: statusId, 
       nextSpawnTime: new Date(item.next_spawn).getTime()
     });
   });
@@ -123,21 +164,17 @@ function updateTimers() {
     const distance = timer.nextSpawnTime - now;
 
     if (distance < 0) {
-      // Timer is up, boss is potentially alive
       element.textContent = "WINDOW OPEN!";
-      element.style.color = "#fbbf24"; // Orange
-      
+      element.style.color = "#fbbf24"; 
       statusElement.textContent = "🟢 ALIVE";
       statusElement.className = "status-alive";
     } else {
-      // Timer is counting down, boss is dead
       const hours = Math.floor(distance / (1000 * 60 * 60));
       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
       
       element.textContent = `${hours}h ${minutes}m ${seconds}s`;
-      element.style.color = "#4ade80"; // Green
-      
+      element.style.color = "#4ade80"; 
       statusElement.textContent = "💀 DEAD";
       statusElement.className = "status-dead";
     }
