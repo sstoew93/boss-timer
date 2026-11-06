@@ -682,9 +682,9 @@
   {
     "server": "Sv3",
     "boss": "Lord Silvester",
-    "last_kill": "2026-11-02T19:12:13",
-    "killer": "ManixRW",
-    "next_spawn": "2026-11-06T13:12:13",
+    "last_kill": "2026-11-06T16:20:19",
+    "killer": "DarkSumm",
+    "next_spawn": "2026-11-10T10:20:19",
     "respawn_hours": 90
   },
   {
@@ -730,9 +730,9 @@
   {
     "server": "Sv4",
     "boss": "Lord Silvester",
-    "last_kill": "2026-11-02T19:14:14",
-    "killer": "ManixRW",
-    "next_spawn": "2026-11-06T13:14:14",
+    "last_kill": "2026-11-06T16:22:15",
+    "killer": "Douha",
+    "next_spawn": "2026-11-10T10:22:15",
     "respawn_hours": 90
   },
   {
@@ -954,9 +954,9 @@
   {
     "server": "Sv8",
     "boss": "Selupan",
-    "last_kill": "2026-11-05T06:25:18",
+    "last_kill": "2026-11-06T16:34:07",
     "killer": "Jot4",
-    "next_spawn": "2026-11-06T16:25:18",
+    "next_spawn": "2026-11-08T02:34:07",
     "respawn_hours": 34
   },
   {
