@@ -1,13 +1,5 @@
 [
   {
-    "server": "Sv6",
-    "boss": "Lord of Ferea",
-    "last_kill": "2026-11-02T11:51:59+02:00",
-    "killer": "SolrakDVDL",
-    "next_spawn": "2026-11-05T21:51:59+02:00",
-    "respawn_hours": 82
-  },
-  {
     "server": "Sv11",
     "boss": "Lord of Ferea",
     "last_kill": "2026-11-02T15:18:27+02:00",
@@ -366,14 +358,6 @@
     "killer": "LorD",
     "next_spawn": "2026-11-07T21:18:08+02:00",
     "respawn_hours": 90
-  },
-  {
-    "server": "Sv8",
-    "boss": "Nix",
-    "last_kill": "2026-11-02T13:01:51+02:00",
-    "killer": "Bestpanda",
-    "next_spawn": "2026-11-07T23:01:51+02:00",
-    "respawn_hours": 130
   },
   {
     "server": "Sv15",
@@ -872,6 +856,14 @@
     "respawn_hours": 100
   },
   {
+    "server": "Sv6",
+    "boss": "Lord of Ferea",
+    "last_kill": "2026-11-06T23:28:15+02:00",
+    "killer": "ElfCitara",
+    "next_spawn": "2026-11-10T09:28:15+02:00",
+    "respawn_hours": 82
+  },
+  {
     "server": "Sv7",
     "boss": "Nix",
     "last_kill": "2026-11-05T02:54:03+02:00",
@@ -981,6 +973,14 @@
     "last_kill": "2026-11-06T20:30:53+02:00",
     "killer": "Kasperiano",
     "next_spawn": "2026-11-12T06:30:53+02:00",
+    "respawn_hours": 130
+  },
+  {
+    "server": "Sv8",
+    "boss": "Nix",
+    "last_kill": "2026-11-06T23:27:55+02:00",
+    "killer": "NayrobSL",
+    "next_spawn": "2026-11-12T09:27:55+02:00",
     "respawn_hours": 130
   }
 ]
