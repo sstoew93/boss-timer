@@ -726,17 +726,6 @@
     "raw_date": "2026-11-06 02:33:48"
   },
   {
-    "server": "Sv10",
-    "boss": "Nix",
-    "last_kill": "2026-11-02T14:15:41+02:00",
-    "killer": "XxVILLEGAS",
-    "earliest_spawn": "2026-11-08T00:15:41+02:00",
-    "latest_spawn": "2026-11-08T00:15:41+02:00",
-    "min_hours": 130.0,
-    "max_hours": 130.0,
-    "raw_date": "2026-11-02 09:15:41"
-  },
-  {
     "server": "Speed4",
     "boss": "Lord Silvester",
     "last_kill": "2026-11-04T03:18:08+02:00",
@@ -1571,5 +1560,16 @@
     "min_hours": 130.0,
     "max_hours": 130.0,
     "raw_date": "2026-11-06 18:27:55"
+  },
+  {
+    "server": "Sv10",
+    "boss": "Nix",
+    "last_kill": "2026-11-07T01:39:43+02:00",
+    "killer": "XxVILLEGAS",
+    "earliest_spawn": "2026-11-12T11:39:43+02:00",
+    "latest_spawn": "2026-11-12T11:39:43+02:00",
+    "min_hours": 130.0,
+    "max_hours": 130.0,
+    "raw_date": "2026-11-06 20:39:43"
   }
 ]
