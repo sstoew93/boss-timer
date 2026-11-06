@@ -8,15 +8,35 @@
         body { font-family: Arial, sans-serif; background: #1a1a1a; color: #eee; padding: 20px; }
         h1 { text-align: center; }
         
-        /* Filter styling */
-        .filters { max-width: 900px; margin: 0 auto 20px auto; background: #2a2a2a; padding: 15px; border-radius: 8px; display: flex; gap: 30px; flex-wrap: wrap; }
-        .filter-group { display: flex; flex-direction: column; gap: 5px; }
-        .filter-group h3 { margin: 0 0 10px 0; font-size: 16px; border-bottom: 1px solid #444; padding-bottom: 5px; }
-        .checkbox-container { display: flex; flex-wrap: wrap; gap: 10px; max-width: 400px;}
-        label { display: flex; align-items: center; gap: 5px; cursor: pointer; font-size: 14px; }
+        /* Top Bar Layout */
+        .top-bar { max-width: 1000px; margin: 0 auto 20px auto; display: flex; gap: 15px; align-items: center; flex-wrap: wrap; }
+        
+        /* Search Bar */
+        .search-container { flex-grow: 1; }
+        .search-container input {
+            width: 100%; padding: 10px 15px; border-radius: 5px; border: 1px solid #444;
+            background: #2a2a2a; color: #fff; font-size: 16px; outline: none;
+        }
+        .search-container input:focus { border-color: #4ade80; }
+
+        /* Dropdowns */
+        .dropdown { position: relative; display: inline-block; }
+        .dropbtn {
+            background-color: #333; color: white; padding: 10px 15px; font-size: 16px;
+            border: 1px solid #444; border-radius: 5px; cursor: pointer; min-width: 150px; text-align: left;
+        }
+        .dropbtn:hover { background-color: #444; }
+        .dropdown-content {
+            display: none; position: absolute; background-color: #2a2a2a; min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5); z-index: 1;
+            border: 1px solid #444; border-radius: 5px; max-height: 300px; overflow-y: auto;
+        }
+        .dropdown-content.show { display: block; }
+        .checkbox-container { padding: 10px; display: flex; flex-direction: column; gap: 8px; }
+        .checkbox-container label { display: flex; align-items: center; gap: 8px; cursor: pointer; }
         
         /* Table styling */
-        table { width: 100%; max-width: 900px; margin: 0 auto; border-collapse: collapse; background: #2a2a2a; }
+        table { width: 100%; max-width: 1000px; margin: 0 auto; border-collapse: collapse; background: #2a2a2a; }
         th, td { padding: 12px; border: 1px solid #444; text-align: left; font-size: 14px; }
         th { background: #333; }
         .countdown { font-weight: bold; color: #4ade80; }
@@ -25,15 +45,26 @@
 <body>
     <h1>🐉 MEGAMU Boss Respawn Timers</h1>
     
-    <!-- Filter Areas -->
-    <div class="filters">
-        <div class="filter-group">
-            <h3>Filter by Server</h3>
-            <div class="checkbox-container" id="server-filters"></div>
+    <div class="top-bar">
+        <!-- Search Bar -->
+        <div class="search-container">
+            <input type="text" id="search-bar" placeholder="Search by server, boss, or killer...">
         </div>
-        <div class="filter-group">
-            <h3>Filter by Boss</h3>
-            <div class="checkbox-container" id="boss-filters"></div>
+
+        <!-- Server Dropdown -->
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('server-dropdown')">Filter Servers ▼</button>
+            <div id="server-dropdown" class="dropdown-content">
+                <div id="server-filters" class="checkbox-container"></div>
+            </div>
+        </div>
+
+        <!-- Boss Dropdown -->
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('boss-dropdown')">Filter Bosses ▼</button>
+            <div id="boss-dropdown" class="dropdown-content">
+                <div id="boss-filters" class="checkbox-container"></div>
+            </div>
         </div>
     </div>
 
@@ -42,8 +73,7 @@
             <tr>
                 <th>SERVER</th>
                 <th>BOSS</th>
-                <th>LAST KILL</th>
-                <th>KILLER</th>
+                <th>LAST KILLER</th>
                 <th>NEXT SPAWN</th>
                 <th>REMAINING TIME</th>
             </tr>
