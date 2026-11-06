@@ -1,0 +1,38 @@
+[
+  {
+    "boss": "Nix",
+    "last_kill": "2026-11-06T15:30:53",
+    "next_spawn": "2026-11-12T01:30:53",
+    "respawn_hours": 130
+  },
+  {
+    "boss": "Selupan",
+    "last_kill": "2026-11-06T15:08:36",
+    "next_spawn": "2026-11-08T01:08:36",
+    "respawn_hours": 34
+  },
+  {
+    "boss": "Nightmare",
+    "last_kill": "2026-11-06T14:24:09",
+    "next_spawn": "2026-11-08T06:24:09",
+    "respawn_hours": 40
+  },
+  {
+    "boss": "Lord of Ferea",
+    "last_kill": "2026-11-06T12:41:34",
+    "next_spawn": "2026-11-09T22:41:34",
+    "respawn_hours": 82
+  },
+  {
+    "boss": "Core Magriffy",
+    "last_kill": "2026-11-05T23:19:04",
+    "next_spawn": "2026-11-10T03:19:04",
+    "respawn_hours": 100
+  },
+  {
+    "boss": "Lord Silvester",
+    "last_kill": "2026-11-05T22:19:48",
+    "next_spawn": "2026-11-09T16:19:48",
+    "respawn_hours": 90
+  }
+]
