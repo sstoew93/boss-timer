@@ -7,14 +7,12 @@ from zoneinfo import ZoneInfo
 BRAZIL_TZ = ZoneInfo("America/Sao_Paulo")
 BULGARIA_TZ = ZoneInfo("Europe/Sofia")
 
-# Updated times in minutes (Hours * 60 + Minutes)
-# Added "God of Darkness" in case it appears in the log
+# Updated times in minutes
 BOSS_TIMES = {
     "God of Darkness": {"min": 72 * 60, "max": 168 * 60},
     "Core Magriffy": {"min": 84 * 60, "max": 84 * 60},
     "Lord of Ferea": {"min": 80 * 60, "max": 182 * 60},
-    "Lord Silvester": {"min": (3 * 24 + 21) * 60 + 5, "max": (3 * 24 + 21) * 60 + 5}, # 3 days 21h 5m
-    # Kept previous times for these bosses, assuming they are fixed
+    "Lord Silvester": {"min": (3 * 24 + 21) * 60 + 5, "max": (3 * 24 + 21) * 60 + 5}, 
     "Selupan": {"min": 34 * 60, "max": 34 * 60},
     "Nightmare": {"min": 40 * 60, "max": 40 * 60},
     "Nix": {"min": 130 * 60, "max": 130 * 60}
@@ -46,18 +44,15 @@ def scrape():
             continue
 
         try:
-            # 1. Read as Brazilian Time
             kill_time_naive = datetime.strptime(date_str, "%Y-%m-%d %H:%M:%S")
             kill_time_br = kill_time_naive.replace(tzinfo=BRAZIL_TZ)
-            
-            # 2. Convert to Bulgarian Time
             kill_time_bg = kill_time_br.astimezone(BULGARIA_TZ)
             
-            # 3. Calculate Earliest and Latest Spawn
             times = BOSS_TIMES[monster_name]
             earliest_spawn_bg = kill_time_bg + timedelta(minutes=times["min"])
             latest_spawn_bg = kill_time_bg + timedelta(minutes=times["max"])
             
+            # FIXED: Added 'raw_date' here so it doesn't crash later
             kill_data.append({
                 'server': server,
                 'boss': monster_name,
@@ -66,7 +61,8 @@ def scrape():
                 'earliest_spawn': earliest_spawn_bg,
                 'latest_spawn': latest_spawn_bg,
                 'min_hours': round(times["min"] / 60, 1),
-                'max_hours': round(times["max"] / 60, 1)
+                'max_hours': round(times["max"] / 60, 1),
+                'raw_date': date_str 
             })
         except Exception as e:
             continue
@@ -78,7 +74,6 @@ def scrape():
             latest_kills[key] = item
 
     result = list(latest_kills.values())
-    # Sort by Earliest Spawn (Soonest first)
     result.sort(key=lambda x: x['earliest_spawn'])
 
     final_json = []
@@ -92,7 +87,7 @@ def scrape():
             "latest_spawn": item['latest_spawn'].isoformat(),
             "min_hours": item['min_hours'],
             "max_hours": item['max_hours'],
-            "raw_date": date_str
+            "raw_date": item['raw_date']
         })
 
     return final_json
