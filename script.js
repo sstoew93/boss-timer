@@ -1,5 +1,3 @@
-// --- PASSWORD LOGIC ---
-// Change "megamu123" to whatever password you want!
 const SECRET_PASSWORD = "NewOrder"; 
 
 function checkPassword() {
@@ -7,29 +5,22 @@ function checkPassword() {
     const errorMsg = document.getElementById('error-msg');
     
     if (input === SECRET_PASSWORD) {
-        // Correct password: hide login, show app, and load data
         document.getElementById('login-screen').style.display = 'none';
         document.getElementById('app-content').style.display = 'block';
-        
-        // Save login state so if they refresh, they don't have to type it again
         sessionStorage.setItem('isLoggedIn', 'true');
-        
-        loadData(); // Start the app
+        loadData();
     } else {
-        // Wrong password
         errorMsg.style.display = 'block';
-        document.getElementById('password-input').value = ''; // Clear input
+        document.getElementById('password-input').value = ''; 
     }
 }
 
-// Allow pressing "Enter" to submit password
 document.getElementById('password-input').addEventListener('keypress', function (e) {
     if (e.key === 'Enter') {
         checkPassword();
     }
 });
 
-// Check if they already logged in this session
 if (sessionStorage.getItem('isLoggedIn') === 'true') {
     document.getElementById('login-screen').style.display = 'none';
     document.getElementById('app-content').style.display = 'block';
@@ -75,14 +66,19 @@ function toggleDropdown(id) {
     document.getElementById(id).classList.toggle("show");
 }
 
+// --- THE FIX IS HERE ---
 window.onclick = function(event) {
-    if (!event.target.matches('.dropbtn')) {
+    // If the click is NOT inside any element with the class "dropdown"
+    if (!event.target.closest('.dropdown')) {
         const dropdowns = document.getElementsByClassName("dropdown-content");
         for (let i = 0; i < dropdowns.length; i++) {
-            if (dropdowns[i].classList.contains('show')) dropdowns[i].classList.remove('show');
+            if (dropdowns[i].classList.contains('show')) {
+                dropdowns[i].classList.remove('show');
+            }
         }
     }
 }
+// -----------------------
 
 function buildFilters(containerId, items, type) {
   const container = document.getElementById(containerId);
