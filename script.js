@@ -1,6 +1,6 @@
 // --- PASSWORD LOGIC ---
 // Change "megamu123" to whatever password you want!
-const SECRET_PASSWORD = "megamu123"; 
+const SECRET_PASSWORD = "NewOrder"; 
 
 function checkPassword() {
     const input = document.getElementById('password-input').value;
