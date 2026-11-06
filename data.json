@@ -1,986 +1,1575 @@
 [
   {
+    "server": "Sv2",
+    "boss": "God of Darkness",
+    "last_kill": "2026-11-01T10:55:11+02:00",
+    "killer": "Kasperiano",
+    "earliest_spawn": "2026-11-04T10:55:11+02:00",
+    "latest_spawn": "2026-11-08T10:55:11+02:00",
+    "min_hours": 72.0,
+    "max_hours": 168.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Sv14",
+    "boss": "God of Darkness",
+    "last_kill": "2026-11-02T03:21:48+02:00",
+    "killer": "Kasperiano",
+    "earliest_spawn": "2026-11-05T03:21:48+02:00",
+    "latest_spawn": "2026-11-09T03:21:48+02:00",
+    "min_hours": 72.0,
+    "max_hours": 168.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Speed5",
+    "boss": "God of Darkness",
+    "last_kill": "2026-11-02T08:14:58+02:00",
+    "killer": "IlllIIlIll",
+    "earliest_spawn": "2026-11-05T08:14:58+02:00",
+    "latest_spawn": "2026-11-09T08:14:58+02:00",
+    "min_hours": 72.0,
+    "max_hours": 168.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Sv19",
+    "boss": "God of Darkness",
+    "last_kill": "2026-11-02T11:53:53+02:00",
+    "killer": "Kasperiano",
+    "earliest_spawn": "2026-11-05T11:53:53+02:00",
+    "latest_spawn": "2026-11-09T11:53:53+02:00",
+    "min_hours": 72.0,
+    "max_hours": 168.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Sv5",
+    "boss": "God of Darkness",
+    "last_kill": "2026-11-02T17:54:47+02:00",
+    "killer": "Fidela",
+    "earliest_spawn": "2026-11-05T17:54:47+02:00",
+    "latest_spawn": "2026-11-09T17:54:47+02:00",
+    "min_hours": 72.0,
+    "max_hours": 168.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Sv10",
+    "boss": "God of Darkness",
+    "last_kill": "2026-11-02T21:32:11+02:00",
+    "killer": "Collette",
+    "earliest_spawn": "2026-11-05T21:32:11+02:00",
+    "latest_spawn": "2026-11-09T21:32:11+02:00",
+    "min_hours": 72.0,
+    "max_hours": 168.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
     "server": "Sv11",
     "boss": "Lord of Ferea",
     "last_kill": "2026-11-02T15:18:27+02:00",
     "killer": "SolrakDVDL",
-    "next_spawn": "2026-11-06T01:18:27+02:00",
-    "respawn_hours": 82
+    "earliest_spawn": "2026-11-05T23:18:27+02:00",
+    "latest_spawn": "2026-11-10T05:18:27+02:00",
+    "min_hours": 80.0,
+    "max_hours": 182.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Speed5",
     "boss": "Lord of Ferea",
     "last_kill": "2026-11-02T17:44:00+02:00",
     "killer": "lIlIllIlIl",
-    "next_spawn": "2026-11-06T03:44:00+02:00",
-    "respawn_hours": 82
+    "earliest_spawn": "2026-11-06T01:44:00+02:00",
+    "latest_spawn": "2026-11-10T07:44:00+02:00",
+    "min_hours": 80.0,
+    "max_hours": 182.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Sv5",
     "boss": "Lord of Ferea",
     "last_kill": "2026-11-03T01:41:35+02:00",
     "killer": "Babayaga98",
-    "next_spawn": "2026-11-06T11:41:35+02:00",
-    "respawn_hours": 82
+    "earliest_spawn": "2026-11-06T09:41:35+02:00",
+    "latest_spawn": "2026-11-10T15:41:35+02:00",
+    "min_hours": 80.0,
+    "max_hours": 182.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Speed2",
+    "boss": "God of Darkness",
+    "last_kill": "2026-11-03T14:46:53+02:00",
+    "killer": "lIlIllIlIl",
+    "earliest_spawn": "2026-11-06T14:46:53+02:00",
+    "latest_spawn": "2026-11-10T14:46:53+02:00",
+    "min_hours": 72.0,
+    "max_hours": 168.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Sv11",
     "boss": "Selupan",
     "last_kill": "2026-11-05T08:44:07+02:00",
     "killer": "SolrakDVDL",
-    "next_spawn": "2026-11-06T18:44:07+02:00",
-    "respawn_hours": 34
-  },
-  {
-    "server": "Sv19",
-    "boss": "Lord Silvester",
-    "last_kill": "2026-11-03T02:31:38+02:00",
-    "killer": "Zegui",
-    "next_spawn": "2026-11-06T20:31:38+02:00",
-    "respawn_hours": 90
+    "earliest_spawn": "2026-11-06T18:44:07+02:00",
+    "latest_spawn": "2026-11-06T18:44:07+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Sv19",
     "boss": "Nightmare",
     "last_kill": "2026-11-05T05:26:35+02:00",
     "killer": "SolrakDVDL",
-    "next_spawn": "2026-11-06T21:26:35+02:00",
-    "respawn_hours": 40
+    "earliest_spawn": "2026-11-06T21:26:35+02:00",
+    "latest_spawn": "2026-11-06T21:26:35+02:00",
+    "min_hours": 40.0,
+    "max_hours": 40.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Sv19",
+    "boss": "Lord Silvester",
+    "last_kill": "2026-11-03T02:31:38+02:00",
+    "killer": "Zegui",
+    "earliest_spawn": "2026-11-06T23:36:38+02:00",
+    "latest_spawn": "2026-11-06T23:36:38+02:00",
+    "min_hours": 93.1,
+    "max_hours": 93.1,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Sv10",
     "boss": "Selupan",
     "last_kill": "2026-11-05T13:47:02+02:00",
     "killer": "XxVILLEGAS",
-    "next_spawn": "2026-11-06T23:47:02+02:00",
-    "respawn_hours": 34
+    "earliest_spawn": "2026-11-06T23:47:02+02:00",
+    "latest_spawn": "2026-11-06T23:47:02+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Speed1",
+    "boss": "God of Darkness",
+    "last_kill": "2026-11-04T00:09:53+02:00",
+    "killer": "PauDurasso",
+    "earliest_spawn": "2026-11-07T00:09:53+02:00",
+    "latest_spawn": "2026-11-11T00:09:53+02:00",
+    "min_hours": 72.0,
+    "max_hours": 168.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Speed4",
+    "boss": "God of Darkness",
+    "last_kill": "2026-11-04T00:11:02+02:00",
+    "killer": "KrabeSL",
+    "earliest_spawn": "2026-11-07T00:11:02+02:00",
+    "latest_spawn": "2026-11-11T00:11:02+02:00",
+    "min_hours": 72.0,
+    "max_hours": 168.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Speed1",
     "boss": "Lord Silvester",
     "last_kill": "2026-11-03T05:53:43+02:00",
     "killer": "Pomelobaby",
-    "next_spawn": "2026-11-06T23:53:43+02:00",
-    "respawn_hours": 90
+    "earliest_spawn": "2026-11-07T02:58:43+02:00",
+    "latest_spawn": "2026-11-07T02:58:43+02:00",
+    "min_hours": 93.1,
+    "max_hours": 93.1,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Speed2",
     "boss": "Lord Silvester",
     "last_kill": "2026-11-03T06:08:07+02:00",
     "killer": "Messi",
-    "next_spawn": "2026-11-07T00:08:07+02:00",
-    "respawn_hours": 90
+    "earliest_spawn": "2026-11-07T03:13:07+02:00",
+    "latest_spawn": "2026-11-07T03:13:07+02:00",
+    "min_hours": 93.1,
+    "max_hours": 93.1,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Speed3",
     "boss": "Lord Silvester",
     "last_kill": "2026-11-03T06:16:54+02:00",
     "killer": "KrabeSL",
-    "next_spawn": "2026-11-07T00:16:54+02:00",
-    "respawn_hours": 90
-  },
-  {
-    "server": "Speed1",
-    "boss": "Selupan",
-    "last_kill": "2026-11-05T18:45:43+02:00",
-    "killer": "LorD",
-    "next_spawn": "2026-11-07T04:45:43+02:00",
-    "respawn_hours": 34
+    "earliest_spawn": "2026-11-07T03:21:54+02:00",
+    "latest_spawn": "2026-11-07T03:21:54+02:00",
+    "min_hours": 93.1,
+    "max_hours": 93.1,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Speed3",
     "boss": "Lord of Ferea",
     "last_kill": "2026-11-03T19:40:08+02:00",
     "killer": "PoluSL",
-    "next_spawn": "2026-11-07T05:40:08+02:00",
-    "respawn_hours": 82
-  },
-  {
-    "server": "Speed5",
-    "boss": "Selupan",
-    "last_kill": "2026-11-05T20:09:52+02:00",
-    "killer": "Messi",
-    "next_spawn": "2026-11-07T06:09:52+02:00",
-    "respawn_hours": 34
+    "earliest_spawn": "2026-11-07T03:40:08+02:00",
+    "latest_spawn": "2026-11-11T09:40:08+02:00",
+    "min_hours": 80.0,
+    "max_hours": 182.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Speed4",
     "boss": "Lord of Ferea",
     "last_kill": "2026-11-03T20:25:17+02:00",
     "killer": "Messi",
-    "next_spawn": "2026-11-07T06:25:17+02:00",
-    "respawn_hours": 82
+    "earliest_spawn": "2026-11-07T04:25:17+02:00",
+    "latest_spawn": "2026-11-11T10:25:17+02:00",
+    "min_hours": 80.0,
+    "max_hours": 182.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Speed1",
+    "boss": "Selupan",
+    "last_kill": "2026-11-05T18:45:43+02:00",
+    "killer": "LorD",
+    "earliest_spawn": "2026-11-07T04:45:43+02:00",
+    "latest_spawn": "2026-11-07T04:45:43+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Speed5",
+    "boss": "Selupan",
+    "last_kill": "2026-11-05T20:09:52+02:00",
+    "killer": "Messi",
+    "earliest_spawn": "2026-11-07T06:09:52+02:00",
+    "latest_spawn": "2026-11-07T06:09:52+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Speed2",
     "boss": "Selupan",
     "last_kill": "2026-11-05T21:07:30+02:00",
     "killer": "Messi",
-    "next_spawn": "2026-11-07T07:07:30+02:00",
-    "respawn_hours": 34
+    "earliest_spawn": "2026-11-07T07:07:30+02:00",
+    "latest_spawn": "2026-11-07T07:07:30+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Sv6",
     "boss": "Nightmare",
     "last_kill": "2026-11-05T15:55:26+02:00",
     "killer": "JexusGL",
-    "next_spawn": "2026-11-07T07:55:26+02:00",
-    "respawn_hours": 40
-  },
-  {
-    "server": "SvC",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-05T16:36:43+02:00",
-    "killer": "DlZot",
-    "next_spawn": "2026-11-07T08:36:43+02:00",
-    "respawn_hours": 40
-  },
-  {
-    "server": "Speed3",
-    "boss": "Selupan",
-    "last_kill": "2026-11-05T22:47:57+02:00",
-    "killer": "LorD",
-    "next_spawn": "2026-11-07T08:47:57+02:00",
-    "respawn_hours": 34
+    "earliest_spawn": "2026-11-07T07:55:26+02:00",
+    "latest_spawn": "2026-11-07T07:55:26+02:00",
+    "min_hours": 40.0,
+    "max_hours": 40.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Sv7",
     "boss": "Lord of Ferea",
     "last_kill": "2026-11-03T23:58:27+02:00",
     "killer": "Babayaga98",
-    "next_spawn": "2026-11-07T09:58:27+02:00",
-    "respawn_hours": 82
+    "earliest_spawn": "2026-11-07T07:58:27+02:00",
+    "latest_spawn": "2026-11-11T13:58:27+02:00",
+    "min_hours": 80.0,
+    "max_hours": 182.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "SvC",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-05T16:36:43+02:00",
+    "killer": "DlZot",
+    "earliest_spawn": "2026-11-07T08:36:43+02:00",
+    "latest_spawn": "2026-11-07T08:36:43+02:00",
+    "min_hours": 40.0,
+    "max_hours": 40.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Speed3",
+    "boss": "Selupan",
+    "last_kill": "2026-11-05T22:47:57+02:00",
+    "killer": "LorD",
+    "earliest_spawn": "2026-11-07T08:47:57+02:00",
+    "latest_spawn": "2026-11-07T08:47:57+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Sv19",
     "boss": "Selupan",
     "last_kill": "2026-11-05T23:59:24+02:00",
     "killer": "SolrakDVDL",
-    "next_spawn": "2026-11-07T09:59:24+02:00",
-    "respawn_hours": 34
+    "earliest_spawn": "2026-11-07T09:59:24+02:00",
+    "latest_spawn": "2026-11-07T09:59:24+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Sv7",
     "boss": "Nightmare",
     "last_kill": "2026-11-05T19:34:30+02:00",
     "killer": "SolrakDVDL",
-    "next_spawn": "2026-11-07T11:34:30+02:00",
-    "respawn_hours": 40
-  },
-  {
-    "server": "Sv11",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-05T21:00:30+02:00",
-    "killer": "ElfCitara",
-    "next_spawn": "2026-11-07T13:00:30+02:00",
-    "respawn_hours": 40
-  },
-  {
-    "server": "Speed5",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-05T21:03:24+02:00",
-    "killer": "Messi",
-    "next_spawn": "2026-11-07T13:03:24+02:00",
-    "respawn_hours": 40
-  },
-  {
-    "server": "Sv6",
-    "boss": "Selupan",
-    "last_kill": "2026-11-06T04:11:20+02:00",
-    "killer": "TORIANO",
-    "next_spawn": "2026-11-07T14:11:20+02:00",
-    "respawn_hours": 34
-  },
-  {
-    "server": "Sv7",
-    "boss": "Selupan",
-    "last_kill": "2026-11-06T04:13:31+02:00",
-    "killer": "TORIANO",
-    "next_spawn": "2026-11-07T14:13:31+02:00",
-    "respawn_hours": 34
-  },
-  {
-    "server": "Sv5",
-    "boss": "Selupan",
-    "last_kill": "2026-11-06T05:04:22+02:00",
-    "killer": "SolrakDVDL",
-    "next_spawn": "2026-11-07T15:04:22+02:00",
-    "respawn_hours": 34
-  },
-  {
-    "server": "Speed2",
-    "boss": "Lord of Ferea",
-    "last_kill": "2026-11-04T08:14:49+02:00",
-    "killer": "lIlIllIlIl",
-    "next_spawn": "2026-11-07T18:14:49+02:00",
-    "respawn_hours": 82
-  },
-  {
-    "server": "Speed4",
-    "boss": "Selupan",
-    "last_kill": "2026-11-06T08:20:43+02:00",
-    "killer": "Ziuh",
-    "next_spawn": "2026-11-07T18:20:43+02:00",
-    "respawn_hours": 34
-  },
-  {
-    "server": "Sv4",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-06T03:15:04+02:00",
-    "killer": "Eternuxd",
-    "next_spawn": "2026-11-07T19:15:04+02:00",
-    "respawn_hours": 40
-  },
-  {
-    "server": "Sv5",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-06T03:28:45+02:00",
-    "killer": "Eternuxd",
-    "next_spawn": "2026-11-07T19:28:45+02:00",
-    "respawn_hours": 40
-  },
-  {
-    "server": "Sv17",
-    "boss": "Selupan",
-    "last_kill": "2026-11-06T09:37:43+02:00",
-    "killer": "Akyris",
-    "next_spawn": "2026-11-07T19:37:43+02:00",
-    "respawn_hours": 34
-  },
-  {
-    "server": "Sv15",
-    "boss": "Selupan",
-    "last_kill": "2026-11-06T09:39:11+02:00",
-    "killer": "CATIPU",
-    "next_spawn": "2026-11-07T19:39:11+02:00",
-    "respawn_hours": 34
-  },
-  {
-    "server": "Sv16",
-    "boss": "Selupan",
-    "last_kill": "2026-11-06T09:40:39+02:00",
-    "killer": "Akyris",
-    "next_spawn": "2026-11-07T19:40:39+02:00",
-    "respawn_hours": 34
-  },
-  {
-    "server": "Sv14",
-    "boss": "Selupan",
-    "last_kill": "2026-11-06T09:42:28+02:00",
-    "killer": "Akyris",
-    "next_spawn": "2026-11-07T19:42:28+02:00",
-    "respawn_hours": 34
-  },
-  {
-    "server": "Sv1",
-    "boss": "Selupan",
-    "last_kill": "2026-11-06T09:47:00+02:00",
-    "killer": "Akyris",
-    "next_spawn": "2026-11-07T19:47:00+02:00",
-    "respawn_hours": 34
-  },
-  {
-    "server": "Speed1",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-06T03:49:13+02:00",
-    "killer": "Abaddonz",
-    "next_spawn": "2026-11-07T19:49:13+02:00",
-    "respawn_hours": 40
-  },
-  {
-    "server": "Sv2",
-    "boss": "Selupan",
-    "last_kill": "2026-11-06T09:52:29+02:00",
-    "killer": "Jot4",
-    "next_spawn": "2026-11-07T19:52:29+02:00",
-    "respawn_hours": 34
-  },
-  {
-    "server": "Sv3",
-    "boss": "Selupan",
-    "last_kill": "2026-11-06T09:54:23+02:00",
-    "killer": "Akyris",
-    "next_spawn": "2026-11-07T19:54:23+02:00",
-    "respawn_hours": 34
-  },
-  {
-    "server": "Sv4",
-    "boss": "Selupan",
-    "last_kill": "2026-11-06T10:33:17+02:00",
-    "killer": "Jot4",
-    "next_spawn": "2026-11-07T20:33:17+02:00",
-    "respawn_hours": 34
-  },
-  {
-    "server": "Sv1",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-06T04:38:54+02:00",
-    "killer": "ExpressMg",
-    "next_spawn": "2026-11-07T20:38:54+02:00",
-    "respawn_hours": 40
-  },
-  {
-    "server": "Sv8",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-06T04:47:57+02:00",
-    "killer": "Crimsum",
-    "next_spawn": "2026-11-07T20:47:57+02:00",
-    "respawn_hours": 40
-  },
-  {
-    "server": "Speed1",
-    "boss": "Lord of Ferea",
-    "last_kill": "2026-11-04T10:49:26+02:00",
-    "killer": "Thrak",
-    "next_spawn": "2026-11-07T20:49:26+02:00",
-    "respawn_hours": 82
-  },
-  {
-    "server": "Sv2",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-06T04:51:13+02:00",
-    "killer": "Babayaga98",
-    "next_spawn": "2026-11-07T20:51:13+02:00",
-    "respawn_hours": 40
-  },
-  {
-    "server": "Sv3",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-06T04:53:44+02:00",
-    "killer": "ExpressMg",
-    "next_spawn": "2026-11-07T20:53:44+02:00",
-    "respawn_hours": 40
-  },
-  {
-    "server": "Speed4",
-    "boss": "Lord Silvester",
-    "last_kill": "2026-11-04T03:18:08+02:00",
-    "killer": "LorD",
-    "next_spawn": "2026-11-07T21:18:08+02:00",
-    "respawn_hours": 90
-  },
-  {
-    "server": "Sv15",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-06T07:33:48+02:00",
-    "killer": "Eternuxd",
-    "next_spawn": "2026-11-07T23:33:48+02:00",
-    "respawn_hours": 40
-  },
-  {
-    "server": "Speed5",
-    "boss": "Lord Silvester",
-    "last_kill": "2026-11-04T05:36:02+02:00",
-    "killer": "Abaddonz",
-    "next_spawn": "2026-11-07T23:36:02+02:00",
-    "respawn_hours": 90
-  },
-  {
-    "server": "Sv5",
-    "boss": "Lord Silvester",
-    "last_kill": "2026-11-04T05:56:05+02:00",
-    "killer": "xJICKx",
-    "next_spawn": "2026-11-07T23:56:05+02:00",
-    "respawn_hours": 90
-  },
-  {
-    "server": "Sv6",
-    "boss": "Lord Silvester",
-    "last_kill": "2026-11-04T06:01:28+02:00",
-    "killer": "zTargaryeN",
-    "next_spawn": "2026-11-08T00:01:28+02:00",
-    "respawn_hours": 90
-  },
-  {
-    "server": "Sv7",
-    "boss": "Lord Silvester",
-    "last_kill": "2026-11-04T06:05:30+02:00",
-    "killer": "xJICKx",
-    "next_spawn": "2026-11-08T00:05:30+02:00",
-    "respawn_hours": 90
-  },
-  {
-    "server": "Sv8",
-    "boss": "Lord of Ferea",
-    "last_kill": "2026-11-04T14:09:45+02:00",
-    "killer": "Babayaga98",
-    "next_spawn": "2026-11-08T00:09:45+02:00",
-    "respawn_hours": 82
-  },
-  {
-    "server": "Sv10",
-    "boss": "Nix",
-    "last_kill": "2026-11-02T14:15:41+02:00",
-    "killer": "XxVILLEGAS",
-    "next_spawn": "2026-11-08T00:15:41+02:00",
-    "respawn_hours": 130
-  },
-  {
-    "server": "Speed3",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-06T09:47:19+02:00",
-    "killer": "Guilis5",
-    "next_spawn": "2026-11-08T01:47:19+02:00",
-    "respawn_hours": 40
+    "earliest_spawn": "2026-11-07T11:34:30+02:00",
+    "latest_spawn": "2026-11-07T11:34:30+02:00",
+    "min_hours": 40.0,
+    "max_hours": 40.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Sv8",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-04T00:07:25+02:00",
     "killer": "GranSabana",
-    "next_spawn": "2026-11-08T04:07:25+02:00",
-    "respawn_hours": 100
-  },
-  {
-    "server": "Speed2",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-06T13:15:27+02:00",
-    "killer": "TipoZerao",
-    "next_spawn": "2026-11-08T05:15:27+02:00",
-    "respawn_hours": 40
-  },
-  {
-    "server": "SvC",
-    "boss": "Selupan",
-    "last_kill": "2026-11-06T20:08:36+02:00",
-    "killer": "RB18",
-    "next_spawn": "2026-11-08T06:08:36+02:00",
-    "respawn_hours": 34
-  },
-  {
-    "server": "Sv16",
-    "boss": "Lord of Ferea",
-    "last_kill": "2026-11-04T21:07:14+02:00",
-    "killer": "SolrakDVDL",
-    "next_spawn": "2026-11-08T07:07:14+02:00",
-    "respawn_hours": 82
-  },
-  {
-    "server": "Sv8",
-    "boss": "Selupan",
-    "last_kill": "2026-11-06T21:34:07+02:00",
-    "killer": "Jot4",
-    "next_spawn": "2026-11-08T07:34:07+02:00",
-    "respawn_hours": 34
-  },
-  {
-    "server": "Sv14",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-06T15:37:04+02:00",
-    "killer": "MrMyzor",
-    "next_spawn": "2026-11-08T07:37:04+02:00",
-    "respawn_hours": 40
-  },
-  {
-    "server": "Sv17",
-    "boss": "Nix",
-    "last_kill": "2026-11-02T21:45:32+02:00",
-    "killer": "SolrakDVDL",
-    "next_spawn": "2026-11-08T07:45:32+02:00",
-    "respawn_hours": 130
+    "earliest_spawn": "2026-11-07T12:07:25+02:00",
+    "latest_spawn": "2026-11-07T12:07:25+02:00",
+    "min_hours": 84.0,
+    "max_hours": 84.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Sv11",
-    "boss": "Lord Silvester",
-    "last_kill": "2026-11-04T14:04:54+02:00",
-    "killer": "XxDIAZxX",
-    "next_spawn": "2026-11-08T08:04:54+02:00",
-    "respawn_hours": 90
+    "boss": "Nightmare",
+    "last_kill": "2026-11-05T21:00:30+02:00",
+    "killer": "ElfCitara",
+    "earliest_spawn": "2026-11-07T13:00:30+02:00",
+    "latest_spawn": "2026-11-07T13:00:30+02:00",
+    "min_hours": 40.0,
+    "max_hours": 40.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
-    "server": "Sv16",
+    "server": "Speed5",
     "boss": "Nightmare",
-    "last_kill": "2026-11-06T17:17:26+02:00",
-    "killer": "MrMyzor",
-    "next_spawn": "2026-11-08T09:17:26+02:00",
-    "respawn_hours": 40
+    "last_kill": "2026-11-05T21:03:24+02:00",
+    "killer": "Messi",
+    "earliest_spawn": "2026-11-07T13:03:24+02:00",
+    "latest_spawn": "2026-11-07T13:03:24+02:00",
+    "min_hours": 40.0,
+    "max_hours": 40.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Sv4",
-    "boss": "Nix",
-    "last_kill": "2026-11-02T23:37:06+02:00",
-    "killer": "Bestpanda",
-    "next_spawn": "2026-11-08T09:37:06+02:00",
-    "respawn_hours": 130
+    "boss": "God of Darkness",
+    "last_kill": "2026-11-04T13:30:28+02:00",
+    "killer": "Kasperiano",
+    "earliest_spawn": "2026-11-07T13:30:28+02:00",
+    "latest_spawn": "2026-11-11T13:30:28+02:00",
+    "min_hours": 72.0,
+    "max_hours": 168.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
-    "server": "Sv10",
+    "server": "Speed3",
+    "boss": "God of Darkness",
+    "last_kill": "2026-11-04T13:54:27+02:00",
+    "killer": "PauDurasso",
+    "earliest_spawn": "2026-11-07T13:54:27+02:00",
+    "latest_spawn": "2026-11-11T13:54:27+02:00",
+    "min_hours": 72.0,
+    "max_hours": 168.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Sv6",
+    "boss": "Selupan",
+    "last_kill": "2026-11-06T04:11:20+02:00",
+    "killer": "TORIANO",
+    "earliest_spawn": "2026-11-07T14:11:20+02:00",
+    "latest_spawn": "2026-11-07T14:11:20+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Sv7",
+    "boss": "Selupan",
+    "last_kill": "2026-11-06T04:13:31+02:00",
+    "killer": "TORIANO",
+    "earliest_spawn": "2026-11-07T14:13:31+02:00",
+    "latest_spawn": "2026-11-07T14:13:31+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Sv5",
+    "boss": "Selupan",
+    "last_kill": "2026-11-06T05:04:22+02:00",
+    "killer": "SolrakDVDL",
+    "earliest_spawn": "2026-11-07T15:04:22+02:00",
+    "latest_spawn": "2026-11-07T15:04:22+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Speed2",
+    "boss": "Lord of Ferea",
+    "last_kill": "2026-11-04T08:14:49+02:00",
+    "killer": "lIlIllIlIl",
+    "earliest_spawn": "2026-11-07T16:14:49+02:00",
+    "latest_spawn": "2026-11-11T22:14:49+02:00",
+    "min_hours": 80.0,
+    "max_hours": 182.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Sv15",
+    "boss": "God of Darkness",
+    "last_kill": "2026-11-04T17:43:47+02:00",
+    "killer": "Kasperiano",
+    "earliest_spawn": "2026-11-07T17:43:47+02:00",
+    "latest_spawn": "2026-11-11T17:43:47+02:00",
+    "min_hours": 72.0,
+    "max_hours": 168.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Speed4",
+    "boss": "Selupan",
+    "last_kill": "2026-11-06T08:20:43+02:00",
+    "killer": "Ziuh",
+    "earliest_spawn": "2026-11-07T18:20:43+02:00",
+    "latest_spawn": "2026-11-07T18:20:43+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Speed1",
+    "boss": "Lord of Ferea",
+    "last_kill": "2026-11-04T10:49:26+02:00",
+    "killer": "Thrak",
+    "earliest_spawn": "2026-11-07T18:49:26+02:00",
+    "latest_spawn": "2026-11-12T00:49:26+02:00",
+    "min_hours": 80.0,
+    "max_hours": 182.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Sv4",
     "boss": "Nightmare",
-    "last_kill": "2026-11-06T18:06:31+02:00",
-    "killer": "XxVILLEGAS",
-    "next_spawn": "2026-11-08T10:06:31+02:00",
-    "respawn_hours": 40
+    "last_kill": "2026-11-06T03:15:04+02:00",
+    "killer": "Eternuxd",
+    "earliest_spawn": "2026-11-07T19:15:04+02:00",
+    "latest_spawn": "2026-11-07T19:15:04+02:00",
+    "min_hours": 40.0,
+    "max_hours": 40.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Sv5",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-06T03:28:45+02:00",
+    "killer": "Eternuxd",
+    "earliest_spawn": "2026-11-07T19:28:45+02:00",
+    "latest_spawn": "2026-11-07T19:28:45+02:00",
+    "min_hours": 40.0,
+    "max_hours": 40.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Sv17",
+    "boss": "Selupan",
+    "last_kill": "2026-11-06T09:37:43+02:00",
+    "killer": "Akyris",
+    "earliest_spawn": "2026-11-07T19:37:43+02:00",
+    "latest_spawn": "2026-11-07T19:37:43+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Sv15",
+    "boss": "Selupan",
+    "last_kill": "2026-11-06T09:39:11+02:00",
+    "killer": "CATIPU",
+    "earliest_spawn": "2026-11-07T19:39:11+02:00",
+    "latest_spawn": "2026-11-07T19:39:11+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Sv16",
+    "boss": "Selupan",
+    "last_kill": "2026-11-06T09:40:39+02:00",
+    "killer": "Akyris",
+    "earliest_spawn": "2026-11-07T19:40:39+02:00",
+    "latest_spawn": "2026-11-07T19:40:39+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Sv14",
+    "boss": "Selupan",
+    "last_kill": "2026-11-06T09:42:28+02:00",
+    "killer": "Akyris",
+    "earliest_spawn": "2026-11-07T19:42:28+02:00",
+    "latest_spawn": "2026-11-07T19:42:28+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Sv1",
+    "boss": "Selupan",
+    "last_kill": "2026-11-06T09:47:00+02:00",
+    "killer": "Akyris",
+    "earliest_spawn": "2026-11-07T19:47:00+02:00",
+    "latest_spawn": "2026-11-07T19:47:00+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Speed1",
     "boss": "Nightmare",
-    "last_kill": "2026-11-06T19:24:09+02:00",
-    "killer": "MrMyzor",
-    "next_spawn": "2026-11-08T11:24:09+02:00",
-    "respawn_hours": 40
+    "last_kill": "2026-11-06T03:49:13+02:00",
+    "killer": "Abaddonz",
+    "earliest_spawn": "2026-11-07T19:49:13+02:00",
+    "latest_spawn": "2026-11-07T19:49:13+02:00",
+    "min_hours": 40.0,
+    "max_hours": 40.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Sv2",
+    "boss": "Selupan",
+    "last_kill": "2026-11-06T09:52:29+02:00",
+    "killer": "Jot4",
+    "earliest_spawn": "2026-11-07T19:52:29+02:00",
+    "latest_spawn": "2026-11-07T19:52:29+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Sv3",
+    "boss": "Selupan",
+    "last_kill": "2026-11-06T09:54:23+02:00",
+    "killer": "Akyris",
+    "earliest_spawn": "2026-11-07T19:54:23+02:00",
+    "latest_spawn": "2026-11-07T19:54:23+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Sv4",
+    "boss": "Selupan",
+    "last_kill": "2026-11-06T10:33:17+02:00",
+    "killer": "Jot4",
+    "earliest_spawn": "2026-11-07T20:33:17+02:00",
+    "latest_spawn": "2026-11-07T20:33:17+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Sv1",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-06T04:38:54+02:00",
+    "killer": "ExpressMg",
+    "earliest_spawn": "2026-11-07T20:38:54+02:00",
+    "latest_spawn": "2026-11-07T20:38:54+02:00",
+    "min_hours": 40.0,
+    "max_hours": 40.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Sv4",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-04T08:45:37+02:00",
     "killer": "JexusGL",
-    "next_spawn": "2026-11-08T12:45:37+02:00",
-    "respawn_hours": 100
+    "earliest_spawn": "2026-11-07T20:45:37+02:00",
+    "latest_spawn": "2026-11-07T20:45:37+02:00",
+    "min_hours": 84.0,
+    "max_hours": 84.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
-    "server": "Speed1",
-    "boss": "Nix",
-    "last_kill": "2026-11-03T02:49:22+02:00",
-    "killer": "lIlIllIlIl",
-    "next_spawn": "2026-11-08T12:49:22+02:00",
-    "respawn_hours": 130
+    "server": "Sv8",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-06T04:47:57+02:00",
+    "killer": "Crimsum",
+    "earliest_spawn": "2026-11-07T20:47:57+02:00",
+    "latest_spawn": "2026-11-07T20:47:57+02:00",
+    "min_hours": 40.0,
+    "max_hours": 40.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Sv2",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-06T04:51:13+02:00",
+    "killer": "Babayaga98",
+    "earliest_spawn": "2026-11-07T20:51:13+02:00",
+    "latest_spawn": "2026-11-07T20:51:13+02:00",
+    "min_hours": 40.0,
+    "max_hours": 40.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Sv14",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-04T08:51:18+02:00",
     "killer": "JexusGL",
-    "next_spawn": "2026-11-08T12:51:18+02:00",
-    "respawn_hours": 100
+    "earliest_spawn": "2026-11-07T20:51:18+02:00",
+    "latest_spawn": "2026-11-07T20:51:18+02:00",
+    "min_hours": 84.0,
+    "max_hours": 84.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Sv1",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-04T08:52:10+02:00",
     "killer": "Malandraca",
-    "next_spawn": "2026-11-08T12:52:10+02:00",
-    "respawn_hours": 100
+    "earliest_spawn": "2026-11-07T20:52:10+02:00",
+    "latest_spawn": "2026-11-07T20:52:10+02:00",
+    "min_hours": 84.0,
+    "max_hours": 84.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Sv3",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-06T04:53:44+02:00",
+    "killer": "ExpressMg",
+    "earliest_spawn": "2026-11-07T20:53:44+02:00",
+    "latest_spawn": "2026-11-07T20:53:44+02:00",
+    "min_hours": 40.0,
+    "max_hours": 40.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Sv2",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-04T08:55:27+02:00",
     "killer": "Winnerzim",
-    "next_spawn": "2026-11-08T12:55:27+02:00",
-    "respawn_hours": 100
+    "earliest_spawn": "2026-11-07T20:55:27+02:00",
+    "latest_spawn": "2026-11-07T20:55:27+02:00",
+    "min_hours": 84.0,
+    "max_hours": 84.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Sv3",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-04T08:59:10+02:00",
     "killer": "JexusGL",
-    "next_spawn": "2026-11-08T12:59:10+02:00",
-    "respawn_hours": 100
+    "earliest_spawn": "2026-11-07T20:59:10+02:00",
+    "latest_spawn": "2026-11-07T20:59:10+02:00",
+    "min_hours": 84.0,
+    "max_hours": 84.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
-    "server": "Speed4",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-06T21:40:21+02:00",
-    "killer": "Ziuh",
-    "next_spawn": "2026-11-08T13:40:21+02:00",
-    "respawn_hours": 40
+    "server": "Sv8",
+    "boss": "Lord of Ferea",
+    "last_kill": "2026-11-04T14:09:45+02:00",
+    "killer": "Babayaga98",
+    "earliest_spawn": "2026-11-07T22:09:45+02:00",
+    "latest_spawn": "2026-11-12T04:09:45+02:00",
+    "min_hours": 80.0,
+    "max_hours": 182.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Sv16",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-04T10:44:03+02:00",
     "killer": "xJICKx",
-    "next_spawn": "2026-11-08T14:44:03+02:00",
-    "respawn_hours": 100
+    "earliest_spawn": "2026-11-07T22:44:03+02:00",
+    "latest_spawn": "2026-11-07T22:44:03+02:00",
+    "min_hours": 84.0,
+    "max_hours": 84.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Sv17",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-04T10:48:54+02:00",
     "killer": "xSLuZ011X",
-    "next_spawn": "2026-11-08T14:48:54+02:00",
-    "respawn_hours": 100
+    "earliest_spawn": "2026-11-07T22:48:54+02:00",
+    "latest_spawn": "2026-11-07T22:48:54+02:00",
+    "min_hours": 84.0,
+    "max_hours": 84.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Sv15",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-04T10:56:07+02:00",
     "killer": "Ruxo",
-    "next_spawn": "2026-11-08T14:56:07+02:00",
-    "respawn_hours": 100
+    "earliest_spawn": "2026-11-07T22:56:07+02:00",
+    "latest_spawn": "2026-11-07T22:56:07+02:00",
+    "min_hours": 84.0,
+    "max_hours": 84.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Sv3",
+    "boss": "God of Darkness",
+    "last_kill": "2026-11-04T23:13:16+02:00",
+    "killer": "Kasperiano",
+    "earliest_spawn": "2026-11-07T23:13:16+02:00",
+    "latest_spawn": "2026-11-11T23:13:16+02:00",
+    "min_hours": 72.0,
+    "max_hours": 168.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Sv15",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-06T07:33:48+02:00",
+    "killer": "Eternuxd",
+    "earliest_spawn": "2026-11-07T23:33:48+02:00",
+    "latest_spawn": "2026-11-07T23:33:48+02:00",
+    "min_hours": 40.0,
+    "max_hours": 40.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Sv10",
-    "boss": "Lord of Ferea",
-    "last_kill": "2026-11-05T05:08:22+02:00",
+    "boss": "Nix",
+    "last_kill": "2026-11-02T14:15:41+02:00",
     "killer": "XxVILLEGAS",
-    "next_spawn": "2026-11-08T15:08:22+02:00",
-    "respawn_hours": 82
+    "earliest_spawn": "2026-11-08T00:15:41+02:00",
+    "latest_spawn": "2026-11-08T00:15:41+02:00",
+    "min_hours": 130.0,
+    "max_hours": 130.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
-    "server": "Sv2",
-    "boss": "Nix",
-    "last_kill": "2026-11-03T05:17:32+02:00",
-    "killer": "zTargaryeN",
-    "next_spawn": "2026-11-08T15:17:32+02:00",
-    "respawn_hours": 130
+    "server": "Speed4",
+    "boss": "Lord Silvester",
+    "last_kill": "2026-11-04T03:18:08+02:00",
+    "killer": "LorD",
+    "earliest_spawn": "2026-11-08T00:23:08+02:00",
+    "latest_spawn": "2026-11-08T00:23:08+02:00",
+    "min_hours": 93.1,
+    "max_hours": 93.1,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Sv10",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-04T12:36:48+02:00",
     "killer": "BUGGIING",
-    "next_spawn": "2026-11-08T16:36:48+02:00",
-    "respawn_hours": 100
+    "earliest_spawn": "2026-11-08T00:36:48+02:00",
+    "latest_spawn": "2026-11-08T00:36:48+02:00",
+    "min_hours": 84.0,
+    "max_hours": 84.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
-    "server": "Sv10",
+    "server": "Speed3",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-06T09:47:19+02:00",
+    "killer": "Guilis5",
+    "earliest_spawn": "2026-11-08T01:47:19+02:00",
+    "latest_spawn": "2026-11-08T01:47:19+02:00",
+    "min_hours": 40.0,
+    "max_hours": 40.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Speed5",
     "boss": "Lord Silvester",
-    "last_kill": "2026-11-04T23:33:20+02:00",
-    "killer": "XxVILLEGAS",
-    "next_spawn": "2026-11-08T17:33:20+02:00",
-    "respawn_hours": 90
+    "last_kill": "2026-11-04T05:36:02+02:00",
+    "killer": "Abaddonz",
+    "earliest_spawn": "2026-11-08T02:41:02+02:00",
+    "latest_spawn": "2026-11-08T02:41:02+02:00",
+    "min_hours": 93.1,
+    "max_hours": 93.1,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Sv5",
+    "boss": "Lord Silvester",
+    "last_kill": "2026-11-04T05:56:05+02:00",
+    "killer": "xJICKx",
+    "earliest_spawn": "2026-11-08T03:01:05+02:00",
+    "latest_spawn": "2026-11-08T03:01:05+02:00",
+    "min_hours": 93.1,
+    "max_hours": 93.1,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Sv6",
+    "boss": "Lord Silvester",
+    "last_kill": "2026-11-04T06:01:28+02:00",
+    "killer": "zTargaryeN",
+    "earliest_spawn": "2026-11-08T03:06:28+02:00",
+    "latest_spawn": "2026-11-08T03:06:28+02:00",
+    "min_hours": 93.1,
+    "max_hours": 93.1,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Sv7",
+    "boss": "Lord Silvester",
+    "last_kill": "2026-11-04T06:05:30+02:00",
+    "killer": "xJICKx",
+    "earliest_spawn": "2026-11-08T03:10:30+02:00",
+    "latest_spawn": "2026-11-08T03:10:30+02:00",
+    "min_hours": 93.1,
+    "max_hours": 93.1,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Speed4",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-04T15:13:52+02:00",
     "killer": "Panda997",
-    "next_spawn": "2026-11-08T19:13:52+02:00",
-    "respawn_hours": 100
+    "earliest_spawn": "2026-11-08T03:13:52+02:00",
+    "latest_spawn": "2026-11-08T03:13:52+02:00",
+    "min_hours": 84.0,
+    "max_hours": 84.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
-    "server": "Sv17",
+    "server": "Sv16",
+    "boss": "God of Darkness",
+    "last_kill": "2026-11-05T04:27:35+02:00",
+    "killer": "V4GABUND0",
+    "earliest_spawn": "2026-11-08T04:27:35+02:00",
+    "latest_spawn": "2026-11-12T04:27:35+02:00",
+    "min_hours": 72.0,
+    "max_hours": 168.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Sv16",
     "boss": "Lord of Ferea",
-    "last_kill": "2026-11-05T12:57:04+02:00",
-    "killer": "NexusDM",
-    "next_spawn": "2026-11-08T22:57:04+02:00",
-    "respawn_hours": 82
+    "last_kill": "2026-11-04T21:07:14+02:00",
+    "killer": "SolrakDVDL",
+    "earliest_spawn": "2026-11-08T05:07:14+02:00",
+    "latest_spawn": "2026-11-12T11:07:14+02:00",
+    "min_hours": 80.0,
+    "max_hours": 182.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Speed2",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-06T13:15:27+02:00",
+    "killer": "TipoZerao",
+    "earliest_spawn": "2026-11-08T05:15:27+02:00",
+    "latest_spawn": "2026-11-08T05:15:27+02:00",
+    "min_hours": 40.0,
+    "max_hours": 40.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "SvC",
+    "boss": "Selupan",
+    "last_kill": "2026-11-06T20:08:36+02:00",
+    "killer": "RB18",
+    "earliest_spawn": "2026-11-08T06:08:36+02:00",
+    "latest_spawn": "2026-11-08T06:08:36+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Sv8",
+    "boss": "Selupan",
+    "last_kill": "2026-11-06T21:34:07+02:00",
+    "killer": "Jot4",
+    "earliest_spawn": "2026-11-08T07:34:07+02:00",
+    "latest_spawn": "2026-11-08T07:34:07+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Sv14",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-06T15:37:04+02:00",
+    "killer": "MrMyzor",
+    "earliest_spawn": "2026-11-08T07:37:04+02:00",
+    "latest_spawn": "2026-11-08T07:37:04+02:00",
+    "min_hours": 40.0,
+    "max_hours": 40.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Sv17",
     "boss": "Nix",
-    "last_kill": "2026-11-03T13:26:06+02:00",
-    "killer": "Bestpanda",
-    "next_spawn": "2026-11-08T23:26:06+02:00",
-    "respawn_hours": 130
+    "last_kill": "2026-11-02T21:45:32+02:00",
+    "killer": "SolrakDVDL",
+    "earliest_spawn": "2026-11-08T07:45:32+02:00",
+    "latest_spawn": "2026-11-08T07:45:32+02:00",
+    "min_hours": 130.0,
+    "max_hours": 130.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Sv19",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-04T20:54:13+02:00",
     "killer": "SolrakDVDL",
-    "next_spawn": "2026-11-09T00:54:13+02:00",
-    "respawn_hours": 100
+    "earliest_spawn": "2026-11-08T08:54:13+02:00",
+    "latest_spawn": "2026-11-08T08:54:13+02:00",
+    "min_hours": 84.0,
+    "max_hours": 84.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Sv16",
-    "boss": "Nix",
-    "last_kill": "2026-11-03T15:24:10+02:00",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-06T17:17:26+02:00",
     "killer": "MrMyzor",
-    "next_spawn": "2026-11-09T01:24:10+02:00",
-    "respawn_hours": 130
+    "earliest_spawn": "2026-11-08T09:17:26+02:00",
+    "latest_spawn": "2026-11-08T09:17:26+02:00",
+    "min_hours": 40.0,
+    "max_hours": 40.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
-    "server": "Sv15",
-    "boss": "Lord of Ferea",
-    "last_kill": "2026-11-05T15:41:02+02:00",
-    "killer": "Babayaga98",
-    "next_spawn": "2026-11-09T01:41:02+02:00",
-    "respawn_hours": 82
-  },
-  {
-    "server": "Speed3",
+    "server": "Sv4",
     "boss": "Nix",
-    "last_kill": "2026-11-03T16:49:34+02:00",
-    "killer": "Messi",
-    "next_spawn": "2026-11-09T02:49:34+02:00",
-    "respawn_hours": 130
+    "last_kill": "2026-11-02T23:37:06+02:00",
+    "killer": "Bestpanda",
+    "earliest_spawn": "2026-11-08T09:37:06+02:00",
+    "latest_spawn": "2026-11-08T09:37:06+02:00",
+    "min_hours": 130.0,
+    "max_hours": 130.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
-    "server": "Sv3",
-    "boss": "Lord of Ferea",
-    "last_kill": "2026-11-05T17:08:32+02:00",
-    "killer": "Guasakaka",
-    "next_spawn": "2026-11-09T03:08:32+02:00",
-    "respawn_hours": 82
+    "server": "Sv10",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-06T18:06:31+02:00",
+    "killer": "XxVILLEGAS",
+    "earliest_spawn": "2026-11-08T10:06:31+02:00",
+    "latest_spawn": "2026-11-08T10:06:31+02:00",
+    "min_hours": 40.0,
+    "max_hours": 40.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Sv11",
+    "boss": "Lord Silvester",
+    "last_kill": "2026-11-04T14:04:54+02:00",
+    "killer": "XxDIAZxX",
+    "earliest_spawn": "2026-11-08T11:09:54+02:00",
+    "latest_spawn": "2026-11-08T11:09:54+02:00",
+    "min_hours": 93.1,
+    "max_hours": 93.1,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Sv17",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-06T19:24:09+02:00",
+    "killer": "MrMyzor",
+    "earliest_spawn": "2026-11-08T11:24:09+02:00",
+    "latest_spawn": "2026-11-08T11:24:09+02:00",
+    "min_hours": 40.0,
+    "max_hours": 40.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Sv8",
+    "boss": "God of Darkness",
+    "last_kill": "2026-11-05T11:27:19+02:00",
+    "killer": "NoFeArSLAY",
+    "earliest_spawn": "2026-11-08T11:27:19+02:00",
+    "latest_spawn": "2026-11-12T11:27:19+02:00",
+    "min_hours": 72.0,
+    "max_hours": 168.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Speed1",
+    "boss": "Nix",
+    "last_kill": "2026-11-03T02:49:22+02:00",
+    "killer": "lIlIllIlIl",
+    "earliest_spawn": "2026-11-08T12:49:22+02:00",
+    "latest_spawn": "2026-11-08T12:49:22+02:00",
+    "min_hours": 130.0,
+    "max_hours": 130.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Speed5",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-05T01:06:29+02:00",
     "killer": "LorD",
-    "next_spawn": "2026-11-09T05:06:29+02:00",
-    "respawn_hours": 100
+    "earliest_spawn": "2026-11-08T13:06:29+02:00",
+    "latest_spawn": "2026-11-08T13:06:29+02:00",
+    "min_hours": 84.0,
+    "max_hours": 84.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
-    "server": "Sv5",
-    "boss": "Nix",
-    "last_kill": "2026-11-03T19:33:05+02:00",
-    "killer": "MrMyzor",
-    "next_spawn": "2026-11-09T05:33:05+02:00",
-    "respawn_hours": 130
-  },
-  {
-    "server": "Speed2",
-    "boss": "Nix",
-    "last_kill": "2026-11-03T20:15:58+02:00",
-    "killer": "Messi",
-    "next_spawn": "2026-11-09T06:15:58+02:00",
-    "respawn_hours": 130
-  },
-  {
-    "server": "Sv4",
+    "server": "Sv10",
     "boss": "Lord of Ferea",
-    "last_kill": "2026-11-06T02:06:09+02:00",
-    "killer": "Babayaga98",
-    "next_spawn": "2026-11-09T12:06:09+02:00",
-    "respawn_hours": 82
+    "last_kill": "2026-11-05T05:08:22+02:00",
+    "killer": "XxVILLEGAS",
+    "earliest_spawn": "2026-11-08T13:08:22+02:00",
+    "latest_spawn": "2026-11-12T19:08:22+02:00",
+    "min_hours": 80.0,
+    "max_hours": 182.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
-    "server": "Sv1",
-    "boss": "Nix",
-    "last_kill": "2026-11-04T03:12:43+02:00",
-    "killer": "Babayaga96",
-    "next_spawn": "2026-11-09T13:12:43+02:00",
-    "respawn_hours": 130
+    "server": "Speed4",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-06T21:40:21+02:00",
+    "killer": "Ziuh",
+    "earliest_spawn": "2026-11-08T13:40:21+02:00",
+    "latest_spawn": "2026-11-08T13:40:21+02:00",
+    "min_hours": 40.0,
+    "max_hours": 40.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
-    "server": "Sv19",
-    "boss": "Lord of Ferea",
-    "last_kill": "2026-11-06T05:48:27+02:00",
-    "killer": "Babayaga96",
-    "next_spawn": "2026-11-09T15:48:27+02:00",
-    "respawn_hours": 82
+    "server": "Sv7",
+    "boss": "God of Darkness",
+    "last_kill": "2026-11-05T13:56:54+02:00",
+    "killer": "Kasperiano",
+    "earliest_spawn": "2026-11-08T13:56:54+02:00",
+    "latest_spawn": "2026-11-12T13:56:54+02:00",
+    "min_hours": 72.0,
+    "max_hours": 168.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Sv2",
+    "boss": "Nix",
+    "last_kill": "2026-11-03T05:17:32+02:00",
+    "killer": "zTargaryeN",
+    "earliest_spawn": "2026-11-08T15:17:32+02:00",
+    "latest_spawn": "2026-11-08T15:17:32+02:00",
+    "min_hours": 130.0,
+    "max_hours": 130.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Sv10",
+    "boss": "Lord Silvester",
+    "last_kill": "2026-11-04T23:33:20+02:00",
+    "killer": "XxVILLEGAS",
+    "earliest_spawn": "2026-11-08T20:38:20+02:00",
+    "latest_spawn": "2026-11-08T20:38:20+02:00",
+    "min_hours": 93.1,
+    "max_hours": 93.1,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Sv17",
     "boss": "Lord of Ferea",
-    "last_kill": "2026-11-06T07:07:43+02:00",
+    "last_kill": "2026-11-05T12:57:04+02:00",
+    "killer": "NexusDM",
+    "earliest_spawn": "2026-11-08T20:57:04+02:00",
+    "latest_spawn": "2026-11-13T02:57:04+02:00",
+    "min_hours": 80.0,
+    "max_hours": 182.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Sv14",
+    "boss": "Nix",
+    "last_kill": "2026-11-03T13:26:06+02:00",
+    "killer": "Bestpanda",
+    "earliest_spawn": "2026-11-08T23:26:06+02:00",
+    "latest_spawn": "2026-11-08T23:26:06+02:00",
+    "min_hours": 130.0,
+    "max_hours": 130.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Sv15",
+    "boss": "Lord of Ferea",
+    "last_kill": "2026-11-05T15:41:02+02:00",
     "killer": "Babayaga98",
-    "next_spawn": "2026-11-09T17:07:43+02:00",
-    "respawn_hours": 82
+    "earliest_spawn": "2026-11-08T23:41:02+02:00",
+    "latest_spawn": "2026-11-13T05:41:02+02:00",
+    "min_hours": 80.0,
+    "max_hours": 182.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Sv6",
+    "boss": "God of Darkness",
+    "last_kill": "2026-11-06T00:50:42+02:00",
+    "killer": "V4GABUND0",
+    "earliest_spawn": "2026-11-09T00:50:42+02:00",
+    "latest_spawn": "2026-11-13T00:50:42+02:00",
+    "min_hours": 72.0,
+    "max_hours": 168.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Sv3",
+    "boss": "Lord of Ferea",
+    "last_kill": "2026-11-05T17:08:32+02:00",
+    "killer": "Guasakaka",
+    "earliest_spawn": "2026-11-09T01:08:32+02:00",
+    "latest_spawn": "2026-11-13T07:08:32+02:00",
+    "min_hours": 80.0,
+    "max_hours": 182.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Sv16",
+    "boss": "Nix",
+    "last_kill": "2026-11-03T15:24:10+02:00",
+    "killer": "MrMyzor",
+    "earliest_spawn": "2026-11-09T01:24:10+02:00",
+    "latest_spawn": "2026-11-09T01:24:10+02:00",
+    "min_hours": 130.0,
+    "max_hours": 130.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Sv11",
+    "boss": "God of Darkness",
+    "last_kill": "2026-11-06T01:49:11+02:00",
+    "killer": "KILA0SM",
+    "earliest_spawn": "2026-11-09T01:49:11+02:00",
+    "latest_spawn": "2026-11-13T01:49:11+02:00",
+    "min_hours": 72.0,
+    "max_hours": 168.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Speed3",
+    "boss": "Nix",
+    "last_kill": "2026-11-03T16:49:34+02:00",
+    "killer": "Messi",
+    "earliest_spawn": "2026-11-09T02:49:34+02:00",
+    "latest_spawn": "2026-11-09T02:49:34+02:00",
+    "min_hours": 130.0,
+    "max_hours": 130.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Sv5",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-05T15:21:28+02:00",
     "killer": "Kasperiano",
-    "next_spawn": "2026-11-09T19:21:28+02:00",
-    "respawn_hours": 100
+    "earliest_spawn": "2026-11-09T03:21:28+02:00",
+    "latest_spawn": "2026-11-09T03:21:28+02:00",
+    "min_hours": 84.0,
+    "max_hours": 84.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Sv7",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-05T15:24:07+02:00",
     "killer": "Kasperiano",
-    "next_spawn": "2026-11-09T19:24:07+02:00",
-    "respawn_hours": 100
+    "earliest_spawn": "2026-11-09T03:24:07+02:00",
+    "latest_spawn": "2026-11-09T03:24:07+02:00",
+    "min_hours": 84.0,
+    "max_hours": 84.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Sv6",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-05T15:25:50+02:00",
     "killer": "Kasperiano",
-    "next_spawn": "2026-11-09T19:25:50+02:00",
-    "respawn_hours": 100
+    "earliest_spawn": "2026-11-09T03:25:50+02:00",
+    "latest_spawn": "2026-11-09T03:25:50+02:00",
+    "min_hours": 84.0,
+    "max_hours": 84.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
-    "server": "Speed5",
+    "server": "Sv5",
     "boss": "Nix",
-    "last_kill": "2026-11-04T11:15:12+02:00",
-    "killer": "Thrak",
-    "next_spawn": "2026-11-09T21:15:12+02:00",
-    "respawn_hours": 130
-  },
-  {
-    "server": "Sv8",
-    "boss": "Lord Silvester",
-    "last_kill": "2026-11-06T03:19:48+02:00",
-    "killer": "allisonSL",
-    "next_spawn": "2026-11-09T21:19:48+02:00",
-    "respawn_hours": 90
-  },
-  {
-    "server": "Sv14",
-    "boss": "Lord of Ferea",
-    "last_kill": "2026-11-06T15:25:45+02:00",
+    "last_kill": "2026-11-03T19:33:05+02:00",
     "killer": "MrMyzor",
-    "next_spawn": "2026-11-10T01:25:45+02:00",
-    "respawn_hours": 82
+    "earliest_spawn": "2026-11-09T05:33:05+02:00",
+    "latest_spawn": "2026-11-09T05:33:05+02:00",
+    "min_hours": 130.0,
+    "max_hours": 130.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
-    "server": "Sv6",
+    "server": "Sv17",
+    "boss": "God of Darkness",
+    "last_kill": "2026-11-06T05:38:17+02:00",
+    "killer": "Kasperiano",
+    "earliest_spawn": "2026-11-09T05:38:17+02:00",
+    "latest_spawn": "2026-11-13T05:38:17+02:00",
+    "min_hours": 72.0,
+    "max_hours": 168.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Speed2",
     "boss": "Nix",
-    "last_kill": "2026-11-04T16:04:13+02:00",
-    "killer": "SolrakDVDL",
-    "next_spawn": "2026-11-10T02:04:13+02:00",
-    "respawn_hours": 130
+    "last_kill": "2026-11-03T20:15:58+02:00",
+    "killer": "Messi",
+    "earliest_spawn": "2026-11-09T06:15:58+02:00",
+    "latest_spawn": "2026-11-09T06:15:58+02:00",
+    "min_hours": 130.0,
+    "max_hours": 130.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
-    "server": "Sv1",
+    "server": "Sv4",
     "boss": "Lord of Ferea",
-    "last_kill": "2026-11-06T17:41:34+02:00",
-    "killer": "MrMyzor",
-    "next_spawn": "2026-11-10T03:41:34+02:00",
-    "respawn_hours": 82
+    "last_kill": "2026-11-06T02:06:09+02:00",
+    "killer": "Babayaga98",
+    "earliest_spawn": "2026-11-09T10:06:09+02:00",
+    "latest_spawn": "2026-11-13T16:06:09+02:00",
+    "min_hours": 80.0,
+    "max_hours": 182.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Speed3",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-06T00:37:52+02:00",
     "killer": "inDriver",
-    "next_spawn": "2026-11-10T04:37:52+02:00",
-    "respawn_hours": 100
+    "earliest_spawn": "2026-11-09T12:37:52+02:00",
+    "latest_spawn": "2026-11-09T12:37:52+02:00",
+    "min_hours": 84.0,
+    "max_hours": 84.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Speed2",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-06T00:51:39+02:00",
     "killer": "LorD",
-    "next_spawn": "2026-11-10T04:51:39+02:00",
-    "respawn_hours": 100
+    "earliest_spawn": "2026-11-09T12:51:39+02:00",
+    "latest_spawn": "2026-11-09T12:51:39+02:00",
+    "min_hours": 84.0,
+    "max_hours": 84.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
-    "server": "Speed4",
+    "server": "Sv1",
     "boss": "Nix",
-    "last_kill": "2026-11-04T19:16:37+02:00",
-    "killer": "Messi",
-    "next_spawn": "2026-11-10T05:16:37+02:00",
-    "respawn_hours": 130
+    "last_kill": "2026-11-04T03:12:43+02:00",
+    "killer": "Babayaga96",
+    "earliest_spawn": "2026-11-09T13:12:43+02:00",
+    "latest_spawn": "2026-11-09T13:12:43+02:00",
+    "min_hours": 130.0,
+    "max_hours": 130.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Speed1",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-06T01:26:25+02:00",
     "killer": "LorD",
-    "next_spawn": "2026-11-10T05:26:25+02:00",
-    "respawn_hours": 100
+    "earliest_spawn": "2026-11-09T13:26:25+02:00",
+    "latest_spawn": "2026-11-09T13:26:25+02:00",
+    "min_hours": 84.0,
+    "max_hours": 84.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Sv19",
+    "boss": "Lord of Ferea",
+    "last_kill": "2026-11-06T05:48:27+02:00",
+    "killer": "Babayaga96",
+    "earliest_spawn": "2026-11-09T13:48:27+02:00",
+    "latest_spawn": "2026-11-13T19:48:27+02:00",
+    "min_hours": 80.0,
+    "max_hours": 182.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Sv2",
+    "boss": "Lord of Ferea",
+    "last_kill": "2026-11-06T07:07:43+02:00",
+    "killer": "Babayaga98",
+    "earliest_spawn": "2026-11-09T15:07:43+02:00",
+    "latest_spawn": "2026-11-13T21:07:43+02:00",
+    "min_hours": 80.0,
+    "max_hours": 182.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Sv11",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-06T04:19:04+02:00",
     "killer": "MacKgorBan",
-    "next_spawn": "2026-11-10T08:19:04+02:00",
-    "respawn_hours": 100
+    "earliest_spawn": "2026-11-09T16:19:04+02:00",
+    "latest_spawn": "2026-11-09T16:19:04+02:00",
+    "min_hours": 84.0,
+    "max_hours": 84.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Sv1",
+    "boss": "God of Darkness",
+    "last_kill": "2026-11-06T18:17:26+02:00",
+    "killer": "SolrakDVDL",
+    "earliest_spawn": "2026-11-09T18:17:26+02:00",
+    "latest_spawn": "2026-11-13T18:17:26+02:00",
+    "min_hours": 72.0,
+    "max_hours": 168.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Speed5",
+    "boss": "Nix",
+    "last_kill": "2026-11-04T11:15:12+02:00",
+    "killer": "Thrak",
+    "earliest_spawn": "2026-11-09T21:15:12+02:00",
+    "latest_spawn": "2026-11-09T21:15:12+02:00",
+    "min_hours": 130.0,
+    "max_hours": 130.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Sv14",
+    "boss": "Lord of Ferea",
+    "last_kill": "2026-11-06T15:25:45+02:00",
+    "killer": "MrMyzor",
+    "earliest_spawn": "2026-11-09T23:25:45+02:00",
+    "latest_spawn": "2026-11-14T05:25:45+02:00",
+    "min_hours": 80.0,
+    "max_hours": 182.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Sv8",
+    "boss": "Lord Silvester",
+    "last_kill": "2026-11-06T03:19:48+02:00",
+    "killer": "allisonSL",
+    "earliest_spawn": "2026-11-10T00:24:48+02:00",
+    "latest_spawn": "2026-11-10T00:24:48+02:00",
+    "min_hours": 93.1,
+    "max_hours": 93.1,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Sv1",
+    "boss": "Lord of Ferea",
+    "last_kill": "2026-11-06T17:41:34+02:00",
+    "killer": "MrMyzor",
+    "earliest_spawn": "2026-11-10T01:41:34+02:00",
+    "latest_spawn": "2026-11-14T07:41:34+02:00",
+    "min_hours": 80.0,
+    "max_hours": 182.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Sv6",
+    "boss": "Nix",
+    "last_kill": "2026-11-04T16:04:13+02:00",
+    "killer": "SolrakDVDL",
+    "earliest_spawn": "2026-11-10T02:04:13+02:00",
+    "latest_spawn": "2026-11-10T02:04:13+02:00",
+    "min_hours": 130.0,
+    "max_hours": 130.0,
+    "raw_date": "2026-10-31 21:02:25"
+  },
+  {
+    "server": "Speed4",
+    "boss": "Nix",
+    "last_kill": "2026-11-04T19:16:37+02:00",
+    "killer": "Messi",
+    "earliest_spawn": "2026-11-10T05:16:37+02:00",
+    "latest_spawn": "2026-11-10T05:16:37+02:00",
+    "min_hours": 130.0,
+    "max_hours": 130.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Sv6",
     "boss": "Lord of Ferea",
     "last_kill": "2026-11-06T23:28:15+02:00",
     "killer": "ElfCitara",
-    "next_spawn": "2026-11-10T09:28:15+02:00",
-    "respawn_hours": 82
+    "earliest_spawn": "2026-11-10T07:28:15+02:00",
+    "latest_spawn": "2026-11-14T13:28:15+02:00",
+    "min_hours": 80.0,
+    "max_hours": 182.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Sv7",
     "boss": "Nix",
     "last_kill": "2026-11-05T02:54:03+02:00",
     "killer": "SolrakDVDL",
-    "next_spawn": "2026-11-10T12:54:03+02:00",
-    "respawn_hours": 130
+    "earliest_spawn": "2026-11-10T12:54:03+02:00",
+    "latest_spawn": "2026-11-10T12:54:03+02:00",
+    "min_hours": 130.0,
+    "max_hours": 130.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Sv2",
     "boss": "Lord Silvester",
     "last_kill": "2026-11-06T21:16:19+02:00",
     "killer": "Douha",
-    "next_spawn": "2026-11-10T15:16:19+02:00",
-    "respawn_hours": 90
+    "earliest_spawn": "2026-11-10T18:21:19+02:00",
+    "latest_spawn": "2026-11-10T18:21:19+02:00",
+    "min_hours": 93.1,
+    "max_hours": 93.1,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Sv1",
     "boss": "Lord Silvester",
     "last_kill": "2026-11-06T21:18:13+02:00",
     "killer": "ELFtitania",
-    "next_spawn": "2026-11-10T15:18:13+02:00",
-    "respawn_hours": 90
+    "earliest_spawn": "2026-11-10T18:23:13+02:00",
+    "latest_spawn": "2026-11-10T18:23:13+02:00",
+    "min_hours": 93.1,
+    "max_hours": 93.1,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Sv3",
     "boss": "Lord Silvester",
     "last_kill": "2026-11-06T21:20:19+02:00",
     "killer": "DarkSumm",
-    "next_spawn": "2026-11-10T15:20:19+02:00",
-    "respawn_hours": 90
+    "earliest_spawn": "2026-11-10T18:25:19+02:00",
+    "latest_spawn": "2026-11-10T18:25:19+02:00",
+    "min_hours": 93.1,
+    "max_hours": 93.1,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Sv4",
     "boss": "Lord Silvester",
     "last_kill": "2026-11-06T21:22:15+02:00",
     "killer": "Douha",
-    "next_spawn": "2026-11-10T15:22:15+02:00",
-    "respawn_hours": 90
+    "earliest_spawn": "2026-11-10T18:27:15+02:00",
+    "latest_spawn": "2026-11-10T18:27:15+02:00",
+    "min_hours": 93.1,
+    "max_hours": 93.1,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Sv14",
     "boss": "Lord Silvester",
     "last_kill": "2026-11-06T21:37:00+02:00",
     "killer": "HyperziN",
-    "next_spawn": "2026-11-10T15:37:00+02:00",
-    "respawn_hours": 90
+    "earliest_spawn": "2026-11-10T18:42:00+02:00",
+    "latest_spawn": "2026-11-10T18:42:00+02:00",
+    "min_hours": 93.1,
+    "max_hours": 93.1,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Sv16",
     "boss": "Lord Silvester",
     "last_kill": "2026-11-06T21:55:06+02:00",
     "killer": "Summ1u",
-    "next_spawn": "2026-11-10T15:55:06+02:00",
-    "respawn_hours": 90
+    "earliest_spawn": "2026-11-10T19:00:06+02:00",
+    "latest_spawn": "2026-11-10T19:00:06+02:00",
+    "min_hours": 93.1,
+    "max_hours": 93.1,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Sv17",
     "boss": "Lord Silvester",
     "last_kill": "2026-11-06T21:57:27+02:00",
     "killer": "SuMuning",
-    "next_spawn": "2026-11-10T15:57:27+02:00",
-    "respawn_hours": 90
+    "earliest_spawn": "2026-11-10T19:02:27+02:00",
+    "latest_spawn": "2026-11-10T19:02:27+02:00",
+    "min_hours": 93.1,
+    "max_hours": 93.1,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Sv15",
     "boss": "Lord Silvester",
     "last_kill": "2026-11-06T21:58:57+02:00",
     "killer": "DeadChoir",
-    "next_spawn": "2026-11-10T15:58:57+02:00",
-    "respawn_hours": 90
+    "earliest_spawn": "2026-11-10T19:03:57+02:00",
+    "latest_spawn": "2026-11-10T19:03:57+02:00",
+    "min_hours": 93.1,
+    "max_hours": 93.1,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Sv19",
     "boss": "Nix",
     "last_kill": "2026-11-05T15:36:22+02:00",
     "killer": "TUITUI",
-    "next_spawn": "2026-11-11T01:36:22+02:00",
-    "respawn_hours": 130
+    "earliest_spawn": "2026-11-11T01:36:22+02:00",
+    "latest_spawn": "2026-11-11T01:36:22+02:00",
+    "min_hours": 130.0,
+    "max_hours": 130.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "SvC",
     "boss": "Nix",
     "last_kill": "2026-11-06T03:40:31+02:00",
     "killer": "WinterRain",
-    "next_spawn": "2026-11-11T13:40:31+02:00",
-    "respawn_hours": 130
+    "earliest_spawn": "2026-11-11T13:40:31+02:00",
+    "latest_spawn": "2026-11-11T13:40:31+02:00",
+    "min_hours": 130.0,
+    "max_hours": 130.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Sv11",
     "boss": "Nix",
     "last_kill": "2026-11-06T07:39:11+02:00",
     "killer": "SolrakDVDL",
-    "next_spawn": "2026-11-11T17:39:11+02:00",
-    "respawn_hours": 130
+    "earliest_spawn": "2026-11-11T17:39:11+02:00",
+    "latest_spawn": "2026-11-11T17:39:11+02:00",
+    "min_hours": 130.0,
+    "max_hours": 130.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Sv3",
     "boss": "Nix",
     "last_kill": "2026-11-06T17:48:19+02:00",
     "killer": "MrMyzor",
-    "next_spawn": "2026-11-12T03:48:19+02:00",
-    "respawn_hours": 130
+    "earliest_spawn": "2026-11-12T03:48:19+02:00",
+    "latest_spawn": "2026-11-12T03:48:19+02:00",
+    "min_hours": 130.0,
+    "max_hours": 130.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Sv15",
     "boss": "Nix",
     "last_kill": "2026-11-06T20:30:53+02:00",
     "killer": "Kasperiano",
-    "next_spawn": "2026-11-12T06:30:53+02:00",
-    "respawn_hours": 130
+    "earliest_spawn": "2026-11-12T06:30:53+02:00",
+    "latest_spawn": "2026-11-12T06:30:53+02:00",
+    "min_hours": 130.0,
+    "max_hours": 130.0,
+    "raw_date": "2026-10-31 21:02:25"
   },
   {
     "server": "Sv8",
     "boss": "Nix",
     "last_kill": "2026-11-06T23:27:55+02:00",
     "killer": "NayrobSL",
-    "next_spawn": "2026-11-12T09:27:55+02:00",
-    "respawn_hours": 130
+    "earliest_spawn": "2026-11-12T09:27:55+02:00",
+    "latest_spawn": "2026-11-12T09:27:55+02:00",
+    "min_hours": 130.0,
+    "max_hours": 130.0,
+    "raw_date": "2026-10-31 21:02:25"
   }
 ]
