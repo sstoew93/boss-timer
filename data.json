@@ -250,9 +250,9 @@
   {
     "server": "Sv1",
     "boss": "Lord Silvester",
-    "last_kill": "2026-11-02T19:10:02",
-    "killer": "xFloryn",
-    "next_spawn": "2026-11-06T13:10:02",
+    "last_kill": "2026-11-06T16:18:13",
+    "killer": "ELFtitania",
+    "next_spawn": "2026-11-10T10:18:13",
     "respawn_hours": 90
   },
   {
@@ -634,9 +634,9 @@
   {
     "server": "Sv2",
     "boss": "Lord Silvester",
-    "last_kill": "2026-11-02T19:08:13",
-    "killer": "ChambeX",
-    "next_spawn": "2026-11-06T13:08:13",
+    "last_kill": "2026-11-06T16:16:19",
+    "killer": "Douha",
+    "next_spawn": "2026-11-10T10:16:19",
     "respawn_hours": 90
   },
   {
