@@ -131,7 +131,7 @@ function renderTable() {
       </td>
       <td>
           <div id="${statusId}" class="status-pill dead">
-              <div class="status-dot"></div> Dead • counting
+              <div class="status-dot"></div> Dead
           </div>
           <div class="timer-main" id="${timerId}">Calculating...</div>
           <div class="timer-sub" id="${maxTimeId}"></div>
@@ -176,7 +176,7 @@ function updateTimers() {
       timerEl.style.color = "#fafafa";
       
       statusEl.className = "status-pill dead";
-      statusEl.innerHTML = '<div class="status-dot"></div> Dead • counting';
+      statusEl.innerHTML = '<div class="status-dot"></div> Dead';
       
       maxEl.textContent = `max in ${formatTimeRemaining(timeToMax)}`;
 
@@ -192,7 +192,7 @@ function updateTimers() {
 
     } else {
       // --- ALIVE ---
-      timerEl.textContent = "ALIVE";
+      timerEl.textContent = "GO HUNT";
       timerEl.style.color = "#10b981"; // Emerald
       
       statusEl.className = "status-pill alive";
