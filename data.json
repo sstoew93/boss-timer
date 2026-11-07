@@ -176,17 +176,6 @@
     "raw_date": "2026-11-04 09:09:45"
   },
   {
-    "server": "Sv15",
-    "boss": "Core Magriffy",
-    "last_kill": "2026-11-04T10:56:07+02:00",
-    "killer": "Ruxo",
-    "earliest_spawn": "2026-11-07T22:56:07+02:00",
-    "latest_spawn": "2026-11-07T22:56:07+02:00",
-    "min_hours": 84.0,
-    "max_hours": 84.0,
-    "raw_date": "2026-11-04 05:56:07"
-  },
-  {
     "server": "Sv3",
     "boss": "God of Darkness",
     "last_kill": "2026-11-04T23:13:16+02:00",
@@ -1439,6 +1428,17 @@
     "min_hours": 84.0,
     "max_hours": 84.0,
     "raw_date": "2026-11-07 18:28:18"
+  },
+  {
+    "server": "Sv15",
+    "boss": "Core Magriffy",
+    "last_kill": "2026-11-07T23:32:57+02:00",
+    "killer": "TORIANO",
+    "earliest_spawn": "2026-11-11T11:32:57+02:00",
+    "latest_spawn": "2026-11-11T11:32:57+02:00",
+    "min_hours": 84.0,
+    "max_hours": 84.0,
+    "raw_date": "2026-11-07 18:32:57"
   },
   {
     "server": "SvC",
