@@ -198,17 +198,6 @@
     "raw_date": "2026-11-05 23:51:13"
   },
   {
-    "server": "Sv14",
-    "boss": "Core Magriffy",
-    "last_kill": "2026-11-04T08:51:18+02:00",
-    "killer": "JexusGL",
-    "earliest_spawn": "2026-11-07T20:51:18+02:00",
-    "latest_spawn": "2026-11-07T20:51:18+02:00",
-    "min_hours": 84.0,
-    "max_hours": 84.0,
-    "raw_date": "2026-11-04 03:51:18"
-  },
-  {
     "server": "Sv1",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-04T08:52:10+02:00",
@@ -1461,6 +1450,17 @@
     "min_hours": 84.0,
     "max_hours": 84.0,
     "raw_date": "2026-11-07 16:22:56"
+  },
+  {
+    "server": "Sv14",
+    "boss": "Core Magriffy",
+    "last_kill": "2026-11-07T21:28:57+02:00",
+    "killer": "mOnRaCWB",
+    "earliest_spawn": "2026-11-11T09:28:57+02:00",
+    "latest_spawn": "2026-11-11T09:28:57+02:00",
+    "min_hours": 84.0,
+    "max_hours": 84.0,
+    "raw_date": "2026-11-07 16:28:57"
   },
   {
     "server": "SvC",
