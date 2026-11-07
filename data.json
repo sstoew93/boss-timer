@@ -44,17 +44,6 @@
     "raw_date": "2026-11-02 16:32:11"
   },
   {
-    "server": "Speed5",
-    "boss": "Lord of Ferea",
-    "last_kill": "2026-11-02T17:44:00+02:00",
-    "killer": "lIlIllIlIl",
-    "earliest_spawn": "2026-11-06T01:44:00+02:00",
-    "latest_spawn": "2026-11-10T07:44:00+02:00",
-    "min_hours": 80.0,
-    "max_hours": 182.0,
-    "raw_date": "2026-11-02 12:44:00"
-  },
-  {
     "server": "Speed2",
     "boss": "God of Darkness",
     "last_kill": "2026-11-03T14:46:53+02:00",
@@ -1417,6 +1406,17 @@
     "min_hours": 80.0,
     "max_hours": 182.0,
     "raw_date": "2026-11-07 07:08:19"
+  },
+  {
+    "server": "Speed5",
+    "boss": "Lord of Ferea",
+    "last_kill": "2026-11-07T12:52:12+02:00",
+    "killer": "MeloPone",
+    "earliest_spawn": "2026-11-10T20:52:12+02:00",
+    "latest_spawn": "2026-11-15T02:52:12+02:00",
+    "min_hours": 80.0,
+    "max_hours": 182.0,
+    "raw_date": "2026-11-07 07:52:12"
   },
   {
     "server": "Sv19",
