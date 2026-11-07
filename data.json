@@ -792,17 +792,6 @@
     "raw_date": "2026-11-05 10:25:50"
   },
   {
-    "server": "SvC",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-07T12:12:52+02:00",
-    "killer": "L0B0MG",
-    "earliest_spawn": "2026-11-09T04:12:52+02:00",
-    "latest_spawn": "2026-11-09T04:12:52+02:00",
-    "min_hours": 40.0,
-    "max_hours": 40.0,
-    "raw_date": "2026-11-07 07:12:52"
-  },
-  {
     "server": "Speed4",
     "boss": "Selupan",
     "last_kill": "2026-11-07T18:26:39+02:00",
@@ -1054,6 +1043,17 @@
     "min_hours": 84.0,
     "max_hours": 84.0,
     "raw_date": "2026-11-05 20:26:25"
+  },
+  {
+    "server": "SvC",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-07T21:41:03+02:00",
+    "killer": "JeiYacK",
+    "earliest_spawn": "2026-11-09T13:41:03+02:00",
+    "latest_spawn": "2026-11-09T13:41:03+02:00",
+    "min_hours": 40.0,
+    "max_hours": 40.0,
+    "raw_date": "2026-11-07 16:41:03"
   },
   {
     "server": "Sv19",
