@@ -209,17 +209,6 @@
     "raw_date": "2026-11-06 04:42:28"
   },
   {
-    "server": "Sv1",
-    "boss": "Selupan",
-    "last_kill": "2026-11-06T09:47:00+02:00",
-    "killer": "Akyris",
-    "earliest_spawn": "2026-11-07T19:47:00+02:00",
-    "latest_spawn": "2026-11-07T19:47:00+02:00",
-    "min_hours": 34.0,
-    "max_hours": 34.0,
-    "raw_date": "2026-11-06 04:47:00"
-  },
-  {
     "server": "Speed1",
     "boss": "Nightmare",
     "last_kill": "2026-11-06T03:49:13+02:00",
@@ -1021,6 +1010,17 @@
     "min_hours": 34.0,
     "max_hours": 34.0,
     "raw_date": "2026-11-07 14:49:59"
+  },
+  {
+    "server": "Sv1",
+    "boss": "Selupan",
+    "last_kill": "2026-11-07T19:50:52+02:00",
+    "killer": "MrMyzor",
+    "earliest_spawn": "2026-11-09T05:50:52+02:00",
+    "latest_spawn": "2026-11-09T05:50:52+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "raw_date": "2026-11-07 14:50:52"
   },
   {
     "server": "Speed5",
