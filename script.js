@@ -200,18 +200,18 @@ function updateTimers() {
       timerEl.textContent = formatTimeRemaining(timeToMin);
       timerEl.style.color = "#fafafa";
       statusEl.className = "status-pill dead";
-      statusEl.innerHTML = '<div class="status-dot"></div> Dead • counting';
-      maxEl.textContent = `max in ${formatTimeRemaining(timeToMax)}`;
+      statusEl.innerHTML = '<div class="status-dot"></div> Dead';
+      maxEl.textContent = `Max in ${formatTimeRemaining(timeToMax)}`;
 
     } else if (timeToMax > 0) {
       timerEl.textContent = "MAY SPAWN";
       timerEl.style.color = "#f59e0b"; 
       statusEl.className = "status-pill window";
       statusEl.innerHTML = '<div class="status-dot"></div> Window Open';
-      maxEl.textContent = `guaranteed in ${formatTimeRemaining(timeToMax)}`;
+      maxEl.textContent = ``; //guaranteed in ${formatTimeRemaining(timeToMax)}
 
     } else {
-      timerEl.textContent = "ALIVE";
+      timerEl.textContent = "GO HUNT";
       timerEl.style.color = "#10b981"; 
       statusEl.className = "status-pill alive";
       statusEl.innerHTML = '<div class="status-dot"></div> Alive';
