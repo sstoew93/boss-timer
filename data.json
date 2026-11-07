@@ -209,17 +209,6 @@
     "raw_date": "2026-11-05 23:53:44"
   },
   {
-    "server": "Sv3",
-    "boss": "Core Magriffy",
-    "last_kill": "2026-11-04T08:59:10+02:00",
-    "killer": "JexusGL",
-    "earliest_spawn": "2026-11-07T20:59:10+02:00",
-    "latest_spawn": "2026-11-07T20:59:10+02:00",
-    "min_hours": 84.0,
-    "max_hours": 84.0,
-    "raw_date": "2026-11-04 03:59:10"
-  },
-  {
     "server": "Sv8",
     "boss": "Lord of Ferea",
     "last_kill": "2026-11-04T14:09:45+02:00",
@@ -1461,6 +1450,17 @@
     "min_hours": 84.0,
     "max_hours": 84.0,
     "raw_date": "2026-11-07 16:32:50"
+  },
+  {
+    "server": "Sv3",
+    "boss": "Core Magriffy",
+    "last_kill": "2026-11-07T21:36:29+02:00",
+    "killer": "PaulaLeaLL",
+    "earliest_spawn": "2026-11-11T09:36:29+02:00",
+    "latest_spawn": "2026-11-11T09:36:29+02:00",
+    "min_hours": 84.0,
+    "max_hours": 84.0,
+    "raw_date": "2026-11-07 16:36:29"
   },
   {
     "server": "SvC",
