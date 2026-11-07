@@ -209,17 +209,6 @@
     "raw_date": "2026-11-05 22:49:13"
   },
   {
-    "server": "Sv2",
-    "boss": "Selupan",
-    "last_kill": "2026-11-06T09:52:29+02:00",
-    "killer": "Jot4",
-    "earliest_spawn": "2026-11-07T19:52:29+02:00",
-    "latest_spawn": "2026-11-07T19:52:29+02:00",
-    "min_hours": 34.0,
-    "max_hours": 34.0,
-    "raw_date": "2026-11-06 04:52:29"
-  },
-  {
     "server": "Sv3",
     "boss": "Selupan",
     "last_kill": "2026-11-06T09:54:23+02:00",
@@ -1021,6 +1010,17 @@
     "min_hours": 34.0,
     "max_hours": 34.0,
     "raw_date": "2026-11-07 14:52:38"
+  },
+  {
+    "server": "Sv2",
+    "boss": "Selupan",
+    "last_kill": "2026-11-07T19:56:23+02:00",
+    "killer": "ixiTCDixi",
+    "earliest_spawn": "2026-11-09T05:56:23+02:00",
+    "latest_spawn": "2026-11-09T05:56:23+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "raw_date": "2026-11-07 14:56:23"
   },
   {
     "server": "Speed5",
