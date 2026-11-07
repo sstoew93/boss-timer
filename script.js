@@ -37,7 +37,7 @@ function loadData() {
     fetch('data.json')
       .then(response => response.json())
       .then(data => {
-        allData = data; // Data is already sorted by earliest_spawn from Python
+        allData = data; 
         
         allData.forEach(item => {
           uniqueServers.add(item.server);
@@ -53,21 +53,12 @@ function loadData() {
       .catch(error => console.error('Error loading data:', error));
 }
 
-// Function to format date nicely (e.g., 05.11, 21:51)
-function formatShortDate(dateString) {
+// Format date to look like: "11/07, 04:22 AM"
+function formatDateShort(dateString) {
     const d = new Date(dateString);
-    const options = { timeZone: 'Europe/Sofia', day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' };
-    const formatter = new Intl.DateTimeFormat('en-GB', options);
-    const parts = formatter.formatToParts(d);
-    return `${parts.find(p => p.type === 'day').value}.${parts.find(p => p.type === 'month').value}, ${parts.find(p => p.type === 'hour').value}:${parts.find(p => p.type === 'minute').value}`;
-}
-
-function formatFullDate(dateString) {
-    const d = new Date(dateString);
-    const options = { timeZone: 'Europe/Sofia', day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', hourCycle: 'h23' };
-    const formatter = new Intl.DateTimeFormat('en-GB', options);
-    const parts = formatter.formatToParts(d);
-    return `${parts.find(p => p.type === 'day').value}.${parts.find(p => p.type === 'month').value}.${parts.find(p => p.type === 'year').value} г., ${parts.find(p => p.type === 'hour').value}:${parts.find(p => p.type === 'minute').value}:${parts.find(p => p.type === 'second').value} ч.`;
+    const options = { timeZone: 'Europe/Sofia', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hour12: true };
+    // en-US gives MM/DD, HH:MM AM/PM
+    return new Intl.DateTimeFormat('en-US', options).format(d);
 }
 
 function toggleDropdown(id) {
@@ -111,46 +102,49 @@ function renderTable() {
   });
 
   if (filteredData.length === 0) {
-    tbody.innerHTML = '<tr><td colspan="7" style="text-align:center;">No results found.</td></tr>';
+    tbody.innerHTML = '<tr><td colspan="4" style="text-align:center; color:#71717a; padding: 40px;">No results found.</td></tr>';
     return;
   }
 
   filteredData.forEach(item => {
     const row = document.createElement('tr');
     
-    const formattedLastKill = formatShortDate(item.last_kill);
-    const fullLastKill = formatFullDate(item.last_kill);
-    const fullEarliest = formatFullDate(item.earliest_spawn);
-    const fullLatest = formatFullDate(item.latest_spawn);
-    
-    // Format the spawn window beautifully
-    const windowStr = `${formatShortDate(item.earliest_spawn)} <br><span style="color:#888;font-size:12px;">to</span><br> ${formatShortDate(item.latest_spawn)}`;
+    const windowStart = formatDateShort(item.earliest_spawn);
+    const windowEnd = formatDateShort(item.latest_spawn);
     
     const timerId = `timer-${item.server}-${item.boss}`.replace(/[^a-zA-Z0-9-]/g, '');
     const statusId = `status-${item.server}-${item.boss}`.replace(/[^a-zA-Z0-9-]/g, '');
+    const maxTimeId = `max-${item.server}-${item.boss}`.replace(/[^a-zA-Z0-9-]/g, '');
 
+    // Building the exact layout from your screenshot
     row.innerHTML = `
-      <td>${item.server}</td>
-      <td>${item.boss}</td>
-      <td id="${statusId}" class="status-dead">💀 DEAD</td>
-      <td>${item.killer}</td>
       <td>
-        <div class="tooltip">${formattedLastKill}
-          <span class="tooltiptext">Full BG Time: ${fullLastKill}<br><br>Raw Brazil: ${item.raw_date}</span>
-        </div>
+          <div class="boss-name">${item.boss}</div>
+          <div class="boss-subtext">Last kill by ${item.killer}</div>
       </td>
       <td>
-        <div class="tooltip">${windowStr}
-          <span class="tooltiptext">Earliest: ${fullEarliest}<br>Latest: ${fullLatest}<br><br>Fixed Math: Kill Time + ${item.min_hours}h to ${item.max_hours}h</span>
-        </div>
+          <span class="server-badge">${item.server}</span>
       </td>
-      <td class="countdown" id="${timerId}">Calculating...</td>
+      <td>
+          <div class="window-text">
+              <span>Window:</span> <strong>${windowStart}</strong> to<br>
+              <strong>${windowEnd}</strong>
+          </div>
+      </td>
+      <td>
+          <div id="${statusId}" class="status-pill dead">
+              <div class="status-dot"></div> Dead • counting
+          </div>
+          <div class="timer-main" id="${timerId}">Calculating...</div>
+          <div class="timer-sub" id="${maxTimeId}"></div>
+      </td>
     `;
     tbody.appendChild(row);
 
     countdownTimers.push({
-      elementId: timerId,
-      statusId: statusId, 
+      timerId: timerId,
+      statusId: statusId,
+      maxTimeId: maxTimeId,
       earliestSpawnTime: new Date(item.earliest_spawn).getTime(),
       latestSpawnTime: new Date(item.latest_spawn).getTime()
     });
@@ -159,44 +153,55 @@ function renderTable() {
   updateTimers();
 }
 
+// Helper function to format hours/mins/secs
+function formatTimeRemaining(ms) {
+    const hours = Math.floor(ms / (1000 * 60 * 60));
+    const minutes = Math.floor((ms % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((ms % (1000 * 60)) / 1000);
+    return `${String(hours).padStart(2, '0')}h ${String(minutes).padStart(2, '0')}m ${String(seconds).padStart(2, '0')}s`;
+}
+
 function updateTimers() {
   const now = new Date().getTime();
   
   countdownTimers.forEach(timer => {
-    const element = document.getElementById(timer.elementId);
-    const statusElement = document.getElementById(timer.statusId);
-    if (!element || !statusElement) return; 
+    const timerEl = document.getElementById(timer.timerId);
+    const statusEl = document.getElementById(timer.statusId);
+    const maxEl = document.getElementById(timer.maxTimeId);
+    if (!timerEl || !statusEl || !maxEl) return; 
 
     const timeToMin = timer.earliestSpawnTime - now;
     const timeToMax = timer.latestSpawnTime - now;
 
     if (timeToMin > 0) {
-      // --- BOSS IS DEAD ---
-      const hours = Math.floor(timeToMin / (1000 * 60 * 60));
-      const minutes = Math.floor((timeToMin % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((timeToMin % (1000 * 60)) / 1000);
+      // --- DEAD ---
+      timerEl.textContent = formatTimeRemaining(timeToMin);
+      timerEl.style.color = "#111";
       
-      element.textContent = `${hours}h ${minutes}m ${seconds}s`;
-      element.style.color = "#c9d1d9"; // Reset to normal text color
+      statusEl.className = "status-pill dead";
+      statusEl.innerHTML = '<div class="status-dot"></div> Dead • counting';
       
-      statusElement.textContent = "💀 DEAD";
-      statusElement.className = "status-badge status-dead";
+      maxEl.textContent = `max in ${formatTimeRemaining(timeToMax)}`;
 
     } else if (timeToMax > 0) {
-      // --- SPAWN WINDOW IS OPEN ---
-      element.textContent = "MAY SPAWN";
-      element.style.color = "#d29922"; // Yellow/Orange text
+      // --- WINDOW OPEN ---
+      timerEl.textContent = "MAY SPAWN";
+      timerEl.style.color = "#f59e0b"; // Orange
       
-      statusElement.textContent = "🟡 HUNT NOW";
-      statusElement.className = "status-badge status-window";
+      statusEl.className = "status-pill window";
+      statusEl.innerHTML = '<div class="status-dot"></div> Window Open';
+      
+      maxEl.textContent = `guaranteed in ${formatTimeRemaining(timeToMax)}`;
 
     } else {
-      // --- BOSS IS ALIVE (MAX TIME PASSED) ---
-      element.textContent = "SPAWNED";
-      element.style.color = "#3fb950"; // Green text
+      // --- ALIVE ---
+      timerEl.textContent = "ALIVE";
+      timerEl.style.color = "#10b981"; // Green
       
-      statusElement.textContent = "🟢 ALIVE";
-      statusElement.className = "status-badge status-alive";
+      statusEl.className = "status-pill alive";
+      statusEl.innerHTML = '<div class="status-dot"></div> Alive';
+      
+      maxEl.textContent = `spawned`;
     }
   });
 }
