@@ -234,7 +234,7 @@ function updateTimers() {
       timerEl.style.color = "#10b981"; 
       statusEl.className = "status-pill alive";
       statusEl.innerHTML = '<div class="status-dot"></div> Alive';
-      maxEl.textContent = `spawned`;
+      maxEl.textContent = ``;
     }
   });
 }
