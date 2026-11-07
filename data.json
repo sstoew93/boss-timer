@@ -583,17 +583,6 @@
     "raw_date": "2026-11-07 05:08:29"
   },
   {
-    "server": "Sv1",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-07T04:14:07+02:00",
-    "killer": "QuistisFF8",
-    "earliest_spawn": "2026-11-08T20:14:07+02:00",
-    "latest_spawn": "2026-11-08T20:14:07+02:00",
-    "min_hours": 40.0,
-    "max_hours": 40.0,
-    "raw_date": "2026-11-06 23:14:07"
-  },
-  {
     "server": "Sv10",
     "boss": "Lord Silvester",
     "last_kill": "2026-11-04T23:33:20+02:00",
@@ -1065,6 +1054,17 @@
     "min_hours": 40.0,
     "max_hours": 40.0,
     "raw_date": "2026-11-07 16:49:07"
+  },
+  {
+    "server": "Sv1",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-07T21:50:49+02:00",
+    "killer": "LUISFLO133",
+    "earliest_spawn": "2026-11-09T13:50:49+02:00",
+    "latest_spawn": "2026-11-09T13:50:49+02:00",
+    "min_hours": 40.0,
+    "max_hours": 40.0,
+    "raw_date": "2026-11-07 16:50:49"
   },
   {
     "server": "Sv2",
