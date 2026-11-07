@@ -176,17 +176,6 @@
     "raw_date": "2026-11-04 05:49:26"
   },
   {
-    "server": "Sv4",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-06T03:15:04+02:00",
-    "killer": "Eternuxd",
-    "earliest_spawn": "2026-11-07T19:15:04+02:00",
-    "latest_spawn": "2026-11-07T19:15:04+02:00",
-    "min_hours": 40.0,
-    "max_hours": 40.0,
-    "raw_date": "2026-11-05 22:15:04"
-  },
-  {
     "server": "Sv5",
     "boss": "Nightmare",
     "last_kill": "2026-11-06T03:28:45+02:00",
@@ -1065,6 +1054,17 @@
     "min_hours": 80.0,
     "max_hours": 182.0,
     "raw_date": "2026-11-05 21:06:09"
+  },
+  {
+    "server": "Sv4",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-07T20:14:45+02:00",
+    "killer": "PinkKitty",
+    "earliest_spawn": "2026-11-09T12:14:45+02:00",
+    "latest_spawn": "2026-11-09T12:14:45+02:00",
+    "min_hours": 40.0,
+    "max_hours": 40.0,
+    "raw_date": "2026-11-07 15:14:45"
   },
   {
     "server": "Speed3",
