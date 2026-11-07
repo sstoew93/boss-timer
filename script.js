@@ -57,7 +57,6 @@ function loadData() {
 function formatDateShort(dateString) {
     const d = new Date(dateString);
     const options = { timeZone: 'Europe/Sofia', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hour12: true };
-    // en-US gives MM/DD, HH:MM AM/PM
     return new Intl.DateTimeFormat('en-US', options).format(d);
 }
 
@@ -102,7 +101,7 @@ function renderTable() {
   });
 
   if (filteredData.length === 0) {
-    tbody.innerHTML = '<tr><td colspan="4" style="text-align:center; color:#71717a; padding: 40px;">No results found.</td></tr>';
+    tbody.innerHTML = '<tr><td colspan="4" style="text-align:center; color:#a1a1aa; padding: 40px;">No results found.</td></tr>';
     return;
   }
 
@@ -116,7 +115,6 @@ function renderTable() {
     const statusId = `status-${item.server}-${item.boss}`.replace(/[^a-zA-Z0-9-]/g, '');
     const maxTimeId = `max-${item.server}-${item.boss}`.replace(/[^a-zA-Z0-9-]/g, '');
 
-    // Building the exact layout from your screenshot
     row.innerHTML = `
       <td>
           <div class="boss-name">${item.boss}</div>
@@ -153,7 +151,6 @@ function renderTable() {
   updateTimers();
 }
 
-// Helper function to format hours/mins/secs
 function formatTimeRemaining(ms) {
     const hours = Math.floor(ms / (1000 * 60 * 60));
     const minutes = Math.floor((ms % (1000 * 60 * 60)) / (1000 * 60));
@@ -176,7 +173,7 @@ function updateTimers() {
     if (timeToMin > 0) {
       // --- DEAD ---
       timerEl.textContent = formatTimeRemaining(timeToMin);
-      timerEl.style.color = "#111";
+      timerEl.style.color = "#fafafa";
       
       statusEl.className = "status-pill dead";
       statusEl.innerHTML = '<div class="status-dot"></div> Dead • counting';
@@ -186,7 +183,7 @@ function updateTimers() {
     } else if (timeToMax > 0) {
       // --- WINDOW OPEN ---
       timerEl.textContent = "MAY SPAWN";
-      timerEl.style.color = "#f59e0b"; // Orange
+      timerEl.style.color = "#f59e0b"; // Amber
       
       statusEl.className = "status-pill window";
       statusEl.innerHTML = '<div class="status-dot"></div> Window Open';
@@ -196,7 +193,7 @@ function updateTimers() {
     } else {
       // --- ALIVE ---
       timerEl.textContent = "ALIVE";
-      timerEl.style.color = "#10b981"; // Green
+      timerEl.style.color = "#10b981"; // Emerald
       
       statusEl.className = "status-pill alive";
       statusEl.innerHTML = '<div class="status-dot"></div> Alive';
