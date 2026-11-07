@@ -154,17 +154,6 @@
     "raw_date": "2026-11-03 15:25:17"
   },
   {
-    "server": "Sv6",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-05T15:55:26+02:00",
-    "killer": "JexusGL",
-    "earliest_spawn": "2026-11-07T07:55:26+02:00",
-    "latest_spawn": "2026-11-07T07:55:26+02:00",
-    "min_hours": 40.0,
-    "max_hours": 40.0,
-    "raw_date": "2026-11-05 10:55:26"
-  },
-  {
     "server": "Sv7",
     "boss": "Lord of Ferea",
     "last_kill": "2026-11-03T23:58:27+02:00",
@@ -1043,6 +1032,17 @@
     "min_hours": 80.0,
     "max_hours": 182.0,
     "raw_date": "2026-11-05 12:08:32"
+  },
+  {
+    "server": "Sv6",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-07T09:13:45+02:00",
+    "killer": "MrMyzor",
+    "earliest_spawn": "2026-11-09T01:13:45+02:00",
+    "latest_spawn": "2026-11-09T01:13:45+02:00",
+    "min_hours": 40.0,
+    "max_hours": 40.0,
+    "raw_date": "2026-11-07 04:13:45"
   },
   {
     "server": "Sv16",
