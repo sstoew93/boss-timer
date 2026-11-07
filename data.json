@@ -187,17 +187,6 @@
     "raw_date": "2026-11-05 23:47:57"
   },
   {
-    "server": "Sv3",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-06T04:53:44+02:00",
-    "killer": "ExpressMg",
-    "earliest_spawn": "2026-11-07T20:53:44+02:00",
-    "latest_spawn": "2026-11-07T20:53:44+02:00",
-    "min_hours": 40.0,
-    "max_hours": 40.0,
-    "raw_date": "2026-11-05 23:53:44"
-  },
-  {
     "server": "Sv8",
     "boss": "Lord of Ferea",
     "last_kill": "2026-11-04T14:09:45+02:00",
@@ -1065,6 +1054,17 @@
     "min_hours": 40.0,
     "max_hours": 40.0,
     "raw_date": "2026-11-07 16:50:49"
+  },
+  {
+    "server": "Sv3",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-07T21:58:04+02:00",
+    "killer": "PinkKitty",
+    "earliest_spawn": "2026-11-09T13:58:04+02:00",
+    "latest_spawn": "2026-11-09T13:58:04+02:00",
+    "min_hours": 40.0,
+    "max_hours": 40.0,
+    "raw_date": "2026-11-07 16:58:04"
   },
   {
     "server": "Sv2",
