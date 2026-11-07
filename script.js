@@ -55,8 +55,16 @@ function loadData() {
 
 function formatDateShort(dateString) {
     const d = new Date(dateString);
-    const options = { timeZone: 'Europe/Sofia', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hour12: true };
-    return new Intl.DateTimeFormat('en-US', options).format(d);
+    const options = { 
+        timeZone: 'Europe/Sofia', 
+        day: '2-digit', 
+        month: '2-digit', 
+        hour: '2-digit', 
+        minute: '2-digit', 
+        hour12: false // Forces 24-hour time
+    };
+    // 'en-GB' forces Day/Month order
+    return new Intl.DateTimeFormat('en-GB', options).format(d);
 }
 
 function toggleDropdown(id) {
