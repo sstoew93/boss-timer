@@ -53,25 +53,51 @@ function loadData() {
       .catch(error => console.error('Error loading data:', error));
 }
 
-// Format date to look like: "11/07, 04:22 AM"
 function formatDateShort(dateString) {
     const d = new Date(dateString);
     const options = { timeZone: 'Europe/Sofia', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hour12: true };
     return new Intl.DateTimeFormat('en-US', options).format(d);
 }
 
+// --- UPDATED DROPDOWN LOGIC ---
 function toggleDropdown(id) {
-    document.getElementById(id).classList.toggle("show");
+    const targetDropdown = document.getElementById(id);
+    const allDropdowns = document.getElementsByClassName("dropdown-content");
+    
+    // Loop through all dropdowns
+    for (let i = 0; i < allDropdowns.length; i++) {
+        if (allDropdowns[i].id === id) {
+            // Toggle the clicked one
+            targetDropdown.classList.toggle("show");
+        } else {
+            // Force close the others
+            allDropdowns[i].classList.remove("show");
+        }
+    }
 }
 
+// Close dropdowns when clicking outside
 window.onclick = function(event) {
     if (!event.target.closest('.dropdown')) {
         const dropdowns = document.getElementsByClassName("dropdown-content");
         for (let i = 0; i < dropdowns.length; i++) {
-            if (dropdowns[i].classList.contains('show')) dropdowns[i].classList.remove('show');
+            if (dropdowns[i].classList.contains('show')) {
+                dropdowns[i].classList.remove('show');
+            }
         }
     }
 }
+
+// Close dropdown when the mouse leaves the dropdown area entirely
+document.querySelectorAll('.dropdown').forEach(dropdown => {
+    dropdown.addEventListener('mouseleave', () => {
+        const content = dropdown.querySelector('.dropdown-content');
+        if (content) {
+            content.classList.remove('show');
+        }
+    });
+});
+// ------------------------------
 
 function buildFilters(containerId, items, type) {
   const container = document.getElementById(containerId);
@@ -131,7 +157,7 @@ function renderTable() {
       </td>
       <td>
           <div id="${statusId}" class="status-pill dead">
-              <div class="status-dot"></div> Dead
+              <div class="status-dot"></div> Dead • counting
           </div>
           <div class="timer-main" id="${timerId}">Calculating...</div>
           <div class="timer-sub" id="${maxTimeId}"></div>
@@ -171,33 +197,24 @@ function updateTimers() {
     const timeToMax = timer.latestSpawnTime - now;
 
     if (timeToMin > 0) {
-      // --- DEAD ---
       timerEl.textContent = formatTimeRemaining(timeToMin);
       timerEl.style.color = "#fafafa";
-      
       statusEl.className = "status-pill dead";
-      statusEl.innerHTML = '<div class="status-dot"></div> Dead';
-      
+      statusEl.innerHTML = '<div class="status-dot"></div> Dead • counting';
       maxEl.textContent = `max in ${formatTimeRemaining(timeToMax)}`;
 
     } else if (timeToMax > 0) {
-      // --- WINDOW OPEN ---
       timerEl.textContent = "MAY SPAWN";
-      timerEl.style.color = "#f59e0b"; // Amber
-      
+      timerEl.style.color = "#f59e0b"; 
       statusEl.className = "status-pill window";
       statusEl.innerHTML = '<div class="status-dot"></div> Window Open';
-      
-    maxEl.textContent = ``; //guaranteed in ${formatTimeRemaining(timeToMax)}
+      maxEl.textContent = `guaranteed in ${formatTimeRemaining(timeToMax)}`;
 
     } else {
-      // --- ALIVE ---
-      timerEl.textContent = "GO HUNT";
-      timerEl.style.color = "#10b981"; // Emerald
-      
+      timerEl.textContent = "ALIVE";
+      timerEl.style.color = "#10b981"; 
       statusEl.className = "status-pill alive";
       statusEl.innerHTML = '<div class="status-dot"></div> Alive';
-      
       maxEl.textContent = `spawned`;
     }
   });
