@@ -7,27 +7,85 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Import Orbitron for the header, and Inter for the rest -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
 
     <style>
         body { 
             font-family: 'Inter', sans-serif; 
-            background: #09090b; /* Very dark background */
+            background: #09090b; 
             background-image: radial-gradient(circle at 50% 0%, #1c1c22 0%, #09090b 60%);
             color: #fafafa; 
             padding: 40px 20px; 
             margin: 0;
             min-height: 100vh;
+            overflow-x: hidden;
         }
 
-        /* --- HEADER --- */
-        .main-header { text-align: center; margin-bottom: 30px; }
-        .main-header h1 { 
-            font-size: 2.2rem; font-weight: 700; margin: 0; 
-            letter-spacing: -1px; color: #fff;
-            text-shadow: 0 0 20px rgba(255,255,255,0.1);
+        /* --- COOL STYLIZED HEADER --- */
+        .main-header { 
+            text-align: center; 
+            margin-bottom: 40px; 
+            perspective: 1000px;
         }
-        .subtitle { text-align: center; color: #a1a1aa; font-size: 14px; margin-bottom: 30px; }
+
+        .cool-header {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(2rem, 5vw, 3.5rem); /* Responsive font size */
+            font-weight: 900;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            position: relative;
+            display: inline-block;
+            
+            /* Metallic/Neon Gradient */
+            background: linear-gradient(135deg, #f59e0b 0%, #ef4444 40%, #a855f7 60%, #3b82f6 100%);
+            background-size: 200% auto;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            
+            /* Smooth animations */
+            animation: shine 4s linear infinite, float 3s ease-in-out infinite;
+            
+            /* Subtle text shadow for depth */
+            text-shadow: 0px 4px 15px rgba(239, 68, 68, 0.2);
+            
+            /* Variables for the JS mouse tracking */
+            --mouse-x: 50%;
+            --mouse-y: 50%;
+        }
+
+        /* The JS Spotlight Overlay */
+        .cool-header::before {
+            content: "MEGA Mu BOSS Timer";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(
+                circle at var(--mouse-x) var(--mouse-y), 
+                rgba(255, 255, 255, 0.9) 0%, 
+                transparent 40%
+            );
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            z-index: 1;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        /* Show the spotlight on hover */
+        .cool-header:hover::before {
+            opacity: 1;
+        }
+
+        /* Subtitle */
+        .subtitle { 
+            text-align: center; color: #a1a1aa; font-size: 15px; margin-bottom: 30px; 
+            letter-spacing: 2px; text-transform: uppercase; font-weight: 500;
+        }
 
         /* --- TOP BAR (Search & Filters) --- */
         .top-bar { max-width: 1100px; margin: 0 auto 20px auto; display: flex; gap: 15px; flex-wrap: wrap; }
@@ -51,7 +109,6 @@
             box-shadow: 0px 10px 30px rgba(0,0,0,0.8); z-index: 10; border: 1px solid #27272a; border-radius: 10px; 
             max-height: 300px; overflow-y: auto;
         }
-        /* Custom dark scrollbar */
         .dropdown-content::-webkit-scrollbar { width: 8px; }
         .dropdown-content::-webkit-scrollbar-track { background: #18181b; border-radius: 8px; }
         .dropdown-content::-webkit-scrollbar-thumb { background: #3f3f46; border-radius: 8px; }
@@ -65,9 +122,8 @@
         /* --- TABLE STYLED AS CARDS --- */
         .table-container { max-width: 1100px; margin: 0 auto; }
         table { width: 100%; border-collapse: separate; border-spacing: 0 12px; }
-        thead { display: none; } /* Hide headers for a cleaner card look */
+        thead { display: none; } 
 
-        /* The "Card" Row */
         tbody tr { 
             background: #18181b; 
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
@@ -81,7 +137,6 @@
             background: #1f1f23;
         }
 
-        /* Cells within the card */
         td { 
             padding: 20px; 
             vertical-align: middle; 
@@ -91,7 +146,6 @@
         td:first-child { border-left: 1px solid #27272a; border-radius: 12px 0 0 12px; }
         td:last-child { border-right: 1px solid #27272a; border-radius: 0 12px 12px 0; text-align: right; }
 
-        /* --- SPECIFIC CELL STYLES --- */
         .boss-name { font-size: 18px; font-weight: 600; color: #fff; margin-bottom: 4px; }
         .boss-subtext { font-size: 13px; color: #a1a1aa; }
         
@@ -103,54 +157,33 @@
         .window-text { font-size: 13px; color: #a1a1aa; line-height: 1.6; }
         .window-text strong { color: #e4e4e7; font-weight: 500; }
 
-        /* Status Pill */
         .status-pill { 
             background: #27272a; color: #e4e4e7; padding: 4px 12px; border-radius: 20px; 
             font-size: 12px; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; margin-bottom: 8px;
             border: 1px solid #3f3f46;
         }
         
-        /* Pulsing Dots */
         .status-dot { width: 8px; height: 8px; border-radius: 50%; position: relative; }
-        
-        /* Dead - Red Pulse */
         .status-pill.dead .status-dot { background: #ef4444; box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); animation: pulse-red 2s infinite; }
-        /* Window - Amber Pulse */
         .status-pill.window .status-dot { background: #f59e0b; box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7); animation: pulse-amber 1.5s infinite; }
-        /* Alive - Green Pulse */
         .status-pill.alive .status-dot { background: #10b981; box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); animation: pulse-green 2s infinite; }
 
-        @keyframes pulse-red {
-            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
-            70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(239, 68, 68, 0); }
-            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
-        }
-        @keyframes pulse-amber {
-            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7); }
-            70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(245, 158, 11, 0); }
-            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(245, 158, 11, 0); }
-        }
-        @keyframes pulse-green {
-            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
-            70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
-            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
-        }
+        @keyframes pulse-red { 0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); } 70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(239, 68, 68, 0); } 100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); } }
+        @keyframes pulse-amber { 0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7); } 70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(245, 158, 11, 0); } 100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(245, 158, 11, 0); } }
+        @keyframes pulse-green { 0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); } 70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); } 100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); } }
+
+        /* Header Animations */
+        @keyframes shine { to { background-position: 200% center; } }
+        @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-5px); } 100% { transform: translateY(0px); } }
 
         .timer-main { font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 2px; font-variant-numeric: tabular-nums; }
         .timer-sub { font-size: 12px; color: #71717a; }
 
-        /* --- LOGIN SCREEN --- */
         #login-screen { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 80vh; text-align: center; }
-        #login-screen h1 { font-size: 2rem; margin-bottom: 10px; font-weight: 700; color: #fff; }
-        #login-screen input { 
-            padding: 12px; font-size: 16px; border-radius: 8px; border: 1px solid #27272a; background: #18181b; 
-            color: #fff; margin-bottom: 15px; width: 300px; text-align: center; outline: none; transition: all 0.2s;
-        }
+        #login-screen h1 { font-family: 'Orbitron', sans-serif; font-size: 2rem; margin-bottom: 10px; font-weight: 900; color: #fff; letter-spacing: 2px;}
+        #login-screen input { padding: 12px; font-size: 16px; border-radius: 8px; border: 1px solid #27272a; background: #18181b; color: #fff; margin-bottom: 15px; width: 300px; text-align: center; outline: none; transition: all 0.2s; }
         #login-screen input:focus { border-color: #52525b; box-shadow: 0 0 0 3px rgba(255,255,255,0.05); }
-        #login-screen button { 
-            padding: 12px 24px; font-size: 16px; font-weight: 600; border-radius: 8px; border: none; background: #fafafa; 
-            color: #09090b; cursor: pointer; transition: background 0.2s, transform 0.1s;
-        }
+        #login-screen button { padding: 12px 24px; font-size: 16px; font-weight: 600; border-radius: 8px; border: none; background: #fafafa; color: #09090b; cursor: pointer; transition: background 0.2s, transform 0.1s; }
         #login-screen button:hover { background: #e4e4e7; transform: scale(1.02); }
         #error-msg { color: #ef4444; margin-top: 15px; display: none; font-size: 14px; font-weight: 500; }
         
@@ -161,7 +194,7 @@
 
     <!-- LOGIN SCREEN -->
     <div id="login-screen">
-        <h1>🔒 Restricted Access</h1>
+        <h1>🔒 RESTRICTED ACCESS</h1>
         <p style="color: #a1a1aa; font-size: 15px; margin-bottom: 20px;">Please enter the password to view the boss timers.</p>
         <input type="password" id="password-input" placeholder="Enter password...">
         <button onclick="checkPassword()">Unlock</button>
@@ -172,8 +205,10 @@
     <div id="app-content">
         
         <header class="main-header">
-            <h1>MEGAMU Boss Timers</h1>
+            <!-- The JS Spotlight is handled in the script at the bottom -->
+            <h1 class="cool-header" id="main-title">MEGA Mu BOSS Timer</h1>
         </header>
+        <div class="subtitle">Respawn times are dynamic • Hover for details</div>
         
         <div class="top-bar">
             <div class="search-container">
@@ -211,5 +246,21 @@
     </div>
 
     <script src="script.js"></script>
+
+    <!-- JS for the mouse-tracking spotlight effect on the header -->
+    <script>
+        const title = document.getElementById('main-title');
+        
+        title.addEventListener('mousemove', (e) => {
+            const rect = title.getBoundingClientRect();
+            // Calculate mouse position relative to the text element
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            // Update CSS variables so the ::before pseudo-element can use them
+            title.style.setProperty('--mouse-x', `${x}px`);
+            title.style.setProperty('--mouse-y', `${y}px`);
+        });
+    </script>
 </body>
 </html>
