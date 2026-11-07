@@ -187,17 +187,6 @@
     "raw_date": "2026-11-05 11:36:43"
   },
   {
-    "server": "Speed3",
-    "boss": "Selupan",
-    "last_kill": "2026-11-05T22:47:57+02:00",
-    "killer": "LorD",
-    "earliest_spawn": "2026-11-07T08:47:57+02:00",
-    "latest_spawn": "2026-11-07T08:47:57+02:00",
-    "min_hours": 34.0,
-    "max_hours": 34.0,
-    "raw_date": "2026-11-05 17:47:57"
-  },
-  {
     "server": "Sv19",
     "boss": "Selupan",
     "last_kill": "2026-11-05T23:59:24+02:00",
@@ -977,6 +966,17 @@
     "min_hours": 34.0,
     "max_hours": 34.0,
     "raw_date": "2026-11-07 02:16:22"
+  },
+  {
+    "server": "Speed3",
+    "boss": "Selupan",
+    "last_kill": "2026-11-07T08:55:14+02:00",
+    "killer": "Ziuh",
+    "earliest_spawn": "2026-11-08T18:55:14+02:00",
+    "latest_spawn": "2026-11-08T18:55:14+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "raw_date": "2026-11-07 03:55:14"
   },
   {
     "server": "Sv1",
