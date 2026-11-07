@@ -66,17 +66,6 @@
     "raw_date": "2026-11-02 16:32:11"
   },
   {
-    "server": "Sv11",
-    "boss": "Lord of Ferea",
-    "last_kill": "2026-11-02T15:18:27+02:00",
-    "killer": "SolrakDVDL",
-    "earliest_spawn": "2026-11-05T23:18:27+02:00",
-    "latest_spawn": "2026-11-10T05:18:27+02:00",
-    "min_hours": 80.0,
-    "max_hours": 182.0,
-    "raw_date": "2026-11-02 10:18:27"
-  },
-  {
     "server": "Speed5",
     "boss": "Lord of Ferea",
     "last_kill": "2026-11-02T17:44:00+02:00",
@@ -1351,6 +1340,17 @@
     "min_hours": 80.0,
     "max_hours": 182.0,
     "raw_date": "2026-11-06 18:28:15"
+  },
+  {
+    "server": "Sv11",
+    "boss": "Lord of Ferea",
+    "last_kill": "2026-11-07T04:16:07+02:00",
+    "killer": "Fobia",
+    "earliest_spawn": "2026-11-10T12:16:07+02:00",
+    "latest_spawn": "2026-11-14T18:16:07+02:00",
+    "min_hours": 80.0,
+    "max_hours": 182.0,
+    "raw_date": "2026-11-06 23:16:07"
   },
   {
     "server": "Sv7",
