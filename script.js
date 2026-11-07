@@ -59,24 +59,19 @@ function formatDateShort(dateString) {
     return new Intl.DateTimeFormat('en-US', options).format(d);
 }
 
-// --- UPDATED DROPDOWN LOGIC ---
 function toggleDropdown(id) {
     const targetDropdown = document.getElementById(id);
     const allDropdowns = document.getElementsByClassName("dropdown-content");
     
-    // Loop through all dropdowns
     for (let i = 0; i < allDropdowns.length; i++) {
         if (allDropdowns[i].id === id) {
-            // Toggle the clicked one
             targetDropdown.classList.toggle("show");
         } else {
-            // Force close the others
             allDropdowns[i].classList.remove("show");
         }
     }
 }
 
-// Close dropdowns when clicking outside
 window.onclick = function(event) {
     if (!event.target.closest('.dropdown')) {
         const dropdowns = document.getElementsByClassName("dropdown-content");
@@ -88,7 +83,6 @@ window.onclick = function(event) {
     }
 }
 
-// Close dropdown when the mouse leaves the dropdown area entirely
 document.querySelectorAll('.dropdown').forEach(dropdown => {
     dropdown.addEventListener('mouseleave', () => {
         const content = dropdown.querySelector('.dropdown-content');
@@ -97,7 +91,6 @@ document.querySelectorAll('.dropdown').forEach(dropdown => {
         }
     });
 });
-// ------------------------------
 
 function buildFilters(containerId, items, type) {
   const container = document.getElementById(containerId);
@@ -119,12 +112,38 @@ function renderTable() {
   const checkedBosses = Array.from(document.querySelectorAll('#boss-filters input:checked')).map(cb => cb.value);
   const searchText = document.getElementById('search-bar').value.toLowerCase().trim();
 
-  const filteredData = allData.filter(item => {
+  let filteredData = allData.filter(item => {
     const matchesServer = checkedServers.includes(item.server);
     const matchesBoss = checkedBosses.includes(item.boss);
     const matchesSearch = item.server.toLowerCase().includes(searchText) || item.boss.toLowerCase().includes(searchText) || item.killer.toLowerCase().includes(searchText);
     return matchesServer && matchesBoss && matchesSearch;
   });
+
+  // --- NEW: CUSTOM SORTING LOGIC ---
+  const now = new Date().getTime();
+  
+  filteredData.sort((a, b) => {
+    // 1. Determine status weight based on current time
+    const getWeight = (item) => {
+        const min = new Date(item.earliest_spawn).getTime();
+        const max = new Date(item.latest_spawn).getTime();
+        if (max <= now) return 1; // ALIVE
+        if (min <= now && max > now) return 2; // MAY SPAWN
+        return 3; // DEAD
+    };
+
+    const weightA = getWeight(a);
+    const weightB = getWeight(b);
+
+    // 2. Sort by Status Weight (1 -> 2 -> 3)
+    if (weightA !== weightB) {
+        return weightA - weightB;
+    }
+
+    // 3. If status is the same, sort by Earliest Spawn (Ascending - Soonest first)
+    return new Date(a.earliest_spawn) - new Date(b.earliest_spawn);
+  });
+  // ---------------------------------
 
   if (filteredData.length === 0) {
     tbody.innerHTML = '<tr><td colspan="4" style="text-align:center; color:#a1a1aa; padding: 40px;">No results found.</td></tr>';
