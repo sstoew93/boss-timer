@@ -198,17 +198,6 @@
     "raw_date": "2026-11-06 02:33:48"
   },
   {
-    "server": "Sv10",
-    "boss": "Core Magriffy",
-    "last_kill": "2026-11-04T12:36:48+02:00",
-    "killer": "BUGGIING",
-    "earliest_spawn": "2026-11-08T00:36:48+02:00",
-    "latest_spawn": "2026-11-08T00:36:48+02:00",
-    "min_hours": 84.0,
-    "max_hours": 84.0,
-    "raw_date": "2026-11-04 07:36:48"
-  },
-  {
     "server": "Speed3",
     "boss": "Nightmare",
     "last_kill": "2026-11-06T09:47:19+02:00",
@@ -1428,6 +1417,17 @@
     "min_hours": 84.0,
     "max_hours": 84.0,
     "raw_date": "2026-11-07 18:32:57"
+  },
+  {
+    "server": "Sv10",
+    "boss": "Core Magriffy",
+    "last_kill": "2026-11-08T01:14:42+02:00",
+    "killer": "TacaLenha",
+    "earliest_spawn": "2026-11-11T13:14:42+02:00",
+    "latest_spawn": "2026-11-11T13:14:42+02:00",
+    "min_hours": 84.0,
+    "max_hours": 84.0,
+    "raw_date": "2026-11-07 20:14:42"
   },
   {
     "server": "SvC",
