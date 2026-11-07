@@ -198,17 +198,6 @@
     "raw_date": "2026-11-05 22:28:45"
   },
   {
-    "server": "Sv17",
-    "boss": "Selupan",
-    "last_kill": "2026-11-06T09:37:43+02:00",
-    "killer": "Akyris",
-    "earliest_spawn": "2026-11-07T19:37:43+02:00",
-    "latest_spawn": "2026-11-07T19:37:43+02:00",
-    "min_hours": 34.0,
-    "max_hours": 34.0,
-    "raw_date": "2026-11-06 04:37:43"
-  },
-  {
     "server": "Sv15",
     "boss": "Selupan",
     "last_kill": "2026-11-06T09:39:11+02:00",
@@ -1021,6 +1010,17 @@
     "min_hours": 72.0,
     "max_hours": 168.0,
     "raw_date": "2026-11-06 00:38:17"
+  },
+  {
+    "server": "Sv17",
+    "boss": "Selupan",
+    "last_kill": "2026-11-07T19:44:17+02:00",
+    "killer": "PinkKitty",
+    "earliest_spawn": "2026-11-09T05:44:17+02:00",
+    "latest_spawn": "2026-11-09T05:44:17+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "raw_date": "2026-11-07 14:44:17"
   },
   {
     "server": "Speed5",
