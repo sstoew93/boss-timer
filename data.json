@@ -188,17 +188,6 @@
   },
   {
     "server": "Sv4",
-    "boss": "Selupan",
-    "last_kill": "2026-11-06T10:33:17+02:00",
-    "killer": "Jot4",
-    "earliest_spawn": "2026-11-07T20:33:17+02:00",
-    "latest_spawn": "2026-11-07T20:33:17+02:00",
-    "min_hours": 34.0,
-    "max_hours": 34.0,
-    "raw_date": "2026-11-06 05:33:17"
-  },
-  {
-    "server": "Sv4",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-04T08:45:37+02:00",
     "killer": "JexusGL",
@@ -1032,6 +1021,17 @@
     "min_hours": 40.0,
     "max_hours": 40.0,
     "raw_date": "2026-11-07 09:24:48"
+  },
+  {
+    "server": "Sv4",
+    "boss": "Selupan",
+    "last_kill": "2026-11-07T20:38:21+02:00",
+    "killer": "PinkKitty",
+    "earliest_spawn": "2026-11-09T06:38:21+02:00",
+    "latest_spawn": "2026-11-09T06:38:21+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "raw_date": "2026-11-07 15:38:21"
   },
   {
     "server": "Sv4",
