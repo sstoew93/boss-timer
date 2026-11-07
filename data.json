@@ -781,17 +781,6 @@
     "raw_date": "2026-11-06 12:17:26"
   },
   {
-    "server": "Sv4",
-    "boss": "Nix",
-    "last_kill": "2026-11-02T23:37:06+02:00",
-    "killer": "Bestpanda",
-    "earliest_spawn": "2026-11-08T09:37:06+02:00",
-    "latest_spawn": "2026-11-08T09:37:06+02:00",
-    "min_hours": 130.0,
-    "max_hours": 130.0,
-    "raw_date": "2026-11-02 18:37:06"
-  },
-  {
     "server": "Sv10",
     "boss": "Nightmare",
     "last_kill": "2026-11-06T18:06:31+02:00",
@@ -1571,5 +1560,16 @@
     "min_hours": 130.0,
     "max_hours": 130.0,
     "raw_date": "2026-11-07 04:00:55"
+  },
+  {
+    "server": "Sv4",
+    "boss": "Nix",
+    "last_kill": "2026-11-07T09:35:57+02:00",
+    "killer": "MrMyzor",
+    "earliest_spawn": "2026-11-12T19:35:57+02:00",
+    "latest_spawn": "2026-11-12T19:35:57+02:00",
+    "min_hours": 130.0,
+    "max_hours": 130.0,
+    "raw_date": "2026-11-07 04:35:57"
   }
 ]
