@@ -770,17 +770,6 @@
     "raw_date": "2026-11-06 10:37:04"
   },
   {
-    "server": "Sv17",
-    "boss": "Nix",
-    "last_kill": "2026-11-02T21:45:32+02:00",
-    "killer": "SolrakDVDL",
-    "earliest_spawn": "2026-11-08T07:45:32+02:00",
-    "latest_spawn": "2026-11-08T07:45:32+02:00",
-    "min_hours": 130.0,
-    "max_hours": 130.0,
-    "raw_date": "2026-11-02 16:45:32"
-  },
-  {
     "server": "Sv19",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-04T20:54:13+02:00",
@@ -1571,5 +1560,16 @@
     "min_hours": 130.0,
     "max_hours": 130.0,
     "raw_date": "2026-11-06 20:39:43"
+  },
+  {
+    "server": "Sv17",
+    "boss": "Nix",
+    "last_kill": "2026-11-07T09:00:55+02:00",
+    "killer": "MrMyzor",
+    "earliest_spawn": "2026-11-12T19:00:55+02:00",
+    "latest_spawn": "2026-11-12T19:00:55+02:00",
+    "min_hours": 130.0,
+    "max_hours": 130.0,
+    "raw_date": "2026-11-07 04:00:55"
   }
 ]
