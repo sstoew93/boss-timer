@@ -528,17 +528,6 @@
     "raw_date": "2026-11-06 05:33:17"
   },
   {
-    "server": "Sv1",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-06T04:38:54+02:00",
-    "killer": "ExpressMg",
-    "earliest_spawn": "2026-11-07T20:38:54+02:00",
-    "latest_spawn": "2026-11-07T20:38:54+02:00",
-    "min_hours": 40.0,
-    "max_hours": 40.0,
-    "raw_date": "2026-11-05 23:38:54"
-  },
-  {
     "server": "Sv4",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-04T08:45:37+02:00",
@@ -1010,6 +999,17 @@
     "min_hours": 40.0,
     "max_hours": 40.0,
     "raw_date": "2026-11-06 20:08:40"
+  },
+  {
+    "server": "Sv1",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-07T04:14:07+02:00",
+    "killer": "QuistisFF8",
+    "earliest_spawn": "2026-11-08T20:14:07+02:00",
+    "latest_spawn": "2026-11-08T20:14:07+02:00",
+    "min_hours": 40.0,
+    "max_hours": 40.0,
+    "raw_date": "2026-11-06 23:14:07"
   },
   {
     "server": "Sv10",
