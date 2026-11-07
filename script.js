@@ -188,7 +188,7 @@ function updateTimers() {
       statusEl.className = "status-pill window";
       statusEl.innerHTML = '<div class="status-dot"></div> Window Open';
       
-      maxEl.textContent = `guaranteed in ${formatTimeRemaining(timeToMax)}`;
+    maxEl.textContent = ``; //guaranteed in ${formatTimeRemaining(timeToMax)}
 
     } else {
       // --- ALIVE ---
