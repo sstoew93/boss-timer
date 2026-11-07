@@ -155,17 +155,6 @@
   },
   {
     "server": "Speed3",
-    "boss": "Lord Silvester",
-    "last_kill": "2026-11-03T06:16:54+02:00",
-    "killer": "KrabeSL",
-    "earliest_spawn": "2026-11-07T03:21:54+02:00",
-    "latest_spawn": "2026-11-07T03:21:54+02:00",
-    "min_hours": 93.1,
-    "max_hours": 93.1,
-    "raw_date": "2026-11-03 01:16:54"
-  },
-  {
-    "server": "Speed3",
     "boss": "Lord of Ferea",
     "last_kill": "2026-11-03T19:40:08+02:00",
     "killer": "PoluSL",
@@ -1494,6 +1483,17 @@
     "min_hours": 93.1,
     "max_hours": 93.1,
     "raw_date": "2026-11-06 22:20:21"
+  },
+  {
+    "server": "Speed3",
+    "boss": "Lord Silvester",
+    "last_kill": "2026-11-07T03:26:58+02:00",
+    "killer": "M4ROL1T3",
+    "earliest_spawn": "2026-11-11T00:31:58+02:00",
+    "latest_spawn": "2026-11-11T00:31:58+02:00",
+    "min_hours": 93.1,
+    "max_hours": 93.1,
+    "raw_date": "2026-11-06 22:26:58"
   },
   {
     "server": "Sv19",
