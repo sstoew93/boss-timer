@@ -209,17 +209,6 @@
     "raw_date": "2026-11-05 23:53:44"
   },
   {
-    "server": "Sv2",
-    "boss": "Core Magriffy",
-    "last_kill": "2026-11-04T08:55:27+02:00",
-    "killer": "Winnerzim",
-    "earliest_spawn": "2026-11-07T20:55:27+02:00",
-    "latest_spawn": "2026-11-07T20:55:27+02:00",
-    "min_hours": 84.0,
-    "max_hours": 84.0,
-    "raw_date": "2026-11-04 03:55:27"
-  },
-  {
     "server": "Sv3",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-04T08:59:10+02:00",
@@ -1461,6 +1450,17 @@
     "min_hours": 84.0,
     "max_hours": 84.0,
     "raw_date": "2026-11-07 16:30:28"
+  },
+  {
+    "server": "Sv2",
+    "boss": "Core Magriffy",
+    "last_kill": "2026-11-07T21:32:50+02:00",
+    "killer": "Babayaga98",
+    "earliest_spawn": "2026-11-11T09:32:50+02:00",
+    "latest_spawn": "2026-11-11T09:32:50+02:00",
+    "min_hours": 84.0,
+    "max_hours": 84.0,
+    "raw_date": "2026-11-07 16:32:50"
   },
   {
     "server": "SvC",
