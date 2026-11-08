@@ -211,8 +211,8 @@ function updateTimers() {
       timerEl.textContent = formatTimeRemaining(timeToMin);
       timerEl.style.color = "#fafafa";
       statusEl.className = "status-pill dead";
-      statusEl.innerHTML = '<div class="status-dot"></div> Dead • counting';
-      maxEl.textContent = `Max: ${formatTimeRemaining(timeToMax)}`;
+      statusEl.innerHTML = '<div class="status-dot"></div> Dead';
+      maxEl.textContent = ``; //Max: ${formatTimeRemaining(timeToMax)}
 
     } else if (timeToMax > 0) {
       // --- WINDOW OPEN ---
@@ -224,7 +224,7 @@ function updateTimers() {
 
     } else {
       // --- ALIVE ---
-      timerEl.textContent = "ALIVE";
+      timerEl.textContent = "GO HUNT";
       timerEl.style.color = "#10b981"; 
       statusEl.className = "status-pill alive";
       statusEl.innerHTML = '<div class="status-dot"></div> Alive';
