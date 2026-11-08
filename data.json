@@ -187,17 +187,6 @@
     "raw_date": "2026-11-04 09:09:45"
   },
   {
-    "server": "Sv16",
-    "boss": "Lord of Ferea",
-    "last_kill": "2026-11-04T21:07:14+02:00",
-    "killer": "SolrakDVDL",
-    "earliest_spawn": "2026-11-08T23:30:14+02:00",
-    "latest_spawn": "2026-11-09T14:22:14+02:00",
-    "min_hours": 98.4,
-    "max_hours": 113.2,
-    "raw_date": "2026-11-04 16:07:14"
-  },
-  {
     "server": "Sv6",
     "boss": "Selupan",
     "last_kill": "2026-11-07T14:17:01+02:00",
@@ -1538,6 +1527,17 @@
     "min_hours": 130.0,
     "max_hours": 130.0,
     "raw_date": "2026-11-07 08:20:09"
+  },
+  {
+    "server": "Sv16",
+    "boss": "Lord of Ferea",
+    "last_kill": "2026-11-08T22:06:33+02:00",
+    "killer": "PinkKitty",
+    "earliest_spawn": "2026-11-13T00:29:33+02:00",
+    "latest_spawn": "2026-11-13T15:21:33+02:00",
+    "min_hours": 98.4,
+    "max_hours": 113.2,
+    "raw_date": "2026-11-08 17:06:33"
   },
   {
     "server": "Speed1",
