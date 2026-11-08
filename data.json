@@ -176,17 +176,6 @@
     "raw_date": "2026-11-06 04:47:19"
   },
   {
-    "server": "Speed5",
-    "boss": "Lord Silvester",
-    "last_kill": "2026-11-04T05:36:02+02:00",
-    "killer": "Abaddonz",
-    "earliest_spawn": "2026-11-08T02:41:02+02:00",
-    "latest_spawn": "2026-11-08T02:41:02+02:00",
-    "min_hours": 93.1,
-    "max_hours": 93.1,
-    "raw_date": "2026-11-04 00:36:02"
-  },
-  {
     "server": "Sv5",
     "boss": "Lord Silvester",
     "last_kill": "2026-11-04T05:56:05+02:00",
@@ -1450,6 +1439,17 @@
     "min_hours": 93.1,
     "max_hours": 93.1,
     "raw_date": "2026-11-07 19:37:09"
+  },
+  {
+    "server": "Speed5",
+    "boss": "Lord Silvester",
+    "last_kill": "2026-11-08T02:47:03+02:00",
+    "killer": "Messi",
+    "earliest_spawn": "2026-11-11T23:52:03+02:00",
+    "latest_spawn": "2026-11-11T23:52:03+02:00",
+    "min_hours": 93.1,
+    "max_hours": 93.1,
+    "raw_date": "2026-11-07 21:47:03"
   },
   {
     "server": "Sv3",
