@@ -154,17 +154,6 @@
     "raw_date": "2026-11-04 16:07:14"
   },
   {
-    "server": "Sv14",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-06T15:37:04+02:00",
-    "killer": "MrMyzor",
-    "earliest_spawn": "2026-11-08T07:37:04+02:00",
-    "latest_spawn": "2026-11-08T07:37:04+02:00",
-    "min_hours": 40.0,
-    "max_hours": 40.0,
-    "raw_date": "2026-11-06 10:37:04"
-  },
-  {
     "server": "Sv19",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-04T20:54:13+02:00",
@@ -955,6 +944,17 @@
     "min_hours": 40.0,
     "max_hours": 40.0,
     "raw_date": "2026-11-08 03:28:05"
+  },
+  {
+    "server": "Sv14",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-08T08:35:55+02:00",
+    "killer": "L0RDCAIM",
+    "earliest_spawn": "2026-11-10T00:35:55+02:00",
+    "latest_spawn": "2026-11-10T00:35:55+02:00",
+    "min_hours": 40.0,
+    "max_hours": 40.0,
+    "raw_date": "2026-11-08 03:35:55"
   },
   {
     "server": "Sv1",
