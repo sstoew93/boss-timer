@@ -1,16 +1,5 @@
 [
   {
-    "server": "Sv10",
-    "boss": "God of Darkness",
-    "last_kill": "2026-11-02T21:32:11+02:00",
-    "killer": "Collette",
-    "earliest_spawn": "2026-11-05T21:32:11+02:00",
-    "latest_spawn": "2026-11-09T21:32:11+02:00",
-    "min_hours": 72.0,
-    "max_hours": 168.0,
-    "raw_date": "2026-11-02 16:32:11"
-  },
-  {
     "server": "Speed2",
     "boss": "God of Darkness",
     "last_kill": "2026-11-03T14:46:53+02:00",
@@ -759,17 +748,6 @@
     "raw_date": "2026-11-05 20:26:25"
   },
   {
-    "server": "SvC",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-07T21:41:03+02:00",
-    "killer": "JeiYacK",
-    "earliest_spawn": "2026-11-09T13:41:03+02:00",
-    "latest_spawn": "2026-11-09T13:41:03+02:00",
-    "min_hours": 40.0,
-    "max_hours": 40.0,
-    "raw_date": "2026-11-07 16:41:03"
-  },
-  {
     "server": "Sv19",
     "boss": "Lord of Ferea",
     "last_kill": "2026-11-06T05:48:27+02:00",
@@ -966,6 +944,17 @@
     "min_hours": 93.1,
     "max_hours": 93.1,
     "raw_date": "2026-11-05 22:19:48"
+  },
+  {
+    "server": "SvC",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-08T08:28:05+02:00",
+    "killer": "CSE23",
+    "earliest_spawn": "2026-11-10T00:28:05+02:00",
+    "latest_spawn": "2026-11-10T00:28:05+02:00",
+    "min_hours": 40.0,
+    "max_hours": 40.0,
+    "raw_date": "2026-11-08 03:28:05"
   },
   {
     "server": "Sv1",
