@@ -143,17 +143,6 @@
     "raw_date": "2026-11-04 16:07:14"
   },
   {
-    "server": "Sv19",
-    "boss": "Core Magriffy",
-    "last_kill": "2026-11-04T20:54:13+02:00",
-    "killer": "SolrakDVDL",
-    "earliest_spawn": "2026-11-08T08:54:13+02:00",
-    "latest_spawn": "2026-11-08T08:54:13+02:00",
-    "min_hours": 84.0,
-    "max_hours": 84.0,
-    "raw_date": "2026-11-04 15:54:13"
-  },
-  {
     "server": "Sv16",
     "boss": "Nightmare",
     "last_kill": "2026-11-06T17:17:26+02:00",
@@ -1406,6 +1395,17 @@
     "min_hours": 84.0,
     "max_hours": 84.0,
     "raw_date": "2026-11-08 00:54:54"
+  },
+  {
+    "server": "Sv19",
+    "boss": "Core Magriffy",
+    "last_kill": "2026-11-08T09:36:42+02:00",
+    "killer": "SolrakDVDL",
+    "earliest_spawn": "2026-11-11T21:36:42+02:00",
+    "latest_spawn": "2026-11-11T21:36:42+02:00",
+    "min_hours": 84.0,
+    "max_hours": 84.0,
+    "raw_date": "2026-11-08 04:36:42"
   },
   {
     "server": "Speed4",
