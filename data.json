@@ -935,6 +935,17 @@
     "raw_date": "2026-11-08 01:22:56"
   },
   {
+    "server": "Sv18",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-08T07:23:41+02:00",
+    "killer": "DlGunzM79",
+    "earliest_spawn": "2026-11-09T23:23:41+02:00",
+    "latest_spawn": "2026-11-09T23:23:41+02:00",
+    "min_hours": 40.0,
+    "max_hours": 40.0,
+    "raw_date": "2026-11-08 02:23:41"
+  },
+  {
     "server": "Sv14",
     "boss": "Lord of Ferea",
     "last_kill": "2026-11-06T15:25:45+02:00",
