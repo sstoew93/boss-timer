@@ -212,7 +212,7 @@ function updateTimers() {
       timerEl.style.color = "#fafafa";
       statusEl.className = "status-pill dead";
       statusEl.innerHTML = '<div class="status-dot"></div> Dead • counting';
-      maxEl.textContent = `max in ${formatTimeRemaining(timeToMax)}`;
+      maxEl.textContent = `Max: ${formatTimeRemaining(timeToMax)}`;
 
     } else if (timeToMax > 0) {
       // --- WINDOW OPEN ---
@@ -220,7 +220,7 @@ function updateTimers() {
       timerEl.style.color = "#f59e0b"; 
       statusEl.className = "status-pill window";
       statusEl.innerHTML = '<div class="status-dot"></div> Window Open';
-      maxEl.textContent = `guaranteed in ${formatTimeRemaining(timeToMax)}`;
+      maxEl.textContent = `Max: ${formatTimeRemaining(timeToMax)}`;
 
     } else {
       // --- ALIVE ---
@@ -228,7 +228,7 @@ function updateTimers() {
       timerEl.style.color = "#10b981"; 
       statusEl.className = "status-pill alive";
       statusEl.innerHTML = '<div class="status-dot"></div> Alive';
-      maxEl.textContent = `spawned`;
+      maxEl.textContent = `Spawned`;
     }
   });
 }
