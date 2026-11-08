@@ -11,17 +11,6 @@
     "raw_date": "2026-11-03 09:46:53"
   },
   {
-    "server": "Sv10",
-    "boss": "Selupan",
-    "last_kill": "2026-11-05T13:47:02+02:00",
-    "killer": "XxVILLEGAS",
-    "earliest_spawn": "2026-11-06T23:47:02+02:00",
-    "latest_spawn": "2026-11-06T23:47:02+02:00",
-    "min_hours": 34.0,
-    "max_hours": 34.0,
-    "raw_date": "2026-11-05 08:47:02"
-  },
-  {
     "server": "Speed1",
     "boss": "God of Darkness",
     "last_kill": "2026-11-04T00:09:53+02:00",
@@ -845,6 +834,17 @@
     "min_hours": 80.0,
     "max_hours": 182.0,
     "raw_date": "2026-11-06 10:25:45"
+  },
+  {
+    "server": "Sv10",
+    "boss": "Selupan",
+    "last_kill": "2026-11-08T13:50:04+02:00",
+    "killer": "XxVILLEGAS",
+    "earliest_spawn": "2026-11-09T23:50:04+02:00",
+    "latest_spawn": "2026-11-09T23:50:04+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "raw_date": "2026-11-08 08:50:04"
   },
   {
     "server": "Sv8",
