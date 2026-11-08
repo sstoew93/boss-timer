@@ -792,17 +792,6 @@
     "raw_date": "2026-11-08 01:22:56"
   },
   {
-    "server": "SvC",
-    "boss": "Selupan",
-    "last_kill": "2026-11-08T13:04:07+02:00",
-    "killer": "Hommie",
-    "earliest_spawn": "2026-11-09T23:04:07+02:00",
-    "latest_spawn": "2026-11-09T23:04:07+02:00",
-    "min_hours": 34.0,
-    "max_hours": 34.0,
-    "raw_date": "2026-11-08 08:04:07"
-  },
-  {
     "server": "Sv18",
     "boss": "Nightmare",
     "last_kill": "2026-11-08T07:23:41+02:00",
@@ -867,6 +856,17 @@
     "min_hours": 40.0,
     "max_hours": 40.0,
     "raw_date": "2026-11-08 03:35:55"
+  },
+  {
+    "server": "SvC",
+    "boss": "Selupan",
+    "last_kill": "2026-11-08T14:37:03+02:00",
+    "killer": "Cracker666",
+    "earliest_spawn": "2026-11-10T00:37:03+02:00",
+    "latest_spawn": "2026-11-10T00:37:03+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "raw_date": "2026-11-08 09:37:03"
   },
   {
     "server": "Sv1",
