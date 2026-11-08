@@ -594,17 +594,6 @@
     "raw_date": "2026-11-07 09:08:27"
   },
   {
-    "server": "Speed2",
-    "boss": "Nix",
-    "last_kill": "2026-11-03T20:15:58+02:00",
-    "killer": "Messi",
-    "earliest_spawn": "2026-11-09T06:15:58+02:00",
-    "latest_spawn": "2026-11-09T06:15:58+02:00",
-    "min_hours": 130.0,
-    "max_hours": 130.0,
-    "raw_date": "2026-11-03 15:15:58"
-  },
-  {
     "server": "Sv11",
     "boss": "Nightmare",
     "last_kill": "2026-11-07T14:24:48+02:00",
@@ -1626,5 +1615,16 @@
     "min_hours": 130.0,
     "max_hours": 130.0,
     "raw_date": "2026-11-08 03:36:30"
+  },
+  {
+    "server": "Speed2",
+    "boss": "Nix",
+    "last_kill": "2026-11-08T08:59:32+02:00",
+    "killer": "lIlIllIlIl",
+    "earliest_spawn": "2026-11-13T18:59:32+02:00",
+    "latest_spawn": "2026-11-13T18:59:32+02:00",
+    "min_hours": 130.0,
+    "max_hours": 130.0,
+    "raw_date": "2026-11-08 03:59:32"
   }
 ]
