@@ -7,10 +7,11 @@ from zoneinfo import ZoneInfo
 BRAZIL_TZ = ZoneInfo("America/Sao_Paulo")
 BULGARIA_TZ = ZoneInfo("Europe/Sofia")
 
-# Updated times in minutes
+# Times in minutes
 BOSS_TIMES = {
     "God of Darkness": {"min": 72 * 60, "max": 168 * 60},
     "Core Magriffy": {"min": 84 * 60, "max": 84 * 60},
+    # Lord of Ferea: 93h 23m to 108h 15m
     "Lord of Ferea": {"min": (93 * 60) + 23, "max": (108 * 60) + 15}, 
     "Lord Silvester": {"min": (3 * 24 + 21) * 60 + 5, "max": (3 * 24 + 21) * 60 + 5}, 
     "Selupan": {"min": 34 * 60, "max": 34 * 60},
@@ -52,7 +53,6 @@ def scrape():
             earliest_spawn_bg = kill_time_bg + timedelta(minutes=times["min"])
             latest_spawn_bg = kill_time_bg + timedelta(minutes=times["max"])
             
-            # FIXED: Added 'raw_date' here so it doesn't crash later
             kill_data.append({
                 'server': server,
                 'boss': monster_name,
@@ -62,6 +62,7 @@ def scrape():
                 'latest_spawn': latest_spawn_bg,
                 'min_hours': round(times["min"] / 60, 1),
                 'max_hours': round(times["max"] / 60, 1),
+                'is_fixed': times["min"] == times["max"],
                 'raw_date': date_str 
             })
         except Exception as e:
@@ -87,6 +88,7 @@ def scrape():
             "latest_spawn": item['latest_spawn'].isoformat(),
             "min_hours": item['min_hours'],
             "max_hours": item['max_hours'],
+            "is_fixed": item['is_fixed'],
             "raw_date": item['raw_date']
         })
 
@@ -94,5 +96,5 @@ def scrape():
 
 if __name__ == "__main__":
     data = scrape()
-    with open('data.json', 'w') as f:
+    with open('data.json', 'w') as f: 
         json.dump(data, f, indent=2)
