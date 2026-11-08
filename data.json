@@ -96,18 +96,6 @@
     "raw_date": "2026-11-04 23:27:35"
   },
   {
-    "server": "Speed2",
-    "boss": "Lord of Ferea",
-    "last_kill": "2026-11-04T08:14:49+02:00",
-    "killer": "lIlIllIlIl",
-    "earliest_spawn": "2026-11-08T05:37:49+02:00",
-    "latest_spawn": "2026-11-08T20:29:49+02:00",
-    "min_hours": 93.4,
-    "max_hours": 108.2,
-    "is_fixed": false,
-    "raw_date": "2026-11-04 03:14:49"
-  },
-  {
     "server": "Sv8",
     "boss": "God of Darkness",
     "last_kill": "2026-11-05T11:27:19+02:00",
@@ -1666,6 +1654,18 @@
     "max_hours": 130.0,
     "is_fixed": true,
     "raw_date": "2026-11-07 04:35:57"
+  },
+  {
+    "server": "Speed2",
+    "boss": "Lord of Ferea",
+    "last_kill": "2026-11-08T23:09:46+02:00",
+    "killer": "Messi",
+    "earliest_spawn": "2026-11-12T20:32:46+02:00",
+    "latest_spawn": "2026-11-13T11:24:46+02:00",
+    "min_hours": 93.4,
+    "max_hours": 108.2,
+    "is_fixed": false,
+    "raw_date": "2026-11-08 18:09:46"
   },
   {
     "server": "Sv2",
