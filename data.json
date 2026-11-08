@@ -1232,6 +1232,17 @@
     "raw_date": "2026-11-05 10:36:22"
   },
   {
+    "server": "Sv18",
+    "boss": "God of Darkness",
+    "last_kill": "2026-11-08T05:52:32+02:00",
+    "killer": "Teachers",
+    "earliest_spawn": "2026-11-11T05:52:32+02:00",
+    "latest_spawn": "2026-11-15T05:52:32+02:00",
+    "min_hours": 72.0,
+    "max_hours": 168.0,
+    "raw_date": "2026-11-08 00:52:32"
+  },
+  {
     "server": "Sv4",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-07T21:22:56+02:00",
