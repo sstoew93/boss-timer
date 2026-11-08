@@ -53,17 +53,10 @@ function loadData() {
       .catch(error => console.error('Error loading data:', error));
 }
 
+// Reverted to DD/MM, HH:MM (24-hour)
 function formatDateShort(dateString) {
     const d = new Date(dateString);
-    const options = { 
-        timeZone: 'Europe/Sofia', 
-        day: '2-digit', 
-        month: '2-digit', 
-        hour: '2-digit', 
-        minute: '2-digit', 
-        hour12: false // Forces 24-hour time
-    };
-    // 'en-GB' forces Day/Month order
+    const options = { timeZone: 'Europe/Sofia', day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit', hour12: false };
     return new Intl.DateTimeFormat('en-GB', options).format(d);
 }
 
@@ -127,11 +120,9 @@ function renderTable() {
     return matchesServer && matchesBoss && matchesSearch;
   });
 
-  // --- NEW: CUSTOM SORTING LOGIC ---
+  // Sort by ALIVE, MAY SPAWN, DEAD
   const now = new Date().getTime();
-  
   filteredData.sort((a, b) => {
-    // 1. Determine status weight based on current time
     const getWeight = (item) => {
         const min = new Date(item.earliest_spawn).getTime();
         const max = new Date(item.latest_spawn).getTime();
@@ -139,19 +130,11 @@ function renderTable() {
         if (min <= now && max > now) return 2; // MAY SPAWN
         return 3; // DEAD
     };
-
     const weightA = getWeight(a);
     const weightB = getWeight(b);
-
-    // 2. Sort by Status Weight (1 -> 2 -> 3)
-    if (weightA !== weightB) {
-        return weightA - weightB;
-    }
-
-    // 3. If status is the same, sort by Earliest Spawn (Ascending - Soonest first)
+    if (weightA !== weightB) return weightA - weightB;
     return new Date(a.earliest_spawn) - new Date(b.earliest_spawn);
   });
-  // ---------------------------------
 
   if (filteredData.length === 0) {
     tbody.innerHTML = '<tr><td colspan="4" style="text-align:center; color:#a1a1aa; padding: 40px;">No results found.</td></tr>';
@@ -220,40 +203,32 @@ function updateTimers() {
     const maxEl = document.getElementById(timer.maxTimeId);
     if (!timerEl || !statusEl || !maxEl) return; 
 
-    const timeToMin = timer.earliestSpawnTime - now; // If negative, window is open
-    const timeToMax = timer.latestSpawnTime - now;   // If negative, guaranteed alive
+    const timeToMin = timer.earliestSpawnTime - now;
+    const timeToMax = timer.latestSpawnTime - now;
 
     if (timeToMin > 0) {
       // --- DEAD ---
-      timerEl.textContent = `spawns in ${formatTimeRemaining(timeToMin)}`;
+      timerEl.textContent = formatTimeRemaining(timeToMin);
       timerEl.style.color = "#fafafa";
-      
       statusEl.className = "status-pill dead";
-      statusEl.innerHTML = '<div class="status-dot"></div> Dead';
-      
+      statusEl.innerHTML = '<div class="status-dot"></div> Dead • counting';
       maxEl.textContent = `max in ${formatTimeRemaining(timeToMax)}`;
 
     } else if (timeToMax > 0) {
-      // --- MAY SPAWN ---
-      timerEl.textContent = `remaining ${formatTimeRemaining(timeToMax)} to max`;
-      timerEl.style.color = "#fff";
-      
+      // --- WINDOW OPEN ---
+      timerEl.textContent = "MAY SPAWN";
+      timerEl.style.color = "#f59e0b"; 
       statusEl.className = "status-pill window";
-      statusEl.innerHTML = '<div class="status-dot"></div> Might be alive';
-      
-      // timeToMin is negative here, so Math.abs() makes it a positive number
-      // to show how long it has been in the spawn window.
-      maxEl.textContent = `possibly alive for ${formatTimeRemaining(timeToMin)}`;
+      statusEl.innerHTML = '<div class="status-dot"></div> Window Open';
+      maxEl.textContent = `guaranteed in ${formatTimeRemaining(timeToMax)}`;
 
     } else {
       // --- ALIVE ---
-      timerEl.textContent = `ALIVE`;
+      timerEl.textContent = "ALIVE";
       timerEl.style.color = "#10b981"; 
-      
       statusEl.className = "status-pill alive";
-      statusEl.innerHTML = '<div class="status-dot"></div> Guaranteed Alive';
-      
-      maxEl.textContent = `spawned ${formatTimeRemaining(timeToMax)} ago`;
+      statusEl.innerHTML = '<div class="status-dot"></div> Alive';
+      maxEl.textContent = `spawned`;
     }
   });
 }
