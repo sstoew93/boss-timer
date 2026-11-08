@@ -869,6 +869,17 @@
     "raw_date": "2026-11-06 02:07:43"
   },
   {
+    "server": "Sv18",
+    "boss": "Selupan",
+    "last_kill": "2026-11-08T06:00:09+02:00",
+    "killer": "CSDl3",
+    "earliest_spawn": "2026-11-09T16:00:09+02:00",
+    "latest_spawn": "2026-11-09T16:00:09+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "raw_date": "2026-11-08 01:00:09"
+  },
+  {
     "server": "Sv11",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-06T04:19:04+02:00",
@@ -1375,6 +1386,17 @@
     "raw_date": "2026-11-05 22:40:31"
   },
   {
+    "server": "Sv18",
+    "boss": "Lord of Ferea",
+    "last_kill": "2026-11-08T05:59:51+02:00",
+    "killer": "KatoTaka",
+    "earliest_spawn": "2026-11-11T13:59:51+02:00",
+    "latest_spawn": "2026-11-15T19:59:51+02:00",
+    "min_hours": 80.0,
+    "max_hours": 182.0,
+    "raw_date": "2026-11-08 00:59:51"
+  },
+  {
     "server": "Speed4",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-08T03:54:30+02:00",
@@ -1593,5 +1615,16 @@
     "min_hours": 130.0,
     "max_hours": 130.0,
     "raw_date": "2026-11-07 22:57:35"
+  },
+  {
+    "server": "Sv18",
+    "boss": "Nix",
+    "last_kill": "2026-11-08T06:00:30+02:00",
+    "killer": "MrMyzor",
+    "earliest_spawn": "2026-11-13T16:00:30+02:00",
+    "latest_spawn": "2026-11-13T16:00:30+02:00",
+    "min_hours": 130.0,
+    "max_hours": 130.0,
+    "raw_date": "2026-11-08 01:00:30"
   }
 ]
