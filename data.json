@@ -210,17 +210,6 @@
   },
   {
     "server": "Sv19",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-07T01:08:40+02:00",
-    "killer": "xSuperDL",
-    "earliest_spawn": "2026-11-08T17:08:40+02:00",
-    "latest_spawn": "2026-11-08T17:08:40+02:00",
-    "min_hours": 40.0,
-    "max_hours": 40.0,
-    "raw_date": "2026-11-06 20:08:40"
-  },
-  {
-    "server": "Sv19",
     "boss": "Selupan",
     "last_kill": "2026-11-07T10:08:29+02:00",
     "killer": "MrMyzor",
@@ -955,6 +944,17 @@
     "min_hours": 72.0,
     "max_hours": 168.0,
     "raw_date": "2026-11-07 05:48:53"
+  },
+  {
+    "server": "Sv19",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-08T19:04:47+02:00",
+    "killer": "DL3v1L",
+    "earliest_spawn": "2026-11-10T11:04:47+02:00",
+    "latest_spawn": "2026-11-10T11:04:47+02:00",
+    "min_hours": 40.0,
+    "max_hours": 40.0,
+    "raw_date": "2026-11-08 14:04:47"
   },
   {
     "server": "Sv11",
