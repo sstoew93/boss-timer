@@ -605,17 +605,6 @@
     "raw_date": "2026-11-07 15:54:00"
   },
   {
-    "server": "Sv1",
-    "boss": "Nix",
-    "last_kill": "2026-11-04T03:12:43+02:00",
-    "killer": "Babayaga96",
-    "earliest_spawn": "2026-11-09T13:12:43+02:00",
-    "latest_spawn": "2026-11-09T13:12:43+02:00",
-    "min_hours": 130.0,
-    "max_hours": 130.0,
-    "raw_date": "2026-11-03 22:12:43"
-  },
-  {
     "server": "Speed1",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-06T01:26:25+02:00",
@@ -1626,5 +1615,16 @@
     "min_hours": 130.0,
     "max_hours": 130.0,
     "raw_date": "2026-11-08 04:43:07"
+  },
+  {
+    "server": "Sv1",
+    "boss": "Nix",
+    "last_kill": "2026-11-08T16:38:26+02:00",
+    "killer": "Babayaga98",
+    "earliest_spawn": "2026-11-14T02:38:26+02:00",
+    "latest_spawn": "2026-11-14T02:38:26+02:00",
+    "min_hours": 130.0,
+    "max_hours": 130.0,
+    "raw_date": "2026-11-08 11:38:26"
   }
 ]
