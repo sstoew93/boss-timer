@@ -1331,17 +1331,6 @@
     "raw_date": "2026-11-07 20:14:42"
   },
   {
-    "server": "SvC",
-    "boss": "Nix",
-    "last_kill": "2026-11-06T03:40:31+02:00",
-    "killer": "WinterRain",
-    "earliest_spawn": "2026-11-11T13:40:31+02:00",
-    "latest_spawn": "2026-11-11T13:40:31+02:00",
-    "min_hours": 130.0,
-    "max_hours": 130.0,
-    "raw_date": "2026-11-05 22:40:31"
-  },
-  {
     "server": "Sv18",
     "boss": "Lord of Ferea",
     "last_kill": "2026-11-08T05:59:51+02:00",
@@ -1626,5 +1615,16 @@
     "min_hours": 130.0,
     "max_hours": 130.0,
     "raw_date": "2026-11-08 03:59:32"
+  },
+  {
+    "server": "SvC",
+    "boss": "Nix",
+    "last_kill": "2026-11-08T09:43:07+02:00",
+    "killer": "SumTiTi",
+    "earliest_spawn": "2026-11-13T19:43:07+02:00",
+    "latest_spawn": "2026-11-13T19:43:07+02:00",
+    "min_hours": 130.0,
+    "max_hours": 130.0,
+    "raw_date": "2026-11-08 04:43:07"
   }
 ]
