@@ -196,11 +196,50 @@
         
         #app-content { display: none; }
 
-                @media (max-width: 768px) {
-            td { display: block; text-align: left !important; border: none; border-bottom: 1px solid #27272a; padding: 10px 20px; }
-            tbody tr { display: block; padding: 10px 0; }
-            .window-text { margin-top: 10px; }
-            .server-badge { margin-top: 10px; }
+                /* --- MOBILE RESPONSIVE FIX --- */
+        @media (max-width: 768px) {
+            table { 
+                border-spacing: 0; /* Remove default table spacing */
+            }
+
+            tbody tr { 
+                display: block; 
+                margin-bottom: 24px; /* <--- THIS ADDS THE GAP BETWEEN CARDS */
+            }
+
+            td { 
+                display: block; 
+                text-align: left !important; 
+                border: none; 
+                border-bottom: 1px solid #27272a; /* Divider lines inside the card */
+                padding: 16px 20px; 
+            }
+
+            /* Fix the top of the card */
+            td:first-child { 
+                border-left: none; 
+                border-top: none; 
+                border-radius: 12px 12px 0 0; 
+            }
+
+            /* Fix the bottom of the card */
+            td:last-child { 
+                border-right: none; 
+                border-bottom: none; 
+                border-radius: 0 0 12px 12px; 
+                text-align: left !important; /* Align timer to left on mobile */
+            }
+
+            /* Fix spacing for specific elements on mobile */
+            .server-badge { 
+                margin-top: 10px; 
+                margin-bottom: 10px; 
+            }
+            
+            .window-text { 
+                margin-top: 10px; 
+            }
+        }
         }
     </style>
 </head>
