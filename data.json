@@ -99,17 +99,6 @@
     "raw_date": "2026-11-04 12:43:47"
   },
   {
-    "server": "Speed1",
-    "boss": "Lord of Ferea",
-    "last_kill": "2026-11-04T10:49:26+02:00",
-    "killer": "Thrak",
-    "earliest_spawn": "2026-11-07T18:49:26+02:00",
-    "latest_spawn": "2026-11-12T00:49:26+02:00",
-    "min_hours": 80.0,
-    "max_hours": 182.0,
-    "raw_date": "2026-11-04 05:49:26"
-  },
-  {
     "server": "Sv8",
     "boss": "Lord of Ferea",
     "last_kill": "2026-11-04T14:09:45+02:00",
@@ -1384,6 +1373,17 @@
     "min_hours": 84.0,
     "max_hours": 84.0,
     "raw_date": "2026-11-07 22:54:30"
+  },
+  {
+    "server": "Speed1",
+    "boss": "Lord of Ferea",
+    "last_kill": "2026-11-08T09:11:51+02:00",
+    "killer": "lIlIllIlIl",
+    "earliest_spawn": "2026-11-11T17:11:51+02:00",
+    "latest_spawn": "2026-11-15T23:11:51+02:00",
+    "min_hours": 80.0,
+    "max_hours": 182.0,
+    "raw_date": "2026-11-08 04:11:51"
   },
   {
     "server": "Sv11",
