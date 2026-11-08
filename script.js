@@ -220,29 +220,40 @@ function updateTimers() {
     const maxEl = document.getElementById(timer.maxTimeId);
     if (!timerEl || !statusEl || !maxEl) return; 
 
-    const timeToMin = timer.earliestSpawnTime - now;
-    const timeToMax = timer.latestSpawnTime - now;
+    const timeToMin = timer.earliestSpawnTime - now; // If negative, window is open
+    const timeToMax = timer.latestSpawnTime - now;   // If negative, guaranteed alive
 
     if (timeToMin > 0) {
-      timerEl.textContent = formatTimeRemaining(timeToMin);
+      // --- DEAD ---
+      timerEl.textContent = `spawns in ${formatTimeRemaining(timeToMin)}`;
       timerEl.style.color = "#fafafa";
+      
       statusEl.className = "status-pill dead";
       statusEl.innerHTML = '<div class="status-dot"></div> Dead';
-      maxEl.textContent = `Max in ${formatTimeRemaining(timeToMax)}`;
+      
+      maxEl.textContent = `max in ${formatTimeRemaining(timeToMax)}`;
 
     } else if (timeToMax > 0) {
-      timerEl.textContent = "MAY SPAWN";
-      timerEl.style.color = "#f59e0b"; 
+      // --- MAY SPAWN ---
+      timerEl.textContent = `remaining ${formatTimeRemaining(timeToMax)} to max`;
+      timerEl.style.color = "#fff";
+      
       statusEl.className = "status-pill window";
-      statusEl.innerHTML = '<div class="status-dot"></div> Window Open';
-      maxEl.textContent = ``; //guaranteed in ${formatTimeRemaining(timeToMax)}
+      statusEl.innerHTML = '<div class="status-dot"></div> Might be alive';
+      
+      // timeToMin is negative here, so Math.abs() makes it a positive number
+      // to show how long it has been in the spawn window.
+      maxEl.textContent = `possibly alive for ${formatTimeRemaining(timeToMin)}`;
 
     } else {
-      timerEl.textContent = "GO HUNT";
+      // --- ALIVE ---
+      timerEl.textContent = `ALIVE`;
       timerEl.style.color = "#10b981"; 
+      
       statusEl.className = "status-pill alive";
-      statusEl.innerHTML = '<div class="status-dot"></div> Alive';
-      maxEl.textContent = ``;
+      statusEl.innerHTML = '<div class="status-dot"></div> Guaranteed Alive';
+      
+      maxEl.textContent = `spawned ${formatTimeRemaining(timeToMax)} ago`;
     }
   });
 }
