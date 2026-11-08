@@ -572,17 +572,6 @@
     "raw_date": "2026-11-07 08:13:37"
   },
   {
-    "server": "Sv5",
-    "boss": "Nix",
-    "last_kill": "2026-11-03T19:33:05+02:00",
-    "killer": "MrMyzor",
-    "earliest_spawn": "2026-11-09T05:33:05+02:00",
-    "latest_spawn": "2026-11-09T05:33:05+02:00",
-    "min_hours": 130.0,
-    "max_hours": 130.0,
-    "raw_date": "2026-11-03 14:33:05"
-  },
-  {
     "server": "Sv17",
     "boss": "God of Darkness",
     "last_kill": "2026-11-06T05:38:17+02:00",
@@ -1560,5 +1549,16 @@
     "min_hours": 130.0,
     "max_hours": 130.0,
     "raw_date": "2026-11-07 17:32:19"
+  },
+  {
+    "server": "Sv5",
+    "boss": "Nix",
+    "last_kill": "2026-11-08T03:57:35+02:00",
+    "killer": "MrMyzor",
+    "earliest_spawn": "2026-11-13T13:57:35+02:00",
+    "latest_spawn": "2026-11-13T13:57:35+02:00",
+    "min_hours": 130.0,
+    "max_hours": 130.0,
+    "raw_date": "2026-11-07 22:57:35"
   }
 ]
