@@ -1397,6 +1397,17 @@
     "raw_date": "2026-11-06 02:39:11"
   },
   {
+    "server": "Sv18",
+    "boss": "Core Magriffy",
+    "last_kill": "2026-11-08T05:54:54+02:00",
+    "killer": "Gervasia",
+    "earliest_spawn": "2026-11-11T17:54:54+02:00",
+    "latest_spawn": "2026-11-11T17:54:54+02:00",
+    "min_hours": 84.0,
+    "max_hours": 84.0,
+    "raw_date": "2026-11-08 00:54:54"
+  },
+  {
     "server": "Speed4",
     "boss": "Lord Silvester",
     "last_kill": "2026-11-08T00:37:09+02:00",
