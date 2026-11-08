@@ -1,16 +1,5 @@
 [
   {
-    "server": "Speed5",
-    "boss": "God of Darkness",
-    "last_kill": "2026-11-02T08:14:58+02:00",
-    "killer": "IlllIIlIll",
-    "earliest_spawn": "2026-11-05T08:14:58+02:00",
-    "latest_spawn": "2026-11-09T08:14:58+02:00",
-    "min_hours": 72.0,
-    "max_hours": 168.0,
-    "raw_date": "2026-11-02 03:14:58"
-  },
-  {
     "server": "Sv10",
     "boss": "God of Darkness",
     "last_kill": "2026-11-02T21:32:11+02:00",
