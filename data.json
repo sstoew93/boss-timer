@@ -204,18 +204,6 @@
     "raw_date": "2026-11-07 09:08:27"
   },
   {
-    "server": "Sv17",
-    "boss": "Lord of Ferea",
-    "last_kill": "2026-11-05T12:57:04+02:00",
-    "killer": "NexusDM",
-    "earliest_spawn": "2026-11-09T10:20:04+02:00",
-    "latest_spawn": "2026-11-10T01:12:04+02:00",
-    "min_hours": 93.4,
-    "max_hours": 108.2,
-    "is_fixed": false,
-    "raw_date": "2026-11-05 07:57:04"
-  },
-  {
     "server": "Sv15",
     "boss": "Lord of Ferea",
     "last_kill": "2026-11-05T15:41:02+02:00",
@@ -1678,6 +1666,18 @@
     "max_hours": 130.0,
     "is_fixed": true,
     "raw_date": "2026-11-07 17:32:19"
+  },
+  {
+    "server": "Sv17",
+    "boss": "Lord of Ferea",
+    "last_kill": "2026-11-09T15:29:27+02:00",
+    "killer": "PinkKitty",
+    "earliest_spawn": "2026-11-13T12:52:27+02:00",
+    "latest_spawn": "2026-11-14T03:44:27+02:00",
+    "min_hours": 93.4,
+    "max_hours": 108.2,
+    "is_fixed": false,
+    "raw_date": "2026-11-09 10:29:27"
   },
   {
     "server": "Sv5",
