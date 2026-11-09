@@ -108,18 +108,6 @@
     "raw_date": "2026-11-05 06:27:19"
   },
   {
-    "server": "Sv8",
-    "boss": "Lord of Ferea",
-    "last_kill": "2026-11-04T14:09:45+02:00",
-    "killer": "Babayaga98",
-    "earliest_spawn": "2026-11-08T11:32:45+02:00",
-    "latest_spawn": "2026-11-09T02:24:45+02:00",
-    "min_hours": 93.4,
-    "max_hours": 108.2,
-    "is_fixed": false,
-    "raw_date": "2026-11-04 09:09:45"
-  },
-  {
     "server": "Speed5",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-05T01:06:29+02:00",
@@ -1666,6 +1654,18 @@
     "max_hours": 130.0,
     "is_fixed": true,
     "raw_date": "2026-11-07 08:20:09"
+  },
+  {
+    "server": "Sv8",
+    "boss": "Lord of Ferea",
+    "last_kill": "2026-11-09T04:18:50+02:00",
+    "killer": "MrMyzor",
+    "earliest_spawn": "2026-11-13T01:41:50+02:00",
+    "latest_spawn": "2026-11-13T16:33:50+02:00",
+    "min_hours": 93.4,
+    "max_hours": 108.2,
+    "is_fixed": false,
+    "raw_date": "2026-11-08 23:18:50"
   },
   {
     "server": "Speed1",
