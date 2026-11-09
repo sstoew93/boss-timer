@@ -216,18 +216,6 @@
     "raw_date": "2026-11-05 00:08:22"
   },
   {
-    "server": "Sv7",
-    "boss": "Core Magriffy",
-    "last_kill": "2026-11-05T15:24:07+02:00",
-    "killer": "Kasperiano",
-    "earliest_spawn": "2026-11-09T03:24:07+02:00",
-    "latest_spawn": "2026-11-09T03:24:07+02:00",
-    "min_hours": 84.0,
-    "max_hours": 84.0,
-    "is_fixed": true,
-    "raw_date": "2026-11-05 10:24:07"
-  },
-  {
     "server": "Sv6",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-05T15:25:50+02:00",
@@ -1594,6 +1582,18 @@
     "max_hours": 84.0,
     "is_fixed": true,
     "raw_date": "2026-11-08 23:02:41"
+  },
+  {
+    "server": "Sv7",
+    "boss": "Core Magriffy",
+    "last_kill": "2026-11-09T04:06:52+02:00",
+    "killer": "TORIANO",
+    "earliest_spawn": "2026-11-12T16:06:52+02:00",
+    "latest_spawn": "2026-11-12T16:06:52+02:00",
+    "min_hours": 84.0,
+    "max_hours": 84.0,
+    "is_fixed": true,
+    "raw_date": "2026-11-08 23:06:52"
   },
   {
     "server": "Sv10",
