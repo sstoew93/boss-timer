@@ -36,18 +36,6 @@
     "raw_date": "2026-11-04 12:43:47"
   },
   {
-    "server": "Speed4",
-    "boss": "Lord of Ferea",
-    "last_kill": "2026-11-03T20:25:17+02:00",
-    "killer": "Messi",
-    "earliest_spawn": "2026-11-07T17:48:17+02:00",
-    "latest_spawn": "2026-11-08T08:40:17+02:00",
-    "min_hours": 93.4,
-    "max_hours": 108.2,
-    "is_fixed": false,
-    "raw_date": "2026-11-03 15:25:17"
-  },
-  {
     "server": "Sv3",
     "boss": "God of Darkness",
     "last_kill": "2026-11-04T23:13:16+02:00",
@@ -238,18 +226,6 @@
     "max_hours": 108.2,
     "is_fixed": false,
     "raw_date": "2026-11-05 10:41:02"
-  },
-  {
-    "server": "Sv2",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-07T21:49:07+02:00",
-    "killer": "PinkKitty",
-    "earliest_spawn": "2026-11-09T13:49:07+02:00",
-    "latest_spawn": "2026-11-09T13:49:07+02:00",
-    "min_hours": 40.0,
-    "max_hours": 40.0,
-    "is_fixed": true,
-    "raw_date": "2026-11-07 16:49:07"
   },
   {
     "server": "Sv1",
@@ -1090,6 +1066,18 @@
     "max_hours": 168.0,
     "is_fixed": false,
     "raw_date": "2026-11-08 00:52:32"
+  },
+  {
+    "server": "Sv2",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-09T14:47:32+02:00",
+    "killer": "PinkKitty",
+    "earliest_spawn": "2026-11-11T06:47:32+02:00",
+    "latest_spawn": "2026-11-11T06:47:32+02:00",
+    "min_hours": 40.0,
+    "max_hours": 40.0,
+    "is_fixed": true,
+    "raw_date": "2026-11-09 09:47:32"
   },
   {
     "server": "Sv4",
