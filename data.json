@@ -240,18 +240,6 @@
     "raw_date": "2026-11-07 09:08:27"
   },
   {
-    "server": "Sv11",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-07T14:24:48+02:00",
-    "killer": "SolrakDVDL",
-    "earliest_spawn": "2026-11-09T06:24:48+02:00",
-    "latest_spawn": "2026-11-09T06:24:48+02:00",
-    "min_hours": 40.0,
-    "max_hours": 40.0,
-    "is_fixed": true,
-    "raw_date": "2026-11-07 09:24:48"
-  },
-  {
     "server": "Sv17",
     "boss": "Lord of Ferea",
     "last_kill": "2026-11-05T12:57:04+02:00",
@@ -1114,6 +1102,18 @@
     "max_hours": 93.1,
     "is_fixed": true,
     "raw_date": "2026-11-06 22:26:58"
+  },
+  {
+    "server": "Sv11",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-09T08:34:13+02:00",
+    "killer": "Crimsum",
+    "earliest_spawn": "2026-11-11T00:34:13+02:00",
+    "latest_spawn": "2026-11-11T00:34:13+02:00",
+    "min_hours": 40.0,
+    "max_hours": 40.0,
+    "is_fixed": true,
+    "raw_date": "2026-11-09 03:34:13"
   },
   {
     "server": "Sv8",
