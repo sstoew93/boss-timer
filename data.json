@@ -180,18 +180,6 @@
     "raw_date": "2026-11-05 08:56:54"
   },
   {
-    "server": "Sv18",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-08T07:23:41+02:00",
-    "killer": "DlGunzM79",
-    "earliest_spawn": "2026-11-10T00:08:41+02:00",
-    "latest_spawn": "2026-11-10T00:08:41+02:00",
-    "min_hours": 40.8,
-    "max_hours": 40.8,
-    "is_fixed": true,
-    "raw_date": "2026-11-08 02:23:41"
-  },
-  {
     "server": "Sv8",
     "boss": "Lord Silvester",
     "last_kill": "2026-11-06T03:19:48+02:00",
@@ -1150,6 +1138,18 @@
     "max_hours": 40.8,
     "is_fixed": true,
     "raw_date": "2026-11-09 18:27:08"
+  },
+  {
+    "server": "Sv18",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-10T00:21:05+02:00",
+    "killer": "PinkKitty",
+    "earliest_spawn": "2026-11-11T17:06:05+02:00",
+    "latest_spawn": "2026-11-11T17:06:05+02:00",
+    "min_hours": 40.8,
+    "max_hours": 40.8,
+    "is_fixed": true,
+    "raw_date": "2026-11-09 19:21:05"
   },
   {
     "server": "Sv2",
