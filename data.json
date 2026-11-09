@@ -1008,18 +1008,6 @@
     "raw_date": "2026-11-06 16:58:57"
   },
   {
-    "server": "SvC",
-    "boss": "Selupan",
-    "last_kill": "2026-11-09T09:20:09+02:00",
-    "killer": "QueenRouss",
-    "earliest_spawn": "2026-11-10T19:20:09+02:00",
-    "latest_spawn": "2026-11-10T19:20:09+02:00",
-    "min_hours": 34.0,
-    "max_hours": 34.0,
-    "is_fixed": true,
-    "raw_date": "2026-11-09 04:20:09"
-  },
-  {
     "server": "Sv6",
     "boss": "Lord of Ferea",
     "last_kill": "2026-11-06T23:28:15+02:00",
@@ -1054,6 +1042,18 @@
     "max_hours": 40.0,
     "is_fixed": true,
     "raw_date": "2026-11-09 01:13:48"
+  },
+  {
+    "server": "SvC",
+    "boss": "Selupan",
+    "last_kill": "2026-11-09T12:20:20+02:00",
+    "killer": "XinhLounge",
+    "earliest_spawn": "2026-11-10T22:20:20+02:00",
+    "latest_spawn": "2026-11-10T22:20:20+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "is_fixed": true,
+    "raw_date": "2026-11-09 07:20:20"
   },
   {
     "server": "Sv14",
