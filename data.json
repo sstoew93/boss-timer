@@ -228,18 +228,6 @@
     "raw_date": "2026-11-05 07:57:04"
   },
   {
-    "server": "Sv4",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-07T20:14:45+02:00",
-    "killer": "PinkKitty",
-    "earliest_spawn": "2026-11-09T12:14:45+02:00",
-    "latest_spawn": "2026-11-09T12:14:45+02:00",
-    "min_hours": 40.0,
-    "max_hours": 40.0,
-    "is_fixed": true,
-    "raw_date": "2026-11-07 15:14:45"
-  },
-  {
     "server": "Sv5",
     "boss": "Nightmare",
     "last_kill": "2026-11-07T20:27:07+02:00",
@@ -1102,6 +1090,18 @@
     "max_hours": 108.2,
     "is_fixed": false,
     "raw_date": "2026-11-06 23:16:07"
+  },
+  {
+    "server": "Sv4",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-09T13:21:14+02:00",
+    "killer": "RutherFort",
+    "earliest_spawn": "2026-11-11T05:21:14+02:00",
+    "latest_spawn": "2026-11-11T05:21:14+02:00",
+    "min_hours": 40.0,
+    "max_hours": 40.0,
+    "is_fixed": true,
+    "raw_date": "2026-11-09 08:21:14"
   },
   {
     "server": "Sv18",
