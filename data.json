@@ -216,18 +216,6 @@
     "raw_date": "2026-11-07 13:26:39"
   },
   {
-    "server": "Sv7",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-07T13:13:37+02:00",
-    "killer": "SolrakDVDL",
-    "earliest_spawn": "2026-11-09T05:13:37+02:00",
-    "latest_spawn": "2026-11-09T05:13:37+02:00",
-    "min_hours": 40.0,
-    "max_hours": 40.0,
-    "is_fixed": true,
-    "raw_date": "2026-11-07 08:13:37"
-  },
-  {
     "server": "Sv17",
     "boss": "God of Darkness",
     "last_kill": "2026-11-06T05:38:17+02:00",
@@ -1066,6 +1054,18 @@
     "max_hours": 93.1,
     "is_fixed": true,
     "raw_date": "2026-11-06 19:53:28"
+  },
+  {
+    "server": "Sv7",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-09T06:13:48+02:00",
+    "killer": "ELFORNICA",
+    "earliest_spawn": "2026-11-10T22:13:48+02:00",
+    "latest_spawn": "2026-11-10T22:13:48+02:00",
+    "min_hours": 40.0,
+    "max_hours": 40.0,
+    "is_fixed": true,
+    "raw_date": "2026-11-09 01:13:48"
   },
   {
     "server": "Sv14",
