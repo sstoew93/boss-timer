@@ -240,18 +240,6 @@
     "raw_date": "2026-11-05 10:41:02"
   },
   {
-    "server": "Speed1",
-    "boss": "Core Magriffy",
-    "last_kill": "2026-11-06T01:26:25+02:00",
-    "killer": "LorD",
-    "earliest_spawn": "2026-11-09T13:26:25+02:00",
-    "latest_spawn": "2026-11-09T13:26:25+02:00",
-    "min_hours": 84.0,
-    "max_hours": 84.0,
-    "is_fixed": true,
-    "raw_date": "2026-11-05 20:26:25"
-  },
-  {
     "server": "Sv2",
     "boss": "Nightmare",
     "last_kill": "2026-11-07T21:49:07+02:00",
@@ -1654,6 +1642,18 @@
     "max_hours": 108.2,
     "is_fixed": false,
     "raw_date": "2026-11-08 23:18:50"
+  },
+  {
+    "server": "Speed1",
+    "boss": "Core Magriffy",
+    "last_kill": "2026-11-09T14:03:34+02:00",
+    "killer": "lIlIllIlIl",
+    "earliest_spawn": "2026-11-13T02:03:34+02:00",
+    "latest_spawn": "2026-11-13T02:03:34+02:00",
+    "min_hours": 84.0,
+    "max_hours": 84.0,
+    "is_fixed": true,
+    "raw_date": "2026-11-09 09:03:34"
   },
   {
     "server": "Speed1",
