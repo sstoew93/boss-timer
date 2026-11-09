@@ -252,18 +252,6 @@
     "raw_date": "2026-11-07 15:27:07"
   },
   {
-    "server": "Speed3",
-    "boss": "Core Magriffy",
-    "last_kill": "2026-11-06T00:37:52+02:00",
-    "killer": "inDriver",
-    "earliest_spawn": "2026-11-09T12:37:52+02:00",
-    "latest_spawn": "2026-11-09T12:37:52+02:00",
-    "min_hours": 84.0,
-    "max_hours": 84.0,
-    "is_fixed": true,
-    "raw_date": "2026-11-05 19:37:52"
-  },
-  {
     "server": "Speed2",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-06T00:51:39+02:00",
@@ -1630,6 +1618,18 @@
     "max_hours": 130.0,
     "is_fixed": true,
     "raw_date": "2026-11-07 08:20:09"
+  },
+  {
+    "server": "Speed3",
+    "boss": "Core Magriffy",
+    "last_kill": "2026-11-09T13:19:05+02:00",
+    "killer": "LorD",
+    "earliest_spawn": "2026-11-13T01:19:05+02:00",
+    "latest_spawn": "2026-11-13T01:19:05+02:00",
+    "min_hours": 84.0,
+    "max_hours": 84.0,
+    "is_fixed": true,
+    "raw_date": "2026-11-09 08:19:05"
   },
   {
     "server": "Sv8",
