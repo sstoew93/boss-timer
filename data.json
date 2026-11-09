@@ -1,17 +1,5 @@
 [
   {
-    "server": "Speed2",
-    "boss": "God of Darkness",
-    "last_kill": "2026-11-03T14:46:53+02:00",
-    "killer": "lIlIllIlIl",
-    "earliest_spawn": "2026-11-06T14:46:53+02:00",
-    "latest_spawn": "2026-11-10T14:46:53+02:00",
-    "min_hours": 72.0,
-    "max_hours": 168.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-03 09:46:53"
-  },
-  {
     "server": "Speed4",
     "boss": "God of Darkness",
     "last_kill": "2026-11-04T00:11:02+02:00",
@@ -34,18 +22,6 @@
     "max_hours": 168.0,
     "is_fixed": false,
     "raw_date": "2026-11-04 08:30:28"
-  },
-  {
-    "server": "Speed3",
-    "boss": "God of Darkness",
-    "last_kill": "2026-11-04T13:54:27+02:00",
-    "killer": "PauDurasso",
-    "earliest_spawn": "2026-11-07T13:54:27+02:00",
-    "latest_spawn": "2026-11-11T13:54:27+02:00",
-    "min_hours": 72.0,
-    "max_hours": 168.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-04 08:54:27"
   },
   {
     "server": "Sv15",
@@ -1534,6 +1510,18 @@
     "max_hours": 130.0,
     "is_fixed": true,
     "raw_date": "2026-11-06 20:39:43"
+  },
+  {
+    "server": "Speed3",
+    "boss": "God of Darkness",
+    "last_kill": "2026-11-09T13:15:17+02:00",
+    "killer": "lIlIllIlIl",
+    "earliest_spawn": "2026-11-12T13:15:17+02:00",
+    "latest_spawn": "2026-11-16T13:15:17+02:00",
+    "min_hours": 72.0,
+    "max_hours": 168.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-09 08:15:17"
   },
   {
     "server": "Sv5",
