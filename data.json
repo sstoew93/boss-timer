@@ -240,18 +240,6 @@
     "raw_date": "2026-11-06 00:38:17"
   },
   {
-    "server": "Sv15",
-    "boss": "Selupan",
-    "last_kill": "2026-11-07T19:47:02+02:00",
-    "killer": "ixiTCDixi",
-    "earliest_spawn": "2026-11-09T05:47:02+02:00",
-    "latest_spawn": "2026-11-09T05:47:02+02:00",
-    "min_hours": 34.0,
-    "max_hours": 34.0,
-    "is_fixed": true,
-    "raw_date": "2026-11-07 14:47:02"
-  },
-  {
     "server": "Sv16",
     "boss": "Selupan",
     "last_kill": "2026-11-07T19:49:59+02:00",
@@ -934,6 +922,18 @@
     "max_hours": 168.0,
     "is_fixed": false,
     "raw_date": "2026-11-07 10:50:14"
+  },
+  {
+    "server": "Sv15",
+    "boss": "Selupan",
+    "last_kill": "2026-11-09T05:51:40+02:00",
+    "killer": "Winnerzim",
+    "earliest_spawn": "2026-11-10T15:51:40+02:00",
+    "latest_spawn": "2026-11-10T15:51:40+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "is_fixed": true,
+    "raw_date": "2026-11-09 00:51:40"
   },
   {
     "server": "Sv2",
