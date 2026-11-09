@@ -768,18 +768,6 @@
     "raw_date": "2026-11-06 10:25:45"
   },
   {
-    "server": "Sv7",
-    "boss": "Nix",
-    "last_kill": "2026-11-05T02:54:03+02:00",
-    "killer": "SolrakDVDL",
-    "earliest_spawn": "2026-11-10T12:54:03+02:00",
-    "latest_spawn": "2026-11-10T12:54:03+02:00",
-    "min_hours": 130.0,
-    "max_hours": 130.0,
-    "is_fixed": true,
-    "raw_date": "2026-11-04 21:54:03"
-  },
-  {
     "server": "Sv1",
     "boss": "Lord of Ferea",
     "last_kill": "2026-11-06T17:41:34+02:00",
@@ -1786,5 +1774,17 @@
     "max_hours": 130.0,
     "is_fixed": true,
     "raw_date": "2026-11-08 19:05:52"
+  },
+  {
+    "server": "Sv7",
+    "boss": "Nix",
+    "last_kill": "2026-11-09T12:24:35+02:00",
+    "killer": "Bestpanda",
+    "earliest_spawn": "2026-11-14T22:24:35+02:00",
+    "latest_spawn": "2026-11-14T22:24:35+02:00",
+    "min_hours": 130.0,
+    "max_hours": 130.0,
+    "is_fixed": true,
+    "raw_date": "2026-11-09 07:24:35"
   }
 ]
