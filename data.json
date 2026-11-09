@@ -24,18 +24,6 @@
     "raw_date": "2026-11-04 12:43:47"
   },
   {
-    "server": "Sv3",
-    "boss": "God of Darkness",
-    "last_kill": "2026-11-04T23:13:16+02:00",
-    "killer": "Kasperiano",
-    "earliest_spawn": "2026-11-07T23:13:16+02:00",
-    "latest_spawn": "2026-11-11T23:13:16+02:00",
-    "min_hours": 72.0,
-    "max_hours": 168.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-04 18:13:16"
-  },
-  {
     "server": "Sv8",
     "boss": "God of Darkness",
     "last_kill": "2026-11-05T11:27:19+02:00",
@@ -1594,6 +1582,18 @@
     "max_hours": 112.0,
     "is_fixed": false,
     "raw_date": "2026-11-08 03:36:30"
+  },
+  {
+    "server": "Sv3",
+    "boss": "God of Darkness",
+    "last_kill": "2026-11-09T18:44:06+02:00",
+    "killer": "Kasperiano",
+    "earliest_spawn": "2026-11-12T18:44:06+02:00",
+    "latest_spawn": "2026-11-16T18:44:06+02:00",
+    "min_hours": 72.0,
+    "max_hours": 168.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-09 13:44:06"
   },
   {
     "server": "Speed2",
