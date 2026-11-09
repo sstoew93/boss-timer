@@ -1,17 +1,5 @@
 [
   {
-    "server": "Speed4",
-    "boss": "God of Darkness",
-    "last_kill": "2026-11-04T00:11:02+02:00",
-    "killer": "KrabeSL",
-    "earliest_spawn": "2026-11-07T00:11:02+02:00",
-    "latest_spawn": "2026-11-11T00:11:02+02:00",
-    "min_hours": 72.0,
-    "max_hours": 168.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-03 19:11:02"
-  },
-  {
     "server": "Sv4",
     "boss": "God of Darkness",
     "last_kill": "2026-11-04T13:30:28+02:00",
@@ -214,18 +202,6 @@
     "max_hours": 108.2,
     "is_fixed": false,
     "raw_date": "2026-11-05 12:08:32"
-  },
-  {
-    "server": "Sv11",
-    "boss": "Core Magriffy",
-    "last_kill": "2026-11-06T04:19:04+02:00",
-    "killer": "MacKgorBan",
-    "earliest_spawn": "2026-11-09T16:19:04+02:00",
-    "latest_spawn": "2026-11-09T16:19:04+02:00",
-    "min_hours": 84.0,
-    "max_hours": 84.0,
-    "is_fixed": true,
-    "raw_date": "2026-11-05 23:19:04"
   },
   {
     "server": "Sv8",
@@ -1630,6 +1606,18 @@
     "max_hours": 130.0,
     "is_fixed": true,
     "raw_date": "2026-11-07 13:23:18"
+  },
+  {
+    "server": "Sv11",
+    "boss": "Core Magriffy",
+    "last_kill": "2026-11-09T17:03:31+02:00",
+    "killer": "SolrakDVDL",
+    "earliest_spawn": "2026-11-13T05:03:31+02:00",
+    "latest_spawn": "2026-11-13T05:03:31+02:00",
+    "min_hours": 84.0,
+    "max_hours": 84.0,
+    "is_fixed": true,
+    "raw_date": "2026-11-09 12:03:31"
   },
   {
     "server": "Speed3",
