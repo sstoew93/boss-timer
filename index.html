@@ -7,7 +7,6 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Import Orbitron for the header, and Inter for the rest -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
 
     <style>
@@ -19,157 +18,76 @@
             padding: 40px 20px; 
             margin: 0;
             min-height: 100vh;
-            overflow-x: hidden;
         }
 
-                /* --- COOL STYLIZED HEADER (DARK CHROME THEME) --- */
-        .main-header { 
-            text-align: center; 
-            margin-bottom: 40px; 
-            perspective: 1000px;
-        }
-
+        /* --- COOL STYLIZED HEADER (DARK CHROME THEME) --- */
+        .main-header { text-align: center; margin-bottom: 40px; perspective: 1000px; }
         .cool-header {
-            font-family: 'Orbitron', sans-serif;
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            font-weight: 900;
-            margin: 0;
-            text-transform: uppercase;
-            letter-spacing: 6px; /* Slightly wider for that premium look */
-            position: relative;
-            display: inline-block;
-            
-            /* Dark Metallic / Silver Gradient */
-            background: linear-gradient(
-                135deg, 
-                #ffffff 0%, 
-                #a1a1aa 20%, 
-                #3f3f46 50%, 
-                #a1a1aa 80%, 
-                #ffffff 100%
-            );
-            background-size: 200% auto;
-            color: transparent;
-            -webkit-background-clip: text;
-            background-clip: text;
-            
-            /* Smooth animations */
+            font-family: 'Orbitron', sans-serif; font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900;
+            margin: 0; text-transform: uppercase; letter-spacing: 6px; position: relative; display: inline-block;
+            background: linear-gradient(135deg, #ffffff 0%, #a1a1aa 20%, #3f3f46 50%, #a1a1aa 80%, #ffffff 100%);
+            background-size: 200% auto; color: transparent; -webkit-background-clip: text; background-clip: text;
             animation: shine 5s linear infinite, float 4s ease-in-out infinite;
-            
-            /* Subtle white glow to match the spotlight */
             text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1);
-            
-            /* Variables for the JS mouse tracking */
-            --mouse-x: 50%;
-            --mouse-y: 50%;
+            --mouse-x: 50%; --mouse-y: 50%;
         }
-
-        /* The JS Spotlight Overlay - Pure White Glare */
         .cool-header::before {
-            content: "#MEGA Mu BOSS Timer";
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: radial-gradient(
-                circle at var(--mouse-x) var(--mouse-y), 
-                rgba(255, 255, 255, 1) 0%, 
-                transparent 40%
-            );
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            z-index: 1;
-            pointer-events: none;
-            opacity: 0;
-            transition: opacity 0.3s;
+            content: "MEGA Mu BOSS Timer"; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 1) 0%, transparent 40%);
+            -webkit-background-clip: text; background-clip: text; color: transparent; z-index: 1; pointer-events: none; opacity: 0; transition: opacity 0.3s;
         }
-
-        /* Show the spotlight on hover */
-        .cool-header:hover::before {
-            opacity: 1;
-        }
-
-        /* Subtitle */
-        .subtitle { 
-            text-align: center; color: #a1a1aa; font-size: 15px; margin-bottom: 30px; 
-            letter-spacing: 2px; text-transform: uppercase; font-weight: 500;
-        }
+        .cool-header:hover::before { opacity: 1; }
+        .subtitle { text-align: center; color: #a1a1aa; font-size: 15px; margin-bottom: 30px; letter-spacing: 2px; text-transform: uppercase; font-weight: 500; }
 
         /* --- TOP BAR (Search & Filters) --- */
         .top-bar { max-width: 1100px; margin: 0 auto 20px auto; display: flex; gap: 15px; flex-wrap: wrap; }
         .search-container { flex-grow: 1; }
-        .search-container input { 
-            width: 60%; padding: 12px 20px; border-radius: 10px; border: 1px solid #27272a; 
-            background: #18181b; color: #fff; font-size: 15px; font-family: 'Inter', sans-serif; outline: none; transition: all 0.2s;
-        }
+        .search-container input { width: 100%; padding: 12px 20px; border-radius: 10px; border: 1px solid #27272a; background: #18181b; color: #fff; font-size: 15px; font-family: 'Inter', sans-serif; outline: none; transition: all 0.2s; }
         .search-container input:focus { border-color: #52525b; box-shadow: 0 0 0 3px rgba(255,255,255,0.05); }
 
         /* --- DROPDOWNS --- */
         .dropdown { position: relative; display: inline-block; }
-        .dropbtn { 
-            background-color: #18181b; color: #e4e4e7; padding: 12px 20px; font-size: 14px; font-family: 'Inter', sans-serif; font-weight: 500;
-            border: 1px solid #27272a; border-radius: 10px; cursor: pointer; min-width: 160px; text-align: left; transition: all 0.2s;
-        }
+        .dropbtn { background-color: #18181b; color: #e4e4e7; padding: 12px 20px; font-size: 14px; font-family: 'Inter', sans-serif; font-weight: 500; border: 1px solid #27272a; border-radius: 10px; cursor: pointer; min-width: 160px; text-align: left; transition: all 0.2s; }
         .dropbtn:hover { border-color: #52525b; background: #1f1f23; }
-        
-        .dropdown-content { 
-            display: none; position: absolute; background-color: #18181b; min-width: 200px; 
-            box-shadow: 0px 10px 30px rgba(0,0,0,0.8); z-index: 10; border: 1px solid #27272a; border-radius: 10px; 
-            max-height: 300px; overflow-y: auto;
-        }
+        .dropdown-content { display: none; position: absolute; background-color: #18181b; min-width: 200px; box-shadow: 0px 10px 30px rgba(0,0,0,0.8); z-index: 10; border: 1px solid #27272a; border-radius: 10px; max-height: 300px; overflow-y: auto; }
         .dropdown-content::-webkit-scrollbar { width: 8px; }
         .dropdown-content::-webkit-scrollbar-track { background: #18181b; border-radius: 8px; }
         .dropdown-content::-webkit-scrollbar-thumb { background: #3f3f46; border-radius: 8px; }
         .dropdown-content::-webkit-scrollbar-thumb:hover { background: #52525b; }
-
         .dropdown-content.show { display: block; }
         .checkbox-container { padding: 10px; display: flex; flex-direction: column; gap: 8px; }
         .checkbox-container label { display: flex; align-items: center; gap: 8px; cursor: pointer; font-size: 14px; color: #d4d4d8; }
-        .checkbox-container input[type="checkbox"] { accent-color: #000000; }
-        
+        .checkbox-container input[type="checkbox"] { accent-color: #6366f1; }
+
+        /* --- EVENT BOSS ACCORDION --- */
+        .event-accordion-container { max-width: 1100px; margin: 0 auto 20px auto; background: #18181b; border: 1px solid #27272a; border-radius: 12px; overflow: hidden; transition: all 0.3s ease; }
+        .event-accordion-btn { width: 100%; background: #1f1f23; color: #e4e4e7; border: none; padding: 16px 20px; font-size: 15px; font-weight: 600; font-family: 'Inter', sans-serif; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: background 0.2s; }
+        .event-accordion-btn:hover { background: #27272a; }
+        .event-accordion-content { display: none; padding: 15px; border-top: 1px solid #27272a; background: #121214; }
+        .event-accordion-content.show { display: block; animation: fadeIn 0.3s ease; }
+        .event-boss-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; }
+        .event-boss-card { background: #18181b; border: 1px solid #27272a; border-radius: 8px; padding: 15px; text-align: center; }
+        .event-boss-name { font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 5px; }
+        .event-boss-timer { font-size: 18px; font-weight: 700; color: #10b981; font-family: monospace; margin-bottom: 4px; }
+        .event-boss-next { font-size: 12px; color: #a1a1aa; }
+
         /* --- TABLE STYLED AS CARDS --- */
         .table-container { max-width: 1100px; margin: 0 auto; }
         table { width: 100%; border-collapse: separate; border-spacing: 0 12px; }
         thead { display: none; } 
-
-        tbody tr { 
-            background: #18181b; 
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
-            border-radius: 12px;
-            transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-        }
-        
-        tbody tr:hover { 
-            transform: translateY(-2px); 
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.6), 0 4px 6px -2px rgba(0, 0, 0, 0.4); 
-            background: #1f1f23;
-        }
-
-        td { 
-            padding: 20px; 
-            vertical-align: middle; 
-            border-top: 1px solid #27272a;
-            border-bottom: 1px solid #27272a;
-        }
+        tbody tr { background: #18181b; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.3); border-radius: 12px; transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease; }
+        tbody tr:hover { transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.6), 0 4px 6px -2px rgba(0, 0, 0, 0.4); background: #1f1f23; }
+        td { padding: 20px; vertical-align: middle; border-top: 1px solid #27272a; border-bottom: 1px solid #27272a; }
         td:first-child { border-left: 1px solid #27272a; border-radius: 12px 0 0 12px; }
         td:last-child { border-right: 1px solid #27272a; border-radius: 0 12px 12px 0; text-align: right; }
 
         .boss-name { font-size: 18px; font-weight: 600; color: #fff; margin-bottom: 4px; }
         .boss-subtext { font-size: 13px; color: #a1a1aa; }
-        
-        .server-badge { 
-            background: #27272a; color: #e4e4e7; padding: 4px 12px; border-radius: 20px; 
-            font-size: 13px; font-weight: 600; display: inline-block; border: 1px solid #3f3f46;
-        }
-        
+        .server-badge { background: #27272a; color: #e4e4e7; padding: 4px 12px; border-radius: 20px; font-size: 13px; font-weight: 600; display: inline-block; border: 1px solid #3f3f46; }
         .window-text { font-size: 13px; color: #a1a1aa; line-height: 1.6; }
         .window-text strong { color: #e4e4e7; font-weight: 500; }
 
-        .status-pill { 
-            background: #27272a; color: #e4e4e7; padding: 4px 12px; border-radius: 20px; 
-            font-size: 12px; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; margin-bottom: 8px;
-            border: 1px solid #3f3f46;
-        }
-        
+        .status-pill { background: #27272a; color: #e4e4e7; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; margin-bottom: 8px; border: 1px solid #3f3f46; }
         .status-dot { width: 8px; height: 8px; border-radius: 50%; position: relative; }
         .status-pill.dead .status-dot { background: #ef4444; box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); animation: pulse-red 2s infinite; }
         .status-pill.window .status-dot { background: #f59e0b; box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7); animation: pulse-amber 1.5s infinite; }
@@ -178,14 +96,14 @@
         @keyframes pulse-red { 0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); } 70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(239, 68, 68, 0); } 100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); } }
         @keyframes pulse-amber { 0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7); } 70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(245, 158, 11, 0); } 100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(245, 158, 11, 0); } }
         @keyframes pulse-green { 0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); } 70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); } 100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); } }
-
-        /* Header Animations */
         @keyframes shine { to { background-position: 200% center; } }
         @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-5px); } 100% { transform: translateY(0px); } }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(-5px); } to { opacity: 1; transform: translateY(0); } }
 
         .timer-main { font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 2px; font-variant-numeric: tabular-nums; }
         .timer-sub { font-size: 12px; color: #71717a; }
 
+        /* --- LOGIN SCREEN --- */
         #login-screen { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 80vh; text-align: center; }
         #login-screen h1 { font-family: 'Orbitron', sans-serif; font-size: 2rem; margin-bottom: 10px; font-weight: 900; color: #fff; letter-spacing: 2px;}
         #login-screen input { padding: 12px; font-size: 16px; border-radius: 8px; border: 1px solid #27272a; background: #18181b; color: #fff; margin-bottom: 15px; width: 300px; text-align: center; outline: none; transition: all 0.2s; }
@@ -193,53 +111,17 @@
         #login-screen button { padding: 12px 24px; font-size: 16px; font-weight: 600; border-radius: 8px; border: none; background: #fafafa; color: #09090b; cursor: pointer; transition: background 0.2s, transform 0.1s; }
         #login-screen button:hover { background: #e4e4e7; transform: scale(1.02); }
         #error-msg { color: #ef4444; margin-top: 15px; display: none; font-size: 14px; font-weight: 500; }
-        
         #app-content { display: none; }
 
-                /* --- MOBILE RESPONSIVE FIX --- */
+        /* --- MOBILE RESPONSIVE FIX --- */
         @media (max-width: 768px) {
-            table { 
-                border-spacing: 0; /* Remove default table spacing */
-            }
-
-            tbody tr { 
-                display: block; 
-                margin-bottom: 24px; /* <--- THIS ADDS THE GAP BETWEEN CARDS */
-            }
-
-            td { 
-                display: block; 
-                text-align: left !important; 
-                border: none; 
-                border-bottom: 1px solid #27272a; /* Divider lines inside the card */
-                padding: 16px 20px; 
-            }
-
-            /* Fix the top of the card */
-            td:first-child { 
-                border-left: none; 
-                border-top: none; 
-                border-radius: 12px 12px 0 0; 
-            }
-
-            /* Fix the bottom of the card */
-            td:last-child { 
-                border-right: none; 
-                border-bottom: none; 
-                border-radius: 0 0 12px 12px; 
-                text-align: left !important; /* Align timer to left on mobile */
-            }
-
-            /* Fix spacing for specific elements on mobile */
-            .server-badge { 
-                margin-top: 10px; 
-                margin-bottom: 10px; 
-            }
-            
-            .window-text { 
-                margin-top: 10px; 
-            }
-        }
+            table { border-spacing: 0; }
+            tbody tr { display: block; margin-bottom: 24px; }
+            td { display: block; text-align: left !important; border: none; border-bottom: 1px solid #27272a; padding: 16px 20px; }
+            td:first-child { border-left: none; border-top: none; border-radius: 12px 12px 0 0; }
+            td:last-child { border-right: none; border-bottom: none; border-radius: 0 0 12px 12px; text-align: left !important; }
+            .server-badge { margin-top: 10px; margin-bottom: 10px; }
+            .window-text { margin-top: 10px; }
         }
     </style>
 </head>
@@ -258,10 +140,9 @@
     <div id="app-content">
         
         <header class="main-header">
-            <!-- The JS Spotlight is handled in the script at the bottom -->
-            <h1 class="cool-header" id="main-title">#MEGA Mu BOSS Timer</h1>
+            <h1 class="cool-header" id="main-title">MEGA Mu BOSS Timer</h1>
         </header>
-        <div class="subtitle">• Some respawn times is dynamic •</div>
+        <div class="subtitle">Respawn times are dynamic • Hover for details</div>
         
         <div class="top-bar">
             <div class="search-container">
@@ -277,6 +158,18 @@
                 <button class="dropbtn" onclick="toggleDropdown('boss-dropdown')">Filter Bosses ▼</button>
                 <div id="boss-dropdown" class="dropdown-content">
                     <div id="boss-filters" class="checkbox-container"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- EVENT BOSS ACCORDION -->
+        <div class="event-accordion-container">
+            <button class="event-accordion-btn" onclick="toggleEventAccordion()">
+                ⏱️ Fixed Event Bosses (Kundun, Medusa, etc.) <span id="event-arrow">▼</span>
+            </button>
+            <div id="event-accordion-content" class="event-accordion-content">
+                <div id="event-boss-grid" class="event-boss-grid">
+                    <!-- Event timers will be loaded here by JS -->
                 </div>
             </div>
         </div>
@@ -299,18 +192,13 @@
     </div>
 
     <script src="script.js"></script>
-
-    <!-- JS for the mouse-tracking spotlight effect on the header -->
     <script>
+        // Header mouse tracking
         const title = document.getElementById('main-title');
-        
         title.addEventListener('mousemove', (e) => {
             const rect = title.getBoundingClientRect();
-            // Calculate mouse position relative to the text element
             const x = e.clientX - rect.left;
             const y = e.clientY - rect.top;
-            
-            // Update CSS variables so the ::before pseudo-element can use them
             title.style.setProperty('--mouse-x', `${x}px`);
             title.style.setProperty('--mouse-y', `${y}px`);
         });
