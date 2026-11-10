@@ -96,18 +96,6 @@
     "raw_date": "2026-11-06 00:48:27"
   },
   {
-    "server": "Sv2",
-    "boss": "Lord of Ferea",
-    "last_kill": "2026-11-06T07:07:43+02:00",
-    "killer": "Babayaga98",
-    "earliest_spawn": "2026-11-10T04:30:43+02:00",
-    "latest_spawn": "2026-11-10T19:22:43+02:00",
-    "min_hours": 93.4,
-    "max_hours": 108.2,
-    "is_fixed": false,
-    "raw_date": "2026-11-06 02:07:43"
-  },
-  {
     "server": "Sv6",
     "boss": "God of Darkness",
     "last_kill": "2026-11-06T00:50:42+02:00",
@@ -1690,6 +1678,18 @@
     "max_hours": 108.2,
     "is_fixed": false,
     "raw_date": "2026-11-10 06:02:22"
+  },
+  {
+    "server": "Sv2",
+    "boss": "Lord of Ferea",
+    "last_kill": "2026-11-10T12:17:51+02:00",
+    "killer": "PinkKitty",
+    "earliest_spawn": "2026-11-14T09:40:51+02:00",
+    "latest_spawn": "2026-11-15T00:32:51+02:00",
+    "min_hours": 93.4,
+    "max_hours": 108.2,
+    "is_fixed": false,
+    "raw_date": "2026-11-10 07:17:51"
   },
   {
     "server": "Sv7",
