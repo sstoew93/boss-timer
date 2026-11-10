@@ -121,18 +121,6 @@
   },
   {
     "server": "Sv19",
-    "boss": "Nix",
-    "last_kill": "2026-11-05T15:36:22+02:00",
-    "killer": "TUITUI",
-    "earliest_spawn": "2026-11-10T01:36:22+02:00",
-    "latest_spawn": "2026-11-10T07:36:22+02:00",
-    "min_hours": 106.0,
-    "max_hours": 112.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-05 10:36:22"
-  },
-  {
-    "server": "Sv19",
     "boss": "Lord of Ferea",
     "last_kill": "2026-11-06T05:48:27+02:00",
     "killer": "Babayaga96",
@@ -178,18 +166,6 @@
     "max_hours": 40.8,
     "is_fixed": true,
     "raw_date": "2026-11-08 07:51:37"
-  },
-  {
-    "server": "Sv19",
-    "boss": "Selupan",
-    "last_kill": "2026-11-08T20:16:04+02:00",
-    "killer": "SolrakDVDL",
-    "earliest_spawn": "2026-11-10T06:16:04+02:00",
-    "latest_spawn": "2026-11-10T06:16:04+02:00",
-    "min_hours": 34.0,
-    "max_hours": 34.0,
-    "is_fixed": true,
-    "raw_date": "2026-11-08 15:16:04"
   },
   {
     "server": "Sv10",
@@ -1068,6 +1044,18 @@
     "raw_date": "2026-11-09 18:27:08"
   },
   {
+    "server": "Sv19",
+    "boss": "Selupan",
+    "last_kill": "2026-11-10T06:27:03+02:00",
+    "killer": "WinterRain",
+    "earliest_spawn": "2026-11-11T16:27:03+02:00",
+    "latest_spawn": "2026-11-11T16:27:03+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "is_fixed": true,
+    "raw_date": "2026-11-10 01:27:03"
+  },
+  {
     "server": "Sv18",
     "boss": "Nightmare",
     "last_kill": "2026-11-10T00:21:05+02:00",
@@ -1762,5 +1750,17 @@
     "max_hours": 112.0,
     "is_fixed": false,
     "raw_date": "2026-11-09 23:30:34"
+  },
+  {
+    "server": "Sv19",
+    "boss": "Nix",
+    "last_kill": "2026-11-10T06:27:03+02:00",
+    "killer": "Kasperiano",
+    "earliest_spawn": "2026-11-14T16:27:03+02:00",
+    "latest_spawn": "2026-11-14T22:27:03+02:00",
+    "min_hours": 106.0,
+    "max_hours": 112.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-10 01:27:03"
   }
 ]
