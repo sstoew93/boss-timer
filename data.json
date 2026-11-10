@@ -145,18 +145,6 @@
   },
   {
     "server": "Sv6",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-09T02:25:05+02:00",
-    "killer": "LUISFLO133",
-    "earliest_spawn": "2026-11-10T19:10:05+02:00",
-    "latest_spawn": "2026-11-10T19:10:05+02:00",
-    "min_hours": 40.8,
-    "max_hours": 40.8,
-    "is_fixed": true,
-    "raw_date": "2026-11-08 21:25:05"
-  },
-  {
-    "server": "Sv6",
     "boss": "Lord of Ferea",
     "last_kill": "2026-11-06T23:28:15+02:00",
     "killer": "ElfCitara",
@@ -1186,6 +1174,18 @@
     "max_hours": 93.1,
     "is_fixed": true,
     "raw_date": "2026-11-08 08:33:13"
+  },
+  {
+    "server": "Sv6",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-10T19:22:35+02:00",
+    "killer": "PinkKitty",
+    "earliest_spawn": "2026-11-12T12:07:35+02:00",
+    "latest_spawn": "2026-11-12T12:07:35+02:00",
+    "min_hours": 40.8,
+    "max_hours": 40.8,
+    "is_fixed": true,
+    "raw_date": "2026-11-10 14:22:35"
   },
   {
     "server": "Sv5",
