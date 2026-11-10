@@ -144,18 +144,6 @@
     "raw_date": "2026-11-06 02:39:11"
   },
   {
-    "server": "Sv1",
-    "boss": "Lord Silvester",
-    "last_kill": "2026-11-06T21:18:13+02:00",
-    "killer": "ELFtitania",
-    "earliest_spawn": "2026-11-10T18:23:13+02:00",
-    "latest_spawn": "2026-11-10T18:23:13+02:00",
-    "min_hours": 93.1,
-    "max_hours": 93.1,
-    "is_fixed": true,
-    "raw_date": "2026-11-06 16:18:13"
-  },
-  {
     "server": "Sv14",
     "boss": "Lord Silvester",
     "last_kill": "2026-11-06T21:37:00+02:00",
@@ -1702,6 +1690,18 @@
     "max_hours": 93.1,
     "is_fixed": true,
     "raw_date": "2026-11-10 13:35:21"
+  },
+  {
+    "server": "Sv1",
+    "boss": "Lord Silvester",
+    "last_kill": "2026-11-10T18:40:36+02:00",
+    "killer": "PinkKitty",
+    "earliest_spawn": "2026-11-14T15:45:36+02:00",
+    "latest_spawn": "2026-11-14T15:45:36+02:00",
+    "min_hours": 93.1,
+    "max_hours": 93.1,
+    "is_fixed": true,
+    "raw_date": "2026-11-10 13:40:36"
   },
   {
     "server": "Sv19",
