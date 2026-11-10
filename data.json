@@ -96,18 +96,6 @@
     "raw_date": "2026-11-06 18:28:15"
   },
   {
-    "server": "Speed2",
-    "boss": "Lord Silvester",
-    "last_kill": "2026-11-07T03:20:21+02:00",
-    "killer": "M4ROL1T3",
-    "earliest_spawn": "2026-11-11T00:25:21+02:00",
-    "latest_spawn": "2026-11-11T00:25:21+02:00",
-    "min_hours": 93.1,
-    "max_hours": 93.1,
-    "is_fixed": true,
-    "raw_date": "2026-11-06 22:20:21"
-  },
-  {
     "server": "Speed3",
     "boss": "Lord Silvester",
     "last_kill": "2026-11-07T03:26:58+02:00",
@@ -1690,6 +1678,18 @@
     "max_hours": 93.1,
     "is_fixed": true,
     "raw_date": "2026-11-10 19:29:01"
+  },
+  {
+    "server": "Speed2",
+    "boss": "Lord Silvester",
+    "last_kill": "2026-11-11T00:32:28+02:00",
+    "killer": "lIlIllIlIl",
+    "earliest_spawn": "2026-11-14T21:37:28+02:00",
+    "latest_spawn": "2026-11-14T21:37:28+02:00",
+    "min_hours": 93.1,
+    "max_hours": 93.1,
+    "is_fixed": true,
+    "raw_date": "2026-11-10 19:32:28"
   },
   {
     "server": "Sv17",
