@@ -120,18 +120,6 @@
     "raw_date": "2026-11-05 19:50:42"
   },
   {
-    "server": "Sv5",
-    "boss": "Selupan",
-    "last_kill": "2026-11-09T01:12:36+02:00",
-    "killer": "PinkKitty",
-    "earliest_spawn": "2026-11-10T11:12:36+02:00",
-    "latest_spawn": "2026-11-10T11:12:36+02:00",
-    "min_hours": 34.0,
-    "max_hours": 34.0,
-    "is_fixed": true,
-    "raw_date": "2026-11-08 20:12:36"
-  },
-  {
     "server": "Sv11",
     "boss": "God of Darkness",
     "last_kill": "2026-11-06T01:49:11+02:00",
@@ -1066,6 +1054,18 @@
     "max_hours": 168.0,
     "is_fixed": false,
     "raw_date": "2026-11-07 05:48:53"
+  },
+  {
+    "server": "Sv5",
+    "boss": "Selupan",
+    "last_kill": "2026-11-10T11:21:37+02:00",
+    "killer": "PinkKitty",
+    "earliest_spawn": "2026-11-11T21:21:37+02:00",
+    "latest_spawn": "2026-11-11T21:21:37+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "is_fixed": true,
+    "raw_date": "2026-11-10 06:21:37"
   },
   {
     "server": "Sv19",
