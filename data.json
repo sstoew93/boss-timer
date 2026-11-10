@@ -168,18 +168,6 @@
     "raw_date": "2026-11-06 16:20:19"
   },
   {
-    "server": "Sv4",
-    "boss": "Lord Silvester",
-    "last_kill": "2026-11-06T21:22:15+02:00",
-    "killer": "Douha",
-    "earliest_spawn": "2026-11-10T18:27:15+02:00",
-    "latest_spawn": "2026-11-10T18:27:15+02:00",
-    "min_hours": 93.1,
-    "max_hours": 93.1,
-    "is_fixed": true,
-    "raw_date": "2026-11-06 16:22:15"
-  },
-  {
     "server": "Sv14",
     "boss": "Lord Silvester",
     "last_kill": "2026-11-06T21:37:00+02:00",
@@ -1702,6 +1690,18 @@
     "max_hours": 93.1,
     "is_fixed": true,
     "raw_date": "2026-11-10 13:25:27"
+  },
+  {
+    "server": "Sv4",
+    "boss": "Lord Silvester",
+    "last_kill": "2026-11-10T18:31:23+02:00",
+    "killer": "SunSUM",
+    "earliest_spawn": "2026-11-14T15:36:23+02:00",
+    "latest_spawn": "2026-11-14T15:36:23+02:00",
+    "min_hours": 93.1,
+    "max_hours": 93.1,
+    "is_fixed": true,
+    "raw_date": "2026-11-10 13:31:23"
   },
   {
     "server": "Sv19",
