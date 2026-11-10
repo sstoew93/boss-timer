@@ -384,18 +384,6 @@
     "raw_date": "2026-11-09 00:55:29"
   },
   {
-    "server": "Sv1",
-    "boss": "Selupan",
-    "last_kill": "2026-11-09T05:57:23+02:00",
-    "killer": "Winnerzim",
-    "earliest_spawn": "2026-11-10T15:57:23+02:00",
-    "latest_spawn": "2026-11-10T15:57:23+02:00",
-    "min_hours": 34.0,
-    "max_hours": 34.0,
-    "is_fixed": true,
-    "raw_date": "2026-11-09 00:57:23"
-  },
-  {
     "server": "Sv14",
     "boss": "Selupan",
     "last_kill": "2026-11-09T05:58:12+02:00",
@@ -1042,6 +1030,18 @@
     "max_hours": 84.0,
     "is_fixed": true,
     "raw_date": "2026-11-07 20:14:42"
+  },
+  {
+    "server": "Sv1",
+    "boss": "Selupan",
+    "last_kill": "2026-11-10T04:11:18+02:00",
+    "killer": "Gervasia",
+    "earliest_spawn": "2026-11-11T14:11:18+02:00",
+    "latest_spawn": "2026-11-11T14:11:18+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "is_fixed": true,
+    "raw_date": "2026-11-09 23:11:18"
   },
   {
     "server": "Speed4",
