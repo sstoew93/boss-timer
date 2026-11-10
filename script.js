@@ -246,17 +246,18 @@ function updateTimers() {
   });
 }
 
-// --- EVENT BOSS ACCORDION LOGIC ---
+// --- EVENT BOSS ACCORDION LOGIC (FIXED FOR BRAZIL TIME) ---
 const EVENT_BOSSES = [
     { 
         name: "Kundun", 
         type: "interval", 
-        interval: 8 // Spawns every 8 hours
+        interval: 8 // Spawns every 8 hours (BR Time)
     },
     { 
         name: "Medusa", 
         type: "schedule", 
         // 0 = Sunday, 1 = Monday, 2 = Tuesday, 3 = Wednesday, 4 = Thursday, 5 = Friday, 6 = Saturday
+        // These times are in BRAZIL TIME as requested
         schedule: [
             { day: 2, hour: 22, minute: 0, label: "Tue 22:00" }, // Tuesday
             { day: 4, hour: 22, minute: 0, label: "Thu 22:00" }, // Thursday
@@ -294,49 +295,45 @@ function buildEventBosses() {
     });
 }
 
-// Helper to get exact time in Bulgarian Timezone
-function getBGTime() {
-    const now = new Date();
-    const bgString = now.toLocaleString('en-US', { timeZone: 'Europe/Sofia', hour12: false });
-    return new Date(bgString);
-}
-
 function updateEventTimers() {
-    const bgNow = getBGTime();
+    const now = new Date();
+    const nowMs = now.getTime();
     
+    // 1. Get current time in Brazil to do the math
+    const brString = now.toLocaleString('en-US', { timeZone: 'America/Sao_Paulo', hour12: false });
+    const brNow = new Date(brString);
+
     EVENT_BOSSES.forEach(boss => {
         const timerEl = document.getElementById(`event-timer-${boss.name.replace(/\s/g, '')}`);
         const nextEl = document.getElementById(`event-next-${boss.name.replace(/\s/g, '')}`);
-        
         if (!timerEl || !nextEl) return;
 
-        let targetTime = new Date(bgNow);
-        let nextLabel = "";
+        let targetTimeBR = new Date(brNow);
+        let label = "";
 
         if (boss.type === "interval") {
-            let nextSpawnHour = Math.ceil((bgNow.getHours() + 1) / boss.interval) * boss.interval;
-            if (nextSpawnHour >= 24) nextSpawnHour -= 24;
-            
-            targetTime.setHours(nextSpawnHour, 0, 0, 0);
-            if (targetTime < bgNow) {
-                targetTime.setDate(targetTime.getDate() + 1);
+            // Kundun Logic
+            let nextSpawnHour = Math.ceil((brNow.getHours() + 1) / boss.interval) * boss.interval;
+            if (nextSpawnHour >= 24) {
+                nextSpawnHour -= 24;
+                targetTimeBR.setDate(targetTimeBR.getDate() + 1);
             }
-            nextLabel = `${String(nextSpawnHour).padStart(2, '0')}:00`;
-
+            targetTimeBR.setHours(nextSpawnHour, 0, 0, 0);
+            label = `${String(nextSpawnHour).padStart(2, '0')}:00 BR`;
+            
         } else if (boss.type === "schedule") {
+            // Medusa Logic
             let closestTime = null;
             let closestLabel = "";
 
             boss.schedule.forEach(slot => {
-                let candidate = new Date(bgNow);
+                let candidate = new Date(brNow);
                 candidate.setHours(slot.hour, slot.minute, 0, 0);
 
-                let dayDiff = slot.day - bgNow.getDay();
-                
-                if (dayDiff < 0 || (dayDiff === 0 && candidate <= bgNow)) {
+                let dayDiff = slot.day - brNow.getDay();
+                if (dayDiff < 0 || (dayDiff === 0 && candidate <= brNow)) {
                     dayDiff += 7;
                 }
-                
                 candidate.setDate(candidate.getDate() + dayDiff);
 
                 if (!closestTime || candidate < closestTime) {
@@ -344,26 +341,35 @@ function updateEventTimers() {
                     closestLabel = slot.label;
                 }
             });
-
-            targetTime = closestTime;
-            nextLabel = closestLabel;
+            targetTimeBR = closestTime;
+            label = closestLabel;
         }
 
-        const distance = targetTime - bgNow;
+        // 2. Calculate the exact millisecond difference
+        const diffMs = targetTimeBR.getTime() - brNow.getTime();
         
+        // 3. Find the actual real-world timestamp
+        const targetMs = nowMs + diffMs;
+        const distance = targetMs - nowMs;
+
+        // 4. Convert the target time to Bulgarian time for display
+        const targetDateObj = new Date(targetMs);
+        const bgTimeStr = targetDateObj.toLocaleString('en-GB', { timeZone: 'Europe/Sofia', hour: '2-digit', minute: '2-digit' });
+
         if (distance < 0) {
             timerEl.textContent = "SPAWNING NOW";
             timerEl.style.color = "#ef4444";
         } else {
             const hours = Math.floor(distance / (1000 * 60 * 60));
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            const seconds = Math.floor((distance % (1000)) / 1000);
 
             timerEl.textContent = `${String(hours).padStart(2, '0')}h ${String(minutes).padStart(2, '0')}m ${String(seconds).padStart(2, '0')}s`;
             timerEl.style.color = hours < 1 ? "#f59e0b" : "#10b981"; 
         }
 
-        nextEl.textContent = `Next: ${nextLabel} (BG Time)`;
+        // Show both the BR label and what time it actually is in BG
+        nextEl.textContent = `Next: ${label} (${bgTimeStr} BG)`;
     });
 }
 
