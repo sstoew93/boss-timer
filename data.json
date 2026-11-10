@@ -36,18 +36,6 @@
     "raw_date": "2026-11-07 01:14:47"
   },
   {
-    "server": "Speed5",
-    "boss": "Nix",
-    "last_kill": "2026-11-04T11:15:12+02:00",
-    "killer": "Thrak",
-    "earliest_spawn": "2026-11-08T21:15:12+02:00",
-    "latest_spawn": "2026-11-09T03:15:12+02:00",
-    "min_hours": 106.0,
-    "max_hours": 112.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-04 06:15:12"
-  },
-  {
     "server": "Sv4",
     "boss": "God of Darkness",
     "last_kill": "2026-11-04T13:30:28+02:00",
