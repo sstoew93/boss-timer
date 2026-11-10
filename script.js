@@ -181,7 +181,7 @@ function renderTable() {
       maxTimeId: maxTimeId,
       earliestSpawnTime: new Date(item.earliest_spawn).getTime(),
       latestSpawnTime: new Date(item.latest_spawn).getTime(),
-      isFixed: item.is_fixed // <--- ADDED THIS LINE
+      isFixed: item.is_fixed
     });
   });
   
@@ -214,7 +214,6 @@ function updateTimers() {
       statusEl.className = "status-pill dead";
       statusEl.innerHTML = '<div class="status-dot"></div> Dead';
       
-      // --- HIDE MAX IF FIXED ---
       if (timer.isFixed) {
         maxEl.style.display = "none";
       } else {
@@ -229,7 +228,6 @@ function updateTimers() {
       statusEl.className = "status-pill window";
       statusEl.innerHTML = '<div class="status-dot"></div> Window Open';
       
-      // --- HIDE MAX IF FIXED ---
       if (timer.isFixed) {
         maxEl.style.display = "none";
       } else {
@@ -243,7 +241,134 @@ function updateTimers() {
       timerEl.style.color = "#10b981"; 
       statusEl.className = "status-pill alive";
       statusEl.innerHTML = '<div class="status-dot"></div> Alive';
-      maxEl.style.display = "none"; // Hide completely when alive
+      maxEl.style.display = "none";
     }
   });
 }
+
+// --- EVENT BOSS ACCORDION LOGIC ---
+const EVENT_BOSSES = [
+    { 
+        name: "Kundun", 
+        type: "interval", 
+        interval: 8 // Spawns every 8 hours
+    },
+    { 
+        name: "Medusa", 
+        type: "schedule", 
+        // 0 = Sunday, 1 = Monday, 2 = Tuesday, 3 = Wednesday, 4 = Thursday, 5 = Friday, 6 = Saturday
+        schedule: [
+            { day: 2, hour: 22, minute: 0, label: "Tue 22:00" }, // Tuesday
+            { day: 4, hour: 22, minute: 0, label: "Thu 22:00" }, // Thursday
+            { day: 6, hour: 16, minute: 0, label: "Sat 16:00" }, // Saturday
+            { day: 0, hour: 18, minute: 0, label: "Sun 18:00" }  // Sunday
+        ]
+    }
+];
+
+function toggleEventAccordion() {
+    const content = document.getElementById('event-accordion-content');
+    const arrow = document.getElementById('event-arrow');
+    if (content.classList.contains('show')) {
+        content.classList.remove('show');
+        arrow.textContent = '▼';
+    } else {
+        content.classList.add('show');
+        arrow.textContent = '▲';
+    }
+}
+
+function buildEventBosses() {
+    const grid = document.getElementById('event-boss-grid');
+    grid.innerHTML = '';
+    
+    EVENT_BOSSES.forEach(boss => {
+        const card = document.createElement('div');
+        card.className = 'event-boss-card';
+        card.innerHTML = `
+            <div class="event-boss-name">${boss.name}</div>
+            <div class="event-boss-timer" id="event-timer-${boss.name.replace(/\s/g, '')}">--h --m --s</div>
+            <div class="event-boss-next" id="event-next-${boss.name.replace(/\s/g, '')}">Next: --:--</div>
+        `;
+        grid.appendChild(card);
+    });
+}
+
+// Helper to get exact time in Bulgarian Timezone
+function getBGTime() {
+    const now = new Date();
+    const bgString = now.toLocaleString('en-US', { timeZone: 'Europe/Sofia', hour12: false });
+    return new Date(bgString);
+}
+
+function updateEventTimers() {
+    const bgNow = getBGTime();
+    
+    EVENT_BOSSES.forEach(boss => {
+        const timerEl = document.getElementById(`event-timer-${boss.name.replace(/\s/g, '')}`);
+        const nextEl = document.getElementById(`event-next-${boss.name.replace(/\s/g, '')}`);
+        
+        if (!timerEl || !nextEl) return;
+
+        let targetTime = new Date(bgNow);
+        let nextLabel = "";
+
+        if (boss.type === "interval") {
+            let nextSpawnHour = Math.ceil((bgNow.getHours() + 1) / boss.interval) * boss.interval;
+            if (nextSpawnHour >= 24) nextSpawnHour -= 24;
+            
+            targetTime.setHours(nextSpawnHour, 0, 0, 0);
+            if (targetTime < bgNow) {
+                targetTime.setDate(targetTime.getDate() + 1);
+            }
+            nextLabel = `${String(nextSpawnHour).padStart(2, '0')}:00`;
+
+        } else if (boss.type === "schedule") {
+            let closestTime = null;
+            let closestLabel = "";
+
+            boss.schedule.forEach(slot => {
+                let candidate = new Date(bgNow);
+                candidate.setHours(slot.hour, slot.minute, 0, 0);
+
+                let dayDiff = slot.day - bgNow.getDay();
+                
+                if (dayDiff < 0 || (dayDiff === 0 && candidate <= bgNow)) {
+                    dayDiff += 7;
+                }
+                
+                candidate.setDate(candidate.getDate() + dayDiff);
+
+                if (!closestTime || candidate < closestTime) {
+                    closestTime = candidate;
+                    closestLabel = slot.label;
+                }
+            });
+
+            targetTime = closestTime;
+            nextLabel = closestLabel;
+        }
+
+        const distance = targetTime - bgNow;
+        
+        if (distance < 0) {
+            timerEl.textContent = "SPAWNING NOW";
+            timerEl.style.color = "#ef4444";
+        } else {
+            const hours = Math.floor(distance / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            timerEl.textContent = `${String(hours).padStart(2, '0')}h ${String(minutes).padStart(2, '0')}m ${String(seconds).padStart(2, '0')}s`;
+            timerEl.style.color = hours < 1 ? "#f59e0b" : "#10b981"; 
+        }
+
+        nextEl.textContent = `Next: ${nextLabel} (BG Time)`;
+    });
+}
+
+// Initialize the event bosses when data loads
+document.addEventListener('DOMContentLoaded', () => {
+    buildEventBosses();
+    setInterval(updateEventTimers, 1000); // Update every second
+});
