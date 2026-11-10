@@ -48,18 +48,6 @@
     "raw_date": "2026-11-07 13:26:39"
   },
   {
-    "server": "Speed4",
-    "boss": "Nix",
-    "last_kill": "2026-11-04T19:16:37+02:00",
-    "killer": "Messi",
-    "earliest_spawn": "2026-11-09T05:16:37+02:00",
-    "latest_spawn": "2026-11-09T11:16:37+02:00",
-    "min_hours": 106.0,
-    "max_hours": 112.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-04 14:16:37"
-  },
-  {
     "server": "Speed5",
     "boss": "Nightmare",
     "last_kill": "2026-11-07T14:08:27+02:00",
@@ -732,18 +720,6 @@
     "raw_date": "2026-11-07 20:14:42"
   },
   {
-    "server": "Sv1",
-    "boss": "Selupan",
-    "last_kill": "2026-11-10T04:11:18+02:00",
-    "killer": "Gervasia",
-    "earliest_spawn": "2026-11-11T14:11:18+02:00",
-    "latest_spawn": "2026-11-11T14:11:18+02:00",
-    "min_hours": 34.0,
-    "max_hours": 34.0,
-    "is_fixed": true,
-    "raw_date": "2026-11-09 23:11:18"
-  },
-  {
     "server": "Speed2",
     "boss": "Selupan",
     "last_kill": "2026-11-10T04:36:55+02:00",
@@ -1210,6 +1186,18 @@
     "max_hours": 108.2,
     "is_fixed": false,
     "raw_date": "2026-11-08 00:59:51"
+  },
+  {
+    "server": "Sv1",
+    "boss": "Selupan",
+    "last_kill": "2026-11-10T17:51:05+02:00",
+    "killer": "SolrakDVDL",
+    "earliest_spawn": "2026-11-12T03:51:05+02:00",
+    "latest_spawn": "2026-11-12T03:51:05+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "is_fixed": true,
+    "raw_date": "2026-11-10 12:51:05"
   },
   {
     "server": "Speed1",
