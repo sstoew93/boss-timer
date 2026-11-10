@@ -1738,5 +1738,17 @@
     "max_hours": 112.0,
     "is_fixed": false,
     "raw_date": "2026-11-10 01:27:03"
+  },
+  {
+    "server": "Sv4",
+    "boss": "God of Darkness",
+    "last_kill": "2026-11-10T11:15:38+02:00",
+    "killer": "TheStakeyl",
+    "earliest_spawn": "2026-11-14T21:15:38+02:00",
+    "latest_spawn": "2026-11-17T11:15:38+02:00",
+    "min_hours": 106.0,
+    "max_hours": 168.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-10 06:15:38"
   }
 ]
