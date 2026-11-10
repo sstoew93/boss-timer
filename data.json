@@ -108,18 +108,6 @@
     "raw_date": "2026-11-06 18:28:15"
   },
   {
-    "server": "Sv7",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-09T06:13:48+02:00",
-    "killer": "ELFORNICA",
-    "earliest_spawn": "2026-11-10T22:58:48+02:00",
-    "latest_spawn": "2026-11-10T22:58:48+02:00",
-    "min_hours": 40.8,
-    "max_hours": 40.8,
-    "is_fixed": true,
-    "raw_date": "2026-11-09 01:13:48"
-  },
-  {
     "server": "Speed1",
     "boss": "Lord Silvester",
     "last_kill": "2026-11-07T03:08:49+02:00",
@@ -1150,6 +1138,18 @@
     "max_hours": 168.0,
     "is_fixed": false,
     "raw_date": "2026-11-08 00:52:32"
+  },
+  {
+    "server": "Sv7",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-10T23:12:32+02:00",
+    "killer": "PinkKitty",
+    "earliest_spawn": "2026-11-12T15:57:32+02:00",
+    "latest_spawn": "2026-11-12T15:57:32+02:00",
+    "min_hours": 40.8,
+    "max_hours": 40.8,
+    "is_fixed": true,
+    "raw_date": "2026-11-10 18:12:32"
   },
   {
     "server": "Sv18",
