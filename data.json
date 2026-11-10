@@ -144,18 +144,6 @@
     "raw_date": "2026-11-06 02:39:11"
   },
   {
-    "server": "Sv15",
-    "boss": "Lord Silvester",
-    "last_kill": "2026-11-06T21:58:57+02:00",
-    "killer": "DeadChoir",
-    "earliest_spawn": "2026-11-10T19:03:57+02:00",
-    "latest_spawn": "2026-11-10T19:03:57+02:00",
-    "min_hours": 93.1,
-    "max_hours": 93.1,
-    "is_fixed": true,
-    "raw_date": "2026-11-06 16:58:57"
-  },
-  {
     "server": "Sv6",
     "boss": "Nightmare",
     "last_kill": "2026-11-09T02:25:05+02:00",
@@ -1702,6 +1690,18 @@
     "max_hours": 93.1,
     "is_fixed": true,
     "raw_date": "2026-11-10 14:05:23"
+  },
+  {
+    "server": "Sv15",
+    "boss": "Lord Silvester",
+    "last_kill": "2026-11-10T19:07:01+02:00",
+    "killer": "xHdSx",
+    "earliest_spawn": "2026-11-14T16:12:01+02:00",
+    "latest_spawn": "2026-11-14T16:12:01+02:00",
+    "min_hours": 93.1,
+    "max_hours": 93.1,
+    "is_fixed": true,
+    "raw_date": "2026-11-10 14:07:01"
   },
   {
     "server": "Sv19",
