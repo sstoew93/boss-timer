@@ -1,17 +1,5 @@
 [
   {
-    "server": "Speed5",
-    "boss": "Core Magriffy",
-    "last_kill": "2026-11-05T01:06:29+02:00",
-    "killer": "LorD",
-    "earliest_spawn": "2026-11-08T13:06:29+02:00",
-    "latest_spawn": "2026-11-08T13:06:29+02:00",
-    "min_hours": 84.0,
-    "max_hours": 84.0,
-    "is_fixed": true,
-    "raw_date": "2026-11-04 20:06:29"
-  },
-  {
     "server": "Speed4",
     "boss": "Nightmare",
     "last_kill": "2026-11-06T21:40:21+02:00",
