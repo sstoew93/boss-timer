@@ -216,18 +216,6 @@
     "raw_date": "2026-11-09 12:10:25"
   },
   {
-    "server": "Sv10",
-    "boss": "Selupan",
-    "last_kill": "2026-11-09T23:58:20+02:00",
-    "killer": "Collette",
-    "earliest_spawn": "2026-11-11T09:58:20+02:00",
-    "latest_spawn": "2026-11-11T09:58:20+02:00",
-    "min_hours": 34.0,
-    "max_hours": 34.0,
-    "is_fixed": true,
-    "raw_date": "2026-11-09 18:58:20"
-  },
-  {
     "server": "Speed5",
     "boss": "Lord of Ferea",
     "last_kill": "2026-11-07T12:52:12+02:00",
@@ -1102,6 +1090,18 @@
     "max_hours": 112.0,
     "is_fixed": false,
     "raw_date": "2026-11-08 11:38:26"
+  },
+  {
+    "server": "Sv10",
+    "boss": "Selupan",
+    "last_kill": "2026-11-11T11:14:04+02:00",
+    "killer": "XxVILLEGAS",
+    "earliest_spawn": "2026-11-12T21:14:04+02:00",
+    "latest_spawn": "2026-11-12T21:14:04+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "is_fixed": true,
+    "raw_date": "2026-11-11 06:14:04"
   },
   {
     "server": "Sv4",
