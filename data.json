@@ -168,18 +168,6 @@
     "raw_date": "2026-11-07 04:35:57"
   },
   {
-    "server": "Speed2",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-09T23:27:08+02:00",
-    "killer": "CapotaLixo",
-    "earliest_spawn": "2026-11-11T16:12:08+02:00",
-    "latest_spawn": "2026-11-11T16:12:08+02:00",
-    "min_hours": 40.8,
-    "max_hours": 40.8,
-    "is_fixed": true,
-    "raw_date": "2026-11-09 18:27:08"
-  },
-  {
     "server": "Speed4",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-08T03:54:30+02:00",
@@ -1150,6 +1138,18 @@
     "max_hours": 40.8,
     "is_fixed": true,
     "raw_date": "2026-11-11 13:04:13"
+  },
+  {
+    "server": "Speed2",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-11T18:07:25+02:00",
+    "killer": "PauDurasso",
+    "earliest_spawn": "2026-11-13T10:52:25+02:00",
+    "latest_spawn": "2026-11-13T10:52:25+02:00",
+    "min_hours": 40.8,
+    "max_hours": 40.8,
+    "is_fixed": true,
+    "raw_date": "2026-11-11 13:07:25"
   },
   {
     "server": "Sv4",
