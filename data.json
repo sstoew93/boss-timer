@@ -120,18 +120,6 @@
     "raw_date": "2026-11-07 18:30:55"
   },
   {
-    "server": "Sv10",
-    "boss": "Nix",
-    "last_kill": "2026-11-07T01:39:43+02:00",
-    "killer": "XxVILLEGAS",
-    "earliest_spawn": "2026-11-11T05:39:43+02:00",
-    "latest_spawn": "2026-11-11T17:39:43+02:00",
-    "min_hours": 100.0,
-    "max_hours": 112.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-06 20:39:43"
-  },
-  {
     "server": "Sv18",
     "boss": "God of Darkness",
     "last_kill": "2026-11-08T05:52:32+02:00",
@@ -1726,5 +1714,17 @@
     "max_hours": 112.0,
     "is_fixed": false,
     "raw_date": "2026-11-11 08:03:05"
+  },
+  {
+    "server": "Sv10",
+    "boss": "Nix",
+    "last_kill": "2026-11-11T13:55:16+02:00",
+    "killer": "XxVILLEGAS",
+    "earliest_spawn": "2026-11-15T17:55:16+02:00",
+    "latest_spawn": "2026-11-16T05:55:16+02:00",
+    "min_hours": 100.0,
+    "max_hours": 112.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-11 08:55:16"
   }
 ]
