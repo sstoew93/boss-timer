@@ -108,18 +108,6 @@
     "raw_date": "2026-11-07 05:48:53"
   },
   {
-    "server": "Sv1",
-    "boss": "Lord of Ferea",
-    "last_kill": "2026-11-06T17:41:34+02:00",
-    "killer": "MrMyzor",
-    "earliest_spawn": "2026-11-10T15:04:34+02:00",
-    "latest_spawn": "2026-11-11T05:56:34+02:00",
-    "min_hours": 93.4,
-    "max_hours": 108.2,
-    "is_fixed": false,
-    "raw_date": "2026-11-06 12:41:34"
-  },
-  {
     "server": "Sv5",
     "boss": "God of Darkness",
     "last_kill": "2026-11-07T15:50:14+02:00",
@@ -1726,5 +1714,17 @@
     "max_hours": 108.2,
     "is_fixed": false,
     "raw_date": "2026-11-11 00:56:00"
+  },
+  {
+    "server": "Sv1",
+    "boss": "Lord of Ferea",
+    "last_kill": "2026-11-11T05:58:34+02:00",
+    "killer": "SolrakDVDL",
+    "earliest_spawn": "2026-11-15T03:21:34+02:00",
+    "latest_spawn": "2026-11-15T18:13:34+02:00",
+    "min_hours": 93.4,
+    "max_hours": 108.2,
+    "is_fixed": false,
+    "raw_date": "2026-11-11 00:58:34"
   }
 ]
