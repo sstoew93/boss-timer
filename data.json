@@ -204,18 +204,6 @@
     "raw_date": "2026-11-07 18:26:48"
   },
   {
-    "server": "Sv16",
-    "boss": "Core Magriffy",
-    "last_kill": "2026-11-07T23:28:18+02:00",
-    "killer": "SolrakDVDL",
-    "earliest_spawn": "2026-11-11T12:00:18+02:00",
-    "latest_spawn": "2026-11-11T12:00:18+02:00",
-    "min_hours": 84.5,
-    "max_hours": 84.5,
-    "is_fixed": true,
-    "raw_date": "2026-11-07 18:28:18"
-  },
-  {
     "server": "Sv15",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-07T23:32:57+02:00",
@@ -1642,6 +1630,18 @@
     "max_hours": 84.5,
     "is_fixed": true,
     "raw_date": "2026-11-11 05:26:11"
+  },
+  {
+    "server": "Sv16",
+    "boss": "Core Magriffy",
+    "last_kill": "2026-11-11T12:09:10+02:00",
+    "killer": "xSLuZ011X",
+    "earliest_spawn": "2026-11-15T00:41:10+02:00",
+    "latest_spawn": "2026-11-15T00:41:10+02:00",
+    "min_hours": 84.5,
+    "max_hours": 84.5,
+    "is_fixed": true,
+    "raw_date": "2026-11-11 07:09:10"
   },
   {
     "server": "Sv11",
