@@ -204,18 +204,6 @@
     "raw_date": "2026-11-07 04:35:57"
   },
   {
-    "server": "Sv10",
-    "boss": "Core Magriffy",
-    "last_kill": "2026-11-08T01:14:42+02:00",
-    "killer": "TacaLenha",
-    "earliest_spawn": "2026-11-11T13:46:42+02:00",
-    "latest_spawn": "2026-11-11T13:46:42+02:00",
-    "min_hours": 84.5,
-    "max_hours": 84.5,
-    "is_fixed": true,
-    "raw_date": "2026-11-07 20:14:42"
-  },
-  {
     "server": "Speed2",
     "boss": "Selupan",
     "last_kill": "2026-11-10T04:36:55+02:00",
@@ -1642,6 +1630,18 @@
     "max_hours": 112.0,
     "is_fixed": false,
     "raw_date": "2026-11-10 16:20:02"
+  },
+  {
+    "server": "Sv10",
+    "boss": "Core Magriffy",
+    "last_kill": "2026-11-11T13:53:00+02:00",
+    "killer": "XxVILLEGAS",
+    "earliest_spawn": "2026-11-15T02:25:00+02:00",
+    "latest_spawn": "2026-11-15T02:25:00+02:00",
+    "min_hours": 84.5,
+    "max_hours": 84.5,
+    "is_fixed": true,
+    "raw_date": "2026-11-11 08:53:00"
   },
   {
     "server": "Sv11",
