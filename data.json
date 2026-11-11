@@ -156,18 +156,6 @@
     "raw_date": "2026-11-07 07:52:12"
   },
   {
-    "server": "Sv17",
-    "boss": "Nix",
-    "last_kill": "2026-11-07T09:00:55+02:00",
-    "killer": "MrMyzor",
-    "earliest_spawn": "2026-11-11T13:00:55+02:00",
-    "latest_spawn": "2026-11-12T01:00:55+02:00",
-    "min_hours": 100.0,
-    "max_hours": 112.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-07 04:00:55"
-  },
-  {
     "server": "Speed3",
     "boss": "Nightmare",
     "last_kill": "2026-11-09T20:17:14+02:00",
@@ -1726,5 +1714,17 @@
     "max_hours": 112.0,
     "is_fixed": false,
     "raw_date": "2026-11-11 08:55:16"
+  },
+  {
+    "server": "Sv17",
+    "boss": "Nix",
+    "last_kill": "2026-11-11T14:42:12+02:00",
+    "killer": "PinkKitty",
+    "earliest_spawn": "2026-11-15T18:42:12+02:00",
+    "latest_spawn": "2026-11-16T06:42:12+02:00",
+    "min_hours": 100.0,
+    "max_hours": 112.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-11 09:42:12"
   }
 ]
