@@ -9,14 +9,17 @@ BULGARIA_TZ = ZoneInfo("Europe/Sofia")
 
 # Times in minutes
 BOSS_TIMES = {
-    "God of Darkness": {"min": 72 * 60, "max": 168 * 60},
-    "Core Magriffy": {"min": (84 * 60) + 32, "max": (84 * 60) + 32},
-    "Lord of Ferea": {"min": (93 * 60) + 23, "max": (108 * 60) + 15}, 
+    "God of Darkness": {"min": 106 * 60, "max": 168 * 60}, 
+    "Core Magriffy": {"min": 84 * 60, "max": 84 * 60},
+    "Lord of Ferea": {"min": 80 * 60, "max": 182 * 60},    
     "Lord Silvester": {"min": (3 * 24 + 21) * 60 + 5, "max": (3 * 24 + 21) * 60 + 5}, 
     "Selupan": {"min": 34 * 60, "max": 34 * 60},
-    "Nightmare": {"min": (40 * 60) + 45, "max": (40 * 60) + 45},
-    "Nix": {"min": 100 * 60, "max": 112 * 60}
+    "Nightmare": {"min": 40 * 60, "max": 40 * 60},
+    "Nix": {"min": 106 * 60, "max": 112 * 60}              
 }
+
+# Add any server you want to hide to this list (lowercase, no spaces)
+IGNORED_SERVERS = {"svc", "speed1", "speed2", "speed3", "speed4", "speed5"}
 
 URL = "https://en.megamu.net/boss-log"
 
@@ -39,6 +42,13 @@ def scrape():
         monster_name = cells[1].get_text(strip=True).strip()
         killer = cells[2].get_text(strip=True)
         server = cells[3].get_text(strip=True)
+
+        # Clean the server name (lowercase, remove spaces) for comparison
+        clean_server = server.lower().replace(" ", "")
+        
+        # Skip if the server is in our ignore list
+        if clean_server in IGNORED_SERVERS:
+            continue
 
         if monster_name not in BOSS_TIMES:
             continue
