@@ -44,8 +44,11 @@ function loadData() {
           uniqueBosses.add(item.boss);
         });
 
-        buildFilters('server-filters', Array.from(uniqueServers).sort(), 'server');
-        buildFilters('boss-filters', Array.from(uniqueBosses).sort(), 'boss');
+        const sortedServers = Array.from(uniqueServers).sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }));
+        const sortedBosses = Array.from(uniqueBosses).sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }));
+
+        buildFilters('server-filters', sortedServers, 'server');
+        buildFilters('boss-filters', sortedBosses, 'boss');
 
         renderTable();
         setInterval(updateTimers, 1000);
