@@ -240,18 +240,6 @@
     "raw_date": "2026-11-07 21:33:18"
   },
   {
-    "server": "Sv6",
-    "boss": "Lord Silvester",
-    "last_kill": "2026-11-08T03:09:21+02:00",
-    "killer": "mOnRaCWB",
-    "earliest_spawn": "2026-11-12T00:14:21+02:00",
-    "latest_spawn": "2026-11-12T00:14:21+02:00",
-    "min_hours": 93.1,
-    "max_hours": 93.1,
-    "is_fixed": true,
-    "raw_date": "2026-11-07 22:09:21"
-  },
-  {
     "server": "Sv7",
     "boss": "Lord Silvester",
     "last_kill": "2026-11-08T03:13:22+02:00",
@@ -1714,6 +1702,18 @@
     "max_hours": 93.1,
     "is_fixed": true,
     "raw_date": "2026-11-11 19:12:02"
+  },
+  {
+    "server": "Sv6",
+    "boss": "Lord Silvester",
+    "last_kill": "2026-11-12T00:17:12+02:00",
+    "killer": "AnJiinhaa",
+    "earliest_spawn": "2026-11-15T21:22:12+02:00",
+    "latest_spawn": "2026-11-15T21:22:12+02:00",
+    "min_hours": 93.1,
+    "max_hours": 93.1,
+    "is_fixed": true,
+    "raw_date": "2026-11-11 19:17:12"
   },
   {
     "server": "Sv4",
