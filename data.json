@@ -204,18 +204,6 @@
     "raw_date": "2026-11-09 20:34:37"
   },
   {
-    "server": "Sv18",
-    "boss": "Core Magriffy",
-    "last_kill": "2026-11-08T05:54:54+02:00",
-    "killer": "Gervasia",
-    "earliest_spawn": "2026-11-11T18:26:54+02:00",
-    "latest_spawn": "2026-11-11T18:26:54+02:00",
-    "min_hours": 84.5,
-    "max_hours": 84.5,
-    "is_fixed": true,
-    "raw_date": "2026-11-08 00:54:54"
-  },
-  {
     "server": "Sv6",
     "boss": "Selupan",
     "last_kill": "2026-11-10T10:28:46+02:00",
@@ -1654,6 +1642,18 @@
     "max_hours": 108.2,
     "is_fixed": false,
     "raw_date": "2026-11-11 00:58:34"
+  },
+  {
+    "server": "Sv18",
+    "boss": "Core Magriffy",
+    "last_kill": "2026-11-11T18:37:49+02:00",
+    "killer": "McQueenn",
+    "earliest_spawn": "2026-11-15T07:09:49+02:00",
+    "latest_spawn": "2026-11-15T07:09:49+02:00",
+    "min_hours": 84.5,
+    "max_hours": 84.5,
+    "is_fixed": true,
+    "raw_date": "2026-11-11 13:37:49"
   },
   {
     "server": "Sv5",
