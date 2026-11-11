@@ -120,18 +120,6 @@
     "raw_date": "2026-11-07 18:30:55"
   },
   {
-    "server": "Sv15",
-    "boss": "Nix",
-    "last_kill": "2026-11-06T20:30:53+02:00",
-    "killer": "Kasperiano",
-    "earliest_spawn": "2026-11-11T00:30:53+02:00",
-    "latest_spawn": "2026-11-11T12:30:53+02:00",
-    "min_hours": 100.0,
-    "max_hours": 112.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-06 15:30:53"
-  },
-  {
     "server": "Sv10",
     "boss": "Nix",
     "last_kill": "2026-11-07T01:39:43+02:00",
@@ -1726,5 +1714,17 @@
     "max_hours": 112.0,
     "is_fixed": false,
     "raw_date": "2026-11-11 06:45:54"
+  },
+  {
+    "server": "Sv15",
+    "boss": "Nix",
+    "last_kill": "2026-11-11T13:03:05+02:00",
+    "killer": "SolrakDVDL",
+    "earliest_spawn": "2026-11-15T17:03:05+02:00",
+    "latest_spawn": "2026-11-16T05:03:05+02:00",
+    "min_hours": 100.0,
+    "max_hours": 112.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-11 08:03:05"
   }
 ]
