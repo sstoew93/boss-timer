@@ -180,18 +180,6 @@
     "raw_date": "2026-11-07 04:35:57"
   },
   {
-    "server": "Speed2",
-    "boss": "Selupan",
-    "last_kill": "2026-11-10T04:36:55+02:00",
-    "killer": "Panda997",
-    "earliest_spawn": "2026-11-11T14:36:55+02:00",
-    "latest_spawn": "2026-11-11T14:36:55+02:00",
-    "min_hours": 34.0,
-    "max_hours": 34.0,
-    "is_fixed": true,
-    "raw_date": "2026-11-09 23:36:55"
-  },
-  {
     "server": "Speed3",
     "boss": "Selupan",
     "last_kill": "2026-11-10T05:04:40+02:00",
@@ -982,6 +970,18 @@
     "max_hours": 40.8,
     "is_fixed": true,
     "raw_date": "2026-11-11 01:36:38"
+  },
+  {
+    "server": "Speed2",
+    "boss": "Selupan",
+    "last_kill": "2026-11-11T14:43:43+02:00",
+    "killer": "SrNicacius",
+    "earliest_spawn": "2026-11-13T00:43:43+02:00",
+    "latest_spawn": "2026-11-13T00:43:43+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "is_fixed": true,
+    "raw_date": "2026-11-11 09:43:43"
   },
   {
     "server": "Sv2",
