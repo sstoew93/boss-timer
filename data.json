@@ -192,18 +192,6 @@
     "raw_date": "2026-11-09 08:51:42"
   },
   {
-    "server": "Sv5",
-    "boss": "Lord of Ferea",
-    "last_kill": "2026-11-07T12:08:19+02:00",
-    "killer": "TeozitoGod",
-    "earliest_spawn": "2026-11-11T09:31:19+02:00",
-    "latest_spawn": "2026-11-12T00:23:19+02:00",
-    "min_hours": 93.4,
-    "max_hours": 108.2,
-    "is_fixed": false,
-    "raw_date": "2026-11-07 07:08:19"
-  },
-  {
     "server": "SvC",
     "boss": "Nightmare",
     "last_kill": "2026-11-09T17:10:25+02:00",
@@ -1714,6 +1702,18 @@
     "max_hours": 108.2,
     "is_fixed": false,
     "raw_date": "2026-11-11 00:58:34"
+  },
+  {
+    "server": "Sv5",
+    "boss": "Lord of Ferea",
+    "last_kill": "2026-11-11T11:21:04+02:00",
+    "killer": "SolrakDVDL",
+    "earliest_spawn": "2026-11-15T08:44:04+02:00",
+    "latest_spawn": "2026-11-15T23:36:04+02:00",
+    "min_hours": 93.4,
+    "max_hours": 108.2,
+    "is_fixed": false,
+    "raw_date": "2026-11-11 06:21:04"
   },
   {
     "server": "Sv3",
