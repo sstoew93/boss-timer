@@ -132,18 +132,6 @@
     "raw_date": "2026-11-06 15:30:53"
   },
   {
-    "server": "Sv8",
-    "boss": "Nix",
-    "last_kill": "2026-11-06T23:27:55+02:00",
-    "killer": "NayrobSL",
-    "earliest_spawn": "2026-11-11T03:27:55+02:00",
-    "latest_spawn": "2026-11-11T15:27:55+02:00",
-    "min_hours": 100.0,
-    "max_hours": 112.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-06 18:27:55"
-  },
-  {
     "server": "Sv10",
     "boss": "Nix",
     "last_kill": "2026-11-07T01:39:43+02:00",
@@ -1726,5 +1714,17 @@
     "max_hours": 112.0,
     "is_fixed": false,
     "raw_date": "2026-11-11 01:07:54"
+  },
+  {
+    "server": "Sv8",
+    "boss": "Nix",
+    "last_kill": "2026-11-11T11:45:54+02:00",
+    "killer": "Babayaga98",
+    "earliest_spawn": "2026-11-15T15:45:54+02:00",
+    "latest_spawn": "2026-11-16T03:45:54+02:00",
+    "min_hours": 100.0,
+    "max_hours": 112.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-11 06:45:54"
   }
 ]
