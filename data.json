@@ -204,18 +204,6 @@
     "raw_date": "2026-11-07 07:08:19"
   },
   {
-    "server": "Sv4",
-    "boss": "Core Magriffy",
-    "last_kill": "2026-11-07T21:22:56+02:00",
-    "killer": "Bdoleko",
-    "earliest_spawn": "2026-11-11T09:54:56+02:00",
-    "latest_spawn": "2026-11-11T09:54:56+02:00",
-    "min_hours": 84.5,
-    "max_hours": 84.5,
-    "is_fixed": true,
-    "raw_date": "2026-11-07 16:22:56"
-  },
-  {
     "server": "SvC",
     "boss": "Nightmare",
     "last_kill": "2026-11-09T17:10:25+02:00",
@@ -1666,6 +1654,18 @@
     "max_hours": 93.1,
     "is_fixed": true,
     "raw_date": "2026-11-10 19:35:17"
+  },
+  {
+    "server": "Sv4",
+    "boss": "Core Magriffy",
+    "last_kill": "2026-11-11T10:09:38+02:00",
+    "killer": "Babayaga98",
+    "earliest_spawn": "2026-11-14T22:41:38+02:00",
+    "latest_spawn": "2026-11-14T22:41:38+02:00",
+    "min_hours": 84.5,
+    "max_hours": 84.5,
+    "is_fixed": true,
+    "raw_date": "2026-11-11 05:09:38"
   },
   {
     "server": "Sv11",
