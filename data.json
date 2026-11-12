@@ -12,18 +12,6 @@
     "raw_date": "2026-11-07 02:27:09"
   },
   {
-    "server": "Sv7",
-    "boss": "Lord of Ferea",
-    "last_kill": "2026-11-08T04:58:44+02:00",
-    "killer": "MrMyzor",
-    "earliest_spawn": "2026-11-12T02:58:44+02:00",
-    "latest_spawn": "2026-11-15T18:58:44+02:00",
-    "min_hours": 94.0,
-    "max_hours": 182.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-07 23:58:44"
-  },
-  {
     "server": "Sv5",
     "boss": "Nix",
     "last_kill": "2026-11-08T03:57:35+02:00",
@@ -1294,6 +1282,18 @@
     "max_hours": 93.1,
     "is_fixed": true,
     "raw_date": "2026-11-12 12:56:45"
+  },
+  {
+    "server": "Sv7",
+    "boss": "Lord of Ferea",
+    "last_kill": "2026-11-12T19:08:26+02:00",
+    "killer": "Babayaga98",
+    "earliest_spawn": "2026-11-16T17:08:26+02:00",
+    "latest_spawn": "2026-11-20T09:08:26+02:00",
+    "min_hours": 94.0,
+    "max_hours": 182.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-12 14:08:26"
   },
   {
     "server": "Sv5",
