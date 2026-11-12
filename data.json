@@ -1330,5 +1330,17 @@
     "max_hours": 168.0,
     "is_fixed": false,
     "raw_date": "2026-11-12 06:45:02"
+  },
+  {
+    "server": "Sv1",
+    "boss": "God of Darkness",
+    "last_kill": "2026-11-12T12:40:32+02:00",
+    "killer": "Kasperiano",
+    "earliest_spawn": "2026-11-16T22:40:32+02:00",
+    "latest_spawn": "2026-11-19T12:40:32+02:00",
+    "min_hours": 106.0,
+    "max_hours": 168.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-12 07:40:32"
   }
 ]
