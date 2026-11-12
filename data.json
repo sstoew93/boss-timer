@@ -12,30 +12,6 @@
     "raw_date": "2026-11-06 13:17:26"
   },
   {
-    "server": "Sv7",
-    "boss": "Lord of Ferea",
-    "last_kill": "2026-11-08T04:58:44+02:00",
-    "killer": "MrMyzor",
-    "earliest_spawn": "2026-11-11T12:58:44+02:00",
-    "latest_spawn": "2026-11-15T18:58:44+02:00",
-    "min_hours": 80.0,
-    "max_hours": 182.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-07 23:58:44"
-  },
-  {
-    "server": "Sv18",
-    "boss": "Lord of Ferea",
-    "last_kill": "2026-11-08T05:59:51+02:00",
-    "killer": "KatoTaka",
-    "earliest_spawn": "2026-11-11T13:59:51+02:00",
-    "latest_spawn": "2026-11-15T19:59:51+02:00",
-    "min_hours": 80.0,
-    "max_hours": 182.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-08 00:59:51"
-  },
-  {
     "server": "Sv2",
     "boss": "God of Darkness",
     "last_kill": "2026-11-07T07:27:09+02:00",
@@ -120,16 +96,28 @@
     "raw_date": "2026-11-10 07:28:31"
   },
   {
-    "server": "Sv16",
+    "server": "Sv7",
     "boss": "Lord of Ferea",
-    "last_kill": "2026-11-08T22:06:33+02:00",
-    "killer": "PinkKitty",
-    "earliest_spawn": "2026-11-12T06:06:33+02:00",
-    "latest_spawn": "2026-11-16T12:06:33+02:00",
-    "min_hours": 80.0,
-    "max_hours": 182.0,
+    "last_kill": "2026-11-08T04:58:44+02:00",
+    "killer": "MrMyzor",
+    "earliest_spawn": "2026-11-12T07:21:44+02:00",
+    "latest_spawn": "2026-11-12T22:13:44+02:00",
+    "min_hours": 98.4,
+    "max_hours": 113.2,
     "is_fixed": false,
-    "raw_date": "2026-11-08 17:06:33"
+    "raw_date": "2026-11-07 23:58:44"
+  },
+  {
+    "server": "Sv18",
+    "boss": "Lord of Ferea",
+    "last_kill": "2026-11-08T05:59:51+02:00",
+    "killer": "KatoTaka",
+    "earliest_spawn": "2026-11-12T08:22:51+02:00",
+    "latest_spawn": "2026-11-12T23:14:51+02:00",
+    "min_hours": 98.4,
+    "max_hours": 113.2,
+    "is_fixed": false,
+    "raw_date": "2026-11-08 00:59:51"
   },
   {
     "server": "Sv14",
@@ -190,18 +178,6 @@
     "max_hours": 34.0,
     "is_fixed": true,
     "raw_date": "2026-11-10 21:10:58"
-  },
-  {
-    "server": "Sv8",
-    "boss": "Lord of Ferea",
-    "last_kill": "2026-11-09T04:18:50+02:00",
-    "killer": "MrMyzor",
-    "earliest_spawn": "2026-11-12T12:18:50+02:00",
-    "latest_spawn": "2026-11-16T18:18:50+02:00",
-    "min_hours": 80.0,
-    "max_hours": 182.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-08 23:18:50"
   },
   {
     "server": "Sv8",
@@ -384,18 +360,6 @@
     "raw_date": "2026-11-11 01:36:38"
   },
   {
-    "server": "Sv17",
-    "boss": "Lord of Ferea",
-    "last_kill": "2026-11-09T15:29:27+02:00",
-    "killer": "PinkKitty",
-    "earliest_spawn": "2026-11-12T23:29:27+02:00",
-    "latest_spawn": "2026-11-17T05:29:27+02:00",
-    "min_hours": 80.0,
-    "max_hours": 182.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-09 10:29:27"
-  },
-  {
     "server": "Sv2",
     "boss": "Nightmare",
     "last_kill": "2026-11-11T08:06:38+02:00",
@@ -420,16 +384,16 @@
     "raw_date": "2026-11-11 03:20:12"
   },
   {
-    "server": "Sv10",
+    "server": "Sv16",
     "boss": "Lord of Ferea",
-    "last_kill": "2026-11-09T16:27:03+02:00",
-    "killer": "Longwang1",
-    "earliest_spawn": "2026-11-13T00:27:03+02:00",
-    "latest_spawn": "2026-11-17T06:27:03+02:00",
-    "min_hours": 80.0,
-    "max_hours": 182.0,
+    "last_kill": "2026-11-08T22:06:33+02:00",
+    "killer": "PinkKitty",
+    "earliest_spawn": "2026-11-13T00:29:33+02:00",
+    "latest_spawn": "2026-11-13T15:21:33+02:00",
+    "min_hours": 98.4,
+    "max_hours": 113.2,
     "is_fixed": false,
-    "raw_date": "2026-11-09 11:27:03"
+    "raw_date": "2026-11-08 17:06:33"
   },
   {
     "server": "Sv3",
@@ -540,6 +504,18 @@
     "raw_date": "2026-11-11 15:38:30"
   },
   {
+    "server": "Sv8",
+    "boss": "Lord of Ferea",
+    "last_kill": "2026-11-09T04:18:50+02:00",
+    "killer": "MrMyzor",
+    "earliest_spawn": "2026-11-13T06:41:50+02:00",
+    "latest_spawn": "2026-11-13T21:33:50+02:00",
+    "min_hours": 98.4,
+    "max_hours": 113.2,
+    "is_fixed": false,
+    "raw_date": "2026-11-08 23:18:50"
+  },
+  {
     "server": "Sv5",
     "boss": "Selupan",
     "last_kill": "2026-11-11T21:26:31+02:00",
@@ -550,30 +526,6 @@
     "max_hours": 34.0,
     "is_fixed": true,
     "raw_date": "2026-11-11 16:26:31"
-  },
-  {
-    "server": "Sv15",
-    "boss": "Lord of Ferea",
-    "last_kill": "2026-11-10T01:21:14+02:00",
-    "killer": "Babayaga98",
-    "earliest_spawn": "2026-11-13T09:21:14+02:00",
-    "latest_spawn": "2026-11-17T15:21:14+02:00",
-    "min_hours": 80.0,
-    "max_hours": 182.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-09 20:21:14"
-  },
-  {
-    "server": "Sv3",
-    "boss": "Lord of Ferea",
-    "last_kill": "2026-11-10T01:55:09+02:00",
-    "killer": "PinkKitty",
-    "earliest_spawn": "2026-11-13T09:55:09+02:00",
-    "latest_spawn": "2026-11-17T15:55:09+02:00",
-    "min_hours": 80.0,
-    "max_hours": 182.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-09 20:55:09"
   },
   {
     "server": "Sv18",
@@ -720,28 +672,28 @@
     "raw_date": "2026-11-11 19:36:05"
   },
   {
-    "server": "Sv4",
+    "server": "Sv17",
     "boss": "Lord of Ferea",
-    "last_kill": "2026-11-10T11:02:22+02:00",
+    "last_kill": "2026-11-09T15:29:27+02:00",
     "killer": "PinkKitty",
-    "earliest_spawn": "2026-11-13T19:02:22+02:00",
-    "latest_spawn": "2026-11-18T01:02:22+02:00",
-    "min_hours": 80.0,
-    "max_hours": 182.0,
+    "earliest_spawn": "2026-11-13T17:52:27+02:00",
+    "latest_spawn": "2026-11-14T08:44:27+02:00",
+    "min_hours": 98.4,
+    "max_hours": 113.2,
     "is_fixed": false,
-    "raw_date": "2026-11-10 06:02:22"
+    "raw_date": "2026-11-09 10:29:27"
   },
   {
-    "server": "Sv2",
+    "server": "Sv10",
     "boss": "Lord of Ferea",
-    "last_kill": "2026-11-10T12:17:51+02:00",
-    "killer": "PinkKitty",
-    "earliest_spawn": "2026-11-13T20:17:51+02:00",
-    "latest_spawn": "2026-11-18T02:17:51+02:00",
-    "min_hours": 80.0,
-    "max_hours": 182.0,
+    "last_kill": "2026-11-09T16:27:03+02:00",
+    "killer": "Longwang1",
+    "earliest_spawn": "2026-11-13T18:50:03+02:00",
+    "latest_spawn": "2026-11-14T09:42:03+02:00",
+    "min_hours": 98.4,
+    "max_hours": 113.2,
     "is_fixed": false,
-    "raw_date": "2026-11-10 07:17:51"
+    "raw_date": "2026-11-09 11:27:03"
   },
   {
     "server": "Sv8",
@@ -780,6 +732,30 @@
     "raw_date": "2026-11-09 12:34:02"
   },
   {
+    "server": "Sv15",
+    "boss": "Lord of Ferea",
+    "last_kill": "2026-11-10T01:21:14+02:00",
+    "killer": "Babayaga98",
+    "earliest_spawn": "2026-11-14T03:44:14+02:00",
+    "latest_spawn": "2026-11-14T18:36:14+02:00",
+    "min_hours": 98.4,
+    "max_hours": 113.2,
+    "is_fixed": false,
+    "raw_date": "2026-11-09 20:21:14"
+  },
+  {
+    "server": "Sv3",
+    "boss": "Lord of Ferea",
+    "last_kill": "2026-11-10T01:55:09+02:00",
+    "killer": "PinkKitty",
+    "earliest_spawn": "2026-11-14T04:18:09+02:00",
+    "latest_spawn": "2026-11-14T19:10:09+02:00",
+    "min_hours": 98.4,
+    "max_hours": 113.2,
+    "is_fixed": false,
+    "raw_date": "2026-11-09 20:55:09"
+  },
+  {
     "server": "Sv3",
     "boss": "God of Darkness",
     "last_kill": "2026-11-09T18:44:06+02:00",
@@ -790,30 +766,6 @@
     "max_hours": 168.0,
     "is_fixed": false,
     "raw_date": "2026-11-09 13:44:06"
-  },
-  {
-    "server": "Sv19",
-    "boss": "Lord of Ferea",
-    "last_kill": "2026-11-10T21:33:32+02:00",
-    "killer": "SolrakDVDL",
-    "earliest_spawn": "2026-11-14T05:33:32+02:00",
-    "latest_spawn": "2026-11-18T11:33:32+02:00",
-    "min_hours": 80.0,
-    "max_hours": 182.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-10 16:33:32"
-  },
-  {
-    "server": "Sv14",
-    "boss": "Lord of Ferea",
-    "last_kill": "2026-11-10T22:42:36+02:00",
-    "killer": "Babayaga96",
-    "earliest_spawn": "2026-11-14T06:42:36+02:00",
-    "latest_spawn": "2026-11-18T12:42:36+02:00",
-    "min_hours": 80.0,
-    "max_hours": 182.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-10 17:42:36"
   },
   {
     "server": "Sv7",
@@ -840,6 +792,18 @@
     "raw_date": "2026-11-09 21:48:10"
   },
   {
+    "server": "Sv4",
+    "boss": "Lord of Ferea",
+    "last_kill": "2026-11-10T11:02:22+02:00",
+    "killer": "PinkKitty",
+    "earliest_spawn": "2026-11-14T13:25:22+02:00",
+    "latest_spawn": "2026-11-15T04:17:22+02:00",
+    "min_hours": 98.4,
+    "max_hours": 113.2,
+    "is_fixed": false,
+    "raw_date": "2026-11-10 06:02:22"
+  },
+  {
     "server": "Sv8",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-11T01:27:45+02:00",
@@ -852,40 +816,16 @@
     "raw_date": "2026-11-10 20:27:45"
   },
   {
-    "server": "Sv11",
+    "server": "Sv2",
     "boss": "Lord of Ferea",
-    "last_kill": "2026-11-11T05:40:49+02:00",
-    "killer": "Bluuux",
-    "earliest_spawn": "2026-11-14T13:40:49+02:00",
-    "latest_spawn": "2026-11-18T19:40:49+02:00",
-    "min_hours": 80.0,
-    "max_hours": 182.0,
+    "last_kill": "2026-11-10T12:17:51+02:00",
+    "killer": "PinkKitty",
+    "earliest_spawn": "2026-11-14T14:40:51+02:00",
+    "latest_spawn": "2026-11-15T05:32:51+02:00",
+    "min_hours": 98.4,
+    "max_hours": 113.2,
     "is_fixed": false,
-    "raw_date": "2026-11-11 00:40:49"
-  },
-  {
-    "server": "Sv6",
-    "boss": "Lord of Ferea",
-    "last_kill": "2026-11-11T05:56:00+02:00",
-    "killer": "NoFeArSLAY",
-    "earliest_spawn": "2026-11-14T13:56:00+02:00",
-    "latest_spawn": "2026-11-18T19:56:00+02:00",
-    "min_hours": 80.0,
-    "max_hours": 182.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-11 00:56:00"
-  },
-  {
-    "server": "Sv1",
-    "boss": "Lord of Ferea",
-    "last_kill": "2026-11-11T05:58:34+02:00",
-    "killer": "SolrakDVDL",
-    "earliest_spawn": "2026-11-14T13:58:34+02:00",
-    "latest_spawn": "2026-11-18T19:58:34+02:00",
-    "min_hours": 80.0,
-    "max_hours": 182.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-11 00:58:34"
+    "raw_date": "2026-11-10 07:17:51"
   },
   {
     "server": "Sv2",
@@ -1008,18 +948,6 @@
     "raw_date": "2026-11-10 17:01:57"
   },
   {
-    "server": "Sv5",
-    "boss": "Lord of Ferea",
-    "last_kill": "2026-11-11T11:21:04+02:00",
-    "killer": "SolrakDVDL",
-    "earliest_spawn": "2026-11-14T19:21:04+02:00",
-    "latest_spawn": "2026-11-19T01:21:04+02:00",
-    "min_hours": 80.0,
-    "max_hours": 182.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-11 06:21:04"
-  },
-  {
     "server": "Sv4",
     "boss": "God of Darkness",
     "last_kill": "2026-11-10T11:15:38+02:00",
@@ -1092,6 +1020,18 @@
     "raw_date": "2026-11-11 05:26:11"
   },
   {
+    "server": "Sv19",
+    "boss": "Lord of Ferea",
+    "last_kill": "2026-11-10T21:33:32+02:00",
+    "killer": "SolrakDVDL",
+    "earliest_spawn": "2026-11-14T23:56:32+02:00",
+    "latest_spawn": "2026-11-15T14:48:32+02:00",
+    "min_hours": 98.4,
+    "max_hours": 113.2,
+    "is_fixed": false,
+    "raw_date": "2026-11-10 16:33:32"
+  },
+  {
     "server": "Sv16",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-11T12:09:10+02:00",
@@ -1126,6 +1066,18 @@
     "max_hours": 84.0,
     "is_fixed": true,
     "raw_date": "2026-11-11 07:14:23"
+  },
+  {
+    "server": "Sv14",
+    "boss": "Lord of Ferea",
+    "last_kill": "2026-11-10T22:42:36+02:00",
+    "killer": "Babayaga96",
+    "earliest_spawn": "2026-11-15T01:05:36+02:00",
+    "latest_spawn": "2026-11-15T15:57:36+02:00",
+    "min_hours": 98.4,
+    "max_hours": 113.2,
+    "is_fixed": false,
+    "raw_date": "2026-11-10 17:42:36"
   },
   {
     "server": "Sv17",
@@ -1188,6 +1140,42 @@
     "raw_date": "2026-11-10 16:20:02"
   },
   {
+    "server": "Sv11",
+    "boss": "Lord of Ferea",
+    "last_kill": "2026-11-11T05:40:49+02:00",
+    "killer": "Bluuux",
+    "earliest_spawn": "2026-11-15T08:03:49+02:00",
+    "latest_spawn": "2026-11-15T22:55:49+02:00",
+    "min_hours": 98.4,
+    "max_hours": 113.2,
+    "is_fixed": false,
+    "raw_date": "2026-11-11 00:40:49"
+  },
+  {
+    "server": "Sv6",
+    "boss": "Lord of Ferea",
+    "last_kill": "2026-11-11T05:56:00+02:00",
+    "killer": "NoFeArSLAY",
+    "earliest_spawn": "2026-11-15T08:19:00+02:00",
+    "latest_spawn": "2026-11-15T23:11:00+02:00",
+    "min_hours": 98.4,
+    "max_hours": 113.2,
+    "is_fixed": false,
+    "raw_date": "2026-11-11 00:56:00"
+  },
+  {
+    "server": "Sv1",
+    "boss": "Lord of Ferea",
+    "last_kill": "2026-11-11T05:58:34+02:00",
+    "killer": "SolrakDVDL",
+    "earliest_spawn": "2026-11-15T08:21:34+02:00",
+    "latest_spawn": "2026-11-15T23:13:34+02:00",
+    "min_hours": 98.4,
+    "max_hours": 113.2,
+    "is_fixed": false,
+    "raw_date": "2026-11-11 00:58:34"
+  },
+  {
     "server": "Sv19",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-11T22:15:13+02:00",
@@ -1198,6 +1186,18 @@
     "max_hours": 84.0,
     "is_fixed": true,
     "raw_date": "2026-11-11 17:15:13"
+  },
+  {
+    "server": "Sv5",
+    "boss": "Lord of Ferea",
+    "last_kill": "2026-11-11T11:21:04+02:00",
+    "killer": "SolrakDVDL",
+    "earliest_spawn": "2026-11-15T13:44:04+02:00",
+    "latest_spawn": "2026-11-16T04:36:04+02:00",
+    "min_hours": 98.4,
+    "max_hours": 113.2,
+    "is_fixed": false,
+    "raw_date": "2026-11-11 06:21:04"
   },
   {
     "server": "Sv3",
