@@ -8,15 +8,41 @@ BRAZIL_TZ = ZoneInfo("America/Sao_Paulo")
 BULGARIA_TZ = ZoneInfo("Europe/Sofia")
 
 # Times in minutes
+ # BOSS_TIMES = {
+  #   "God of Darkness": {"min": 106 * 60, "max": 168 * 60}, #106 - 168
+  #  "Core Magriffy": {"min": 84 * 60, "max": 84 * 60},
+  #   "Lord of Ferea": {"min": 94 * 60, "max": (182 * 60)},
+  #   "Lord Silvester": {"min": (3 * 24 + 21) * 60 + 5, "max": (3 * 24 + 21) * 60 + 5}, 
+  #   "Selupan": {"min": 34 * 60, "max": 34 * 60},
+  #   "Nightmare": {"min": 40 * 60, "max": 40 * 60},
+  #   "Nix": {"min": (100 * 60) + 5, "max": 112 * 60}            
+# }
+
+# Times converted to minutes based on Base Time + Secret Adjustment
 BOSS_TIMES = {
-    "God of Darkness": {"min": 106 * 60, "max": 168 * 60}, #106 - 168
+    # Lord of Ferea: 94 hours + 0 = 94 hours
+    "Lord of Ferea": {"min": 94 * 60, "max": 94 * 60},
+    
+    # Lord Silvester: 90 hours + 2 hours = 92 hours
+    "Lord Silvester": {"min": 92 * 60, "max": 92 * 60},
+    
+    # Nix: 130 hours - 24 hours = 106 hours
+    "Nix": {"min": 106 * 60, "max": 106 * 60},
+    
+    # Core Magriffy: 100 hours - 16h 20m = 83h 40m (Let's round to 84h)
     "Core Magriffy": {"min": 84 * 60, "max": 84 * 60},
-    "Lord of Ferea": {"min": 94 * 60, "max": (182 * 60)},
-    "Lord Silvester": {"min": (3 * 24 + 21) * 60 + 5, "max": (3 * 24 + 21) * 60 + 5}, 
-    "Selupan": {"min": 34 * 60, "max": 34 * 60},
-    "Nightmare": {"min": 40 * 60, "max": 40 * 60},
-    "Nix": {"min": (100 * 60) + 5, "max": 112 * 60}            
+    
+    # Selupan: 34 hours - 1 hour = 33 hours
+    "Selupan": {"min": 33 * 60, "max": 33 * 60},
+    
+    # Nightmare: 40 hours - 1 hour = 39 hours
+    "Nightmare": {"min": 39 * 60, "max": 39 * 60},
+    
+    # God of Darkness: 106 hours + 0 = 106 hours
+    # (Since GoD has RNG delays, let's keep the max at 168h like we did before)
+    "God of Darkness": {"min": 106 * 60, "max": 168 * 60}
 }
+
 
 # Add any server you want to hide to this list (lowercase, no spaces)
 IGNORED_SERVERS = {"svc", "speed1", "speed2", "speed3", "speed4", "speed5"}
