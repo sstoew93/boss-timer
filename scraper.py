@@ -15,7 +15,7 @@ BOSS_TIMES = {
     "Nix": {"min": (130 * 60) - 1440, "max": 112 * 60},
     "Core Magriffy": {"min": (100 * 60) - 980, "max": (100 * 60) - 980},
     "Selupan": {"min": (34 * 60) - 60, "max": (34 * 60) - 60},
-    "Nightmare": {"min": (39 * 60) - 60, "max": (39 * 60) - 60},
+    "Nightmare": {"min": (40 * 60) - 60, "max": (40 * 60) - 60},
     "God of Darkness": {"min": (106 * 60) + 0, "max": 168 * 60}
 }
 
