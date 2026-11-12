@@ -43,10 +43,8 @@ def scrape():
         killer = cells[2].get_text(strip=True)
         server = cells[3].get_text(strip=True)
 
-        # Clean the server name (lowercase, remove spaces) for comparison
         clean_server = server.lower().replace(" ", "")
         
-        # Skip if the server is in our ignore list
         if clean_server in IGNORED_SERVERS:
             continue
 
