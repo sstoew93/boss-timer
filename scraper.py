@@ -15,7 +15,7 @@ BOSS_TIMES = {
     "Lord Silvester": {"min": (3 * 24 + 21) * 60 + 5, "max": (3 * 24 + 21) * 60 + 5}, 
     "Selupan": {"min": 34 * 60, "max": 34 * 60},
     "Nightmare": {"min": 40 * 60, "max": 40 * 60},
-    "Nix": {"min": 106 * 60, "max": 112 * 60}              
+    "Nix": {"min": (100 * 60) + 5, "max": 112 * 60}            
 }
 
 # Add any server you want to hide to this list (lowercase, no spaces)
