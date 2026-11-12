@@ -48,18 +48,6 @@
     "raw_date": "2026-11-08 01:00:30"
   },
   {
-    "server": "Sv11",
-    "boss": "Lord Silvester",
-    "last_kill": "2026-11-08T13:33:13+02:00",
-    "killer": "DL190",
-    "earliest_spawn": "2026-11-12T10:38:13+02:00",
-    "latest_spawn": "2026-11-12T10:38:13+02:00",
-    "min_hours": 93.1,
-    "max_hours": 93.1,
-    "is_fixed": true,
-    "raw_date": "2026-11-08 08:33:13"
-  },
-  {
     "server": "Sv6",
     "boss": "Nightmare",
     "last_kill": "2026-11-10T19:22:35+02:00",
@@ -1294,6 +1282,18 @@
     "max_hours": 168.0,
     "is_fixed": false,
     "raw_date": "2026-11-11 17:15:23"
+  },
+  {
+    "server": "Sv11",
+    "boss": "Lord Silvester",
+    "last_kill": "2026-11-12T12:25:50+02:00",
+    "killer": "joiuda",
+    "earliest_spawn": "2026-11-16T09:30:50+02:00",
+    "latest_spawn": "2026-11-16T09:30:50+02:00",
+    "min_hours": 93.1,
+    "max_hours": 93.1,
+    "is_fixed": true,
+    "raw_date": "2026-11-12 07:25:50"
   },
   {
     "server": "Sv2",
