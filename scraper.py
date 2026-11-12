@@ -8,14 +8,15 @@ BRAZIL_TZ = ZoneInfo("America/Sao_Paulo")
 BULGARIA_TZ = ZoneInfo("Europe/Sofia")
 
 # Times in minutes
+# Base times and secret server adjustments
 BOSS_TIMES = {
-    "God of Darkness": {"min": 106 * 60, "max": 168 * 60},      # Min: 106h | Max: 168h
-    "Core Magriffy": {"min": 84 * 60, "max": 84 * 60},          # Min: 84h  | Max: 84h
-    "Lord of Ferea": {"min": 94 * 60, "max": 182 * 60},         # Min: 94h  | Max: 182h
-    "Lord Silvester": {"min": 5585, "max": 5585},               # Min: 93h 5m | Max: 93h 5m (3 days, 21h, 5m)
-    "Selupan": {"min": 34 * 60, "max": 34 * 60},                # Min: 34h  | Max: 34h
-    "Nightmare": {"min": 40 * 60, "max": 40 * 60},              # Min: 40h  | Max: 40h
-    "Nix": {"min": 6005, "max": 112 * 60}                       # Min: 100h 5m | Max: 112h
+    "Lord of Ferea": {"min": (94 * 60) + 0, "max": 182 * 60},
+    "Lord Silvester": {"min": (90 * 60) + 120, "max": (90 * 60) + 120},
+    "Nix": {"min": (130 * 60) - 1440, "max": 112 * 60},
+    "Core Magriffy": {"min": (100 * 60) - 980, "max": (100 * 60) - 980},
+    "Selupan": {"min": (34 * 60) - 60, "max": (34 * 60) - 60},
+    "Nightmare": {"min": (39 * 60) - 60, "max": (39 * 60) - 60},
+    "God of Darkness": {"min": (106 * 60) + 0, "max": 168 * 60}
 }
 
 # Add any server you want to hide to this list (lowercase, no spaces)
