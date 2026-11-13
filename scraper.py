@@ -9,7 +9,7 @@ BULGARIA_TZ = ZoneInfo("Europe/Sofia")
 
 # Times in minutes
 BOSS_TIMES = {
-    "God of Darkness": {"min": 106 * 60, "max": 168 * 60},
+    "God of Darkness": {"min": 100 * 60, "max": 168 * 60},
     "Core Magriffy": {"min": 84 * 60, "max": 84 * 60},
     "Lord of Ferea": {"min": 94 * 60, "max": (182 * 60)},
     "Lord Silvester": {"min": (93 * 60) + 5, "max": (93 * 60) + 5}, 
