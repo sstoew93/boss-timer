@@ -60,18 +60,6 @@
     "raw_date": "2026-11-09 12:03:31"
   },
   {
-    "server": "Sv15",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-11T12:25:03+02:00",
-    "killer": "FuukiiSL",
-    "earliest_spawn": "2026-11-13T05:10:03+02:00",
-    "latest_spawn": "2026-11-13T05:10:03+02:00",
-    "min_hours": 40.8,
-    "max_hours": 40.8,
-    "is_fixed": true,
-    "raw_date": "2026-11-11 07:25:03"
-  },
-  {
     "server": "Sv10",
     "boss": "God of Darkness",
     "last_kill": "2026-11-08T20:34:53+02:00",
@@ -766,6 +754,18 @@
     "max_hours": 168.0,
     "is_fixed": false,
     "raw_date": "2026-11-10 06:15:38"
+  },
+  {
+    "server": "Sv15",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-13T05:24:35+02:00",
+    "killer": "Babayaga98",
+    "earliest_spawn": "2026-11-14T22:09:35+02:00",
+    "latest_spawn": "2026-11-14T22:09:35+02:00",
+    "min_hours": 40.8,
+    "max_hours": 40.8,
+    "is_fixed": true,
+    "raw_date": "2026-11-13 00:24:35"
   },
   {
     "server": "Sv4",
