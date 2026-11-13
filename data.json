@@ -61,18 +61,6 @@
   },
   {
     "server": "Sv16",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-12T00:36:05+02:00",
-    "killer": "PinkKitty",
-    "earliest_spawn": "2026-11-13T17:21:05+02:00",
-    "latest_spawn": "2026-11-13T17:21:05+02:00",
-    "min_hours": 40.8,
-    "max_hours": 40.8,
-    "is_fixed": true,
-    "raw_date": "2026-11-11 19:36:05"
-  },
-  {
-    "server": "Sv16",
     "boss": "God of Darkness",
     "last_kill": "2026-11-09T17:34:02+02:00",
     "killer": "Kasperiano",
@@ -934,6 +922,18 @@
     "max_hours": 84.0,
     "is_fixed": true,
     "raw_date": "2026-11-11 17:15:13"
+  },
+  {
+    "server": "Sv16",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-13T17:33:38+02:00",
+    "killer": "PinkKitty",
+    "earliest_spawn": "2026-11-15T10:18:38+02:00",
+    "latest_spawn": "2026-11-15T10:18:38+02:00",
+    "min_hours": 40.8,
+    "max_hours": 40.8,
+    "is_fixed": true,
+    "raw_date": "2026-11-13 12:33:38"
   },
   {
     "server": "Sv8",
