@@ -1,17 +1,5 @@
 [
   {
-    "server": "Sv8",
-    "boss": "Lord of Ferea",
-    "last_kill": "2026-11-09T04:18:50+02:00",
-    "killer": "MrMyzor",
-    "earliest_spawn": "2026-11-13T02:18:50+02:00",
-    "latest_spawn": "2026-11-16T18:18:50+02:00",
-    "min_hours": 94.0,
-    "max_hours": 182.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-08 23:18:50"
-  },
-  {
     "server": "Sv17",
     "boss": "Lord of Ferea",
     "last_kill": "2026-11-09T15:29:27+02:00",
@@ -1330,6 +1318,18 @@
     "max_hours": 168.0,
     "is_fixed": false,
     "raw_date": "2026-11-13 00:56:51"
+  },
+  {
+    "server": "Sv8",
+    "boss": "Lord of Ferea",
+    "last_kill": "2026-11-13T17:58:47+02:00",
+    "killer": "MrMyzor",
+    "earliest_spawn": "2026-11-17T15:58:47+02:00",
+    "latest_spawn": "2026-11-21T07:58:47+02:00",
+    "min_hours": 94.0,
+    "max_hours": 182.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-13 12:58:47"
   },
   {
     "server": "Sv18",
