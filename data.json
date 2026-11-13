@@ -24,18 +24,6 @@
     "raw_date": "2026-11-08 23:18:50"
   },
   {
-    "server": "Sv14",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-11T19:01:48+02:00",
-    "killer": "KAYNDL",
-    "earliest_spawn": "2026-11-13T11:46:48+02:00",
-    "latest_spawn": "2026-11-13T11:46:48+02:00",
-    "min_hours": 40.8,
-    "max_hours": 40.8,
-    "is_fixed": true,
-    "raw_date": "2026-11-11 14:01:48"
-  },
-  {
     "server": "Sv17",
     "boss": "Selupan",
     "last_kill": "2026-11-12T02:00:21+02:00",
@@ -898,6 +886,18 @@
     "max_hours": 182.0,
     "is_fixed": false,
     "raw_date": "2026-11-11 00:58:34"
+  },
+  {
+    "server": "Sv14",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-13T12:00:12+02:00",
+    "killer": "PinkKitty",
+    "earliest_spawn": "2026-11-15T04:45:12+02:00",
+    "latest_spawn": "2026-11-15T04:45:12+02:00",
+    "min_hours": 40.8,
+    "max_hours": 40.8,
+    "is_fixed": true,
+    "raw_date": "2026-11-13 07:00:12"
   },
   {
     "server": "Sv18",
