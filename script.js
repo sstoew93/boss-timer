@@ -26,6 +26,53 @@ if (sessionStorage.getItem('isLoggedIn') === 'true') {
     loadData();
 }
 
+// --- EVENT BOSS TIME CALCULATIONS ---
+// Brazil is permanently UTC-3. These functions calculate the exact UTC time for the events.
+
+function getNextKundun() {
+    const now = new Date();
+    // Kundun: Daily at 16:00 BR = 19:00 UTC
+    let target = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), 19, 0, 0));
+    if (target.getTime() <= now.getTime()) {
+        target.setUTCDate(target.getUTCDate() + 1);
+    }
+    return target.toISOString();
+}
+
+function getNextMedusa() {
+    const now = new Date();
+    const nowUTC = now.getTime();
+    
+    // Medusa BR times converted to UTC:
+    // Tue 22:00 BR = Wed 01:00 UTC (Day 3)
+    // Thu 22:00 BR = Fri 01:00 UTC (Day 5)
+    // Sat 16:00 BR = Sat 19:00 UTC (Day 6)
+    // Sun 18:00 BR = Sun 21:00 UTC (Day 0)
+    const schedule = [
+        { day: 3, hour: 1 }, 
+        { day: 5, hour: 1 }, 
+        { day: 6, hour: 19 }, 
+        { day: 0, hour: 21 }  
+    ];
+
+    let nextSpawn = null;
+    
+    schedule.forEach(slot => {
+        let target = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), slot.hour, 0, 0));
+        let dayDiff = slot.day - now.getUTCDay();
+        if (dayDiff < 0 || (dayDiff === 0 && target.getTime() <= nowUTC)) {
+            dayDiff += 7;
+        }
+        target.setUTCDate(target.getUTCDate() + dayDiff);
+        
+        if (!nextSpawn || target.getTime() < nextSpawn.getTime()) {
+            nextSpawn = target;
+        }
+    });
+    return nextSpawn.toISOString();
+}
+// ------------------------------------
+
 // --- APP LOGIC ---
 let allData = []; 
 let uniqueServers = new Set();
@@ -37,6 +84,29 @@ function loadData() {
       .then(response => response.json())
       .then(data => {
         allData = data; 
+        
+        // --- INJECT EVENT BOSSES ---
+        const kundunTime = getNextKundun();
+        allData.push({
+            server: "ALL",
+            boss: "Kundun",
+            killer: "", // Removed the text
+            earliest_spawn: kundunTime,
+            latest_spawn: kundunTime,
+            is_fixed: true
+        });
+
+        const medusaTime = getNextMedusa();
+        allData.push({
+            server: "ALL",
+            boss: "Medusa",
+            killer: "", // Removed the text
+            earliest_spawn: medusaTime,
+            latest_spawn: medusaTime,
+            is_fixed: true
+        });
+        // ---------------------------
+
         allData.forEach(item => {
           uniqueServers.add(item.server);
           uniqueBosses.add(item.boss);
@@ -155,7 +225,7 @@ function renderTable() {
     row.innerHTML = `
       <td>
           <div class="boss-name">${item.boss}</div>
-          <div class="boss-subtext">Last kill by ${item.killer}</div>
+          ${item.killer ? `<div class="boss-subtext">Last kill by ${item.killer}</div>` : ''}
       </td>
       <td>
           <span class="server-badge">${item.server}</span>
@@ -168,7 +238,7 @@ function renderTable() {
       </td>
       <td>
           <div id="${statusId}" class="status-pill dead">
-              <div class="status-dot"></div> Dead • counting
+              <div class="status-dot"></div> Dead
           </div>
           <div class="timer-main" id="${timerId}">Calculating...</div>
           <div class="timer-sub" id="${maxTimeId}"></div>
