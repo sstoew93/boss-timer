@@ -43,16 +43,8 @@ function getNextMedusa() {
     const now = new Date();
     const nowUTC = now.getTime();
     
-    // Medusa BR times converted to UTC:
-    // Tue 22:00 BR = Wed 01:00 UTC (Day 3)
-    // Thu 22:00 BR = Fri 01:00 UTC (Day 5)
-    // Sat 16:00 BR = Sat 19:00 UTC (Day 6)
-    // Sun 18:00 BR = Sun 21:00 UTC (Day 0)
     const schedule = [
-        { day: 3, hour: 1 }, 
-        { day: 5, hour: 1 }, 
-        { day: 6, hour: 19 }, 
-        { day: 0, hour: 21 }  
+        { day: 5, hour: 1 }
     ];
 
     let nextSpawn = null;
