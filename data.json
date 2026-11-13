@@ -24,18 +24,6 @@
     "raw_date": "2026-11-08 17:06:33"
   },
   {
-    "server": "Sv1",
-    "boss": "Nix",
-    "last_kill": "2026-11-08T16:38:26+02:00",
-    "killer": "Babayaga98",
-    "earliest_spawn": "2026-11-12T20:43:26+02:00",
-    "latest_spawn": "2026-11-13T08:38:26+02:00",
-    "min_hours": 100.1,
-    "max_hours": 112.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-08 11:38:26"
-  },
-  {
     "server": "Sv8",
     "boss": "Lord of Ferea",
     "last_kill": "2026-11-09T04:18:50+02:00",
@@ -1330,6 +1318,18 @@
     "max_hours": 112.0,
     "is_fixed": false,
     "raw_date": "2026-11-12 15:13:14"
+  },
+  {
+    "server": "Sv1",
+    "boss": "Nix",
+    "last_kill": "2026-11-13T04:41:46+02:00",
+    "killer": "SolrakDVDL",
+    "earliest_spawn": "2026-11-17T08:46:46+02:00",
+    "latest_spawn": "2026-11-17T20:41:46+02:00",
+    "min_hours": 100.1,
+    "max_hours": 112.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-12 23:41:46"
   },
   {
     "server": "Sv2",
