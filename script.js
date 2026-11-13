@@ -44,7 +44,10 @@ function getNextMedusa() {
     const nowUTC = now.getTime();
     
     const schedule = [
-        { day: 5, hour: 1 }
+        { day: 3, hour: 0 },  // Tuesday 21:00 BR
+        { day: 6, hour: 0 },  // Friday 21:00 BR
+        { day: 6, hour: 19 }, // Saturday 16:00 BR
+        { day: 0, hour: 21 }  // Sunday 18:00 BR
     ];
 
     let nextSpawn = null;
