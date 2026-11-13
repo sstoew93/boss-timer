@@ -27,6 +27,53 @@ if (sessionStorage.getItem('isLoggedIn') === 'true') {
 }
 // ----------------------
 
+// --- EVENT BOSS TIME CALCULATIONS ---
+// Brazil is permanently UTC-3. These functions calculate the exact UTC time for the events.
+
+function getNextKundun() {
+    const now = new Date();
+    // Kundun: Daily at 16:00 BR = 19:00 UTC
+    let target = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), 19, 0, 0));
+    if (target.getTime() <= now.getTime()) {
+        target.setUTCDate(target.getUTCDate() + 1);
+    }
+    return target;
+}
+
+function getNextMedusa() {
+    const now = new Date();
+    const nowUTC = now.getTime();
+    
+    // Medusa BR times converted to UTC:
+    // Tue 22:00 BR = Wed 01:00 UTC (Day 3)
+    // Thu 22:00 BR = Fri 01:00 UTC (Day 5)
+    // Sat 16:00 BR = Sat 19:00 UTC (Day 6)
+    // Sun 18:00 BR = Sun 21:00 UTC (Day 0)
+    const schedule = [
+        { day: 3, hour: 1, minute: 0 }, 
+        { day: 5, hour: 1, minute: 0 }, 
+        { day: 6, hour: 19, minute: 0 }, 
+        { day: 0, hour: 21, minute: 0 }  
+    ];
+
+    let nextSpawn = null;
+    
+    schedule.forEach(slot => {
+        let target = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), slot.hour, slot.minute, 0));
+        let dayDiff = slot.day - now.getUTCDay();
+        if (dayDiff < 0 || (dayDiff === 0 && target.getTime() <= nowUTC)) {
+            dayDiff += 7;
+        }
+        target.setUTCDate(target.getUTCDate() + dayDiff);
+        
+        if (!nextSpawn || target.getTime() < nextSpawn.getTime()) {
+            nextSpawn = target;
+        }
+    });
+    return nextSpawn;
+}
+// ------------------------------------
+
 // --- APP LOGIC ---
 let allData = []; 
 let uniqueServers = new Set();
@@ -38,6 +85,28 @@ function loadData() {
       .then(response => response.json())
       .then(data => {
         allData = data; 
+        
+        // --- INJECT EVENT BOSSES ---
+        const kundunTime = getNextKundun().toISOString();
+        allData.push({
+            server: "ALL",
+            boss: "Kundun",
+            killer: "Daily Event",
+            earliest_spawn: kundunTime,
+            latest_spawn: kundunTime,
+            is_fixed: true
+        });
+
+        const medusaTime = getNextMedusa().toISOString();
+        allData.push({
+            server: "ALL",
+            boss: "Medusa",
+            killer: "Weekly Event",
+            earliest_spawn: medusaTime,
+            latest_spawn: medusaTime,
+            is_fixed: true
+        });
+        // ---------------------------
         
         allData.forEach(item => {
           uniqueServers.add(item.server);
@@ -56,7 +125,6 @@ function loadData() {
       .catch(error => console.error('Error loading data:', error));
 }
 
-// Reverted to DD/MM, HH:MM (24-hour)
 function formatDateShort(dateString) {
     const d = new Date(dateString);
     const options = { timeZone: 'Europe/Sofia', day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit', hour12: false };
@@ -123,7 +191,6 @@ function renderTable() {
     return matchesServer && matchesBoss && matchesSearch;
   });
 
-  // Sort by ALIVE, MAY SPAWN, DEAD
   const now = new Date().getTime();
   filteredData.sort((a, b) => {
     const getWeight = (item) => {
@@ -146,7 +213,6 @@ function renderTable() {
 
   filteredData.forEach(item => {
     const row = document.createElement('tr');
-    
     const windowStart = formatDateShort(item.earliest_spawn);
     const windowEnd = formatDateShort(item.latest_spawn);
     
@@ -157,7 +223,7 @@ function renderTable() {
     row.innerHTML = `
       <td>
           <div class="boss-name">${item.boss}</div>
-          <div class="boss-subtext">Last kill by ${item.killer}</div>
+          <div class="boss-subtext">${item.killer}</div>
       </td>
       <td>
           <span class="server-badge">${item.server}</span>
@@ -215,7 +281,7 @@ function updateTimers() {
       timerEl.textContent = formatTimeRemaining(timeToMin);
       timerEl.style.color = "#fafafa";
       statusEl.className = "status-pill dead";
-      statusEl.innerHTML = '<div class="status-dot"></div> Dead';
+      statusEl.innerHTML = '<div class="status-dot"></div> Dead • counting';
       
       if (timer.isFixed) {
         maxEl.style.display = "none";
