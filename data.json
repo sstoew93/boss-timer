@@ -1,18 +1,6 @@
 [
   {
     "server": "Sv10",
-    "boss": "Lord of Ferea",
-    "last_kill": "2026-11-09T16:27:03+02:00",
-    "killer": "Longwang1",
-    "earliest_spawn": "2026-11-13T14:27:03+02:00",
-    "latest_spawn": "2026-11-17T06:27:03+02:00",
-    "min_hours": 94.0,
-    "max_hours": 182.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-09 11:27:03"
-  },
-  {
-    "server": "Sv10",
     "boss": "Nightmare",
     "last_kill": "2026-11-12T00:19:14+02:00",
     "killer": "XxVILLEGAS",
@@ -1330,6 +1318,18 @@
     "max_hours": 182.0,
     "is_fixed": false,
     "raw_date": "2026-11-13 20:18:34"
+  },
+  {
+    "server": "Sv10",
+    "boss": "Lord of Ferea",
+    "last_kill": "2026-11-14T01:23:51+02:00",
+    "killer": "Babay96aga",
+    "earliest_spawn": "2026-11-17T23:23:51+02:00",
+    "latest_spawn": "2026-11-21T15:23:51+02:00",
+    "min_hours": 94.0,
+    "max_hours": 182.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-13 20:23:51"
   },
   {
     "server": "Sv7",
