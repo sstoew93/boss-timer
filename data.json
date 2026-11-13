@@ -48,18 +48,6 @@
     "raw_date": "2026-11-09 12:34:02"
   },
   {
-    "server": "Sv8",
-    "boss": "Lord Silvester",
-    "last_kill": "2026-11-10T00:30:25+02:00",
-    "killer": "SMHeaD",
-    "earliest_spawn": "2026-11-13T21:35:25+02:00",
-    "latest_spawn": "2026-11-13T21:35:25+02:00",
-    "min_hours": 93.1,
-    "max_hours": 93.1,
-    "is_fixed": true,
-    "raw_date": "2026-11-09 19:30:25"
-  },
-  {
     "server": "Sv18",
     "boss": "Selupan",
     "last_kill": "2026-11-12T12:18:56+02:00",
@@ -1318,6 +1306,18 @@
     "max_hours": 182.0,
     "is_fixed": false,
     "raw_date": "2026-11-13 12:58:47"
+  },
+  {
+    "server": "Sv8",
+    "boss": "Lord Silvester",
+    "last_kill": "2026-11-13T21:39:07+02:00",
+    "killer": "PinkKitty",
+    "earliest_spawn": "2026-11-17T18:44:07+02:00",
+    "latest_spawn": "2026-11-17T18:44:07+02:00",
+    "min_hours": 93.1,
+    "max_hours": 93.1,
+    "is_fixed": true,
+    "raw_date": "2026-11-13 16:39:07"
   },
   {
     "server": "Sv18",
