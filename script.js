@@ -36,6 +36,8 @@ function getNextKundun() {
     if (target.getTime() <= now.getTime()) {
         target.setUTCDate(target.getUTCDate() + 1);
     }
+    // Subtract 5 minutes for preparing
+    target.setMinutes(target.getMinutes() - 5);
     return target.toISOString();
 }
 
@@ -43,6 +45,7 @@ function getNextMedusa() {
     const now = new Date();
     const nowUTC = now.getTime();
     
+    // Medusa BR times converted to UTC:
     const schedule = [
         { day: 3, hour: 0 },  // Tuesday 21:00 BR
         { day: 6, hour: 0 },  // Friday 21:00 BR
@@ -52,18 +55,28 @@ function getNextMedusa() {
 
     let nextSpawn = null;
     
-    schedule.forEach(slot => {
-        let target = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), slot.hour, 0, 0));
-        let dayDiff = slot.day - now.getUTCDay();
-        if (dayDiff < 0 || (dayDiff === 0 && target.getTime() <= nowUTC)) {
-            dayDiff += 7;
-        }
-        target.setUTCDate(target.getUTCDate() + dayDiff);
+    // Failsafe loop: Check the next 14 days to guarantee we find the exact closest spawn
+    for (let i = 0; i < 14; i++) {
+        let checkDate = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() + i, 0, 0, 0));
+        let dayOfWeek = checkDate.getUTCDay();
         
-        if (!nextSpawn || target.getTime() < nextSpawn.getTime()) {
-            nextSpawn = target;
-        }
-    });
+        schedule.forEach(slot => {
+            if (slot.day === dayOfWeek) {
+                let target = new Date(Date.UTC(checkDate.getUTCFullYear(), checkDate.getUTCMonth(), checkDate.getUTCDate(), slot.hour, 0, 0));
+                if (target.getTime() > nowUTC) {
+                    if (!nextSpawn || target.getTime() < nextSpawn.getTime()) {
+                        nextSpawn = target;
+                    }
+                }
+            }
+        });
+    }
+    
+    // Subtract 5 minutes
+    if (nextSpawn) {
+        nextSpawn.setMinutes(nextSpawn.getMinutes() - 5);
+    }
+    
     return nextSpawn.toISOString();
 }
 // ------------------------------------
@@ -85,7 +98,7 @@ function loadData() {
         allData.push({
             server: "ALL",
             boss: "Kundun",
-            killer: "", // Removed the text
+            killer: "", 
             earliest_spawn: kundunTime,
             latest_spawn: kundunTime,
             is_fixed: true
@@ -95,7 +108,7 @@ function loadData() {
         allData.push({
             server: "ALL",
             boss: "Medusa",
-            killer: "", // Removed the text
+            killer: "", 
             earliest_spawn: medusaTime,
             latest_spawn: medusaTime,
             is_fixed: true
