@@ -36,18 +36,6 @@
     "raw_date": "2026-11-09 20:21:14"
   },
   {
-    "server": "Sv3",
-    "boss": "Lord of Ferea",
-    "last_kill": "2026-11-10T01:55:09+02:00",
-    "killer": "PinkKitty",
-    "earliest_spawn": "2026-11-13T23:55:09+02:00",
-    "latest_spawn": "2026-11-17T15:55:09+02:00",
-    "min_hours": 94.0,
-    "max_hours": 182.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-09 20:55:09"
-  },
-  {
     "server": "Sv7",
     "boss": "God of Darkness",
     "last_kill": "2026-11-10T01:50:54+02:00",
@@ -1342,5 +1330,17 @@
     "max_hours": 112.0,
     "is_fixed": false,
     "raw_date": "2026-11-13 16:09:17"
+  },
+  {
+    "server": "Sv3",
+    "boss": "Lord of Ferea",
+    "last_kill": "2026-11-14T07:36:00+02:00",
+    "killer": "SolrakDVDL",
+    "earliest_spawn": "2026-11-18T05:36:00+02:00",
+    "latest_spawn": "2026-11-21T21:36:00+02:00",
+    "min_hours": 94.0,
+    "max_hours": 182.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-14 02:36:00"
   }
 ]
