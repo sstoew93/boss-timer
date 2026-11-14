@@ -1,17 +1,5 @@
 [
   {
-    "server": "Sv10",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-12T00:19:14+02:00",
-    "killer": "XxVILLEGAS",
-    "earliest_spawn": "2026-11-13T17:04:14+02:00",
-    "latest_spawn": "2026-11-13T17:04:14+02:00",
-    "min_hours": 40.8,
-    "max_hours": 40.8,
-    "is_fixed": true,
-    "raw_date": "2026-11-11 19:19:14"
-  },
-  {
     "server": "Sv16",
     "boss": "God of Darkness",
     "last_kill": "2026-11-09T17:34:02+02:00",
@@ -934,6 +922,18 @@
     "max_hours": 112.0,
     "is_fixed": false,
     "raw_date": "2026-11-11 09:42:12"
+  },
+  {
+    "server": "Sv10",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-14T02:12:10+02:00",
+    "killer": "XxVILLEGAS",
+    "earliest_spawn": "2026-11-15T18:57:10+02:00",
+    "latest_spawn": "2026-11-15T18:57:10+02:00",
+    "min_hours": 40.8,
+    "max_hours": 40.8,
+    "is_fixed": true,
+    "raw_date": "2026-11-13 21:12:10"
   },
   {
     "server": "Sv5",
