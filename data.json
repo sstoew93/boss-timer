@@ -84,18 +84,6 @@
     "raw_date": "2026-11-10 06:15:38"
   },
   {
-    "server": "Sv15",
-    "boss": "Lord Silvester",
-    "last_kill": "2026-11-10T19:07:01+02:00",
-    "killer": "xHdSx",
-    "earliest_spawn": "2026-11-14T16:12:01+02:00",
-    "latest_spawn": "2026-11-14T16:12:01+02:00",
-    "min_hours": 93.1,
-    "max_hours": 93.1,
-    "is_fixed": true,
-    "raw_date": "2026-11-10 14:07:01"
-  },
-  {
     "server": "Sv4",
     "boss": "Nightmare",
     "last_kill": "2026-11-12T23:30:32+02:00",
@@ -1342,5 +1330,17 @@
     "max_hours": 93.1,
     "is_fixed": true,
     "raw_date": "2026-11-14 11:13:16"
+  },
+  {
+    "server": "Sv15",
+    "boss": "Lord Silvester",
+    "last_kill": "2026-11-14T16:14:56+02:00",
+    "killer": "MrSIayerVN",
+    "earliest_spawn": "2026-11-18T13:19:56+02:00",
+    "latest_spawn": "2026-11-18T13:19:56+02:00",
+    "min_hours": 93.1,
+    "max_hours": 93.1,
+    "is_fixed": true,
+    "raw_date": "2026-11-14 11:14:56"
   }
 ]
