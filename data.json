@@ -100,10 +100,10 @@
     "boss": "Nightmare",
     "last_kill": "2026-11-13T05:24:35+02:00",
     "killer": "Babayaga98",
-    "earliest_spawn": "2026-11-14T22:09:35+02:00",
-    "latest_spawn": "2026-11-14T22:09:35+02:00",
-    "min_hours": 40.8,
-    "max_hours": 40.8,
+    "earliest_spawn": "2026-11-14T22:24:35+02:00",
+    "latest_spawn": "2026-11-14T22:24:35+02:00",
+    "min_hours": 41.0,
+    "max_hours": 41.0,
     "is_fixed": true,
     "raw_date": "2026-11-13 00:24:35"
   },
@@ -276,18 +276,6 @@
     "raw_date": "2026-11-11 00:40:49"
   },
   {
-    "server": "Sv18",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-13T11:02:55+02:00",
-    "killer": "PinkKitty",
-    "earliest_spawn": "2026-11-15T03:47:55+02:00",
-    "latest_spawn": "2026-11-15T03:47:55+02:00",
-    "min_hours": 40.8,
-    "max_hours": 40.8,
-    "is_fixed": true,
-    "raw_date": "2026-11-13 06:02:55"
-  },
-  {
     "server": "Sv6",
     "boss": "Lord of Ferea",
     "last_kill": "2026-11-11T05:56:00+02:00",
@@ -312,14 +300,26 @@
     "raw_date": "2026-11-11 00:58:34"
   },
   {
+    "server": "Sv18",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-13T11:02:55+02:00",
+    "killer": "PinkKitty",
+    "earliest_spawn": "2026-11-15T04:02:55+02:00",
+    "latest_spawn": "2026-11-15T04:02:55+02:00",
+    "min_hours": 41.0,
+    "max_hours": 41.0,
+    "is_fixed": true,
+    "raw_date": "2026-11-13 06:02:55"
+  },
+  {
     "server": "Sv14",
     "boss": "Nightmare",
     "last_kill": "2026-11-13T12:00:12+02:00",
     "killer": "PinkKitty",
-    "earliest_spawn": "2026-11-15T04:45:12+02:00",
-    "latest_spawn": "2026-11-15T04:45:12+02:00",
-    "min_hours": 40.8,
-    "max_hours": 40.8,
+    "earliest_spawn": "2026-11-15T05:00:12+02:00",
+    "latest_spawn": "2026-11-15T05:00:12+02:00",
+    "min_hours": 41.0,
+    "max_hours": 41.0,
     "is_fixed": true,
     "raw_date": "2026-11-13 07:00:12"
   },
@@ -360,18 +360,6 @@
     "raw_date": "2026-11-11 06:21:04"
   },
   {
-    "server": "Sv17",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-13T17:13:24+02:00",
-    "killer": "PinkKitty",
-    "earliest_spawn": "2026-11-15T09:58:24+02:00",
-    "latest_spawn": "2026-11-15T09:58:24+02:00",
-    "min_hours": 40.8,
-    "max_hours": 40.8,
-    "is_fixed": true,
-    "raw_date": "2026-11-13 12:13:24"
-  },
-  {
     "server": "Sv8",
     "boss": "Selupan",
     "last_kill": "2026-11-13T23:59:15+02:00",
@@ -396,14 +384,26 @@
     "raw_date": "2026-11-11 01:07:54"
   },
   {
+    "server": "Sv17",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-13T17:13:24+02:00",
+    "killer": "PinkKitty",
+    "earliest_spawn": "2026-11-15T10:13:24+02:00",
+    "latest_spawn": "2026-11-15T10:13:24+02:00",
+    "min_hours": 41.0,
+    "max_hours": 41.0,
+    "is_fixed": true,
+    "raw_date": "2026-11-13 12:13:24"
+  },
+  {
     "server": "Sv16",
     "boss": "Nightmare",
     "last_kill": "2026-11-13T17:33:38+02:00",
     "killer": "PinkKitty",
-    "earliest_spawn": "2026-11-15T10:18:38+02:00",
-    "latest_spawn": "2026-11-15T10:18:38+02:00",
-    "min_hours": 40.8,
-    "max_hours": 40.8,
+    "earliest_spawn": "2026-11-15T10:33:38+02:00",
+    "latest_spawn": "2026-11-15T10:33:38+02:00",
+    "min_hours": 41.0,
+    "max_hours": 41.0,
     "is_fixed": true,
     "raw_date": "2026-11-13 12:33:38"
   },
@@ -508,10 +508,10 @@
     "boss": "Nightmare",
     "last_kill": "2026-11-14T02:12:10+02:00",
     "killer": "XxVILLEGAS",
-    "earliest_spawn": "2026-11-15T18:57:10+02:00",
-    "latest_spawn": "2026-11-15T18:57:10+02:00",
-    "min_hours": 40.8,
-    "max_hours": 40.8,
+    "earliest_spawn": "2026-11-15T19:12:10+02:00",
+    "latest_spawn": "2026-11-15T19:12:10+02:00",
+    "min_hours": 41.0,
+    "max_hours": 41.0,
     "is_fixed": true,
     "raw_date": "2026-11-13 21:12:10"
   },
@@ -520,10 +520,10 @@
     "boss": "Nightmare",
     "last_kill": "2026-11-14T02:50:50+02:00",
     "killer": "SolrakDVDL",
-    "earliest_spawn": "2026-11-15T19:35:50+02:00",
-    "latest_spawn": "2026-11-15T19:35:50+02:00",
-    "min_hours": 40.8,
-    "max_hours": 40.8,
+    "earliest_spawn": "2026-11-15T19:50:50+02:00",
+    "latest_spawn": "2026-11-15T19:50:50+02:00",
+    "min_hours": 41.0,
+    "max_hours": 41.0,
     "is_fixed": true,
     "raw_date": "2026-11-13 21:50:50"
   },
@@ -564,18 +564,6 @@
     "raw_date": "2026-11-11 19:21:18"
   },
   {
-    "server": "Sv6",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-14T05:46:26+02:00",
-    "killer": "HangeZoe",
-    "earliest_spawn": "2026-11-15T22:31:26+02:00",
-    "latest_spawn": "2026-11-15T22:31:26+02:00",
-    "min_hours": 40.8,
-    "max_hours": 40.8,
-    "is_fixed": true,
-    "raw_date": "2026-11-14 00:46:26"
-  },
-  {
     "server": "Sv19",
     "boss": "Selupan",
     "last_kill": "2026-11-14T12:42:13+02:00",
@@ -586,6 +574,18 @@
     "max_hours": 34.0,
     "is_fixed": true,
     "raw_date": "2026-11-14 07:42:13"
+  },
+  {
+    "server": "Sv6",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-14T05:46:26+02:00",
+    "killer": "HangeZoe",
+    "earliest_spawn": "2026-11-15T22:46:26+02:00",
+    "latest_spawn": "2026-11-15T22:46:26+02:00",
+    "min_hours": 41.0,
+    "max_hours": 41.0,
+    "is_fixed": true,
+    "raw_date": "2026-11-14 00:46:26"
   },
   {
     "server": "Sv4",
@@ -636,18 +636,6 @@
     "raw_date": "2026-11-11 17:15:23"
   },
   {
-    "server": "Sv7",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-14T10:00:39+02:00",
-    "killer": "Zlostar",
-    "earliest_spawn": "2026-11-16T02:45:39+02:00",
-    "latest_spawn": "2026-11-16T02:45:39+02:00",
-    "min_hours": 40.8,
-    "max_hours": 40.8,
-    "is_fixed": true,
-    "raw_date": "2026-11-14 05:00:39"
-  },
-  {
     "server": "Sv6",
     "boss": "Selupan",
     "last_kill": "2026-11-14T16:45:49+02:00",
@@ -672,6 +660,18 @@
     "raw_date": "2026-11-14 11:50:35"
   },
   {
+    "server": "Sv7",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-14T10:00:39+02:00",
+    "killer": "Zlostar",
+    "earliest_spawn": "2026-11-16T03:00:39+02:00",
+    "latest_spawn": "2026-11-16T03:00:39+02:00",
+    "min_hours": 41.0,
+    "max_hours": 41.0,
+    "is_fixed": true,
+    "raw_date": "2026-11-14 05:00:39"
+  },
+  {
     "server": "Sv5",
     "boss": "Selupan",
     "last_kill": "2026-11-14T17:50:19+02:00",
@@ -694,18 +694,6 @@
     "max_hours": 182.0,
     "is_fixed": false,
     "raw_date": "2026-11-12 01:35:31"
-  },
-  {
-    "server": "Sv11",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-14T12:27:58+02:00",
-    "killer": "SolrakDVDL",
-    "earliest_spawn": "2026-11-16T05:12:58+02:00",
-    "latest_spawn": "2026-11-16T05:12:58+02:00",
-    "min_hours": 40.8,
-    "max_hours": 40.8,
-    "is_fixed": true,
-    "raw_date": "2026-11-14 07:27:58"
   },
   {
     "server": "Sv5",
@@ -742,6 +730,18 @@
     "max_hours": 84.6,
     "is_fixed": true,
     "raw_date": "2026-11-12 11:45:32"
+  },
+  {
+    "server": "Sv11",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-14T12:27:58+02:00",
+    "killer": "SolrakDVDL",
+    "earliest_spawn": "2026-11-16T05:27:58+02:00",
+    "latest_spawn": "2026-11-16T05:27:58+02:00",
+    "min_hours": 41.0,
+    "max_hours": 41.0,
+    "is_fixed": true,
+    "raw_date": "2026-11-14 07:27:58"
   },
   {
     "server": "Sv14",
@@ -832,24 +832,12 @@
     "boss": "Nightmare",
     "last_kill": "2026-11-14T16:29:13+02:00",
     "killer": "Zlostar",
-    "earliest_spawn": "2026-11-16T09:14:13+02:00",
-    "latest_spawn": "2026-11-16T09:14:13+02:00",
-    "min_hours": 40.8,
-    "max_hours": 40.8,
+    "earliest_spawn": "2026-11-16T09:29:13+02:00",
+    "latest_spawn": "2026-11-16T09:29:13+02:00",
+    "min_hours": 41.0,
+    "max_hours": 41.0,
     "is_fixed": true,
     "raw_date": "2026-11-14 11:29:13"
-  },
-  {
-    "server": "Sv5",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-14T16:33:04+02:00",
-    "killer": "PinkKitty",
-    "earliest_spawn": "2026-11-16T09:18:04+02:00",
-    "latest_spawn": "2026-11-16T09:18:04+02:00",
-    "min_hours": 40.8,
-    "max_hours": 40.8,
-    "is_fixed": true,
-    "raw_date": "2026-11-14 11:33:04"
   },
   {
     "server": "Sv11",
@@ -862,6 +850,18 @@
     "max_hours": 93.1,
     "is_fixed": true,
     "raw_date": "2026-11-12 07:25:50"
+  },
+  {
+    "server": "Sv5",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-14T16:33:04+02:00",
+    "killer": "PinkKitty",
+    "earliest_spawn": "2026-11-16T09:33:04+02:00",
+    "latest_spawn": "2026-11-16T09:33:04+02:00",
+    "min_hours": 41.0,
+    "max_hours": 41.0,
+    "is_fixed": true,
+    "raw_date": "2026-11-14 11:33:04"
   },
   {
     "server": "Sv2",
@@ -880,10 +880,10 @@
     "boss": "Nightmare",
     "last_kill": "2026-11-14T18:02:08+02:00",
     "killer": "PinkKitty",
-    "earliest_spawn": "2026-11-16T10:47:08+02:00",
-    "latest_spawn": "2026-11-16T10:47:08+02:00",
-    "min_hours": 40.8,
-    "max_hours": 40.8,
+    "earliest_spawn": "2026-11-16T11:02:08+02:00",
+    "latest_spawn": "2026-11-16T11:02:08+02:00",
+    "min_hours": 41.0,
+    "max_hours": 41.0,
     "is_fixed": true,
     "raw_date": "2026-11-14 13:02:08"
   },
@@ -892,10 +892,10 @@
     "boss": "Nightmare",
     "last_kill": "2026-11-14T18:30:06+02:00",
     "killer": "Zlostar",
-    "earliest_spawn": "2026-11-16T11:15:06+02:00",
-    "latest_spawn": "2026-11-16T11:15:06+02:00",
-    "min_hours": 40.8,
-    "max_hours": 40.8,
+    "earliest_spawn": "2026-11-16T11:30:06+02:00",
+    "latest_spawn": "2026-11-16T11:30:06+02:00",
+    "min_hours": 41.0,
+    "max_hours": 41.0,
     "is_fixed": true,
     "raw_date": "2026-11-14 13:30:06"
   },
@@ -904,10 +904,10 @@
     "boss": "Nightmare",
     "last_kill": "2026-11-14T18:43:00+02:00",
     "killer": "Zlostar",
-    "earliest_spawn": "2026-11-16T11:28:00+02:00",
-    "latest_spawn": "2026-11-16T11:28:00+02:00",
-    "min_hours": 40.8,
-    "max_hours": 40.8,
+    "earliest_spawn": "2026-11-16T11:43:00+02:00",
+    "latest_spawn": "2026-11-16T11:43:00+02:00",
+    "min_hours": 41.0,
+    "max_hours": 41.0,
     "is_fixed": true,
     "raw_date": "2026-11-14 13:43:00"
   },
@@ -916,10 +916,10 @@
     "boss": "Nightmare",
     "last_kill": "2026-11-14T19:33:23+02:00",
     "killer": "Babayaga98",
-    "earliest_spawn": "2026-11-16T12:18:23+02:00",
-    "latest_spawn": "2026-11-16T12:18:23+02:00",
-    "min_hours": 40.8,
-    "max_hours": 40.8,
+    "earliest_spawn": "2026-11-16T12:33:23+02:00",
+    "latest_spawn": "2026-11-16T12:33:23+02:00",
+    "min_hours": 41.0,
+    "max_hours": 41.0,
     "is_fixed": true,
     "raw_date": "2026-11-14 14:33:23"
   },
