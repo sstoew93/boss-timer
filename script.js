@@ -31,31 +31,22 @@ if (sessionStorage.getItem('isLoggedIn') === 'true') {
 
 function getNextKundun() {
     const now = new Date();
-    // Kundun: Daily at 16:00 BR = 19:00 UTC
-    let target = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), 19, 0, 0));
-    if (target.getTime() <= now.getTime()) {
-        target.setUTCDate(target.getUTCDate() + 1);
-    }
-    // Subtract 5 minutes for preparing
-    target.setMinutes(target.getMinutes() - 5);
-    return target.toISOString();
-}
-
-function getNextMedusa() {
-    const now = new Date();
     const nowUTC = now.getTime();
     
-    // Medusa BR times converted to UTC:
+    // Kundun BR times converted to UTC (BR + 3 hours):
     const schedule = [
-        { day: 3, hour: 0 },  // Tuesday 21:00 BR
-        { day: 6, hour: 0 },  // Friday 21:00 BR
-        { day: 6, hour: 19 }, // Saturday 16:00 BR
-        { day: 0, hour: 21 }  // Sunday 18:00 BR
+        { day: 1, hour: 19 }, // Mon 16:00 BR
+        { day: 2, hour: 7 },  // Tue 04:00 BR
+        { day: 4, hour: 2 },  // Wed 23:00 BR (Thu 02:00 UTC)
+        { day: 4, hour: 5 },  // Thu 02:00 BR
+        { day: 5, hour: 19 }, // Fri 16:00 BR
+        { day: 0, hour: 0 },  // Sat 21:00 BR (Sun 00:00 UTC)
+        { day: 0, hour: 5 }   // Sun 02:00 BR
     ];
 
     let nextSpawn = null;
     
-    // Failsafe loop: Check the next 14 days to guarantee we find the exact closest spawn
+    // Failsafe loop: Check the next 14 days
     for (let i = 0; i < 14; i++) {
         let checkDate = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() + i, 0, 0, 0));
         let dayOfWeek = checkDate.getUTCDay();
@@ -74,7 +65,46 @@ function getNextMedusa() {
     
     // Subtract 5 minutes
     if (nextSpawn) {
-        nextSpawn.setMinutes(nextSpawn.getMinutes() - 5);
+        nextSpawn.setUTCMinutes(nextSpawn.getUTCMinutes() - 5);
+    }
+    
+    return nextSpawn.toISOString();
+}
+
+function getNextMedusa() {
+    const now = new Date();
+    const nowUTC = now.getTime();
+    
+    // Medusa BR times converted to UTC:
+    const schedule = [
+        { day: 3, hour: 0 },  // Tuesday 21:00 BR = Wed 00:00 UTC
+        { day: 6, hour: 0 },  // Friday 21:00 BR = Sat 00:00 UTC
+        { day: 6, hour: 19 }, // Saturday 16:00 BR = Sat 19:00 UTC
+        { day: 0, hour: 21 }  // Sunday 18:00 BR = Sun 21:00 UTC
+    ];
+
+    let nextSpawn = null;
+    
+    // Failsafe loop: Check the next 14 days
+    for (let i = 0; i < 14; i++) {
+        let checkDate = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() + i, 0, 0, 0));
+        let dayOfWeek = checkDate.getUTCDay();
+        
+        schedule.forEach(slot => {
+            if (slot.day === dayOfWeek) {
+                let target = new Date(Date.UTC(checkDate.getUTCFullYear(), checkDate.getUTCMonth(), checkDate.getUTCDate(), slot.hour, 0, 0));
+                if (target.getTime() > nowUTC) {
+                    if (!nextSpawn || target.getTime() < nextSpawn.getTime()) {
+                        nextSpawn = target;
+                    }
+                }
+            }
+        });
+    }
+    
+    // Subtract 5 minutes
+    if (nextSpawn) {
+        nextSpawn.setUTCMinutes(nextSpawn.getUTCMinutes() - 5);
     }
     
     return nextSpawn.toISOString();
