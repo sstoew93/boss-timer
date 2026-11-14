@@ -600,18 +600,6 @@
     "raw_date": "2026-11-13 21:50:50"
   },
   {
-    "server": "Sv1",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-14T04:13:59+02:00",
-    "killer": "QuistisFF8",
-    "earliest_spawn": "2026-11-15T20:58:59+02:00",
-    "latest_spawn": "2026-11-15T20:58:59+02:00",
-    "min_hours": 40.8,
-    "max_hours": 40.8,
-    "is_fixed": true,
-    "raw_date": "2026-11-13 23:13:59"
-  },
-  {
     "server": "Sv5",
     "boss": "Lord Silvester",
     "last_kill": "2026-11-12T00:12:02+02:00",
@@ -922,6 +910,18 @@
     "max_hours": 40.8,
     "is_fixed": true,
     "raw_date": "2026-11-14 13:43:00"
+  },
+  {
+    "server": "Sv1",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-14T19:33:23+02:00",
+    "killer": "Babayaga98",
+    "earliest_spawn": "2026-11-16T12:18:23+02:00",
+    "latest_spawn": "2026-11-16T12:18:23+02:00",
+    "min_hours": 40.8,
+    "max_hours": 40.8,
+    "is_fixed": true,
+    "raw_date": "2026-11-14 14:33:23"
   },
   {
     "server": "Sv10",
