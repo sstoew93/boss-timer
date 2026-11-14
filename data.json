@@ -72,18 +72,6 @@
     "raw_date": "2026-11-10 01:27:03"
   },
   {
-    "server": "Sv8",
-    "boss": "Core Magriffy",
-    "last_kill": "2026-11-11T01:27:45+02:00",
-    "killer": "Vodkinha",
-    "earliest_spawn": "2026-11-14T14:02:45+02:00",
-    "latest_spawn": "2026-11-14T14:02:45+02:00",
-    "min_hours": 84.6,
-    "max_hours": 84.6,
-    "is_fixed": true,
-    "raw_date": "2026-11-10 20:27:45"
-  },
-  {
     "server": "Sv4",
     "boss": "God of Darkness",
     "last_kill": "2026-11-10T11:15:38+02:00",
@@ -1306,6 +1294,18 @@
     "max_hours": 112.0,
     "is_fixed": false,
     "raw_date": "2026-11-13 16:09:17"
+  },
+  {
+    "server": "Sv8",
+    "boss": "Core Magriffy",
+    "last_kill": "2026-11-14T14:05:53+02:00",
+    "killer": "Zlostar",
+    "earliest_spawn": "2026-11-18T02:40:53+02:00",
+    "latest_spawn": "2026-11-18T02:40:53+02:00",
+    "min_hours": 84.6,
+    "max_hours": 84.6,
+    "is_fixed": true,
+    "raw_date": "2026-11-14 09:05:53"
   },
   {
     "server": "Sv3",
