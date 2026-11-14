@@ -61,18 +61,6 @@
   },
   {
     "server": "Sv19",
-    "boss": "Lord Silvester",
-    "last_kill": "2026-11-10T22:01:57+02:00",
-    "killer": "PinkKitty",
-    "earliest_spawn": "2026-11-14T19:06:57+02:00",
-    "latest_spawn": "2026-11-14T19:06:57+02:00",
-    "min_hours": 93.1,
-    "max_hours": 93.1,
-    "is_fixed": true,
-    "raw_date": "2026-11-10 17:01:57"
-  },
-  {
-    "server": "Sv19",
     "boss": "Lord of Ferea",
     "last_kill": "2026-11-10T21:33:32+02:00",
     "killer": "SolrakDVDL",
@@ -1330,6 +1318,18 @@
     "max_hours": 182.0,
     "is_fixed": false,
     "raw_date": "2026-11-14 13:04:44"
+  },
+  {
+    "server": "Sv19",
+    "boss": "Lord Silvester",
+    "last_kill": "2026-11-14T19:19:18+02:00",
+    "killer": "cbNx",
+    "earliest_spawn": "2026-11-18T16:24:18+02:00",
+    "latest_spawn": "2026-11-18T16:24:18+02:00",
+    "min_hours": 93.1,
+    "max_hours": 93.1,
+    "is_fixed": true,
+    "raw_date": "2026-11-14 14:19:18"
   },
   {
     "server": "Sv19",
