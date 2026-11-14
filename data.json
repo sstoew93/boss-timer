@@ -84,18 +84,6 @@
     "raw_date": "2026-11-10 06:15:38"
   },
   {
-    "server": "Sv4",
-    "boss": "Lord Silvester",
-    "last_kill": "2026-11-10T18:31:23+02:00",
-    "killer": "SunSUM",
-    "earliest_spawn": "2026-11-14T15:36:23+02:00",
-    "latest_spawn": "2026-11-14T15:36:23+02:00",
-    "min_hours": 93.1,
-    "max_hours": 93.1,
-    "is_fixed": true,
-    "raw_date": "2026-11-10 13:31:23"
-  },
-  {
     "server": "Sv3",
     "boss": "Lord Silvester",
     "last_kill": "2026-11-10T18:35:21+02:00",
@@ -1342,5 +1330,17 @@
     "max_hours": 93.1,
     "is_fixed": true,
     "raw_date": "2026-11-14 10:33:21"
+  },
+  {
+    "server": "Sv4",
+    "boss": "Lord Silvester",
+    "last_kill": "2026-11-14T15:39:29+02:00",
+    "killer": "EasyGames",
+    "earliest_spawn": "2026-11-18T12:44:29+02:00",
+    "latest_spawn": "2026-11-18T12:44:29+02:00",
+    "min_hours": 93.1,
+    "max_hours": 93.1,
+    "is_fixed": true,
+    "raw_date": "2026-11-14 10:39:29"
   }
 ]
