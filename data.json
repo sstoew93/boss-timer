@@ -96,18 +96,6 @@
     "raw_date": "2026-11-10 17:42:36"
   },
   {
-    "server": "Sv15",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-13T05:24:35+02:00",
-    "killer": "Babayaga98",
-    "earliest_spawn": "2026-11-14T22:28:35+02:00",
-    "latest_spawn": "2026-11-14T22:28:35+02:00",
-    "min_hours": 41.1,
-    "max_hours": 41.1,
-    "is_fixed": true,
-    "raw_date": "2026-11-13 00:24:35"
-  },
-  {
     "server": "Sv4",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-11T10:09:38+02:00",
@@ -946,6 +934,18 @@
     "max_hours": 168.0,
     "is_fixed": false,
     "raw_date": "2026-11-12 06:20:53"
+  },
+  {
+    "server": "Sv15",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-14T22:40:57+02:00",
+    "killer": "Coaster",
+    "earliest_spawn": "2026-11-16T15:44:57+02:00",
+    "latest_spawn": "2026-11-16T15:44:57+02:00",
+    "min_hours": 41.1,
+    "max_hours": 41.1,
+    "is_fixed": true,
+    "raw_date": "2026-11-14 17:40:57"
   },
   {
     "server": "Sv14",
