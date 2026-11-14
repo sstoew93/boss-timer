@@ -96,18 +96,6 @@
     "raw_date": "2026-11-10 17:42:36"
   },
   {
-    "server": "Sv4",
-    "boss": "Core Magriffy",
-    "last_kill": "2026-11-11T10:09:38+02:00",
-    "killer": "Babayaga98",
-    "earliest_spawn": "2026-11-14T22:44:38+02:00",
-    "latest_spawn": "2026-11-14T22:44:38+02:00",
-    "min_hours": 84.6,
-    "max_hours": 84.6,
-    "is_fixed": true,
-    "raw_date": "2026-11-11 05:09:38"
-  },
-  {
     "server": "Sv2",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-11T10:17:59+02:00",
@@ -1210,6 +1198,18 @@
     "max_hours": 182.0,
     "is_fixed": false,
     "raw_date": "2026-11-14 07:47:00"
+  },
+  {
+    "server": "Sv4",
+    "boss": "Core Magriffy",
+    "last_kill": "2026-11-14T22:47:36+02:00",
+    "killer": "Kasperiano",
+    "earliest_spawn": "2026-11-18T11:22:36+02:00",
+    "latest_spawn": "2026-11-18T11:22:36+02:00",
+    "min_hours": 84.6,
+    "max_hours": 84.6,
+    "is_fixed": true,
+    "raw_date": "2026-11-14 17:47:36"
   },
   {
     "server": "Sv2",
