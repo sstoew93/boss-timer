@@ -96,18 +96,6 @@
     "raw_date": "2026-11-10 17:42:36"
   },
   {
-    "server": "Sv3",
-    "boss": "Core Magriffy",
-    "last_kill": "2026-11-11T10:22:29+02:00",
-    "killer": "TchimSL",
-    "earliest_spawn": "2026-11-14T22:57:29+02:00",
-    "latest_spawn": "2026-11-14T22:57:29+02:00",
-    "min_hours": 84.6,
-    "max_hours": 84.6,
-    "is_fixed": true,
-    "raw_date": "2026-11-11 05:22:29"
-  },
-  {
     "server": "Sv4",
     "boss": "Selupan",
     "last_kill": "2026-11-13T13:00:32+02:00",
@@ -1210,6 +1198,18 @@
     "max_hours": 84.6,
     "is_fixed": true,
     "raw_date": "2026-11-14 17:59:25"
+  },
+  {
+    "server": "Sv3",
+    "boss": "Core Magriffy",
+    "last_kill": "2026-11-14T23:04:09+02:00",
+    "killer": "PinkKitty",
+    "earliest_spawn": "2026-11-18T11:39:09+02:00",
+    "latest_spawn": "2026-11-18T11:39:09+02:00",
+    "min_hours": 84.6,
+    "max_hours": 84.6,
+    "is_fixed": true,
+    "raw_date": "2026-11-14 18:04:09"
   },
   {
     "server": "Sv2",
