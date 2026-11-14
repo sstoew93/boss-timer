@@ -96,18 +96,6 @@
     "raw_date": "2026-11-10 17:42:36"
   },
   {
-    "server": "Sv1",
-    "boss": "Selupan",
-    "last_kill": "2026-11-13T14:03:36+02:00",
-    "killer": "PinkKitty",
-    "earliest_spawn": "2026-11-15T00:03:36+02:00",
-    "latest_spawn": "2026-11-15T00:03:36+02:00",
-    "min_hours": 34.0,
-    "max_hours": 34.0,
-    "is_fixed": true,
-    "raw_date": "2026-11-13 09:03:36"
-  },
-  {
     "server": "Sv16",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-11T12:09:10+02:00",
@@ -790,6 +778,18 @@
     "max_hours": 41.1,
     "is_fixed": true,
     "raw_date": "2026-11-14 11:33:04"
+  },
+  {
+    "server": "Sv1",
+    "boss": "Selupan",
+    "last_kill": "2026-11-15T00:08:25+02:00",
+    "killer": "PinkKitty",
+    "earliest_spawn": "2026-11-16T10:08:25+02:00",
+    "latest_spawn": "2026-11-16T10:08:25+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "is_fixed": true,
+    "raw_date": "2026-11-14 19:08:25"
   },
   {
     "server": "Sv2",
