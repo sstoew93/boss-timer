@@ -132,18 +132,6 @@
     "raw_date": "2026-11-11 01:07:54"
   },
   {
-    "server": "Sv16",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-13T17:33:38+02:00",
-    "killer": "PinkKitty",
-    "earliest_spawn": "2026-11-15T10:37:38+02:00",
-    "latest_spawn": "2026-11-15T10:37:38+02:00",
-    "min_hours": 41.1,
-    "max_hours": 41.1,
-    "is_fixed": true,
-    "raw_date": "2026-11-13 12:33:38"
-  },
-  {
     "server": "Sv19",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-11T22:15:13+02:00",
@@ -862,6 +850,18 @@
     "max_hours": 41.1,
     "is_fixed": true,
     "raw_date": "2026-11-15 05:12:10"
+  },
+  {
+    "server": "Sv16",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-15T10:52:36+02:00",
+    "killer": "FuukiiSL",
+    "earliest_spawn": "2026-11-17T03:56:36+02:00",
+    "latest_spawn": "2026-11-17T03:56:36+02:00",
+    "min_hours": 41.1,
+    "max_hours": 41.1,
+    "is_fixed": true,
+    "raw_date": "2026-11-15 05:52:36"
   },
   {
     "server": "Sv1",
