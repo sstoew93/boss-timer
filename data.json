@@ -36,18 +36,6 @@
     "raw_date": "2026-11-10 16:07:29"
   },
   {
-    "server": "Sv8",
-    "boss": "Nix",
-    "last_kill": "2026-11-11T11:45:54+02:00",
-    "killer": "Babayaga98",
-    "earliest_spawn": "2026-11-15T15:50:54+02:00",
-    "latest_spawn": "2026-11-16T03:45:54+02:00",
-    "min_hours": 100.1,
-    "max_hours": 112.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-11 06:45:54"
-  },
-  {
     "server": "Sv15",
     "boss": "Nix",
     "last_kill": "2026-11-11T13:03:05+02:00",
@@ -1330,6 +1318,18 @@
     "max_hours": 168.0,
     "is_fixed": false,
     "raw_date": "2026-11-15 09:25:06"
+  },
+  {
+    "server": "Sv8",
+    "boss": "Nix",
+    "last_kill": "2026-11-16T01:52:15+02:00",
+    "killer": "PinkKitty",
+    "earliest_spawn": "2026-11-20T05:57:15+02:00",
+    "latest_spawn": "2026-11-20T17:52:15+02:00",
+    "min_hours": 100.1,
+    "max_hours": 112.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-15 20:52:15"
   },
   {
     "server": "Sv15",
