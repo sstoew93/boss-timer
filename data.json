@@ -120,18 +120,6 @@
     "raw_date": "2026-11-10 16:07:29"
   },
   {
-    "server": "Sv18",
-    "boss": "Selupan",
-    "last_kill": "2026-11-13T22:23:37+02:00",
-    "killer": "PinkKitty",
-    "earliest_spawn": "2026-11-15T08:23:37+02:00",
-    "latest_spawn": "2026-11-15T08:23:37+02:00",
-    "min_hours": 34.0,
-    "max_hours": 34.0,
-    "is_fixed": true,
-    "raw_date": "2026-11-13 17:23:37"
-  },
-  {
     "server": "Sv5",
     "boss": "Lord of Ferea",
     "last_kill": "2026-11-11T11:21:04+02:00",
@@ -778,6 +766,18 @@
     "max_hours": 84.6,
     "is_fixed": true,
     "raw_date": "2026-11-13 00:44:54"
+  },
+  {
+    "server": "Sv18",
+    "boss": "Selupan",
+    "last_kill": "2026-11-15T08:28:33+02:00",
+    "killer": "JexusLive",
+    "earliest_spawn": "2026-11-16T18:28:33+02:00",
+    "latest_spawn": "2026-11-16T18:28:33+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "is_fixed": true,
+    "raw_date": "2026-11-15 03:28:33"
   },
   {
     "server": "Sv18",
