@@ -48,18 +48,6 @@
     "raw_date": "2026-11-11 00:40:49"
   },
   {
-    "server": "Sv6",
-    "boss": "Lord of Ferea",
-    "last_kill": "2026-11-11T05:56:00+02:00",
-    "killer": "NoFeArSLAY",
-    "earliest_spawn": "2026-11-15T03:56:00+02:00",
-    "latest_spawn": "2026-11-18T19:56:00+02:00",
-    "min_hours": 94.0,
-    "max_hours": 182.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-11 00:56:00"
-  },
-  {
     "server": "Sv11",
     "boss": "God of Darkness",
     "last_kill": "2026-11-10T21:07:29+02:00",
@@ -106,18 +94,6 @@
     "max_hours": 112.0,
     "is_fixed": false,
     "raw_date": "2026-11-11 08:03:05"
-  },
-  {
-    "server": "Sv10",
-    "boss": "Selupan",
-    "last_kill": "2026-11-14T07:33:04+02:00",
-    "killer": "XxVILLEGAS",
-    "earliest_spawn": "2026-11-15T17:33:04+02:00",
-    "latest_spawn": "2026-11-15T17:33:04+02:00",
-    "min_hours": 34.0,
-    "max_hours": 34.0,
-    "is_fixed": true,
-    "raw_date": "2026-11-14 02:33:04"
   },
   {
     "server": "Sv10",
@@ -780,6 +756,18 @@
     "raw_date": "2026-11-15 05:12:10"
   },
   {
+    "server": "Sv10",
+    "boss": "Selupan",
+    "last_kill": "2026-11-15T17:53:56+02:00",
+    "killer": "XxVILLEGAS",
+    "earliest_spawn": "2026-11-17T03:53:56+02:00",
+    "latest_spawn": "2026-11-17T03:53:56+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "is_fixed": true,
+    "raw_date": "2026-11-15 12:53:56"
+  },
+  {
     "server": "Sv16",
     "boss": "Nightmare",
     "last_kill": "2026-11-15T10:52:36+02:00",
@@ -1294,6 +1282,18 @@
     "max_hours": 168.0,
     "is_fixed": false,
     "raw_date": "2026-11-15 00:16:12"
+  },
+  {
+    "server": "Sv6",
+    "boss": "Lord of Ferea",
+    "last_kill": "2026-11-15T17:53:48+02:00",
+    "killer": "Zlostar",
+    "earliest_spawn": "2026-11-19T15:53:48+02:00",
+    "latest_spawn": "2026-11-23T07:53:48+02:00",
+    "min_hours": 94.0,
+    "max_hours": 182.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-15 12:53:48"
   },
   {
     "server": "Sv3",
