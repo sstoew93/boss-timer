@@ -132,18 +132,6 @@
     "raw_date": "2026-11-14 07:42:13"
   },
   {
-    "server": "Sv6",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-14T05:46:26+02:00",
-    "killer": "HangeZoe",
-    "earliest_spawn": "2026-11-15T22:50:26+02:00",
-    "latest_spawn": "2026-11-15T22:50:26+02:00",
-    "min_hours": 41.1,
-    "max_hours": 41.1,
-    "is_fixed": true,
-    "raw_date": "2026-11-14 00:46:26"
-  },
-  {
     "server": "Sv4",
     "boss": "Nix",
     "last_kill": "2026-11-11T19:53:03+02:00",
@@ -802,6 +790,18 @@
     "max_hours": 182.0,
     "is_fixed": false,
     "raw_date": "2026-11-13 12:58:47"
+  },
+  {
+    "server": "Sv6",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-15T22:58:46+02:00",
+    "killer": "Elian23",
+    "earliest_spawn": "2026-11-17T16:02:46+02:00",
+    "latest_spawn": "2026-11-17T16:02:46+02:00",
+    "min_hours": 41.1,
+    "max_hours": 41.1,
+    "is_fixed": true,
+    "raw_date": "2026-11-15 17:58:46"
   },
   {
     "server": "Sv8",
