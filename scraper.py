@@ -14,7 +14,7 @@ BOSS_TIMES = {
     "Lord of Ferea": {"min": 94 * 60, "max": (182 * 60)},
     "Lord Silvester": {"min": (93 * 60) + 5, "max": (93 * 60) + 5}, 
     "Selupan": {"min": 34 * 60, "max": 34 * 60},
-    "Nightmare": {"min": (40 * 60) + 50, "max": (40 * 60) + 50},
+    "Nightmare": {"min": (40 * 60) + 45, "max": (40 * 60) + 45},
     "Nix": {"min": (100 * 60) + 5, "max": 112 * 60}            
 }
 
