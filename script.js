@@ -27,8 +27,6 @@ if (sessionStorage.getItem('isLoggedIn') === 'true') {
 }
 
 // --- EVENT BOSS TIME CALCULATIONS ---
-// Brazil is permanently UTC-3. These functions calculate the exact UTC time for the events.
-
 function getNextKundun() {
     const now = new Date();
     const nowUTC = now.getTime();
@@ -46,7 +44,6 @@ function getNextKundun() {
 
     let nextSpawn = null;
     
-    // Failsafe loop: Check the next 14 days
     for (let i = 0; i < 14; i++) {
         let checkDate = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() + i, 0, 0, 0));
         let dayOfWeek = checkDate.getUTCDay();
@@ -63,11 +60,9 @@ function getNextKundun() {
         });
     }
     
-    // Subtract 5 minutes
     if (nextSpawn) {
         nextSpawn.setUTCMinutes(nextSpawn.getUTCMinutes() - 5);
     }
-    
     return nextSpawn.toISOString();
 }
 
@@ -75,7 +70,6 @@ function getNextMedusa() {
     const now = new Date();
     const nowUTC = now.getTime();
     
-    // Medusa BR times converted to UTC:
     const schedule = [
         { day: 3, hour: 0 },  // Tuesday 21:00 BR = Wed 00:00 UTC
         { day: 6, hour: 0 },  // Friday 21:00 BR = Sat 00:00 UTC
@@ -85,7 +79,6 @@ function getNextMedusa() {
 
     let nextSpawn = null;
     
-    // Failsafe loop: Check the next 14 days
     for (let i = 0; i < 14; i++) {
         let checkDate = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() + i, 0, 0, 0));
         let dayOfWeek = checkDate.getUTCDay();
@@ -102,11 +95,9 @@ function getNextMedusa() {
         });
     }
     
-    // Subtract 5 minutes
     if (nextSpawn) {
         nextSpawn.setUTCMinutes(nextSpawn.getUTCMinutes() - 5);
     }
-    
     return nextSpawn.toISOString();
 }
 // ------------------------------------
@@ -123,27 +114,17 @@ function loadData() {
       .then(data => {
         allData = data; 
         
-        // --- INJECT EVENT BOSSES ---
         const kundunTime = getNextKundun();
         allData.push({
-            server: "ALL",
-            boss: "Kundun",
-            killer: "", 
-            earliest_spawn: kundunTime,
-            latest_spawn: kundunTime,
-            is_fixed: true
+            server: "ALL", boss: "Kundun", killer: "", 
+            earliest_spawn: kundunTime, latest_spawn: kundunTime, is_fixed: true
         });
 
         const medusaTime = getNextMedusa();
         allData.push({
-            server: "ALL",
-            boss: "Medusa",
-            killer: "", 
-            earliest_spawn: medusaTime,
-            latest_spawn: medusaTime,
-            is_fixed: true
+            server: "ALL", boss: "Medusa", killer: "", 
+            earliest_spawn: medusaTime, latest_spawn: medusaTime, is_fixed: true
         });
-        // ---------------------------
 
         allData.forEach(item => {
           uniqueServers.add(item.server);
@@ -162,7 +143,6 @@ function loadData() {
       .catch(error => console.error('Error loading data:', error));
 }
 
-// Reverted to DD/MM, HH:MM (24-hour)
 function formatDateShort(dateString) {
     const d = new Date(dateString);
     const options = { timeZone: 'Europe/Sofia', day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit', hour12: false };
@@ -172,7 +152,6 @@ function formatDateShort(dateString) {
 function toggleDropdown(id) {
     const targetDropdown = document.getElementById(id);
     const allDropdowns = document.getElementsByClassName("dropdown-content");
-
     for (let i = 0; i < allDropdowns.length; i++) {
         if (allDropdowns[i].id === id) {
             targetDropdown.classList.toggle("show");
@@ -196,9 +175,7 @@ window.onclick = function(event) {
 document.querySelectorAll('.dropdown').forEach(dropdown => {
     dropdown.addEventListener('mouseleave', () => {
         const content = dropdown.querySelector('.dropdown-content');
-        if (content) {
-            content.classList.remove('show');
-        }
+        if (content) content.classList.remove('show');
     });
 });
 
@@ -212,6 +189,14 @@ function buildFilters(containerId, items, type) {
 }
 
 document.getElementById('search-bar').addEventListener('input', renderTable);
+
+// --- NEW: HELPER TO FIND THE CORRECT IMAGE ---
+function getBossImage(bossName) {
+    // Convert "Lord of Ferea" to "lord-of-ferea"
+    const fileName = bossName.toLowerCase().replace(/\s+/g, '-');
+    return `images/bosses/${fileName}.png`;
+}
+// ----------------------------------------------
 
 function renderTable() {
   const tbody = document.getElementById('boss-table-body');
@@ -229,7 +214,6 @@ function renderTable() {
     return matchesServer && matchesBoss && matchesSearch;
   });
 
-  // Sort by ALIVE, MAY SPAWN, DEAD
   const now = new Date().getTime();
   filteredData.sort((a, b) => {
     const getWeight = (item) => {
@@ -255,15 +239,22 @@ function renderTable() {
     
     const windowStart = formatDateShort(item.earliest_spawn);
     const windowEnd = formatDateShort(item.latest_spawn);
+    const bossImgSrc = getBossImage(item.boss);
 
     const timerId = `timer-${item.server}-${item.boss}`.replace(/[^a-zA-Z0-9-]/g, '');
     const statusId = `status-${item.server}-${item.boss}`.replace(/[^a-zA-Z0-9-]/g, '');
     const maxTimeId = `max-${item.server}-${item.boss}`.replace(/[^a-zA-Z0-9-]/g, '');
 
+    // Added the image with an onerror fallback to a default image
     row.innerHTML = `
       <td>
-          <div class="boss-name">${item.boss}</div>
-          ${item.killer ? `<div class="boss-subtext">Last kill by ${item.killer}</div>` : ''}
+          <div class="boss-info">
+              <img src="${bossImgSrc}" class="boss-avatar" alt="${item.boss}" onerror="this.src='images/bosses/default.png'">
+              <div class="boss-text-container">
+                  <div class="boss-name">${item.boss}</div>
+                  ${item.killer ? `<div class="boss-subtext">Last kill by ${item.killer}</div>` : ''}
+              </div>
+          </div>
       </td>
       <td>
           <span class="server-badge">${item.server}</span>
