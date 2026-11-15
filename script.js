@@ -194,7 +194,7 @@ document.getElementById('search-bar').addEventListener('input', renderTable);
 function getBossImage(bossName) {
     // Convert "Lord of Ferea" to "lord-of-ferea"
     const fileName = bossName.toLowerCase().replace(/\s+/g, '-');
-    return `images/bosses/${fileName}.png`;
+    return `images/${fileName}.png`;
 }
 // ----------------------------------------------
 
