@@ -1,13 +1,13 @@
 import requests
 from bs4 import BeautifulSoup
 import json
+import os
 from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 
 BRAZIL_TZ = ZoneInfo("America/Sao_Paulo")
 BULGARIA_TZ = ZoneInfo("Europe/Sofia")
 
-# Times in minutes
 BOSS_TIMES = {
     "God of Darkness": {"min": 106 * 60, "max": 168 * 60},
     "Core Magriffy": {"min": (84 * 60) + 35, "max": (84 * 60) + 35},
@@ -18,13 +18,15 @@ BOSS_TIMES = {
     "Nix": {"min": (100 * 60) + 5, "max": 112 * 60}            
 }
 
-# Add any server you want to hide to this list (lowercase, no spaces)
 IGNORED_SERVERS = {"svc", "speed1", "speed2", "speed3", "speed4", "speed5"}
-
 URL = "https://en.megamu.net/boss-log"
+HISTORY_FILE = "boss_history.json"
 
 def scrape():
-    response = requests.get(URL)
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+    }
+    response = requests.get(URL, headers=headers)
     soup = BeautifulSoup(response.text, 'html.parser')
     table = soup.find('table')
     if not table:
@@ -44,10 +46,8 @@ def scrape():
         server = cells[3].get_text(strip=True)
 
         clean_server = server.lower().replace(" ", "")
-        
         if clean_server in IGNORED_SERVERS:
             continue
-
         if monster_name not in BOSS_TIMES:
             continue
 
@@ -75,6 +75,38 @@ def scrape():
         except Exception as e:
             continue
 
+    # --- NEW: SAVE TO HISTORY ---
+    # 1. Load existing history
+    history = []
+    if os.path.exists(HISTORY_FILE):
+        with open(HISTORY_FILE, 'r') as f:
+            history = json.load(f)
+            
+    # 2. Create a quick lookup set to avoid duplicates
+    existing_keys = {f"{h['server']}|{h['boss']}|{h['raw_date']}" for h in history}
+    
+    # 3. Add new kills if they don't exist
+    new_kills_added = 0
+    for item in kill_data:
+        key = f"{item['server']}|{item['boss']}|{item['raw_date']}"
+        if key not in existing_keys:
+            history.append({
+                "server": item['server'],
+                "boss": item['boss'],
+                "killer": item['killer'],
+                "raw_date_br": item['raw_date'],
+                "last_kill_bg": item['last_kill'].isoformat()
+            })
+            existing_keys.add(key)
+            new_kills_added += 1
+
+    # 4. Save the updated history
+    with open(HISTORY_FILE, 'w') as f:
+        json.dump(history, f, indent=2)
+    print(f"Added {new_kills_added} new kills to history.")
+    # -----------------------------
+
+    # Keep the original data.json logic for the app
     latest_kills = {}
     for item in kill_data:
         key = f"{item['server']}|{item['boss']}"
