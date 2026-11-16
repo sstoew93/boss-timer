@@ -2,14 +2,16 @@ name: Update Boss Data
 
 on:
   schedule:
-    - cron: '*/3 * * * *'   # Runs every 5 minutes
-  workflow_dispatch:  # Allows you to run it manually to test
+    # Runs every 5 minutes. 
+    # (If you get rate-limited by GitHub or MEGAMU, change this to '*/15 * * * *' for every 15 mins)
+    - cron: '*/3 * * * *'
+  workflow_dispatch: # Allows you to run it manually from the Actions tab
 
 jobs:
   scrape-and-commit:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: write # Required to push the new JSON files back to the repo
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -22,14 +24,21 @@ jobs:
       - name: Install dependencies
         run: pip install requests beautifulsoup4
 
-      - name: Run the scraper
+      - name: Run the App Scraper
         run: python scraper.py
+
+      - name: Run the History Collector
+        run: python collect_data.py
 
       - name: Commit and push updated data
         run: |
           git config user.name "GitHub Action"
           git config user.email "action@github.com"
+          
+          # Add both files. (The history file will be created automatically on the first run)
           git add data.json
-          git add boss_history.json  # <--- ADD THIS LINE
+          git add boss_history.json
+          
+          # This checks if there are any changes. If yes, it commits and pushes.
           git diff --quiet && git diff --staged --quiet || git commit -m "Update boss data and history"
           git push
