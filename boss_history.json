@@ -1727,5 +1727,935 @@
     "killer": "Collette",
     "raw_date_br": "2026-11-09 18:58:20",
     "last_kill_bg": "2026-11-09T23:58:20+02:00"
+  },
+  {
+    "server": "Sv10",
+    "boss": "Medusa",
+    "killer": "FMKDivine",
+    "raw_date_br": "2026-11-15 18:05:09"
+  },
+  {
+    "server": "Sv19",
+    "boss": "Medusa",
+    "killer": "JeiYacK",
+    "raw_date_br": "2026-11-15 18:02:22"
+  },
+  {
+    "server": "Sv14",
+    "boss": "Medusa",
+    "killer": "Nervulax",
+    "raw_date_br": "2026-11-15 18:01:39"
+  },
+  {
+    "server": "Sv17",
+    "boss": "Medusa",
+    "killer": "Hommie",
+    "raw_date_br": "2026-11-15 18:00:55"
+  },
+  {
+    "server": "Sv2",
+    "boss": "Medusa",
+    "killer": "inDriver",
+    "raw_date_br": "2026-11-15 18:00:52"
+  },
+  {
+    "server": "Sv7",
+    "boss": "Medusa",
+    "killer": "Destru1dor",
+    "raw_date_br": "2026-11-15 18:00:39"
+  },
+  {
+    "server": "Sv15",
+    "boss": "Medusa",
+    "killer": "TheGNB",
+    "raw_date_br": "2026-11-15 18:00:30"
+  },
+  {
+    "server": "Sv8",
+    "boss": "Medusa",
+    "killer": "KAYNDL",
+    "raw_date_br": "2026-11-15 18:00:30"
+  },
+  {
+    "server": "Sv6",
+    "boss": "Medusa",
+    "killer": "Victor",
+    "raw_date_br": "2026-11-15 18:00:28"
+  },
+  {
+    "server": "Sv4",
+    "boss": "Medusa",
+    "killer": "PinkKitty",
+    "raw_date_br": "2026-11-15 18:00:23"
+  },
+  {
+    "server": "Sv5",
+    "boss": "Medusa",
+    "killer": "Jherick",
+    "raw_date_br": "2026-11-15 18:00:22"
+  },
+  {
+    "server": "Sv3",
+    "boss": "Medusa",
+    "killer": "Nervulax",
+    "raw_date_br": "2026-11-15 18:00:21"
+  },
+  {
+    "server": "Sv16",
+    "boss": "Medusa",
+    "killer": "MagicBlac",
+    "raw_date_br": "2026-11-15 18:00:21"
+  },
+  {
+    "server": "Sv1",
+    "boss": "Medusa",
+    "killer": "LaManca",
+    "raw_date_br": "2026-11-15 18:00:19"
+  },
+  {
+    "server": "Sv18",
+    "boss": "Medusa",
+    "killer": "Hommie",
+    "raw_date_br": "2026-11-15 18:00:11"
+  },
+  {
+    "server": "Sv3",
+    "boss": "Kundun",
+    "killer": "ShakiraRW",
+    "raw_date_br": "2026-11-15 02:04:04"
+  },
+  {
+    "server": "Sv5",
+    "boss": "Kundun",
+    "killer": "DlGunzM79",
+    "raw_date_br": "2026-11-15 02:03:30"
+  },
+  {
+    "server": "Sv4",
+    "boss": "Kundun",
+    "killer": "MrMyzor",
+    "raw_date_br": "2026-11-15 02:03:25"
+  },
+  {
+    "server": "Sv7",
+    "boss": "Kundun",
+    "killer": "ShakiraRW",
+    "raw_date_br": "2026-11-15 02:02:42"
+  },
+  {
+    "server": "Sv17",
+    "boss": "Kundun",
+    "killer": "BoIaOito",
+    "raw_date_br": "2026-11-15 02:02:34"
+  },
+  {
+    "server": "Sv18",
+    "boss": "Kundun",
+    "killer": "YORY2002",
+    "raw_date_br": "2026-11-15 02:02:23"
+  },
+  {
+    "server": "Sv1",
+    "boss": "Kundun",
+    "killer": "MagicBlac",
+    "raw_date_br": "2026-11-15 02:02:22"
+  },
+  {
+    "server": "Sv6",
+    "boss": "Kundun",
+    "killer": "DlGunzM79",
+    "raw_date_br": "2026-11-15 02:01:54"
+  },
+  {
+    "server": "Sv2",
+    "boss": "Kundun",
+    "killer": "MrKaKaYou",
+    "raw_date_br": "2026-11-15 02:01:49"
+  },
+  {
+    "server": "Sv8",
+    "boss": "Kundun",
+    "killer": "DlGunzM79",
+    "raw_date_br": "2026-11-15 02:01:17"
+  },
+  {
+    "server": "Sv15",
+    "boss": "Kundun",
+    "killer": "Elaiine",
+    "raw_date_br": "2026-11-15 02:01:09"
+  },
+  {
+    "server": "Sv14",
+    "boss": "Kundun",
+    "killer": "BoIaOito",
+    "raw_date_br": "2026-11-15 02:00:40"
+  },
+  {
+    "server": "Sv16",
+    "boss": "Kundun",
+    "killer": "DlGunzM79",
+    "raw_date_br": "2026-11-15 02:00:33"
+  },
+  {
+    "server": "Sv1",
+    "boss": "Balgass",
+    "killer": "inDriver",
+    "raw_date_br": "2026-11-14 23:12:46"
+  },
+  {
+    "server": "Sv10",
+    "boss": "Kundun",
+    "killer": "Dyzen",
+    "raw_date_br": "2026-11-14 21:15:12"
+  },
+  {
+    "server": "Sv2",
+    "boss": "Kundun",
+    "killer": "xTHExBOOSx",
+    "raw_date_br": "2026-11-14 21:03:51"
+  },
+  {
+    "server": "Sv7",
+    "boss": "Kundun",
+    "killer": "Elaiine",
+    "raw_date_br": "2026-11-14 21:03:37"
+  },
+  {
+    "server": "Sv5",
+    "boss": "Kundun",
+    "killer": "Zyrux",
+    "raw_date_br": "2026-11-14 21:03:29"
+  },
+  {
+    "server": "Sv16",
+    "boss": "Kundun",
+    "killer": "PinkKitty",
+    "raw_date_br": "2026-11-14 21:02:49"
+  },
+  {
+    "server": "Sv3",
+    "boss": "Kundun",
+    "killer": "ExpressMg",
+    "raw_date_br": "2026-11-14 21:02:40"
+  },
+  {
+    "server": "Sv11",
+    "boss": "Kundun",
+    "killer": "SolrakDVDL",
+    "raw_date_br": "2026-11-14 21:02:39"
+  },
+  {
+    "server": "Sv6",
+    "boss": "Kundun",
+    "killer": "Kaiserxx",
+    "raw_date_br": "2026-11-14 21:02:32"
+  },
+  {
+    "server": "Sv17",
+    "boss": "Kundun",
+    "killer": "PinkKitty",
+    "raw_date_br": "2026-11-14 21:02:04"
+  },
+  {
+    "server": "Sv4",
+    "boss": "Kundun",
+    "killer": "Jot4",
+    "raw_date_br": "2026-11-14 21:01:59"
+  },
+  {
+    "server": "Sv1",
+    "boss": "Kundun",
+    "killer": "xTHExBOOSx",
+    "raw_date_br": "2026-11-14 21:01:44"
+  },
+  {
+    "server": "Sv15",
+    "boss": "Kundun",
+    "killer": "RominaKD",
+    "raw_date_br": "2026-11-14 21:01:37"
+  },
+  {
+    "server": "Sv19",
+    "boss": "Kundun",
+    "killer": "SolrakDVDL",
+    "raw_date_br": "2026-11-14 21:01:34"
+  },
+  {
+    "server": "Sv14",
+    "boss": "Kundun",
+    "killer": "Elaiine",
+    "raw_date_br": "2026-11-14 21:00:52"
+  },
+  {
+    "server": "Sv18",
+    "boss": "Kundun",
+    "killer": "GeysonSU",
+    "raw_date_br": "2026-11-14 21:00:38"
+  },
+  {
+    "server": "Sv8",
+    "boss": "Kundun",
+    "killer": "Gervasia",
+    "raw_date_br": "2026-11-14 21:00:11"
+  },
+  {
+    "server": "Sv7",
+    "boss": "Medusa",
+    "killer": "Ominous",
+    "raw_date_br": "2026-11-14 16:03:32"
+  },
+  {
+    "server": "Sv10",
+    "boss": "Medusa",
+    "killer": "Zhiyeshas",
+    "raw_date_br": "2026-11-14 16:03:26"
+  },
+  {
+    "server": "Sv11",
+    "boss": "Medusa",
+    "killer": "ElfCitara",
+    "raw_date_br": "2026-11-14 16:02:32"
+  },
+  {
+    "server": "Sv8",
+    "boss": "Medusa",
+    "killer": "DLMuka",
+    "raw_date_br": "2026-11-14 16:02:05"
+  },
+  {
+    "server": "Sv2",
+    "boss": "Medusa",
+    "killer": "CSE23",
+    "raw_date_br": "2026-11-14 16:01:49"
+  },
+  {
+    "server": "Sv17",
+    "boss": "Medusa",
+    "killer": "UsbugSUM",
+    "raw_date_br": "2026-11-14 16:01:42"
+  },
+  {
+    "server": "Sv6",
+    "boss": "Medusa",
+    "killer": "TheGNB",
+    "raw_date_br": "2026-11-14 16:01:32"
+  },
+  {
+    "server": "Sv16",
+    "boss": "Medusa",
+    "killer": "Ominous",
+    "raw_date_br": "2026-11-14 16:01:31"
+  },
+  {
+    "server": "Sv14",
+    "boss": "Medusa",
+    "killer": "Winnerzim",
+    "raw_date_br": "2026-11-14 16:01:04"
+  },
+  {
+    "server": "Sv5",
+    "boss": "Medusa",
+    "killer": "Cuervo",
+    "raw_date_br": "2026-11-14 16:00:53"
+  },
+  {
+    "server": "Sv3",
+    "boss": "Medusa",
+    "killer": "TheGNB",
+    "raw_date_br": "2026-11-14 16:00:52"
+  },
+  {
+    "server": "Sv15",
+    "boss": "Medusa",
+    "killer": "Winnerzim",
+    "raw_date_br": "2026-11-14 16:00:49"
+  },
+  {
+    "server": "Sv4",
+    "boss": "Medusa",
+    "killer": "lJostarl",
+    "raw_date_br": "2026-11-14 16:00:40"
+  },
+  {
+    "server": "Sv18",
+    "boss": "Medusa",
+    "killer": "SkH0mero",
+    "raw_date_br": "2026-11-14 16:00:16"
+  },
+  {
+    "server": "Sv1",
+    "boss": "Medusa",
+    "killer": "TheGNB",
+    "raw_date_br": "2026-11-14 16:00:13"
+  },
+  {
+    "server": "Sv7",
+    "boss": "Medusa",
+    "killer": "SonyaB",
+    "raw_date_br": "2026-11-13 21:01:45"
+  },
+  {
+    "server": "Sv11",
+    "boss": "Medusa",
+    "killer": "SolrakDVDL",
+    "raw_date_br": "2026-11-13 21:01:40"
+  },
+  {
+    "server": "Sv10",
+    "boss": "Medusa",
+    "killer": "XxVILLEGAS",
+    "raw_date_br": "2026-11-13 21:00:57"
+  },
+  {
+    "server": "Sv14",
+    "boss": "Medusa",
+    "killer": "Nervulax",
+    "raw_date_br": "2026-11-13 21:00:56"
+  },
+  {
+    "server": "Sv5",
+    "boss": "Medusa",
+    "killer": "Victor",
+    "raw_date_br": "2026-11-13 21:00:53"
+  },
+  {
+    "server": "Sv8",
+    "boss": "Medusa",
+    "killer": "Zyrux",
+    "raw_date_br": "2026-11-13 21:00:46"
+  },
+  {
+    "server": "Sv16",
+    "boss": "Medusa",
+    "killer": "Next1012",
+    "raw_date_br": "2026-11-13 21:00:44"
+  },
+  {
+    "server": "Sv4",
+    "boss": "Medusa",
+    "killer": "Cracker666",
+    "raw_date_br": "2026-11-13 21:00:43"
+  },
+  {
+    "server": "Sv6",
+    "boss": "Medusa",
+    "killer": "iAviiiCi",
+    "raw_date_br": "2026-11-13 21:00:39"
+  },
+  {
+    "server": "Sv17",
+    "boss": "Medusa",
+    "killer": "MrMyzor",
+    "raw_date_br": "2026-11-13 21:00:35"
+  },
+  {
+    "server": "Sv2",
+    "boss": "Medusa",
+    "killer": "Hommie",
+    "raw_date_br": "2026-11-13 21:00:33"
+  },
+  {
+    "server": "Sv19",
+    "boss": "Medusa",
+    "killer": "SonyaB",
+    "raw_date_br": "2026-11-13 21:00:28"
+  },
+  {
+    "server": "Sv3",
+    "boss": "Medusa",
+    "killer": "GLADIATOM",
+    "raw_date_br": "2026-11-13 21:00:26"
+  },
+  {
+    "server": "Sv15",
+    "boss": "Medusa",
+    "killer": "QuyDauBua",
+    "raw_date_br": "2026-11-13 21:00:18"
+  },
+  {
+    "server": "Sv18",
+    "boss": "Medusa",
+    "killer": "TheGNB",
+    "raw_date_br": "2026-11-13 21:00:12"
+  },
+  {
+    "server": "Sv1",
+    "boss": "Medusa",
+    "killer": "CSD13",
+    "raw_date_br": "2026-11-13 21:00:09"
+  },
+  {
+    "server": "Sv19",
+    "boss": "Kundun",
+    "killer": "Miragerune",
+    "raw_date_br": "2026-11-13 16:12:17"
+  },
+  {
+    "server": "Sv11",
+    "boss": "Kundun",
+    "killer": "Miragerune",
+    "raw_date_br": "2026-11-13 16:07:46"
+  },
+  {
+    "server": "Sv15",
+    "boss": "Kundun",
+    "killer": "Miragerune",
+    "raw_date_br": "2026-11-13 16:06:18"
+  },
+  {
+    "server": "Sv14",
+    "boss": "Kundun",
+    "killer": "JexusGL",
+    "raw_date_br": "2026-11-13 16:05:12"
+  },
+  {
+    "server": "Sv17",
+    "boss": "Kundun",
+    "killer": "ExpressMg",
+    "raw_date_br": "2026-11-13 16:04:29"
+  },
+  {
+    "server": "Sv1",
+    "boss": "Kundun",
+    "killer": "BlueLabelx",
+    "raw_date_br": "2026-11-13 16:04:15"
+  },
+  {
+    "server": "Sv16",
+    "boss": "Kundun",
+    "killer": "Miragerune",
+    "raw_date_br": "2026-11-13 16:03:55"
+  },
+  {
+    "server": "Sv7",
+    "boss": "Kundun",
+    "killer": "JexusGL",
+    "raw_date_br": "2026-11-13 16:03:52"
+  },
+  {
+    "server": "Sv3",
+    "boss": "Kundun",
+    "killer": "CHINOOS0",
+    "raw_date_br": "2026-11-13 16:03:12"
+  },
+  {
+    "server": "Sv4",
+    "boss": "Kundun",
+    "killer": "Sekhmet7",
+    "raw_date_br": "2026-11-13 16:02:51"
+  },
+  {
+    "server": "Sv18",
+    "boss": "Kundun",
+    "killer": "ExpressMg",
+    "raw_date_br": "2026-11-13 16:02:25"
+  },
+  {
+    "server": "Sv2",
+    "boss": "Kundun",
+    "killer": "AeX7",
+    "raw_date_br": "2026-11-13 16:02:19"
+  },
+  {
+    "server": "Sv8",
+    "boss": "Kundun",
+    "killer": "BkPrOFeCia",
+    "raw_date_br": "2026-11-13 16:01:45"
+  },
+  {
+    "server": "Sv6",
+    "boss": "Kundun",
+    "killer": "CHINOOS0",
+    "raw_date_br": "2026-11-13 16:01:29"
+  },
+  {
+    "server": "Sv5",
+    "boss": "Kundun",
+    "killer": "L0B0MG",
+    "raw_date_br": "2026-11-13 16:01:23"
+  },
+  {
+    "server": "Sv10",
+    "boss": "Kundun",
+    "killer": "Collette",
+    "raw_date_br": "2026-11-12 02:35:10"
+  },
+  {
+    "server": "Sv11",
+    "boss": "Kundun",
+    "killer": "SolrakDVDL",
+    "raw_date_br": "2026-11-12 02:03:46"
+  },
+  {
+    "server": "Sv4",
+    "boss": "Kundun",
+    "killer": "iGUYSi",
+    "raw_date_br": "2026-11-12 02:03:21"
+  },
+  {
+    "server": "Sv16",
+    "boss": "Kundun",
+    "killer": "Raveth",
+    "raw_date_br": "2026-11-12 02:02:12"
+  },
+  {
+    "server": "Sv17",
+    "boss": "Kundun",
+    "killer": "SolrakDVDL",
+    "raw_date_br": "2026-11-12 02:02:04"
+  },
+  {
+    "server": "Sv2",
+    "boss": "Kundun",
+    "killer": "Jurlique",
+    "raw_date_br": "2026-11-12 02:01:45"
+  },
+  {
+    "server": "Sv8",
+    "boss": "Kundun",
+    "killer": "FuukiiSL",
+    "raw_date_br": "2026-11-12 02:01:32"
+  },
+  {
+    "server": "Sv3",
+    "boss": "Kundun",
+    "killer": "SuMuning",
+    "raw_date_br": "2026-11-12 02:01:29"
+  },
+  {
+    "server": "Sv18",
+    "boss": "Kundun",
+    "killer": "SolrakDVDL",
+    "raw_date_br": "2026-11-12 02:01:28"
+  },
+  {
+    "server": "Sv7",
+    "boss": "Kundun",
+    "killer": "Coaster",
+    "raw_date_br": "2026-11-12 02:01:08"
+  },
+  {
+    "server": "Sv14",
+    "boss": "Kundun",
+    "killer": "Elaiine",
+    "raw_date_br": "2026-11-12 02:01:01"
+  },
+  {
+    "server": "Sv6",
+    "boss": "Kundun",
+    "killer": "Waru4",
+    "raw_date_br": "2026-11-12 02:00:54"
+  },
+  {
+    "server": "Sv15",
+    "boss": "Kundun",
+    "killer": "MrMyzor",
+    "raw_date_br": "2026-11-12 02:00:49"
+  },
+  {
+    "server": "Sv19",
+    "boss": "Kundun",
+    "killer": "SolrakDVDL",
+    "raw_date_br": "2026-11-12 02:00:36"
+  },
+  {
+    "server": "Sv5",
+    "boss": "Kundun",
+    "killer": "Waru4",
+    "raw_date_br": "2026-11-12 02:00:30"
+  },
+  {
+    "server": "Sv1",
+    "boss": "Kundun",
+    "killer": "NayrobSL",
+    "raw_date_br": "2026-11-12 02:00:10"
+  },
+  {
+    "server": "Sv11",
+    "boss": "Kundun",
+    "killer": "SolrakDVDL",
+    "raw_date_br": "2026-11-11 23:03:51"
+  },
+  {
+    "server": "Sv1",
+    "boss": "Kundun",
+    "killer": "zTargaryeN",
+    "raw_date_br": "2026-11-11 23:02:57"
+  },
+  {
+    "server": "Sv16",
+    "boss": "Kundun",
+    "killer": "EoTanks",
+    "raw_date_br": "2026-11-11 23:02:27"
+  },
+  {
+    "server": "Sv6",
+    "boss": "Kundun",
+    "killer": "BlueLabelx",
+    "raw_date_br": "2026-11-11 23:02:25"
+  },
+  {
+    "server": "Sv17",
+    "boss": "Kundun",
+    "killer": "YORY2002",
+    "raw_date_br": "2026-11-11 23:02:16"
+  },
+  {
+    "server": "Sv8",
+    "boss": "Kundun",
+    "killer": "xJICKx",
+    "raw_date_br": "2026-11-11 23:02:07"
+  },
+  {
+    "server": "Sv18",
+    "boss": "Kundun",
+    "killer": "SolrakDVDL",
+    "raw_date_br": "2026-11-11 23:01:50"
+  },
+  {
+    "server": "Sv14",
+    "boss": "Kundun",
+    "killer": "ExpressMg",
+    "raw_date_br": "2026-11-11 23:01:35"
+  },
+  {
+    "server": "Sv3",
+    "boss": "Kundun",
+    "killer": "xJICKx",
+    "raw_date_br": "2026-11-11 23:01:22"
+  },
+  {
+    "server": "Sv5",
+    "boss": "Kundun",
+    "killer": "Barloven7o",
+    "raw_date_br": "2026-11-11 23:01:22"
+  },
+  {
+    "server": "Sv15",
+    "boss": "Kundun",
+    "killer": "EoTanks",
+    "raw_date_br": "2026-11-11 23:01:08"
+  },
+  {
+    "server": "Sv7",
+    "boss": "Kundun",
+    "killer": "BlueLabelx",
+    "raw_date_br": "2026-11-11 23:00:51"
+  },
+  {
+    "server": "Sv4",
+    "boss": "Kundun",
+    "killer": "Barloven7o",
+    "raw_date_br": "2026-11-11 23:00:41"
+  },
+  {
+    "server": "Sv19",
+    "boss": "Kundun",
+    "killer": "SolrakDVDL",
+    "raw_date_br": "2026-11-11 23:00:38"
+  },
+  {
+    "server": "Sv2",
+    "boss": "Kundun",
+    "killer": "xJICKx",
+    "raw_date_br": "2026-11-11 23:00:25"
+  },
+  {
+    "server": "Sv1",
+    "boss": "Erohim",
+    "killer": "QuistisFF8",
+    "raw_date_br": "2026-11-10 23:11:46"
+  },
+  {
+    "server": "Sv10",
+    "boss": "Medusa",
+    "killer": "XxVILLEGAS",
+    "raw_date_br": "2026-11-10 21:04:48"
+  },
+  {
+    "server": "Sv11",
+    "boss": "Medusa",
+    "killer": "SolrakDVDL",
+    "raw_date_br": "2026-11-10 21:02:04"
+  },
+  {
+    "server": "Sv4",
+    "boss": "Medusa",
+    "killer": "TeEsfolaRW",
+    "raw_date_br": "2026-11-10 21:01:22"
+  },
+  {
+    "server": "Sv19",
+    "boss": "Medusa",
+    "killer": "JeiYacK",
+    "raw_date_br": "2026-11-10 21:01:07"
+  },
+  {
+    "server": "Sv15",
+    "boss": "Medusa",
+    "killer": "DarkSumm",
+    "raw_date_br": "2026-11-10 21:00:45"
+  },
+  {
+    "server": "Sv1",
+    "boss": "Medusa",
+    "killer": "XOQUETE",
+    "raw_date_br": "2026-11-10 21:00:40"
+  },
+  {
+    "server": "Sv14",
+    "boss": "Medusa",
+    "killer": "OnlyFanSL",
+    "raw_date_br": "2026-11-10 21:00:31"
+  },
+  {
+    "server": "Sv6",
+    "boss": "Medusa",
+    "killer": "Troll",
+    "raw_date_br": "2026-11-10 21:00:30"
+  },
+  {
+    "server": "Sv3",
+    "boss": "Medusa",
+    "killer": "k1cKaSs",
+    "raw_date_br": "2026-11-10 21:00:24"
+  },
+  {
+    "server": "Sv17",
+    "boss": "Medusa",
+    "killer": "Winnerzim",
+    "raw_date_br": "2026-11-10 21:00:17"
+  },
+  {
+    "server": "Sv7",
+    "boss": "Medusa",
+    "killer": "Victor",
+    "raw_date_br": "2026-11-10 21:00:17"
+  },
+  {
+    "server": "Sv2",
+    "boss": "Medusa",
+    "killer": "Hommie",
+    "raw_date_br": "2026-11-10 21:00:17"
+  },
+  {
+    "server": "Sv5",
+    "boss": "Medusa",
+    "killer": "LOSINGME",
+    "raw_date_br": "2026-11-10 21:00:16"
+  },
+  {
+    "server": "Sv18",
+    "boss": "Medusa",
+    "killer": "DarkSumm",
+    "raw_date_br": "2026-11-10 21:00:16"
+  },
+  {
+    "server": "Sv16",
+    "boss": "Medusa",
+    "killer": "GLADIATOM",
+    "raw_date_br": "2026-11-10 21:00:12"
+  },
+  {
+    "server": "Sv8",
+    "boss": "Medusa",
+    "killer": "RominaKD",
+    "raw_date_br": "2026-11-10 21:00:11"
+  },
+  {
+    "server": "Sv18",
+    "boss": "Kundun",
+    "killer": "XOQUETE",
+    "raw_date_br": "2026-11-10 04:05:09"
+  },
+  {
+    "server": "Sv6",
+    "boss": "Kundun",
+    "killer": "QuyDauBua",
+    "raw_date_br": "2026-11-10 04:04:46"
+  },
+  {
+    "server": "Sv3",
+    "boss": "Kundun",
+    "killer": "BlueLabelx",
+    "raw_date_br": "2026-11-10 04:04:29"
+  },
+  {
+    "server": "Sv17",
+    "boss": "Kundun",
+    "killer": "ExpressMg",
+    "raw_date_br": "2026-11-10 04:04:21"
+  },
+  {
+    "server": "Sv16",
+    "boss": "Kundun",
+    "killer": "Raveth",
+    "raw_date_br": "2026-11-10 04:04:11"
+  },
+  {
+    "server": "Sv15",
+    "boss": "Kundun",
+    "killer": "KAYNDL",
+    "raw_date_br": "2026-11-10 04:03:34"
+  },
+  {
+    "server": "Sv2",
+    "boss": "Kundun",
+    "killer": "DlGunzM79",
+    "raw_date_br": "2026-11-10 04:03:28"
+  },
+  {
+    "server": "Sv4",
+    "boss": "Kundun",
+    "killer": "QuyDauBua",
+    "raw_date_br": "2026-11-10 04:02:48"
+  },
+  {
+    "server": "Sv1",
+    "boss": "Kundun",
+    "killer": "BlueLabelx",
+    "raw_date_br": "2026-11-10 04:02:17"
+  },
+  {
+    "server": "Sv5",
+    "boss": "Kundun",
+    "killer": "QuyDauBua",
+    "raw_date_br": "2026-11-10 04:01:48"
+  },
+  {
+    "server": "Sv8",
+    "boss": "Kundun",
+    "killer": "DlGunzM79",
+    "raw_date_br": "2026-11-10 04:01:10"
+  },
+  {
+    "server": "Sv7",
+    "boss": "Kundun",
+    "killer": "BlueLabelx",
+    "raw_date_br": "2026-11-10 04:00:54"
+  },
+  {
+    "server": "Sv14",
+    "boss": "Kundun",
+    "killer": "KAYNDL",
+    "raw_date_br": "2026-11-10 04:00:53"
+  },
+  {
+    "server": "Sv19",
+    "boss": "Kundun",
+    "killer": "ElfCitara",
+    "raw_date_br": "2026-11-09 16:08:07"
+  },
+  {
+    "server": "Sv10",
+    "boss": "Kundun",
+    "killer": "FMKDivine",
+    "raw_date_br": "2026-11-09 16:04:32"
+  },
+  {
+    "server": "Sv3",
+    "boss": "Kundun",
+    "killer": "zTargaryeN",
+    "raw_date_br": "2026-11-09 16:03:38"
   }
 ]
