@@ -25,18 +25,6 @@
   },
   {
     "server": "Sv14",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-15T04:58:47+02:00",
-    "killer": "Kaelvyr",
-    "earliest_spawn": "2026-11-16T21:43:47+02:00",
-    "latest_spawn": "2026-11-16T21:43:47+02:00",
-    "min_hours": 40.8,
-    "max_hours": 40.8,
-    "is_fixed": true,
-    "raw_date": "2026-11-14 23:58:47"
-  },
-  {
-    "server": "Sv14",
     "boss": "God of Darkness",
     "last_kill": "2026-11-12T11:45:02+02:00",
     "killer": "LostSh0t",
@@ -826,6 +814,18 @@
     "max_hours": 40.8,
     "is_fixed": true,
     "raw_date": "2026-11-16 15:59:42"
+  },
+  {
+    "server": "Sv14",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-16T21:56:22+02:00",
+    "killer": "PinkKitty",
+    "earliest_spawn": "2026-11-18T14:41:22+02:00",
+    "latest_spawn": "2026-11-18T14:41:22+02:00",
+    "min_hours": 40.8,
+    "max_hours": 40.8,
+    "is_fixed": true,
+    "raw_date": "2026-11-16 16:56:22"
   },
   {
     "server": "Sv10",
