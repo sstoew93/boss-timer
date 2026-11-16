@@ -48,18 +48,6 @@
     "raw_date": "2026-11-11 17:15:23"
   },
   {
-    "server": "Sv14",
-    "boss": "Selupan",
-    "last_kill": "2026-11-14T22:22:01+02:00",
-    "killer": "Coaster",
-    "earliest_spawn": "2026-11-16T08:22:01+02:00",
-    "latest_spawn": "2026-11-16T08:22:01+02:00",
-    "min_hours": 34.0,
-    "max_hours": 34.0,
-    "is_fixed": true,
-    "raw_date": "2026-11-14 17:22:01"
-  },
-  {
     "server": "Sv2",
     "boss": "Selupan",
     "last_kill": "2026-11-14T22:24:01+02:00",
@@ -610,6 +598,18 @@
     "max_hours": 34.0,
     "is_fixed": true,
     "raw_date": "2026-11-16 03:23:45"
+  },
+  {
+    "server": "Sv14",
+    "boss": "Selupan",
+    "last_kill": "2026-11-16T08:27:55+02:00",
+    "killer": "PinkMoon",
+    "earliest_spawn": "2026-11-17T18:27:55+02:00",
+    "latest_spawn": "2026-11-17T18:27:55+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "is_fixed": true,
+    "raw_date": "2026-11-16 03:27:55"
   },
   {
     "server": "Sv8",
