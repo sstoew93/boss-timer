@@ -5,7 +5,10 @@ import os
 
 URL = "https://en.megamu.net/boss-log"
 HISTORY_FILE = "boss_history.json"
+
+# We don't need history for fixed bosses, nor for Kundun/Medusa (not in website log anyway)
 IGNORED_SERVERS = {"svc", "speed1", "speed2", "speed3", "speed4", "speed5"}
+IGNORED_BOSSES = {"selupan", "core magriffy", "kundun", "medusa", "nightmare"}
 
 def collect():
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
@@ -42,7 +45,12 @@ def collect():
         server = cells[3].get_text(strip=True)
 
         clean_server = server.lower().replace(" ", "")
+        clean_boss = monster_name.lower().strip()
+
+        # Skip ignored servers and ignored bosses
         if clean_server in IGNORED_SERVERS:
+            continue
+        if clean_boss in IGNORED_BOSSES:
             continue
 
         key = f"{server}|{monster_name}|{date_str}"
