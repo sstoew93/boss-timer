@@ -60,18 +60,6 @@
     "raw_date": "2026-11-14 11:33:04"
   },
   {
-    "server": "Sv11",
-    "boss": "Lord Silvester",
-    "last_kill": "2026-11-12T12:25:50+02:00",
-    "killer": "joiuda",
-    "earliest_spawn": "2026-11-16T09:30:50+02:00",
-    "latest_spawn": "2026-11-16T09:30:50+02:00",
-    "min_hours": 93.1,
-    "max_hours": 93.1,
-    "is_fixed": true,
-    "raw_date": "2026-11-12 07:25:50"
-  },
-  {
     "server": "Sv1",
     "boss": "Selupan",
     "last_kill": "2026-11-15T00:08:25+02:00",
@@ -1246,6 +1234,18 @@
     "max_hours": 112.0,
     "is_fixed": false,
     "raw_date": "2026-11-15 20:52:15"
+  },
+  {
+    "server": "Sv11",
+    "boss": "Lord Silvester",
+    "last_kill": "2026-11-16T10:00:41+02:00",
+    "killer": "GEITSHDIYL",
+    "earliest_spawn": "2026-11-20T07:05:41+02:00",
+    "latest_spawn": "2026-11-20T07:05:41+02:00",
+    "min_hours": 93.1,
+    "max_hours": 93.1,
+    "is_fixed": true,
+    "raw_date": "2026-11-16 05:00:41"
   },
   {
     "server": "Sv15",
