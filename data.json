@@ -4,9 +4,9 @@
     "boss": "Nix",
     "last_kill": "2026-11-12T06:31:00+02:00",
     "killer": "Babayaga98",
-    "earliest_spawn": "2026-11-16T16:36:00+02:00",
+    "earliest_spawn": "2026-11-16T10:36:00+02:00",
     "latest_spawn": "2026-11-16T22:31:00+02:00",
-    "min_hours": 106.1,
+    "min_hours": 100.1,
     "max_hours": 112.0,
     "is_fixed": false,
     "raw_date": "2026-11-12 01:31:00"
@@ -36,6 +36,18 @@
     "raw_date": "2026-11-12 06:45:02"
   },
   {
+    "server": "Sv16",
+    "boss": "Nix",
+    "last_kill": "2026-11-12T18:31:10+02:00",
+    "killer": "MrMyzor",
+    "earliest_spawn": "2026-11-16T22:36:10+02:00",
+    "latest_spawn": "2026-11-17T10:31:10+02:00",
+    "min_hours": 100.1,
+    "max_hours": 112.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-12 13:31:10"
+  },
+  {
     "server": "Sv11",
     "boss": "Selupan",
     "last_kill": "2026-11-15T14:06:16+02:00",
@@ -46,6 +58,30 @@
     "max_hours": 34.0,
     "is_fixed": true,
     "raw_date": "2026-11-15 09:06:16"
+  },
+  {
+    "server": "Sv5",
+    "boss": "Nix",
+    "last_kill": "2026-11-12T20:11:50+02:00",
+    "killer": "PinkKitty",
+    "earliest_spawn": "2026-11-17T00:16:50+02:00",
+    "latest_spawn": "2026-11-17T12:11:50+02:00",
+    "min_hours": 100.1,
+    "max_hours": 112.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-12 15:11:50"
+  },
+  {
+    "server": "Sv18",
+    "boss": "Nix",
+    "last_kill": "2026-11-12T20:13:14+02:00",
+    "killer": "MrMyzor",
+    "earliest_spawn": "2026-11-17T00:18:14+02:00",
+    "latest_spawn": "2026-11-17T12:13:14+02:00",
+    "min_hours": 100.1,
+    "max_hours": 112.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-12 15:13:14"
   },
   {
     "server": "Sv17",
@@ -84,40 +120,16 @@
     "raw_date": "2026-11-15 12:53:56"
   },
   {
-    "server": "Sv16",
+    "server": "Sv1",
     "boss": "Nix",
-    "last_kill": "2026-11-12T18:31:10+02:00",
-    "killer": "MrMyzor",
-    "earliest_spawn": "2026-11-17T04:36:10+02:00",
-    "latest_spawn": "2026-11-17T10:31:10+02:00",
-    "min_hours": 106.1,
+    "last_kill": "2026-11-13T04:41:46+02:00",
+    "killer": "SolrakDVDL",
+    "earliest_spawn": "2026-11-17T08:46:46+02:00",
+    "latest_spawn": "2026-11-17T20:41:46+02:00",
+    "min_hours": 100.1,
     "max_hours": 112.0,
     "is_fixed": false,
-    "raw_date": "2026-11-12 13:31:10"
-  },
-  {
-    "server": "Sv5",
-    "boss": "Nix",
-    "last_kill": "2026-11-12T20:11:50+02:00",
-    "killer": "PinkKitty",
-    "earliest_spawn": "2026-11-17T06:16:50+02:00",
-    "latest_spawn": "2026-11-17T12:11:50+02:00",
-    "min_hours": 106.1,
-    "max_hours": 112.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-12 15:11:50"
-  },
-  {
-    "server": "Sv18",
-    "boss": "Nix",
-    "last_kill": "2026-11-12T20:13:14+02:00",
-    "killer": "MrMyzor",
-    "earliest_spawn": "2026-11-17T06:18:14+02:00",
-    "latest_spawn": "2026-11-17T12:13:14+02:00",
-    "min_hours": 106.1,
-    "max_hours": 112.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-12 15:13:14"
+    "raw_date": "2026-11-12 23:41:46"
   },
   {
     "server": "Sv16",
@@ -142,6 +154,18 @@
     "max_hours": 34.0,
     "is_fixed": true,
     "raw_date": "2026-11-15 18:28:59"
+  },
+  {
+    "server": "Sv6",
+    "boss": "Nix",
+    "last_kill": "2026-11-13T05:51:34+02:00",
+    "killer": "SolrakDVDL",
+    "earliest_spawn": "2026-11-17T09:56:34+02:00",
+    "latest_spawn": "2026-11-17T21:51:34+02:00",
+    "min_hours": 100.1,
+    "max_hours": 112.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-13 00:51:34"
   },
   {
     "server": "Sv10",
@@ -204,18 +228,6 @@
     "raw_date": "2026-11-15 23:00:22"
   },
   {
-    "server": "Sv1",
-    "boss": "Nix",
-    "last_kill": "2026-11-13T04:41:46+02:00",
-    "killer": "SolrakDVDL",
-    "earliest_spawn": "2026-11-17T14:46:46+02:00",
-    "latest_spawn": "2026-11-17T20:41:46+02:00",
-    "min_hours": 106.1,
-    "max_hours": 112.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-12 23:41:46"
-  },
-  {
     "server": "Sv6",
     "boss": "Nightmare",
     "last_kill": "2026-11-15T22:58:46+02:00",
@@ -226,18 +238,6 @@
     "max_hours": 40.8,
     "is_fixed": true,
     "raw_date": "2026-11-15 17:58:46"
-  },
-  {
-    "server": "Sv6",
-    "boss": "Nix",
-    "last_kill": "2026-11-13T05:51:34+02:00",
-    "killer": "SolrakDVDL",
-    "earliest_spawn": "2026-11-17T15:56:34+02:00",
-    "latest_spawn": "2026-11-17T21:51:34+02:00",
-    "min_hours": 106.1,
-    "max_hours": 112.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-13 00:51:34"
   },
   {
     "server": "Sv10",
@@ -432,6 +432,18 @@
     "raw_date": "2026-11-13 20:23:51"
   },
   {
+    "server": "Sv7",
+    "boss": "Nix",
+    "last_kill": "2026-11-13T21:09:17+02:00",
+    "killer": "MrMyzor",
+    "earliest_spawn": "2026-11-18T01:14:17+02:00",
+    "latest_spawn": "2026-11-18T13:09:17+02:00",
+    "min_hours": 100.1,
+    "max_hours": 112.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-13 16:09:17"
+  },
+  {
     "server": "Sv4",
     "boss": "Nightmare",
     "last_kill": "2026-11-16T09:27:51+02:00",
@@ -574,18 +586,6 @@
     "max_hours": 182.0,
     "is_fixed": false,
     "raw_date": "2026-11-14 03:35:04"
-  },
-  {
-    "server": "Sv7",
-    "boss": "Nix",
-    "last_kill": "2026-11-13T21:09:17+02:00",
-    "killer": "MrMyzor",
-    "earliest_spawn": "2026-11-18T07:14:17+02:00",
-    "latest_spawn": "2026-11-18T13:09:17+02:00",
-    "min_hours": 106.1,
-    "max_hours": 112.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-13 16:09:17"
   },
   {
     "server": "Sv15",
@@ -877,6 +877,18 @@
   },
   {
     "server": "Sv19",
+    "boss": "Nix",
+    "last_kill": "2026-11-14T17:16:10+02:00",
+    "killer": "PinkKitty",
+    "earliest_spawn": "2026-11-18T21:21:10+02:00",
+    "latest_spawn": "2026-11-19T09:16:10+02:00",
+    "min_hours": 100.1,
+    "max_hours": 112.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-14 12:16:10"
+  },
+  {
+    "server": "Sv19",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-15T10:56:43+02:00",
     "killer": "SolrakDVDL",
@@ -886,18 +898,6 @@
     "max_hours": 84.6,
     "is_fixed": true,
     "raw_date": "2026-11-15 05:56:43"
-  },
-  {
-    "server": "Sv19",
-    "boss": "Nix",
-    "last_kill": "2026-11-14T17:16:10+02:00",
-    "killer": "PinkKitty",
-    "earliest_spawn": "2026-11-19T03:21:10+02:00",
-    "latest_spawn": "2026-11-19T09:16:10+02:00",
-    "min_hours": 106.1,
-    "max_hours": 112.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-14 12:16:10"
   },
   {
     "server": "Sv19",
@@ -1056,6 +1056,18 @@
     "raw_date": "2026-11-15 15:50:43"
   },
   {
+    "server": "Sv3",
+    "boss": "Nix",
+    "last_kill": "2026-11-15T16:07:32+02:00",
+    "killer": "Babayaga98",
+    "earliest_spawn": "2026-11-19T20:12:32+02:00",
+    "latest_spawn": "2026-11-20T08:07:32+02:00",
+    "min_hours": 100.1,
+    "max_hours": 112.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-15 11:07:32"
+  },
+  {
     "server": "Sv18",
     "boss": "Lord Silvester",
     "last_kill": "2026-11-16T00:23:32+02:00",
@@ -1078,6 +1090,18 @@
     "max_hours": 182.0,
     "is_fixed": false,
     "raw_date": "2026-11-15 18:37:26"
+  },
+  {
+    "server": "Sv11",
+    "boss": "Nix",
+    "last_kill": "2026-11-15T17:38:14+02:00",
+    "killer": "SolrakDVDL",
+    "earliest_spawn": "2026-11-19T21:43:14+02:00",
+    "latest_spawn": "2026-11-20T09:38:14+02:00",
+    "min_hours": 100.1,
+    "max_hours": 112.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-15 12:38:14"
   },
   {
     "server": "Sv8",
@@ -1104,28 +1128,16 @@
     "raw_date": "2026-11-15 09:25:06"
   },
   {
-    "server": "Sv3",
+    "server": "Sv8",
     "boss": "Nix",
-    "last_kill": "2026-11-15T16:07:32+02:00",
-    "killer": "Babayaga98",
-    "earliest_spawn": "2026-11-20T02:12:32+02:00",
-    "latest_spawn": "2026-11-20T08:07:32+02:00",
-    "min_hours": 106.1,
+    "last_kill": "2026-11-16T01:52:15+02:00",
+    "killer": "PinkKitty",
+    "earliest_spawn": "2026-11-20T05:57:15+02:00",
+    "latest_spawn": "2026-11-20T17:52:15+02:00",
+    "min_hours": 100.1,
     "max_hours": 112.0,
     "is_fixed": false,
-    "raw_date": "2026-11-15 11:07:32"
-  },
-  {
-    "server": "Sv11",
-    "boss": "Nix",
-    "last_kill": "2026-11-15T17:38:14+02:00",
-    "killer": "SolrakDVDL",
-    "earliest_spawn": "2026-11-20T03:43:14+02:00",
-    "latest_spawn": "2026-11-20T09:38:14+02:00",
-    "min_hours": 106.1,
-    "max_hours": 112.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-15 12:38:14"
+    "raw_date": "2026-11-15 20:52:15"
   },
   {
     "server": "Sv11",
@@ -1165,6 +1177,30 @@
   },
   {
     "server": "Sv15",
+    "boss": "Nix",
+    "last_kill": "2026-11-16T04:17:53+02:00",
+    "killer": "SolrakDVDL",
+    "earliest_spawn": "2026-11-20T08:22:53+02:00",
+    "latest_spawn": "2026-11-20T20:17:53+02:00",
+    "min_hours": 100.1,
+    "max_hours": 112.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-15 23:17:53"
+  },
+  {
+    "server": "Sv17",
+    "boss": "Nix",
+    "last_kill": "2026-11-16T05:41:29+02:00",
+    "killer": "Babayaga98",
+    "earliest_spawn": "2026-11-20T09:46:29+02:00",
+    "latest_spawn": "2026-11-20T21:41:29+02:00",
+    "min_hours": 100.1,
+    "max_hours": 112.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-16 00:41:29"
+  },
+  {
+    "server": "Sv15",
     "boss": "God of Darkness",
     "last_kill": "2026-11-16T01:00:52+02:00",
     "killer": "VAMPETAA",
@@ -1176,16 +1212,16 @@
     "raw_date": "2026-11-15 20:00:52"
   },
   {
-    "server": "Sv8",
+    "server": "Sv4",
     "boss": "Nix",
-    "last_kill": "2026-11-16T01:52:15+02:00",
-    "killer": "PinkKitty",
-    "earliest_spawn": "2026-11-20T11:57:15+02:00",
-    "latest_spawn": "2026-11-20T17:52:15+02:00",
-    "min_hours": 106.1,
+    "last_kill": "2026-11-16T06:56:50+02:00",
+    "killer": "Babayaga98",
+    "earliest_spawn": "2026-11-20T11:01:50+02:00",
+    "latest_spawn": "2026-11-20T22:56:50+02:00",
+    "min_hours": 100.1,
     "max_hours": 112.0,
     "is_fixed": false,
-    "raw_date": "2026-11-15 20:52:15"
+    "raw_date": "2026-11-16 01:56:50"
   },
   {
     "server": "Sv10",
@@ -1198,6 +1234,18 @@
     "max_hours": 93.1,
     "is_fixed": true,
     "raw_date": "2026-11-16 10:24:55"
+  },
+  {
+    "server": "Sv10",
+    "boss": "Nix",
+    "last_kill": "2026-11-16T08:25:31+02:00",
+    "killer": "XxVILLEGAS",
+    "earliest_spawn": "2026-11-20T12:30:31+02:00",
+    "latest_spawn": "2026-11-21T00:25:31+02:00",
+    "min_hours": 100.1,
+    "max_hours": 112.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-16 03:25:31"
   },
   {
     "server": "Sv4",
@@ -1224,30 +1272,6 @@
     "raw_date": "2026-11-15 23:12:11"
   },
   {
-    "server": "Sv15",
-    "boss": "Nix",
-    "last_kill": "2026-11-16T04:17:53+02:00",
-    "killer": "SolrakDVDL",
-    "earliest_spawn": "2026-11-20T14:22:53+02:00",
-    "latest_spawn": "2026-11-20T20:17:53+02:00",
-    "min_hours": 106.1,
-    "max_hours": 112.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-15 23:17:53"
-  },
-  {
-    "server": "Sv17",
-    "boss": "Nix",
-    "last_kill": "2026-11-16T05:41:29+02:00",
-    "killer": "Babayaga98",
-    "earliest_spawn": "2026-11-20T15:46:29+02:00",
-    "latest_spawn": "2026-11-20T21:41:29+02:00",
-    "min_hours": 106.1,
-    "max_hours": 112.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-16 00:41:29"
-  },
-  {
     "server": "Sv19",
     "boss": "God of Darkness",
     "last_kill": "2026-11-16T06:59:53+02:00",
@@ -1258,30 +1282,6 @@
     "max_hours": 168.0,
     "is_fixed": false,
     "raw_date": "2026-11-16 01:59:53"
-  },
-  {
-    "server": "Sv4",
-    "boss": "Nix",
-    "last_kill": "2026-11-16T06:56:50+02:00",
-    "killer": "Babayaga98",
-    "earliest_spawn": "2026-11-20T17:01:50+02:00",
-    "latest_spawn": "2026-11-20T22:56:50+02:00",
-    "min_hours": 106.1,
-    "max_hours": 112.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-16 01:56:50"
-  },
-  {
-    "server": "Sv10",
-    "boss": "Nix",
-    "last_kill": "2026-11-16T08:25:31+02:00",
-    "killer": "XxVILLEGAS",
-    "earliest_spawn": "2026-11-20T18:30:31+02:00",
-    "latest_spawn": "2026-11-21T00:25:31+02:00",
-    "min_hours": 106.1,
-    "max_hours": 112.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-16 03:25:31"
   },
   {
     "server": "Sv7",
@@ -1308,6 +1308,18 @@
     "raw_date": "2026-11-16 05:03:42"
   },
   {
+    "server": "Sv14",
+    "boss": "Nix",
+    "last_kill": "2026-11-16T19:12:07+02:00",
+    "killer": "Zlostar",
+    "earliest_spawn": "2026-11-20T23:17:07+02:00",
+    "latest_spawn": "2026-11-21T11:12:07+02:00",
+    "min_hours": 100.1,
+    "max_hours": 112.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-16 14:12:07"
+  },
+  {
     "server": "Sv6",
     "boss": "God of Darkness",
     "last_kill": "2026-11-16T15:04:22+02:00",
@@ -1330,17 +1342,5 @@
     "max_hours": 168.0,
     "is_fixed": false,
     "raw_date": "2026-11-16 10:52:12"
-  },
-  {
-    "server": "Sv14",
-    "boss": "Nix",
-    "last_kill": "2026-11-16T19:12:07+02:00",
-    "killer": "Zlostar",
-    "earliest_spawn": "2026-11-21T05:17:07+02:00",
-    "latest_spawn": "2026-11-21T11:12:07+02:00",
-    "min_hours": 106.1,
-    "max_hours": 112.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-16 14:12:07"
   }
 ]
