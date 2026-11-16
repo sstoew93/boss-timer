@@ -132,18 +132,6 @@
     "raw_date": "2026-11-12 13:31:10"
   },
   {
-    "server": "Sv1",
-    "boss": "God of Darkness",
-    "last_kill": "2026-11-12T12:40:32+02:00",
-    "killer": "Kasperiano",
-    "earliest_spawn": "2026-11-16T22:40:32+02:00",
-    "latest_spawn": "2026-11-19T12:40:32+02:00",
-    "min_hours": 106.0,
-    "max_hours": 168.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-12 07:40:32"
-  },
-  {
     "server": "Sv11",
     "boss": "Selupan",
     "last_kill": "2026-11-15T14:06:16+02:00",
@@ -1342,5 +1330,17 @@
     "max_hours": 168.0,
     "is_fixed": false,
     "raw_date": "2026-11-16 10:04:22"
+  },
+  {
+    "server": "Sv1",
+    "boss": "God of Darkness",
+    "last_kill": "2026-11-16T15:52:12+02:00",
+    "killer": "PinkMoon",
+    "earliest_spawn": "2026-11-21T01:52:12+02:00",
+    "latest_spawn": "2026-11-23T15:52:12+02:00",
+    "min_hours": 106.0,
+    "max_hours": 168.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-16 10:52:12"
   }
 ]
