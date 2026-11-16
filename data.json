@@ -72,18 +72,6 @@
     "raw_date": "2026-11-14 07:27:58"
   },
   {
-    "server": "Sv7",
-    "boss": "Core Magriffy",
-    "last_kill": "2026-11-12T16:43:41+02:00",
-    "killer": "TORIANO",
-    "earliest_spawn": "2026-11-16T05:18:41+02:00",
-    "latest_spawn": "2026-11-16T05:18:41+02:00",
-    "min_hours": 84.6,
-    "max_hours": 84.6,
-    "is_fixed": true,
-    "raw_date": "2026-11-12 11:43:41"
-  },
-  {
     "server": "Sv6",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-12T16:45:32+02:00",
@@ -1162,6 +1150,18 @@
     "max_hours": 84.6,
     "is_fixed": true,
     "raw_date": "2026-11-16 00:20:23"
+  },
+  {
+    "server": "Sv7",
+    "boss": "Core Magriffy",
+    "last_kill": "2026-11-16T05:23:18+02:00",
+    "killer": "xTHExBOOSx",
+    "earliest_spawn": "2026-11-19T17:58:18+02:00",
+    "latest_spawn": "2026-11-19T17:58:18+02:00",
+    "min_hours": 84.6,
+    "max_hours": 84.6,
+    "is_fixed": true,
+    "raw_date": "2026-11-16 00:23:18"
   },
   {
     "server": "Sv5",
