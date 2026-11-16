@@ -1,5 +1,5 @@
 // --- PASSWORD LOGIC ---
-const SECRET_PASSWORD = "megamu123"; 
+const SECRET_PASSWORD = "alohomora"; 
 
 function checkPassword() {
     const input = document.getElementById('password-input').value;
