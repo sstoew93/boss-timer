@@ -8,7 +8,7 @@ HISTORY_FILE = "boss_history.json"
 
 # We don't need history for fixed bosses, nor for Kundun/Medusa (not in website log anyway)
 IGNORED_SERVERS = {"svc", "speed1", "speed2", "speed3", "speed4", "speed5"}
-IGNORED_BOSSES = {"selupan", "core magriffy", "kundun", "medusa", "nightmare"}
+IGNORED_BOSSES = {"selupan", "core magriffy", "kundun", "medusa", "nightmare", "lord silvester"}
 
 def collect():
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
