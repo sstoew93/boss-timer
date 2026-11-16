@@ -24,18 +24,6 @@
     "raw_date": "2026-11-12 14:08:26"
   },
   {
-    "server": "Sv8",
-    "boss": "Selupan",
-    "last_kill": "2026-11-15T10:04:49+02:00",
-    "killer": "Babayaga98",
-    "earliest_spawn": "2026-11-16T20:04:49+02:00",
-    "latest_spawn": "2026-11-16T20:04:49+02:00",
-    "min_hours": 34.0,
-    "max_hours": 34.0,
-    "is_fixed": true,
-    "raw_date": "2026-11-15 05:04:49"
-  },
-  {
     "server": "Sv18",
     "boss": "Nightmare",
     "last_kill": "2026-11-15T04:02:28+02:00",
@@ -610,6 +598,18 @@
     "max_hours": 182.0,
     "is_fixed": false,
     "raw_date": "2026-11-14 02:36:00"
+  },
+  {
+    "server": "Sv8",
+    "boss": "Selupan",
+    "last_kill": "2026-11-16T20:11:12+02:00",
+    "killer": "Luterkin",
+    "earliest_spawn": "2026-11-18T06:11:12+02:00",
+    "latest_spawn": "2026-11-18T06:11:12+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "is_fixed": true,
+    "raw_date": "2026-11-16 15:11:12"
   },
   {
     "server": "Sv15",
