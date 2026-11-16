@@ -12,18 +12,6 @@
     "raw_date": "2026-11-10 10:43:19"
   },
   {
-    "server": "Sv10",
-    "boss": "Nix",
-    "last_kill": "2026-11-11T13:55:16+02:00",
-    "killer": "XxVILLEGAS",
-    "earliest_spawn": "2026-11-15T18:00:16+02:00",
-    "latest_spawn": "2026-11-16T05:55:16+02:00",
-    "min_hours": 100.1,
-    "max_hours": 112.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-11 08:55:16"
-  },
-  {
     "server": "Sv18",
     "boss": "Lord of Ferea",
     "last_kill": "2026-11-12T06:35:31+02:00",
@@ -1306,6 +1294,18 @@
     "max_hours": 112.0,
     "is_fixed": false,
     "raw_date": "2026-11-16 01:56:50"
+  },
+  {
+    "server": "Sv10",
+    "boss": "Nix",
+    "last_kill": "2026-11-16T08:25:31+02:00",
+    "killer": "XxVILLEGAS",
+    "earliest_spawn": "2026-11-20T12:30:31+02:00",
+    "latest_spawn": "2026-11-21T00:25:31+02:00",
+    "min_hours": 100.1,
+    "max_hours": 112.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-16 03:25:31"
   },
   {
     "server": "Sv4",
