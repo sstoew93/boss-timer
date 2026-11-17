@@ -744,6 +744,18 @@
     "raw_date": "2026-11-17 10:57:51"
   },
   {
+    "server": "Sv9",
+    "boss": "Selupan",
+    "last_kill": "2026-11-18T00:30:26+02:00",
+    "killer": "Crimsum",
+    "earliest_spawn": "2026-11-19T10:30:26+02:00",
+    "latest_spawn": "2026-11-19T10:30:26+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "is_fixed": true,
+    "raw_date": "2026-11-17 19:30:26"
+  },
+  {
     "server": "Sv19",
     "boss": "Nightmare",
     "last_kill": "2026-11-17T18:37:33+02:00",
@@ -1318,6 +1330,18 @@
     "max_hours": 93.1,
     "is_fixed": true,
     "raw_date": "2026-11-17 13:47:38"
+  },
+  {
+    "server": "Sv9",
+    "boss": "Lord Silvester",
+    "last_kill": "2026-11-18T00:30:26+02:00",
+    "killer": "allisonSL",
+    "earliest_spawn": "2026-11-21T21:35:26+02:00",
+    "latest_spawn": "2026-11-21T21:35:26+02:00",
+    "min_hours": 93.1,
+    "max_hours": 93.1,
+    "is_fixed": true,
+    "raw_date": "2026-11-17 19:30:26"
   },
   {
     "server": "Sv9",
