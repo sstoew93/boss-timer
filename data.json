@@ -1320,6 +1320,18 @@
     "raw_date": "2026-11-17 13:47:38"
   },
   {
+    "server": "Sv9",
+    "boss": "Lord of Ferea",
+    "last_kill": "2026-11-18T00:27:17+02:00",
+    "killer": "HangeZoe",
+    "earliest_spawn": "2026-11-21T22:27:17+02:00",
+    "latest_spawn": "2026-11-25T14:27:17+02:00",
+    "min_hours": 94.0,
+    "max_hours": 182.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-17 19:27:17"
+  },
+  {
     "server": "Sv2",
     "boss": "God of Darkness",
     "last_kill": "2026-11-17T13:46:36+02:00",
