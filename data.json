@@ -48,18 +48,6 @@
     "raw_date": "2026-11-12 15:13:14"
   },
   {
-    "server": "Sv10",
-    "boss": "Selupan",
-    "last_kill": "2026-11-15T17:53:56+02:00",
-    "killer": "XxVILLEGAS",
-    "earliest_spawn": "2026-11-17T03:53:56+02:00",
-    "latest_spawn": "2026-11-17T03:53:56+02:00",
-    "min_hours": 34.0,
-    "max_hours": 34.0,
-    "is_fixed": true,
-    "raw_date": "2026-11-15 12:53:56"
-  },
-  {
     "server": "Sv1",
     "boss": "Nix",
     "last_kill": "2026-11-13T04:41:46+02:00",
@@ -766,6 +754,18 @@
     "max_hours": 40.8,
     "is_fixed": true,
     "raw_date": "2026-11-16 15:59:42"
+  },
+  {
+    "server": "Sv10",
+    "boss": "Selupan",
+    "last_kill": "2026-11-17T04:03:43+02:00",
+    "killer": "XxVILLEGAS",
+    "earliest_spawn": "2026-11-18T14:03:43+02:00",
+    "latest_spawn": "2026-11-18T14:03:43+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "is_fixed": true,
+    "raw_date": "2026-11-16 23:03:43"
   },
   {
     "server": "Sv14",
