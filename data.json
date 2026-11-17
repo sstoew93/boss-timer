@@ -12,18 +12,6 @@
     "raw_date": "2026-11-12 06:20:53"
   },
   {
-    "server": "Sv14",
-    "boss": "God of Darkness",
-    "last_kill": "2026-11-12T11:45:02+02:00",
-    "killer": "LostSh0t",
-    "earliest_spawn": "2026-11-16T21:45:02+02:00",
-    "latest_spawn": "2026-11-19T11:45:02+02:00",
-    "min_hours": 106.0,
-    "max_hours": 168.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-12 06:45:02"
-  },
-  {
     "server": "Sv16",
     "boss": "Nix",
     "last_kill": "2026-11-12T18:31:10+02:00",
@@ -1342,5 +1330,17 @@
     "max_hours": 114.0,
     "is_fixed": false,
     "raw_date": "2026-11-16 18:54:02"
+  },
+  {
+    "server": "Sv14",
+    "boss": "God of Darkness",
+    "last_kill": "2026-11-17T02:27:55+02:00",
+    "killer": "Kasperiano",
+    "earliest_spawn": "2026-11-21T12:27:55+02:00",
+    "latest_spawn": "2026-11-24T02:27:55+02:00",
+    "min_hours": 106.0,
+    "max_hours": 168.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-16 21:27:55"
   }
 ]
