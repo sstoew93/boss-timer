@@ -12,18 +12,6 @@
     "raw_date": "2026-11-13 00:56:51"
   },
   {
-    "server": "Sv7",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-16T03:00:40+02:00",
-    "killer": "ELFORNICA",
-    "earliest_spawn": "2026-11-17T19:45:40+02:00",
-    "latest_spawn": "2026-11-17T19:45:40+02:00",
-    "min_hours": 40.8,
-    "max_hours": 40.8,
-    "is_fixed": true,
-    "raw_date": "2026-11-15 22:00:40"
-  },
-  {
     "server": "Sv1",
     "boss": "Selupan",
     "last_kill": "2026-11-16T10:14:18+02:00",
@@ -790,6 +778,18 @@
     "max_hours": 182.0,
     "is_fixed": false,
     "raw_date": "2026-11-15 08:52:03"
+  },
+  {
+    "server": "Sv7",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-17T20:00:16+02:00",
+    "killer": "Zlostar",
+    "earliest_spawn": "2026-11-19T12:45:16+02:00",
+    "latest_spawn": "2026-11-19T12:45:16+02:00",
+    "min_hours": 40.8,
+    "max_hours": 40.8,
+    "is_fixed": true,
+    "raw_date": "2026-11-17 15:00:16"
   },
   {
     "server": "Sv3",
