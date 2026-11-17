@@ -48,18 +48,6 @@
     "raw_date": "2026-11-12 15:13:14"
   },
   {
-    "server": "Sv17",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-15T10:12:10+02:00",
-    "killer": "JexusLive",
-    "earliest_spawn": "2026-11-17T02:57:10+02:00",
-    "latest_spawn": "2026-11-17T02:57:10+02:00",
-    "min_hours": 40.8,
-    "max_hours": 40.8,
-    "is_fixed": true,
-    "raw_date": "2026-11-15 05:12:10"
-  },
-  {
     "server": "Sv16",
     "boss": "Nightmare",
     "last_kill": "2026-11-15T10:52:36+02:00",
@@ -850,6 +838,18 @@
     "max_hours": 84.6,
     "is_fixed": true,
     "raw_date": "2026-11-15 02:20:30"
+  },
+  {
+    "server": "Sv17",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-17T03:23:56+02:00",
+    "killer": "SolrakDVDL",
+    "earliest_spawn": "2026-11-18T20:08:56+02:00",
+    "latest_spawn": "2026-11-18T20:08:56+02:00",
+    "min_hours": 40.8,
+    "max_hours": 40.8,
+    "is_fixed": true,
+    "raw_date": "2026-11-16 22:23:56"
   },
   {
     "server": "Sv19",
