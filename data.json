@@ -60,18 +60,6 @@
     "raw_date": "2026-11-14 21:30:11"
   },
   {
-    "server": "Sv4",
-    "boss": "Lord of Ferea",
-    "last_kill": "2026-11-14T18:04:44+02:00",
-    "killer": "PinkKitty",
-    "earliest_spawn": "2026-11-18T16:04:44+02:00",
-    "latest_spawn": "2026-11-22T08:04:44+02:00",
-    "min_hours": 94.0,
-    "max_hours": 182.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-14 13:04:44"
-  },
-  {
     "server": "Sv19",
     "boss": "Selupan",
     "last_kill": "2026-11-17T09:34:55+02:00",
@@ -924,18 +912,6 @@
     "raw_date": "2026-11-18 08:27:55"
   },
   {
-    "server": "Sv15",
-    "boss": "Core Magriffy",
-    "last_kill": "2026-11-18T13:34:09+02:00",
-    "killer": "PiperSL",
-    "earliest_spawn": "2026-11-22T02:09:09+02:00",
-    "latest_spawn": "2026-11-22T02:09:09+02:00",
-    "min_hours": 84.6,
-    "max_hours": 84.6,
-    "is_fixed": true,
-    "raw_date": "2026-11-18 08:34:09"
-  },
-  {
     "server": "Sv17",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-18T13:38:21+02:00",
@@ -994,6 +970,18 @@
     "max_hours": 84.6,
     "is_fixed": true,
     "raw_date": "2026-11-18 10:40:35"
+  },
+  {
+    "server": "Sv15",
+    "boss": "Core Magriffy",
+    "last_kill": "2026-11-18T15:42:14+02:00",
+    "killer": "ParkO",
+    "earliest_spawn": "2026-11-22T04:17:14+02:00",
+    "latest_spawn": "2026-11-22T04:17:14+02:00",
+    "min_hours": 84.6,
+    "max_hours": 84.6,
+    "is_fixed": true,
+    "raw_date": "2026-11-18 10:42:14"
   },
   {
     "server": "Sv9",
@@ -1294,6 +1282,18 @@
     "max_hours": 182.0,
     "is_fixed": false,
     "raw_date": "2026-11-18 10:40:43"
+  },
+  {
+    "server": "Sv4",
+    "boss": "Lord of Ferea",
+    "last_kill": "2026-11-18T15:41:57+02:00",
+    "killer": "FuukiiSL",
+    "earliest_spawn": "2026-11-22T13:41:57+02:00",
+    "latest_spawn": "2026-11-26T05:41:57+02:00",
+    "min_hours": 94.0,
+    "max_hours": 182.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-18 10:41:57"
   },
   {
     "server": "Sv7",
