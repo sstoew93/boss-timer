@@ -180,18 +180,6 @@
     "raw_date": "2026-11-15 05:56:43"
   },
   {
-    "server": "Sv5",
-    "boss": "Selupan",
-    "last_kill": "2026-11-17T14:24:09+02:00",
-    "killer": "CHINOOS0",
-    "earliest_spawn": "2026-11-19T00:24:09+02:00",
-    "latest_spawn": "2026-11-19T00:24:09+02:00",
-    "min_hours": 34.0,
-    "max_hours": 34.0,
-    "is_fixed": true,
-    "raw_date": "2026-11-17 09:24:09"
-  },
-  {
     "server": "Sv17",
     "boss": "Selupan",
     "last_kill": "2026-11-17T18:22:32+02:00",
@@ -432,18 +420,6 @@
     "raw_date": "2026-11-15 16:20:05"
   },
   {
-    "server": "Sv6",
-    "boss": "Lord Silvester",
-    "last_kill": "2026-11-15T21:25:04+02:00",
-    "killer": "NecroSUMsz",
-    "earliest_spawn": "2026-11-19T18:30:04+02:00",
-    "latest_spawn": "2026-11-19T18:30:04+02:00",
-    "min_hours": 93.1,
-    "max_hours": 93.1,
-    "is_fixed": true,
-    "raw_date": "2026-11-15 16:25:04"
-  },
-  {
     "server": "Sv7",
     "boss": "Lord Silvester",
     "last_kill": "2026-11-15T21:29:09+02:00",
@@ -682,6 +658,18 @@
     "max_hours": 34.0,
     "is_fixed": true,
     "raw_date": "2026-11-18 10:34:16"
+  },
+  {
+    "server": "Sv5",
+    "boss": "Selupan",
+    "last_kill": "2026-11-18T15:35:08+02:00",
+    "killer": "MagicBlac",
+    "earliest_spawn": "2026-11-20T01:35:08+02:00",
+    "latest_spawn": "2026-11-20T01:35:08+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "is_fixed": true,
+    "raw_date": "2026-11-18 10:35:08"
   },
   {
     "server": "Sv8",
@@ -1258,6 +1246,18 @@
     "max_hours": 93.1,
     "is_fixed": true,
     "raw_date": "2026-11-18 10:34:02"
+  },
+  {
+    "server": "Sv6",
+    "boss": "Lord Silvester",
+    "last_kill": "2026-11-18T15:35:16+02:00",
+    "killer": "MewTwoo",
+    "earliest_spawn": "2026-11-22T12:40:16+02:00",
+    "latest_spawn": "2026-11-22T12:40:16+02:00",
+    "min_hours": 93.1,
+    "max_hours": 93.1,
+    "is_fixed": true,
+    "raw_date": "2026-11-18 10:35:16"
   },
   {
     "server": "Sv6",
