@@ -444,18 +444,6 @@
     "raw_date": "2026-11-18 10:56:57"
   },
   {
-    "server": "Sv8",
-    "boss": "Nix",
-    "last_kill": "2026-11-16T01:52:15+02:00",
-    "killer": "PinkKitty",
-    "earliest_spawn": "2026-11-20T05:57:15+02:00",
-    "latest_spawn": "2026-11-20T19:52:15+02:00",
-    "min_hours": 100.1,
-    "max_hours": 114.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-15 20:52:15"
-  },
-  {
     "server": "Sv18",
     "boss": "Nightmare",
     "last_kill": "2026-11-18T14:03:12+02:00",
@@ -1234,6 +1222,18 @@
     "max_hours": 114.0,
     "is_fixed": false,
     "raw_date": "2026-11-18 10:58:12"
+  },
+  {
+    "server": "Sv8",
+    "boss": "Nix",
+    "last_kill": "2026-11-18T15:59:31+02:00",
+    "killer": "kurusawa",
+    "earliest_spawn": "2026-11-22T20:04:31+02:00",
+    "latest_spawn": "2026-11-23T09:59:31+02:00",
+    "min_hours": 100.1,
+    "max_hours": 114.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-18 10:59:31"
   },
   {
     "server": "Sv1",
