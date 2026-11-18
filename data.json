@@ -144,18 +144,6 @@
     "raw_date": "2026-11-14 12:16:10"
   },
   {
-    "server": "Sv6",
-    "boss": "Selupan",
-    "last_kill": "2026-11-17T12:56:57+02:00",
-    "killer": "PinkKitty",
-    "earliest_spawn": "2026-11-18T22:56:57+02:00",
-    "latest_spawn": "2026-11-18T22:56:57+02:00",
-    "min_hours": 34.0,
-    "max_hours": 34.0,
-    "is_fixed": true,
-    "raw_date": "2026-11-17 07:56:57"
-  },
-  {
     "server": "Sv7",
     "boss": "Selupan",
     "last_kill": "2026-11-17T13:00:47+02:00",
@@ -202,18 +190,6 @@
     "max_hours": 34.0,
     "is_fixed": true,
     "raw_date": "2026-11-17 13:29:35"
-  },
-  {
-    "server": "Sv15",
-    "boss": "Selupan",
-    "last_kill": "2026-11-17T18:41:29+02:00",
-    "killer": "PinkKitty",
-    "earliest_spawn": "2026-11-19T04:41:29+02:00",
-    "latest_spawn": "2026-11-19T04:41:29+02:00",
-    "min_hours": 34.0,
-    "max_hours": 34.0,
-    "is_fixed": true,
-    "raw_date": "2026-11-17 13:41:29"
   },
   {
     "server": "Sv10",
@@ -408,18 +384,6 @@
     "raw_date": "2026-11-16 00:23:25"
   },
   {
-    "server": "Sv5",
-    "boss": "Lord Silvester",
-    "last_kill": "2026-11-15T21:20:05+02:00",
-    "killer": "Zlostar",
-    "earliest_spawn": "2026-11-19T18:25:05+02:00",
-    "latest_spawn": "2026-11-19T18:25:05+02:00",
-    "min_hours": 93.1,
-    "max_hours": 93.1,
-    "is_fixed": true,
-    "raw_date": "2026-11-15 16:20:05"
-  },
-  {
     "server": "Sv7",
     "boss": "Lord Silvester",
     "last_kill": "2026-11-15T21:29:09+02:00",
@@ -564,18 +528,6 @@
     "raw_date": "2026-11-18 00:43:09"
   },
   {
-    "server": "Sv8",
-    "boss": "God of Darkness",
-    "last_kill": "2026-11-15T14:09:24+02:00",
-    "killer": "andapalla",
-    "earliest_spawn": "2026-11-20T00:09:24+02:00",
-    "latest_spawn": "2026-11-22T14:09:24+02:00",
-    "min_hours": 106.0,
-    "max_hours": 168.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-15 09:09:24"
-  },
-  {
     "server": "Sv10",
     "boss": "Selupan",
     "last_kill": "2026-11-18T14:12:36+02:00",
@@ -670,6 +622,30 @@
     "max_hours": 34.0,
     "is_fixed": true,
     "raw_date": "2026-11-18 10:35:08"
+  },
+  {
+    "server": "Sv6",
+    "boss": "Selupan",
+    "last_kill": "2026-11-18T15:36:31+02:00",
+    "killer": "CSDl3",
+    "earliest_spawn": "2026-11-20T01:36:31+02:00",
+    "latest_spawn": "2026-11-20T01:36:31+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "is_fixed": true,
+    "raw_date": "2026-11-18 10:36:31"
+  },
+  {
+    "server": "Sv15",
+    "boss": "Selupan",
+    "last_kill": "2026-11-18T15:36:41+02:00",
+    "killer": "MagicBlac",
+    "earliest_spawn": "2026-11-20T01:36:41+02:00",
+    "latest_spawn": "2026-11-20T01:36:41+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "is_fixed": true,
+    "raw_date": "2026-11-18 10:36:41"
   },
   {
     "server": "Sv8",
@@ -1128,18 +1104,6 @@
     "raw_date": "2026-11-18 04:27:57"
   },
   {
-    "server": "Sv4",
-    "boss": "Lord Silvester",
-    "last_kill": "2026-11-18T12:47:21+02:00",
-    "killer": "zTargaryeN",
-    "earliest_spawn": "2026-11-22T09:52:21+02:00",
-    "latest_spawn": "2026-11-22T09:52:21+02:00",
-    "min_hours": 93.1,
-    "max_hours": 93.1,
-    "is_fixed": true,
-    "raw_date": "2026-11-18 07:47:21"
-  },
-  {
     "server": "Sv14",
     "boss": "Lord Silvester",
     "last_kill": "2026-11-18T13:01:09+02:00",
@@ -1258,6 +1222,30 @@
     "max_hours": 93.1,
     "is_fixed": true,
     "raw_date": "2026-11-18 10:35:16"
+  },
+  {
+    "server": "Sv4",
+    "boss": "Lord Silvester",
+    "last_kill": "2026-11-18T15:36:55+02:00",
+    "killer": "NoFeArSLAY",
+    "earliest_spawn": "2026-11-22T12:41:55+02:00",
+    "latest_spawn": "2026-11-22T12:41:55+02:00",
+    "min_hours": 93.1,
+    "max_hours": 93.1,
+    "is_fixed": true,
+    "raw_date": "2026-11-18 10:36:55"
+  },
+  {
+    "server": "Sv5",
+    "boss": "Lord Silvester",
+    "last_kill": "2026-11-18T15:37:07+02:00",
+    "killer": "WehPet",
+    "earliest_spawn": "2026-11-22T12:42:07+02:00",
+    "latest_spawn": "2026-11-22T12:42:07+02:00",
+    "min_hours": 93.1,
+    "max_hours": 93.1,
+    "is_fixed": true,
+    "raw_date": "2026-11-18 10:37:07"
   },
   {
     "server": "Sv6",
@@ -1426,5 +1414,17 @@
     "max_hours": 168.0,
     "is_fixed": false,
     "raw_date": "2026-11-18 10:30:41"
+  },
+  {
+    "server": "Sv8",
+    "boss": "God of Darkness",
+    "last_kill": "2026-11-18T15:36:54+02:00",
+    "killer": "Winslayer",
+    "earliest_spawn": "2026-11-23T01:36:54+02:00",
+    "latest_spawn": "2026-11-25T15:36:54+02:00",
+    "min_hours": 106.0,
+    "max_hours": 168.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-18 10:36:54"
   }
 ]
