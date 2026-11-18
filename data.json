@@ -60,18 +60,6 @@
     "raw_date": "2026-11-14 07:47:00"
   },
   {
-    "server": "Sv10",
-    "boss": "Selupan",
-    "last_kill": "2026-11-17T04:03:43+02:00",
-    "killer": "XxVILLEGAS",
-    "earliest_spawn": "2026-11-18T14:03:43+02:00",
-    "latest_spawn": "2026-11-18T14:03:43+02:00",
-    "min_hours": 34.0,
-    "max_hours": 34.0,
-    "is_fixed": true,
-    "raw_date": "2026-11-16 23:03:43"
-  },
-  {
     "server": "Sv14",
     "boss": "Nightmare",
     "last_kill": "2026-11-16T21:56:22+02:00",
@@ -730,6 +718,18 @@
     "max_hours": 168.0,
     "is_fixed": false,
     "raw_date": "2026-11-15 09:09:24"
+  },
+  {
+    "server": "Sv10",
+    "boss": "Selupan",
+    "last_kill": "2026-11-18T14:12:36+02:00",
+    "killer": "XxVILLEGAS",
+    "earliest_spawn": "2026-11-20T00:12:36+02:00",
+    "latest_spawn": "2026-11-20T00:12:36+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "is_fixed": true,
+    "raw_date": "2026-11-18 09:12:36"
   },
   {
     "server": "Sv16",
