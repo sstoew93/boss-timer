@@ -1,18 +1,6 @@
 [
   {
     "server": "Sv10",
-    "boss": "God of Darkness",
-    "last_kill": "2026-11-13T05:56:51+02:00",
-    "killer": "XxVILLEGAS",
-    "earliest_spawn": "2026-11-17T15:56:51+02:00",
-    "latest_spawn": "2026-11-20T05:56:51+02:00",
-    "min_hours": 106.0,
-    "max_hours": 168.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-13 00:56:51"
-  },
-  {
-    "server": "Sv10",
     "boss": "Lord of Ferea",
     "last_kill": "2026-11-14T01:23:51+02:00",
     "killer": "Babay96aga",
@@ -22,18 +10,6 @@
     "max_hours": 182.0,
     "is_fixed": false,
     "raw_date": "2026-11-13 20:23:51"
-  },
-  {
-    "server": "Sv18",
-    "boss": "God of Darkness",
-    "last_kill": "2026-11-13T16:39:11+02:00",
-    "killer": "Zlostar",
-    "earliest_spawn": "2026-11-18T02:39:11+02:00",
-    "latest_spawn": "2026-11-20T16:39:11+02:00",
-    "min_hours": 106.0,
-    "max_hours": 168.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-13 11:39:11"
   },
   {
     "server": "Sv3",
@@ -118,18 +94,6 @@
     "max_hours": 84.6,
     "is_fixed": true,
     "raw_date": "2026-11-15 05:56:43"
-  },
-  {
-    "server": "Sv17",
-    "boss": "Selupan",
-    "last_kill": "2026-11-17T18:22:32+02:00",
-    "killer": "Zlostar",
-    "earliest_spawn": "2026-11-19T04:22:32+02:00",
-    "latest_spawn": "2026-11-19T04:22:32+02:00",
-    "min_hours": 34.0,
-    "max_hours": 34.0,
-    "is_fixed": true,
-    "raw_date": "2026-11-17 13:22:32"
   },
   {
     "server": "Sv10",
@@ -274,30 +238,6 @@
     "max_hours": 34.0,
     "is_fixed": true,
     "raw_date": "2026-11-18 05:44:52"
-  },
-  {
-    "server": "Sv18",
-    "boss": "Lord Silvester",
-    "last_kill": "2026-11-16T00:23:32+02:00",
-    "killer": "mOnRaCWB",
-    "earliest_spawn": "2026-11-19T21:28:32+02:00",
-    "latest_spawn": "2026-11-19T21:28:32+02:00",
-    "min_hours": 93.1,
-    "max_hours": 93.1,
-    "is_fixed": true,
-    "raw_date": "2026-11-15 19:23:32"
-  },
-  {
-    "server": "Sv11",
-    "boss": "Lord of Ferea",
-    "last_kill": "2026-11-15T23:37:26+02:00",
-    "killer": "VAMPETAx",
-    "earliest_spawn": "2026-11-19T21:37:26+02:00",
-    "latest_spawn": "2026-11-23T13:37:26+02:00",
-    "min_hours": 94.0,
-    "max_hours": 182.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-15 18:37:26"
   },
   {
     "server": "Sv11",
@@ -514,6 +454,18 @@
     "max_hours": 34.0,
     "is_fixed": true,
     "raw_date": "2026-11-18 10:48:32"
+  },
+  {
+    "server": "Sv17",
+    "boss": "Selupan",
+    "last_kill": "2026-11-18T15:49:55+02:00",
+    "killer": "CSDl3",
+    "earliest_spawn": "2026-11-20T01:49:55+02:00",
+    "latest_spawn": "2026-11-20T01:49:55+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "is_fixed": true,
+    "raw_date": "2026-11-18 10:49:55"
   },
   {
     "server": "Sv8",
@@ -1068,6 +1020,18 @@
     "raw_date": "2026-11-18 10:49:23"
   },
   {
+    "server": "Sv18",
+    "boss": "Lord Silvester",
+    "last_kill": "2026-11-18T15:50:18+02:00",
+    "killer": "xHdSx",
+    "earliest_spawn": "2026-11-22T12:55:18+02:00",
+    "latest_spawn": "2026-11-22T12:55:18+02:00",
+    "min_hours": 93.1,
+    "max_hours": 93.1,
+    "is_fixed": true,
+    "raw_date": "2026-11-18 10:50:18"
+  },
+  {
     "server": "Sv6",
     "boss": "Lord of Ferea",
     "last_kill": "2026-11-18T15:29:33+02:00",
@@ -1222,6 +1186,18 @@
     "max_hours": 182.0,
     "is_fixed": false,
     "raw_date": "2026-11-18 10:49:09"
+  },
+  {
+    "server": "Sv11",
+    "boss": "Lord of Ferea",
+    "last_kill": "2026-11-18T15:49:27+02:00",
+    "killer": "Bluuux",
+    "earliest_spawn": "2026-11-22T13:49:27+02:00",
+    "latest_spawn": "2026-11-26T05:49:27+02:00",
+    "min_hours": 94.0,
+    "max_hours": 182.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-18 10:49:27"
   },
   {
     "server": "Sv7",
@@ -1426,5 +1402,17 @@
     "max_hours": 168.0,
     "is_fixed": false,
     "raw_date": "2026-11-18 10:48:36"
+  },
+  {
+    "server": "Sv18",
+    "boss": "God of Darkness",
+    "last_kill": "2026-11-18T15:49:39+02:00",
+    "killer": "KatoTaka",
+    "earliest_spawn": "2026-11-23T01:49:39+02:00",
+    "latest_spawn": "2026-11-25T15:49:39+02:00",
+    "min_hours": 106.0,
+    "max_hours": 168.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-18 10:49:39"
   }
 ]
