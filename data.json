@@ -324,18 +324,6 @@
     "raw_date": "2026-11-17 21:26:25"
   },
   {
-    "server": "Sv3",
-    "boss": "Nix",
-    "last_kill": "2026-11-15T16:07:32+02:00",
-    "killer": "Babayaga98",
-    "earliest_spawn": "2026-11-19T20:12:32+02:00",
-    "latest_spawn": "2026-11-20T10:07:32+02:00",
-    "min_hours": 100.1,
-    "max_hours": 114.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-15 11:07:32"
-  },
-  {
     "server": "Sv5",
     "boss": "Nightmare",
     "last_kill": "2026-11-18T03:35:11+02:00",
@@ -742,18 +730,6 @@
     "max_hours": 168.0,
     "is_fixed": false,
     "raw_date": "2026-11-16 05:03:42"
-  },
-  {
-    "server": "Sv14",
-    "boss": "Nix",
-    "last_kill": "2026-11-16T19:12:07+02:00",
-    "killer": "Zlostar",
-    "earliest_spawn": "2026-11-20T23:17:07+02:00",
-    "latest_spawn": "2026-11-21T13:12:07+02:00",
-    "min_hours": 100.1,
-    "max_hours": 114.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-16 14:12:07"
   },
   {
     "server": "Sv2",
@@ -1306,6 +1282,30 @@
     "max_hours": 114.0,
     "is_fixed": false,
     "raw_date": "2026-11-18 10:41:02"
+  },
+  {
+    "server": "Sv3",
+    "boss": "Nix",
+    "last_kill": "2026-11-18T15:42:59+02:00",
+    "killer": "GatlingGun",
+    "earliest_spawn": "2026-11-22T19:47:59+02:00",
+    "latest_spawn": "2026-11-23T09:42:59+02:00",
+    "min_hours": 100.1,
+    "max_hours": 114.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-18 10:42:59"
+  },
+  {
+    "server": "Sv14",
+    "boss": "Nix",
+    "last_kill": "2026-11-18T15:43:06+02:00",
+    "killer": "KatoTaka",
+    "earliest_spawn": "2026-11-22T19:48:06+02:00",
+    "latest_spawn": "2026-11-23T09:43:06+02:00",
+    "min_hours": 100.1,
+    "max_hours": 114.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-18 10:43:06"
   },
   {
     "server": "Sv1",
