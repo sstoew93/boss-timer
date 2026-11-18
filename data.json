@@ -972,18 +972,6 @@
     "raw_date": "2026-11-16 10:04:22"
   },
   {
-    "server": "Sv1",
-    "boss": "God of Darkness",
-    "last_kill": "2026-11-16T15:52:12+02:00",
-    "killer": "PinkMoon",
-    "earliest_spawn": "2026-11-21T01:52:12+02:00",
-    "latest_spawn": "2026-11-23T15:52:12+02:00",
-    "min_hours": 106.0,
-    "max_hours": 168.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-16 10:52:12"
-  },
-  {
     "server": "Sv2",
     "boss": "Nix",
     "last_kill": "2026-11-16T23:54:02+02:00",
@@ -1426,5 +1414,17 @@
     "max_hours": 114.0,
     "is_fixed": false,
     "raw_date": "2026-11-18 02:37:08"
+  },
+  {
+    "server": "Sv1",
+    "boss": "God of Darkness",
+    "last_kill": "2026-11-18T15:27:12+02:00",
+    "killer": "SiriTesudo",
+    "earliest_spawn": "2026-11-23T01:27:12+02:00",
+    "latest_spawn": "2026-11-25T15:27:12+02:00",
+    "min_hours": 106.0,
+    "max_hours": 168.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-18 10:27:12"
   }
 ]
