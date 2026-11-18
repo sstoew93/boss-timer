@@ -60,18 +60,6 @@
     "raw_date": "2026-11-14 07:47:00"
   },
   {
-    "server": "Sv3",
-    "boss": "Core Magriffy",
-    "last_kill": "2026-11-14T23:04:09+02:00",
-    "killer": "PinkKitty",
-    "earliest_spawn": "2026-11-18T11:39:09+02:00",
-    "latest_spawn": "2026-11-18T11:39:09+02:00",
-    "min_hours": 84.6,
-    "max_hours": 84.6,
-    "is_fixed": true,
-    "raw_date": "2026-11-14 18:04:09"
-  },
-  {
     "server": "Sv1",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-14T23:07:47+02:00",
@@ -1354,6 +1342,18 @@
     "max_hours": 84.6,
     "is_fixed": true,
     "raw_date": "2026-11-18 06:37:28"
+  },
+  {
+    "server": "Sv3",
+    "boss": "Core Magriffy",
+    "last_kill": "2026-11-18T11:43:07+02:00",
+    "killer": "JexusGL",
+    "earliest_spawn": "2026-11-22T00:18:07+02:00",
+    "latest_spawn": "2026-11-22T00:18:07+02:00",
+    "min_hours": 84.6,
+    "max_hours": 84.6,
+    "is_fixed": true,
+    "raw_date": "2026-11-18 06:43:07"
   },
   {
     "server": "Sv9",
