@@ -408,18 +408,6 @@
     "raw_date": "2026-11-17 23:43:27"
   },
   {
-    "server": "Sv3",
-    "boss": "God of Darkness",
-    "last_kill": "2026-11-15T05:06:44+02:00",
-    "killer": "PinkMoon",
-    "earliest_spawn": "2026-11-19T15:06:44+02:00",
-    "latest_spawn": "2026-11-22T05:06:44+02:00",
-    "min_hours": 106.0,
-    "max_hours": 168.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-15 00:06:44"
-  },
-  {
     "server": "Sv7",
     "boss": "God of Darkness",
     "last_kill": "2026-11-15T05:16:12+02:00",
@@ -960,18 +948,6 @@
     "raw_date": "2026-11-16 14:12:07"
   },
   {
-    "server": "Sv6",
-    "boss": "God of Darkness",
-    "last_kill": "2026-11-16T15:04:22+02:00",
-    "killer": "Kasperiano",
-    "earliest_spawn": "2026-11-21T01:04:22+02:00",
-    "latest_spawn": "2026-11-23T15:04:22+02:00",
-    "min_hours": 106.0,
-    "max_hours": 168.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-16 10:04:22"
-  },
-  {
     "server": "Sv2",
     "boss": "Nix",
     "last_kill": "2026-11-16T23:54:02+02:00",
@@ -1426,5 +1402,29 @@
     "max_hours": 168.0,
     "is_fixed": false,
     "raw_date": "2026-11-18 10:28:20"
+  },
+  {
+    "server": "Sv3",
+    "boss": "God of Darkness",
+    "last_kill": "2026-11-18T15:28:39+02:00",
+    "killer": "Boss1987",
+    "earliest_spawn": "2026-11-23T01:28:39+02:00",
+    "latest_spawn": "2026-11-25T15:28:39+02:00",
+    "min_hours": 106.0,
+    "max_hours": 168.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-18 10:28:39"
+  },
+  {
+    "server": "Sv6",
+    "boss": "God of Darkness",
+    "last_kill": "2026-11-18T15:28:50+02:00",
+    "killer": "UITraKill",
+    "earliest_spawn": "2026-11-23T01:28:50+02:00",
+    "latest_spawn": "2026-11-25T15:28:50+02:00",
+    "min_hours": 106.0,
+    "max_hours": 168.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-18 10:28:50"
   }
 ]
