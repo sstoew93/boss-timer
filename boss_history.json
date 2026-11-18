@@ -862,5 +862,23 @@
     "boss": "God of Darkness",
     "killer": "Winslayer",
     "raw_date_br": "2026-11-18 10:36:54"
+  },
+  {
+    "server": "Sv7",
+    "boss": "Lord of Ferea",
+    "killer": "Bibriella",
+    "raw_date_br": "2026-11-18 10:39:16"
+  },
+  {
+    "server": "Sv8",
+    "boss": "Lord of Ferea",
+    "killer": "WhiteTulip",
+    "raw_date_br": "2026-11-18 10:38:44"
+  },
+  {
+    "server": "Sv1",
+    "boss": "Lord of Ferea",
+    "killer": "DouHun",
+    "raw_date_br": "2026-11-18 10:38:32"
   }
 ]
