@@ -420,18 +420,6 @@
     "raw_date": "2026-11-16 05:00:41"
   },
   {
-    "server": "Sv14",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-18T14:55:41+02:00",
-    "killer": "CHINOOS0",
-    "earliest_spawn": "2026-11-20T07:40:41+02:00",
-    "latest_spawn": "2026-11-20T07:40:41+02:00",
-    "min_hours": 40.8,
-    "max_hours": 40.8,
-    "is_fixed": true,
-    "raw_date": "2026-11-18 09:55:41"
-  },
-  {
     "server": "Sv15",
     "boss": "Nix",
     "last_kill": "2026-11-16T04:17:53+02:00",
@@ -466,6 +454,18 @@
     "max_hours": 40.8,
     "is_fixed": true,
     "raw_date": "2026-11-18 11:08:36"
+  },
+  {
+    "server": "Sv14",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-18T16:12:18+02:00",
+    "killer": "FuukiiSL",
+    "earliest_spawn": "2026-11-20T08:57:18+02:00",
+    "latest_spawn": "2026-11-20T08:57:18+02:00",
+    "min_hours": 40.8,
+    "max_hours": 40.8,
+    "is_fixed": true,
+    "raw_date": "2026-11-18 11:12:18"
   },
   {
     "server": "Sv4",
