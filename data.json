@@ -228,30 +228,6 @@
     "raw_date": "2026-11-17 13:29:35"
   },
   {
-    "server": "Sv14",
-    "boss": "Selupan",
-    "last_kill": "2026-11-17T18:33:07+02:00",
-    "killer": "PinkKitty",
-    "earliest_spawn": "2026-11-19T04:33:07+02:00",
-    "latest_spawn": "2026-11-19T04:33:07+02:00",
-    "min_hours": 34.0,
-    "max_hours": 34.0,
-    "is_fixed": true,
-    "raw_date": "2026-11-17 13:33:07"
-  },
-  {
-    "server": "Sv2",
-    "boss": "Selupan",
-    "last_kill": "2026-11-17T18:35:45+02:00",
-    "killer": "PinkKitty",
-    "earliest_spawn": "2026-11-19T04:35:45+02:00",
-    "latest_spawn": "2026-11-19T04:35:45+02:00",
-    "min_hours": 34.0,
-    "max_hours": 34.0,
-    "is_fixed": true,
-    "raw_date": "2026-11-17 13:35:45"
-  },
-  {
     "server": "Sv3",
     "boss": "Selupan",
     "last_kill": "2026-11-17T18:39:45+02:00",
@@ -694,6 +670,30 @@
     "max_hours": 34.0,
     "is_fixed": true,
     "raw_date": "2026-11-18 10:30:21"
+  },
+  {
+    "server": "Sv14",
+    "boss": "Selupan",
+    "last_kill": "2026-11-18T15:32:53+02:00",
+    "killer": "Cracker666",
+    "earliest_spawn": "2026-11-20T01:32:53+02:00",
+    "latest_spawn": "2026-11-20T01:32:53+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "is_fixed": true,
+    "raw_date": "2026-11-18 10:32:53"
+  },
+  {
+    "server": "Sv2",
+    "boss": "Selupan",
+    "last_kill": "2026-11-18T15:32:53+02:00",
+    "killer": "MagicBlac",
+    "earliest_spawn": "2026-11-20T01:32:53+02:00",
+    "latest_spawn": "2026-11-20T01:32:53+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "is_fixed": true,
+    "raw_date": "2026-11-18 10:32:53"
   },
   {
     "server": "Sv8",
@@ -1152,18 +1152,6 @@
     "raw_date": "2026-11-18 04:27:57"
   },
   {
-    "server": "Sv15",
-    "boss": "Lord of Ferea",
-    "last_kill": "2026-11-18T11:09:26+02:00",
-    "killer": "MrMyzor",
-    "earliest_spawn": "2026-11-22T09:09:26+02:00",
-    "latest_spawn": "2026-11-26T01:09:26+02:00",
-    "min_hours": 94.0,
-    "max_hours": 182.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-18 06:09:26"
-  },
-  {
     "server": "Sv4",
     "boss": "Lord Silvester",
     "last_kill": "2026-11-18T12:47:21+02:00",
@@ -1318,6 +1306,18 @@
     "max_hours": 182.0,
     "is_fixed": false,
     "raw_date": "2026-11-18 10:31:27"
+  },
+  {
+    "server": "Sv15",
+    "boss": "Lord of Ferea",
+    "last_kill": "2026-11-18T15:33:17+02:00",
+    "killer": "KatoTaka",
+    "earliest_spawn": "2026-11-22T13:33:17+02:00",
+    "latest_spawn": "2026-11-26T05:33:17+02:00",
+    "min_hours": 94.0,
+    "max_hours": 182.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-18 10:33:17"
   },
   {
     "server": "Sv1",
