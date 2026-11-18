@@ -288,18 +288,6 @@
     "raw_date": "2026-11-16 00:20:23"
   },
   {
-    "server": "Sv7",
-    "boss": "Core Magriffy",
-    "last_kill": "2026-11-16T05:23:18+02:00",
-    "killer": "xTHExBOOSx",
-    "earliest_spawn": "2026-11-19T17:58:18+02:00",
-    "latest_spawn": "2026-11-19T17:58:18+02:00",
-    "min_hours": 84.6,
-    "max_hours": 84.6,
-    "is_fixed": true,
-    "raw_date": "2026-11-16 00:23:18"
-  },
-  {
     "server": "Sv6",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-16T05:23:25+02:00",
@@ -829,18 +817,6 @@
   },
   {
     "server": "Sv9",
-    "boss": "Lord Silvester",
-    "last_kill": "2026-11-18T00:30:26+02:00",
-    "killer": "allisonSL",
-    "earliest_spawn": "2026-11-21T21:35:26+02:00",
-    "latest_spawn": "2026-11-21T21:35:26+02:00",
-    "min_hours": 93.1,
-    "max_hours": 93.1,
-    "is_fixed": true,
-    "raw_date": "2026-11-17 19:30:26"
-  },
-  {
-    "server": "Sv9",
     "boss": "Lord of Ferea",
     "last_kill": "2026-11-18T00:27:17+02:00",
     "killer": "HangeZoe",
@@ -960,6 +936,18 @@
     "raw_date": "2026-11-18 10:44:07"
   },
   {
+    "server": "Sv7",
+    "boss": "Core Magriffy",
+    "last_kill": "2026-11-18T15:44:53+02:00",
+    "killer": "Thorny",
+    "earliest_spawn": "2026-11-22T04:19:53+02:00",
+    "latest_spawn": "2026-11-22T04:19:53+02:00",
+    "min_hours": 84.6,
+    "max_hours": 84.6,
+    "is_fixed": true,
+    "raw_date": "2026-11-18 10:44:53"
+  },
+  {
     "server": "Sv9",
     "boss": "Nix",
     "last_kill": "2026-11-18T00:34:52+02:00",
@@ -994,18 +982,6 @@
     "max_hours": 93.1,
     "is_fixed": true,
     "raw_date": "2026-11-18 08:18:56"
-  },
-  {
-    "server": "Sv9",
-    "boss": "God of Darkness",
-    "last_kill": "2026-11-18T00:25:20+02:00",
-    "killer": "Kasperiano",
-    "earliest_spawn": "2026-11-22T10:25:20+02:00",
-    "latest_spawn": "2026-11-25T00:25:20+02:00",
-    "min_hours": 106.0,
-    "max_hours": 168.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-17 19:25:20"
   },
   {
     "server": "Sv17",
@@ -1150,6 +1126,18 @@
     "max_hours": 93.1,
     "is_fixed": true,
     "raw_date": "2026-11-18 10:41:00"
+  },
+  {
+    "server": "Sv9",
+    "boss": "Lord Silvester",
+    "last_kill": "2026-11-18T15:45:22+02:00",
+    "killer": "SunSUM",
+    "earliest_spawn": "2026-11-22T12:50:22+02:00",
+    "latest_spawn": "2026-11-22T12:50:22+02:00",
+    "min_hours": 93.1,
+    "max_hours": 93.1,
+    "is_fixed": true,
+    "raw_date": "2026-11-18 10:45:22"
   },
   {
     "server": "Sv6",
@@ -1426,5 +1414,17 @@
     "max_hours": 168.0,
     "is_fixed": false,
     "raw_date": "2026-11-18 10:36:54"
+  },
+  {
+    "server": "Sv9",
+    "boss": "God of Darkness",
+    "last_kill": "2026-11-18T15:44:57+02:00",
+    "killer": "ShuraSL",
+    "earliest_spawn": "2026-11-23T01:44:57+02:00",
+    "latest_spawn": "2026-11-25T15:44:57+02:00",
+    "min_hours": 106.0,
+    "max_hours": 168.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-18 10:44:57"
   }
 ]
