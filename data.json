@@ -60,18 +60,6 @@
     "raw_date": "2026-11-13 11:39:11"
   },
   {
-    "server": "Sv18",
-    "boss": "Selupan",
-    "last_kill": "2026-11-16T18:36:34+02:00",
-    "killer": "Zlostar",
-    "earliest_spawn": "2026-11-18T04:36:34+02:00",
-    "latest_spawn": "2026-11-18T04:36:34+02:00",
-    "min_hours": 34.0,
-    "max_hours": 34.0,
-    "is_fixed": true,
-    "raw_date": "2026-11-16 13:36:34"
-  },
-  {
     "server": "Sv8",
     "boss": "Nightmare",
     "last_kill": "2026-11-16T12:02:43+02:00",
@@ -754,6 +742,18 @@
     "max_hours": 34.0,
     "is_fixed": true,
     "raw_date": "2026-11-17 23:07:23"
+  },
+  {
+    "server": "Sv18",
+    "boss": "Selupan",
+    "last_kill": "2026-11-18T04:43:27+02:00",
+    "killer": "Kasperiano",
+    "earliest_spawn": "2026-11-19T14:43:27+02:00",
+    "latest_spawn": "2026-11-19T14:43:27+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "is_fixed": true,
+    "raw_date": "2026-11-17 23:43:27"
   },
   {
     "server": "Sv3",
