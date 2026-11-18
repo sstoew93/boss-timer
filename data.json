@@ -36,18 +36,6 @@
     "raw_date": "2026-11-17 19:21:48"
   },
   {
-    "server": "Sv9",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-18T00:47:02+02:00",
-    "killer": "Crimsum",
-    "earliest_spawn": "2026-11-19T17:32:02+02:00",
-    "latest_spawn": "2026-11-19T17:32:02+02:00",
-    "min_hours": 40.8,
-    "max_hours": 40.8,
-    "is_fixed": true,
-    "raw_date": "2026-11-17 19:47:02"
-  },
-  {
     "server": "Sv1",
     "boss": "Selupan",
     "last_kill": "2026-11-18T15:30:21+02:00",
@@ -430,6 +418,18 @@
     "max_hours": 40.8,
     "is_fixed": true,
     "raw_date": "2026-11-18 12:07:52"
+  },
+  {
+    "server": "Sv9",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-18T17:19:57+02:00",
+    "killer": "FuukiiSL",
+    "earliest_spawn": "2026-11-20T10:04:57+02:00",
+    "latest_spawn": "2026-11-20T10:04:57+02:00",
+    "min_hours": 40.8,
+    "max_hours": 40.8,
+    "is_fixed": true,
+    "raw_date": "2026-11-18 12:19:57"
   },
   {
     "server": "Sv2",
