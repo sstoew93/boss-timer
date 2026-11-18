@@ -204,18 +204,6 @@
     "raw_date": "2026-11-17 14:23:02"
   },
   {
-    "server": "Sv19",
-    "boss": "Lord of Ferea",
-    "last_kill": "2026-11-15T08:14:27+02:00",
-    "killer": "Babayaga96",
-    "earliest_spawn": "2026-11-19T06:14:27+02:00",
-    "latest_spawn": "2026-11-22T22:14:27+02:00",
-    "min_hours": 94.0,
-    "max_hours": 182.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-15 03:14:27"
-  },
-  {
     "server": "Sv6",
     "boss": "Nightmare",
     "last_kill": "2026-11-17T15:57:51+02:00",
@@ -912,18 +900,6 @@
     "raw_date": "2026-11-17 06:41:53"
   },
   {
-    "server": "Sv8",
-    "boss": "Lord Silvester",
-    "last_kill": "2026-11-17T18:47:38+02:00",
-    "killer": "SicooBET",
-    "earliest_spawn": "2026-11-21T15:52:38+02:00",
-    "latest_spawn": "2026-11-21T15:52:38+02:00",
-    "min_hours": 93.1,
-    "max_hours": 93.1,
-    "is_fixed": true,
-    "raw_date": "2026-11-17 13:47:38"
-  },
-  {
     "server": "Sv9",
     "boss": "Lord Silvester",
     "last_kill": "2026-11-18T00:30:26+02:00",
@@ -958,30 +934,6 @@
     "max_hours": 84.6,
     "is_fixed": true,
     "raw_date": "2026-11-18 06:25:42"
-  },
-  {
-    "server": "Sv2",
-    "boss": "Core Magriffy",
-    "last_kill": "2026-11-18T11:34:17+02:00",
-    "killer": "Lion8",
-    "earliest_spawn": "2026-11-22T00:09:17+02:00",
-    "latest_spawn": "2026-11-22T00:09:17+02:00",
-    "min_hours": 84.6,
-    "max_hours": 84.6,
-    "is_fixed": true,
-    "raw_date": "2026-11-18 06:34:17"
-  },
-  {
-    "server": "Sv3",
-    "boss": "Core Magriffy",
-    "last_kill": "2026-11-18T11:43:07+02:00",
-    "killer": "JexusGL",
-    "earliest_spawn": "2026-11-22T00:18:07+02:00",
-    "latest_spawn": "2026-11-22T00:18:07+02:00",
-    "min_hours": 84.6,
-    "max_hours": 84.6,
-    "is_fixed": true,
-    "raw_date": "2026-11-18 06:43:07"
   },
   {
     "server": "Sv16",
@@ -1042,6 +994,30 @@
     "max_hours": 84.6,
     "is_fixed": true,
     "raw_date": "2026-11-18 10:36:01"
+  },
+  {
+    "server": "Sv3",
+    "boss": "Core Magriffy",
+    "last_kill": "2026-11-18T15:39:50+02:00",
+    "killer": "Jurlique",
+    "earliest_spawn": "2026-11-22T04:14:50+02:00",
+    "latest_spawn": "2026-11-22T04:14:50+02:00",
+    "min_hours": 84.6,
+    "max_hours": 84.6,
+    "is_fixed": true,
+    "raw_date": "2026-11-18 10:39:50"
+  },
+  {
+    "server": "Sv2",
+    "boss": "Core Magriffy",
+    "last_kill": "2026-11-18T15:40:35+02:00",
+    "killer": "Atas",
+    "earliest_spawn": "2026-11-22T04:15:35+02:00",
+    "latest_spawn": "2026-11-22T04:15:35+02:00",
+    "min_hours": 84.6,
+    "max_hours": 84.6,
+    "is_fixed": true,
+    "raw_date": "2026-11-18 10:40:35"
   },
   {
     "server": "Sv9",
@@ -1212,6 +1188,18 @@
     "raw_date": "2026-11-18 10:38:20"
   },
   {
+    "server": "Sv8",
+    "boss": "Lord Silvester",
+    "last_kill": "2026-11-18T15:40:06+02:00",
+    "killer": "CSD13",
+    "earliest_spawn": "2026-11-22T12:45:06+02:00",
+    "latest_spawn": "2026-11-22T12:45:06+02:00",
+    "min_hours": 93.1,
+    "max_hours": 93.1,
+    "is_fixed": true,
+    "raw_date": "2026-11-18 10:40:06"
+  },
+  {
     "server": "Sv6",
     "boss": "Lord of Ferea",
     "last_kill": "2026-11-18T15:29:33+02:00",
@@ -1306,6 +1294,18 @@
     "max_hours": 182.0,
     "is_fixed": false,
     "raw_date": "2026-11-18 10:39:16"
+  },
+  {
+    "server": "Sv19",
+    "boss": "Lord of Ferea",
+    "last_kill": "2026-11-18T15:40:43+02:00",
+    "killer": "SolrakDVDL",
+    "earliest_spawn": "2026-11-22T13:40:43+02:00",
+    "latest_spawn": "2026-11-26T05:40:43+02:00",
+    "min_hours": 94.0,
+    "max_hours": 182.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-18 10:40:43"
   },
   {
     "server": "Sv1",
