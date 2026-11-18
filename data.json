@@ -360,18 +360,6 @@
     "raw_date": "2026-11-17 13:37:33"
   },
   {
-    "server": "Sv14",
-    "boss": "Lord of Ferea",
-    "last_kill": "2026-11-15T13:52:03+02:00",
-    "killer": "PinkKitty",
-    "earliest_spawn": "2026-11-19T11:52:03+02:00",
-    "latest_spawn": "2026-11-23T03:52:03+02:00",
-    "min_hours": 94.0,
-    "max_hours": 182.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-15 08:52:03"
-  },
-  {
     "server": "Sv7",
     "boss": "Nightmare",
     "last_kill": "2026-11-17T20:00:16+02:00",
@@ -1176,18 +1164,6 @@
     "raw_date": "2026-11-18 06:09:26"
   },
   {
-    "server": "Sv2",
-    "boss": "Lord Silvester",
-    "last_kill": "2026-11-18T12:41:14+02:00",
-    "killer": "zTargaryeN",
-    "earliest_spawn": "2026-11-22T09:46:14+02:00",
-    "latest_spawn": "2026-11-22T09:46:14+02:00",
-    "min_hours": 93.1,
-    "max_hours": 93.1,
-    "is_fixed": true,
-    "raw_date": "2026-11-18 07:41:14"
-  },
-  {
     "server": "Sv4",
     "boss": "Lord Silvester",
     "last_kill": "2026-11-18T12:47:21+02:00",
@@ -1296,6 +1272,18 @@
     "raw_date": "2026-11-18 10:30:35"
   },
   {
+    "server": "Sv2",
+    "boss": "Lord Silvester",
+    "last_kill": "2026-11-18T15:32:17+02:00",
+    "killer": "MrCom",
+    "earliest_spawn": "2026-11-22T12:37:17+02:00",
+    "latest_spawn": "2026-11-22T12:37:17+02:00",
+    "min_hours": 93.1,
+    "max_hours": 93.1,
+    "is_fixed": true,
+    "raw_date": "2026-11-18 10:32:17"
+  },
+  {
     "server": "Sv6",
     "boss": "Lord of Ferea",
     "last_kill": "2026-11-18T15:29:33+02:00",
@@ -1318,6 +1306,18 @@
     "max_hours": 182.0,
     "is_fixed": false,
     "raw_date": "2026-11-18 10:31:09"
+  },
+  {
+    "server": "Sv14",
+    "boss": "Lord of Ferea",
+    "last_kill": "2026-11-18T15:31:27+02:00",
+    "killer": "DouHun",
+    "earliest_spawn": "2026-11-22T13:31:27+02:00",
+    "latest_spawn": "2026-11-26T05:31:27+02:00",
+    "min_hours": 94.0,
+    "max_hours": 182.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-18 10:31:27"
   },
   {
     "server": "Sv1",
