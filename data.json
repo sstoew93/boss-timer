@@ -60,18 +60,6 @@
     "raw_date": "2026-11-14 07:47:00"
   },
   {
-    "server": "Sv1",
-    "boss": "Core Magriffy",
-    "last_kill": "2026-11-14T23:07:47+02:00",
-    "killer": "xTHExBOOSx",
-    "earliest_spawn": "2026-11-18T11:42:47+02:00",
-    "latest_spawn": "2026-11-18T11:42:47+02:00",
-    "min_hours": 84.6,
-    "max_hours": 84.6,
-    "is_fixed": true,
-    "raw_date": "2026-11-14 18:07:47"
-  },
-  {
     "server": "Sv2",
     "boss": "Lord Silvester",
     "last_kill": "2026-11-14T15:33:21+02:00",
@@ -1354,6 +1342,18 @@
     "max_hours": 84.6,
     "is_fixed": true,
     "raw_date": "2026-11-18 06:43:07"
+  },
+  {
+    "server": "Sv1",
+    "boss": "Core Magriffy",
+    "last_kill": "2026-11-18T11:45:39+02:00",
+    "killer": "xSLuZ011X",
+    "earliest_spawn": "2026-11-22T00:20:39+02:00",
+    "latest_spawn": "2026-11-22T00:20:39+02:00",
+    "min_hours": 84.6,
+    "max_hours": 84.6,
+    "is_fixed": true,
+    "raw_date": "2026-11-18 06:45:39"
   },
   {
     "server": "Sv9",
