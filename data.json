@@ -516,18 +516,6 @@
     "raw_date": "2026-11-15 16:29:09"
   },
   {
-    "server": "Sv5",
-    "boss": "Lord of Ferea",
-    "last_kill": "2026-11-15T20:50:43+02:00",
-    "killer": "PoluElfa",
-    "earliest_spawn": "2026-11-19T18:50:43+02:00",
-    "latest_spawn": "2026-11-23T10:50:43+02:00",
-    "min_hours": 94.0,
-    "max_hours": 182.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-15 15:50:43"
-  },
-  {
     "server": "Sv4",
     "boss": "Nightmare",
     "last_kill": "2026-11-18T02:26:25+02:00",
@@ -1318,6 +1306,18 @@
     "max_hours": 182.0,
     "is_fixed": false,
     "raw_date": "2026-11-18 10:29:33"
+  },
+  {
+    "server": "Sv5",
+    "boss": "Lord of Ferea",
+    "last_kill": "2026-11-18T15:31:09+02:00",
+    "killer": "Lion8",
+    "earliest_spawn": "2026-11-22T13:31:09+02:00",
+    "latest_spawn": "2026-11-26T05:31:09+02:00",
+    "min_hours": 94.0,
+    "max_hours": 182.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-18 10:31:09"
   },
   {
     "server": "Sv1",
