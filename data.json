@@ -12,18 +12,6 @@
     "raw_date": "2026-11-15 00:16:12"
   },
   {
-    "server": "Sv9",
-    "boss": "Selupan",
-    "last_kill": "2026-11-18T15:47:36+02:00",
-    "killer": "CSDl3",
-    "earliest_spawn": "2026-11-20T01:47:36+02:00",
-    "latest_spawn": "2026-11-20T01:47:36+02:00",
-    "min_hours": 34.0,
-    "max_hours": 34.0,
-    "is_fixed": true,
-    "raw_date": "2026-11-18 10:47:36"
-  },
-  {
     "server": "Sv16",
     "boss": "Selupan",
     "last_kill": "2026-11-18T15:48:32+02:00",
@@ -442,6 +430,18 @@
     "max_hours": 34.0,
     "is_fixed": true,
     "raw_date": "2026-11-19 20:48:29"
+  },
+  {
+    "server": "Sv9",
+    "boss": "Selupan",
+    "last_kill": "2026-11-20T01:53:19+02:00",
+    "killer": "PinkMoon",
+    "earliest_spawn": "2026-11-21T11:53:19+02:00",
+    "latest_spawn": "2026-11-21T11:53:19+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "is_fixed": true,
+    "raw_date": "2026-11-19 20:53:19"
   },
   {
     "server": "Sv16",
