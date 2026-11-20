@@ -24,18 +24,6 @@
     "raw_date": "2026-11-15 23:17:53"
   },
   {
-    "server": "Sv11",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-18T18:36:31+02:00",
-    "killer": "Crimsum",
-    "earliest_spawn": "2026-11-20T11:21:31+02:00",
-    "latest_spawn": "2026-11-20T11:21:31+02:00",
-    "min_hours": 40.8,
-    "max_hours": 40.8,
-    "is_fixed": true,
-    "raw_date": "2026-11-18 13:36:31"
-  },
-  {
     "server": "Sv2",
     "boss": "Nix",
     "last_kill": "2026-11-16T23:54:02+02:00",
@@ -598,6 +586,18 @@
     "max_hours": 84.6,
     "is_fixed": true,
     "raw_date": "2026-11-18 10:51:31"
+  },
+  {
+    "server": "Sv11",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-20T11:41:46+02:00",
+    "killer": "SolrakDVDL",
+    "earliest_spawn": "2026-11-22T04:26:46+02:00",
+    "latest_spawn": "2026-11-22T04:26:46+02:00",
+    "min_hours": 40.8,
+    "max_hours": 40.8,
+    "is_fixed": true,
+    "raw_date": "2026-11-20 06:41:46"
   },
   {
     "server": "Sv4",
