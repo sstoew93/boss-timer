@@ -36,18 +36,6 @@
     "raw_date": "2026-11-18 11:28:58"
   },
   {
-    "server": "Sv6",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-18T17:07:52+02:00",
-    "killer": "RutherFort",
-    "earliest_spawn": "2026-11-20T09:52:52+02:00",
-    "latest_spawn": "2026-11-20T09:52:52+02:00",
-    "min_hours": 40.8,
-    "max_hours": 40.8,
-    "is_fixed": true,
-    "raw_date": "2026-11-18 12:07:52"
-  },
-  {
     "server": "Sv9",
     "boss": "Nightmare",
     "last_kill": "2026-11-18T17:19:57+02:00",
@@ -454,6 +442,18 @@
     "max_hours": 40.8,
     "is_fixed": true,
     "raw_date": "2026-11-20 05:03:19"
+  },
+  {
+    "server": "Sv6",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-20T10:07:02+02:00",
+    "killer": "SolrakDVDL",
+    "earliest_spawn": "2026-11-22T02:52:02+02:00",
+    "latest_spawn": "2026-11-22T02:52:02+02:00",
+    "min_hours": 40.8,
+    "max_hours": 40.8,
+    "is_fixed": true,
+    "raw_date": "2026-11-20 05:07:02"
   },
   {
     "server": "Sv1",
