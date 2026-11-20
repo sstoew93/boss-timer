@@ -12,18 +12,6 @@
     "raw_date": "2026-11-15 00:16:12"
   },
   {
-    "server": "Sv10",
-    "boss": "Selupan",
-    "last_kill": "2026-11-18T16:05:09+02:00",
-    "killer": "Collette",
-    "earliest_spawn": "2026-11-20T02:05:09+02:00",
-    "latest_spawn": "2026-11-20T02:05:09+02:00",
-    "min_hours": 34.0,
-    "max_hours": 34.0,
-    "is_fixed": true,
-    "raw_date": "2026-11-18 11:05:09"
-  },
-  {
     "server": "Sv15",
     "boss": "Nix",
     "last_kill": "2026-11-16T04:17:53+02:00",
@@ -442,6 +430,18 @@
     "max_hours": 34.0,
     "is_fixed": true,
     "raw_date": "2026-11-19 21:07:01"
+  },
+  {
+    "server": "Sv10",
+    "boss": "Selupan",
+    "last_kill": "2026-11-20T02:15:37+02:00",
+    "killer": "XxVILLEGAS",
+    "earliest_spawn": "2026-11-21T12:15:37+02:00",
+    "latest_spawn": "2026-11-21T12:15:37+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "is_fixed": true,
+    "raw_date": "2026-11-19 21:15:37"
   },
   {
     "server": "Sv16",
