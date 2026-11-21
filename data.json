@@ -36,30 +36,6 @@
     "raw_date": "2026-11-16 18:54:02"
   },
   {
-    "server": "Sv15",
-    "boss": "Selupan",
-    "last_kill": "2026-11-20T01:42:54+02:00",
-    "killer": "PinkKitty",
-    "earliest_spawn": "2026-11-21T11:42:54+02:00",
-    "latest_spawn": "2026-11-21T11:42:54+02:00",
-    "min_hours": 34.0,
-    "max_hours": 34.0,
-    "is_fixed": true,
-    "raw_date": "2026-11-19 20:42:54"
-  },
-  {
-    "server": "Sv8",
-    "boss": "Selupan",
-    "last_kill": "2026-11-20T01:43:38+02:00",
-    "killer": "PinkMoon",
-    "earliest_spawn": "2026-11-21T11:43:38+02:00",
-    "latest_spawn": "2026-11-21T11:43:38+02:00",
-    "min_hours": 34.0,
-    "max_hours": 34.0,
-    "is_fixed": true,
-    "raw_date": "2026-11-19 20:43:38"
-  },
-  {
     "server": "Sv7",
     "boss": "Selupan",
     "last_kill": "2026-11-20T01:44:44+02:00",
@@ -1234,6 +1210,30 @@
     "max_hours": 34.0,
     "is_fixed": true,
     "raw_date": "2026-11-21 06:47:35"
+  },
+  {
+    "server": "Sv15",
+    "boss": "Selupan",
+    "last_kill": "2026-11-21T11:48:26+02:00",
+    "killer": "PiperSL",
+    "earliest_spawn": "2026-11-22T21:48:26+02:00",
+    "latest_spawn": "2026-11-22T21:48:26+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "is_fixed": true,
+    "raw_date": "2026-11-21 06:48:26"
+  },
+  {
+    "server": "Sv8",
+    "boss": "Selupan",
+    "last_kill": "2026-11-21T11:49:18+02:00",
+    "killer": "PiperSL",
+    "earliest_spawn": "2026-11-22T21:49:18+02:00",
+    "latest_spawn": "2026-11-22T21:49:18+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "is_fixed": true,
+    "raw_date": "2026-11-21 06:49:18"
   },
   {
     "server": "Sv1",
