@@ -60,18 +60,6 @@
     "raw_date": "2026-11-20 04:47:24"
   },
   {
-    "server": "Sv9",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-20T10:17:34+02:00",
-    "killer": "Praxis",
-    "earliest_spawn": "2026-11-22T03:02:34+02:00",
-    "latest_spawn": "2026-11-22T03:02:34+02:00",
-    "min_hours": 40.8,
-    "max_hours": 40.8,
-    "is_fixed": true,
-    "raw_date": "2026-11-20 05:17:34"
-  },
-  {
     "server": "Sv10",
     "boss": "Nightmare",
     "last_kill": "2026-11-20T10:25:03+02:00",
@@ -1402,5 +1390,17 @@
     "max_hours": 40.8,
     "is_fixed": true,
     "raw_date": "2026-11-21 22:08:50"
+  },
+  {
+    "server": "Sv9",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-22T03:15:02+02:00",
+    "killer": "JexusLive",
+    "earliest_spawn": "2026-11-23T20:00:02+02:00",
+    "latest_spawn": "2026-11-23T20:00:02+02:00",
+    "min_hours": 40.8,
+    "max_hours": 40.8,
+    "is_fixed": true,
+    "raw_date": "2026-11-21 22:15:02"
   }
 ]
