@@ -48,18 +48,6 @@
     "raw_date": "2026-11-17 06:41:53"
   },
   {
-    "server": "Sv1",
-    "boss": "Core Magriffy",
-    "last_kill": "2026-11-18T15:33:58+02:00",
-    "killer": "Atas",
-    "earliest_spawn": "2026-11-22T04:08:58+02:00",
-    "latest_spawn": "2026-11-22T04:08:58+02:00",
-    "min_hours": 84.6,
-    "max_hours": 84.6,
-    "is_fixed": true,
-    "raw_date": "2026-11-18 10:33:58"
-  },
-  {
     "server": "Sv14",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-18T15:36:01+02:00",
@@ -840,18 +828,6 @@
     "raw_date": "2026-11-18 11:16:37"
   },
   {
-    "server": "Sv1",
-    "boss": "Selupan",
-    "last_kill": "2026-11-21T11:41:10+02:00",
-    "killer": "PiperSL",
-    "earliest_spawn": "2026-11-22T21:41:10+02:00",
-    "latest_spawn": "2026-11-22T21:41:10+02:00",
-    "min_hours": 34.0,
-    "max_hours": 34.0,
-    "is_fixed": true,
-    "raw_date": "2026-11-21 06:41:10"
-  },
-  {
     "server": "Sv2",
     "boss": "Selupan",
     "last_kill": "2026-11-21T11:43:05+02:00",
@@ -1212,6 +1188,18 @@
     "raw_date": "2026-11-18 10:49:39"
   },
   {
+    "server": "Sv1",
+    "boss": "Selupan",
+    "last_kill": "2026-11-22T04:11:57+02:00",
+    "killer": "Luterkin",
+    "earliest_spawn": "2026-11-23T14:11:57+02:00",
+    "latest_spawn": "2026-11-23T14:11:57+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "is_fixed": true,
+    "raw_date": "2026-11-21 23:11:57"
+  },
+  {
     "server": "Sv18",
     "boss": "Nightmare",
     "last_kill": "2026-11-22T01:57:24+02:00",
@@ -1402,5 +1390,17 @@
     "max_hours": 40.8,
     "is_fixed": true,
     "raw_date": "2026-11-21 22:26:59"
+  },
+  {
+    "server": "Sv1",
+    "boss": "Core Magriffy",
+    "last_kill": "2026-11-22T04:12:05+02:00",
+    "killer": "Melford",
+    "earliest_spawn": "2026-11-25T16:47:05+02:00",
+    "latest_spawn": "2026-11-25T16:47:05+02:00",
+    "min_hours": 84.6,
+    "max_hours": 84.6,
+    "is_fixed": true,
+    "raw_date": "2026-11-21 23:12:05"
   }
 ]
