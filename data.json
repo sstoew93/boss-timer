@@ -36,18 +36,6 @@
     "raw_date": "2026-11-17 06:41:53"
   },
   {
-    "server": "Sv18",
-    "boss": "Lord Silvester",
-    "last_kill": "2026-11-18T15:50:18+02:00",
-    "killer": "xHdSx",
-    "earliest_spawn": "2026-11-22T12:55:18+02:00",
-    "latest_spawn": "2026-11-22T12:55:18+02:00",
-    "min_hours": 93.1,
-    "max_hours": 93.1,
-    "is_fixed": true,
-    "raw_date": "2026-11-18 10:50:18"
-  },
-  {
     "server": "Sv10",
     "boss": "Lord Silvester",
     "last_kill": "2026-11-18T15:51:45+02:00",
@@ -1390,5 +1378,17 @@
     "max_hours": 93.1,
     "is_fixed": true,
     "raw_date": "2026-11-22 07:57:21"
+  },
+  {
+    "server": "Sv18",
+    "boss": "Lord Silvester",
+    "last_kill": "2026-11-22T12:58:12+02:00",
+    "killer": "zTargaryeN",
+    "earliest_spawn": "2026-11-26T10:03:12+02:00",
+    "latest_spawn": "2026-11-26T10:03:12+02:00",
+    "min_hours": 93.1,
+    "max_hours": 93.1,
+    "is_fixed": true,
+    "raw_date": "2026-11-22 07:58:12"
   }
 ]
