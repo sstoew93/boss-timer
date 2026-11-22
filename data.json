@@ -276,18 +276,6 @@
     "raw_date": "2026-11-18 11:16:00"
   },
   {
-    "server": "Sv4",
-    "boss": "Nix",
-    "last_kill": "2026-11-18T16:16:37+02:00",
-    "killer": "Teachers",
-    "earliest_spawn": "2026-11-22T20:21:37+02:00",
-    "latest_spawn": "2026-11-23T10:16:37+02:00",
-    "min_hours": 100.1,
-    "max_hours": 114.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-18 11:16:37"
-  },
-  {
     "server": "Sv2",
     "boss": "Selupan",
     "last_kill": "2026-11-21T11:43:05+02:00",
@@ -1366,6 +1354,18 @@
     "max_hours": 114.0,
     "is_fixed": false,
     "raw_date": "2026-11-22 15:50:53"
+  },
+  {
+    "server": "Sv4",
+    "boss": "Nix",
+    "last_kill": "2026-11-22T20:53:43+02:00",
+    "killer": "SolrakDVDL",
+    "earliest_spawn": "2026-11-27T00:58:43+02:00",
+    "latest_spawn": "2026-11-27T14:53:43+02:00",
+    "min_hours": 100.1,
+    "max_hours": 114.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-22 15:53:43"
   },
   {
     "server": "Sv4",
