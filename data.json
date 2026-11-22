@@ -60,18 +60,6 @@
     "raw_date": "2026-11-20 06:41:46"
   },
   {
-    "server": "Sv17",
-    "boss": "Core Magriffy",
-    "last_kill": "2026-11-18T15:54:22+02:00",
-    "killer": "Gervasia",
-    "earliest_spawn": "2026-11-22T04:29:22+02:00",
-    "latest_spawn": "2026-11-22T04:29:22+02:00",
-    "min_hours": 84.6,
-    "max_hours": 84.6,
-    "is_fixed": true,
-    "raw_date": "2026-11-18 10:54:22"
-  },
-  {
     "server": "Sv11",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-18T16:03:55+02:00",
@@ -1402,5 +1390,17 @@
     "max_hours": 84.6,
     "is_fixed": true,
     "raw_date": "2026-11-21 23:30:12"
+  },
+  {
+    "server": "Sv17",
+    "boss": "Core Magriffy",
+    "last_kill": "2026-11-22T04:31:16+02:00",
+    "killer": "JexusGL",
+    "earliest_spawn": "2026-11-25T17:06:16+02:00",
+    "latest_spawn": "2026-11-25T17:06:16+02:00",
+    "min_hours": 84.6,
+    "max_hours": 84.6,
+    "is_fixed": true,
+    "raw_date": "2026-11-21 23:31:16"
   }
 ]
