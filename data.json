@@ -60,18 +60,6 @@
     "raw_date": "2026-11-18 10:49:27"
   },
   {
-    "server": "Sv10",
-    "boss": "Lord of Ferea",
-    "last_kill": "2026-11-18T16:07:05+02:00",
-    "killer": "Collette",
-    "earliest_spawn": "2026-11-22T14:07:05+02:00",
-    "latest_spawn": "2026-11-26T06:07:05+02:00",
-    "min_hours": 94.0,
-    "max_hours": 182.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-18 11:07:05"
-  },
-  {
     "server": "Sv7",
     "boss": "Nix",
     "last_kill": "2026-11-18T15:41:02+02:00",
@@ -1222,6 +1210,18 @@
     "max_hours": 182.0,
     "is_fixed": false,
     "raw_date": "2026-11-22 20:09:28"
+  },
+  {
+    "server": "Sv10",
+    "boss": "Lord of Ferea",
+    "last_kill": "2026-11-23T01:50:29+02:00",
+    "killer": "FMKDivine",
+    "earliest_spawn": "2026-11-26T23:50:29+02:00",
+    "latest_spawn": "2026-11-30T15:50:29+02:00",
+    "min_hours": 94.0,
+    "max_hours": 182.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-22 20:50:29"
   },
   {
     "server": "Sv17",
