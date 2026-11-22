@@ -36,18 +36,6 @@
     "raw_date": "2026-11-17 06:41:53"
   },
   {
-    "server": "Sv6",
-    "boss": "Lord Silvester",
-    "last_kill": "2026-11-18T15:35:16+02:00",
-    "killer": "MewTwoo",
-    "earliest_spawn": "2026-11-22T12:40:16+02:00",
-    "latest_spawn": "2026-11-22T12:40:16+02:00",
-    "min_hours": 93.1,
-    "max_hours": 93.1,
-    "is_fixed": true,
-    "raw_date": "2026-11-18 10:35:16"
-  },
-  {
     "server": "Sv4",
     "boss": "Lord Silvester",
     "last_kill": "2026-11-18T15:36:55+02:00",
@@ -1390,5 +1378,17 @@
     "max_hours": 93.1,
     "is_fixed": true,
     "raw_date": "2026-11-22 07:43:46"
+  },
+  {
+    "server": "Sv6",
+    "boss": "Lord Silvester",
+    "last_kill": "2026-11-22T12:46:08+02:00",
+    "killer": "Molosa",
+    "earliest_spawn": "2026-11-26T09:51:08+02:00",
+    "latest_spawn": "2026-11-26T09:51:08+02:00",
+    "min_hours": 93.1,
+    "max_hours": 93.1,
+    "is_fixed": true,
+    "raw_date": "2026-11-22 07:46:08"
   }
 ]
