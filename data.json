@@ -36,18 +36,6 @@
     "raw_date": "2026-11-17 06:41:53"
   },
   {
-    "server": "Sv10",
-    "boss": "Lord Silvester",
-    "last_kill": "2026-11-18T15:51:45+02:00",
-    "killer": "Collette",
-    "earliest_spawn": "2026-11-22T12:56:45+02:00",
-    "latest_spawn": "2026-11-22T12:56:45+02:00",
-    "min_hours": 93.1,
-    "max_hours": 93.1,
-    "is_fixed": true,
-    "raw_date": "2026-11-18 10:51:45"
-  },
-  {
     "server": "Sv11",
     "boss": "Lord Silvester",
     "last_kill": "2026-11-18T16:15:07+02:00",
@@ -1390,5 +1378,17 @@
     "max_hours": 93.1,
     "is_fixed": true,
     "raw_date": "2026-11-22 07:58:12"
+  },
+  {
+    "server": "Sv10",
+    "boss": "Lord Silvester",
+    "last_kill": "2026-11-22T13:00:15+02:00",
+    "killer": "Longwang1",
+    "earliest_spawn": "2026-11-26T10:05:15+02:00",
+    "latest_spawn": "2026-11-26T10:05:15+02:00",
+    "min_hours": 93.1,
+    "max_hours": 93.1,
+    "is_fixed": true,
+    "raw_date": "2026-11-22 08:00:15"
   }
 ]
