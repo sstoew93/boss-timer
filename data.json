@@ -72,18 +72,6 @@
     "raw_date": "2026-11-18 10:31:27"
   },
   {
-    "server": "Sv1",
-    "boss": "Lord of Ferea",
-    "last_kill": "2026-11-18T15:38:32+02:00",
-    "killer": "DouHun",
-    "earliest_spawn": "2026-11-22T13:38:32+02:00",
-    "latest_spawn": "2026-11-26T05:38:32+02:00",
-    "min_hours": 94.0,
-    "max_hours": 182.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-18 10:38:32"
-  },
-  {
     "server": "Sv8",
     "boss": "Lord of Ferea",
     "last_kill": "2026-11-18T15:38:44+02:00",
@@ -1378,6 +1366,18 @@
     "max_hours": 182.0,
     "is_fixed": false,
     "raw_date": "2026-11-22 12:59:56"
+  },
+  {
+    "server": "Sv1",
+    "boss": "Lord of Ferea",
+    "last_kill": "2026-11-22T19:05:51+02:00",
+    "killer": "ElfCitara",
+    "earliest_spawn": "2026-11-26T17:05:51+02:00",
+    "latest_spawn": "2026-11-30T09:05:51+02:00",
+    "min_hours": 94.0,
+    "max_hours": 182.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-22 14:05:51"
   },
   {
     "server": "Sv4",
