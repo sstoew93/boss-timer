@@ -132,18 +132,6 @@
     "raw_date": "2026-11-18 10:42:59"
   },
   {
-    "server": "Sv14",
-    "boss": "Nix",
-    "last_kill": "2026-11-18T15:43:06+02:00",
-    "killer": "KatoTaka",
-    "earliest_spawn": "2026-11-22T19:48:06+02:00",
-    "latest_spawn": "2026-11-23T09:43:06+02:00",
-    "min_hours": 100.1,
-    "max_hours": 114.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-18 10:43:06"
-  },
-  {
     "server": "Sv1",
     "boss": "Nix",
     "last_kill": "2026-11-18T15:51:55+02:00",
@@ -1342,6 +1330,18 @@
     "max_hours": 114.0,
     "is_fixed": false,
     "raw_date": "2026-11-22 15:53:43"
+  },
+  {
+    "server": "Sv14",
+    "boss": "Nix",
+    "last_kill": "2026-11-22T23:14:03+02:00",
+    "killer": "SolrakDVDL",
+    "earliest_spawn": "2026-11-27T03:19:03+02:00",
+    "latest_spawn": "2026-11-27T17:14:03+02:00",
+    "min_hours": 100.1,
+    "max_hours": 114.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-22 18:14:03"
   },
   {
     "server": "Sv4",
