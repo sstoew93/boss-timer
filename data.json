@@ -72,18 +72,6 @@
     "raw_date": "2026-11-18 10:31:27"
   },
   {
-    "server": "Sv2",
-    "boss": "Lord of Ferea",
-    "last_kill": "2026-11-18T15:34:25+02:00",
-    "killer": "Fiestyy",
-    "earliest_spawn": "2026-11-22T13:34:25+02:00",
-    "latest_spawn": "2026-11-26T05:34:25+02:00",
-    "min_hours": 94.0,
-    "max_hours": 182.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-18 10:34:25"
-  },
-  {
     "server": "Sv1",
     "boss": "Lord of Ferea",
     "last_kill": "2026-11-18T15:38:32+02:00",
@@ -1390,5 +1378,17 @@
     "max_hours": 182.0,
     "is_fixed": false,
     "raw_date": "2026-11-22 10:49:59"
+  },
+  {
+    "server": "Sv2",
+    "boss": "Lord of Ferea",
+    "last_kill": "2026-11-22T16:20:57+02:00",
+    "killer": "PipiLord92",
+    "earliest_spawn": "2026-11-26T14:20:57+02:00",
+    "latest_spawn": "2026-11-30T06:20:57+02:00",
+    "min_hours": 94.0,
+    "max_hours": 182.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-22 11:20:57"
   }
 ]
