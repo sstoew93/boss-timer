@@ -48,30 +48,6 @@
     "raw_date": "2026-11-17 06:41:53"
   },
   {
-    "server": "Sv10",
-    "boss": "Core Magriffy",
-    "last_kill": "2026-11-18T15:47:29+02:00",
-    "killer": "iLSunday",
-    "earliest_spawn": "2026-11-22T04:22:29+02:00",
-    "latest_spawn": "2026-11-22T04:22:29+02:00",
-    "min_hours": 84.6,
-    "max_hours": 84.6,
-    "is_fixed": true,
-    "raw_date": "2026-11-18 10:47:29"
-  },
-  {
-    "server": "Sv5",
-    "boss": "Core Magriffy",
-    "last_kill": "2026-11-18T15:47:37+02:00",
-    "killer": "MrKaKaYou",
-    "earliest_spawn": "2026-11-22T04:22:37+02:00",
-    "latest_spawn": "2026-11-22T04:22:37+02:00",
-    "min_hours": 84.6,
-    "max_hours": 84.6,
-    "is_fixed": true,
-    "raw_date": "2026-11-18 10:47:37"
-  },
-  {
     "server": "Sv6",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-18T15:47:45+02:00",
@@ -1402,5 +1378,29 @@
     "max_hours": 84.6,
     "is_fixed": true,
     "raw_date": "2026-11-21 23:21:43"
+  },
+  {
+    "server": "Sv5",
+    "boss": "Core Magriffy",
+    "last_kill": "2026-11-22T04:24:14+02:00",
+    "killer": "TORIANO",
+    "earliest_spawn": "2026-11-25T16:59:14+02:00",
+    "latest_spawn": "2026-11-25T16:59:14+02:00",
+    "min_hours": 84.6,
+    "max_hours": 84.6,
+    "is_fixed": true,
+    "raw_date": "2026-11-21 23:24:14"
+  },
+  {
+    "server": "Sv10",
+    "boss": "Core Magriffy",
+    "last_kill": "2026-11-22T04:24:31+02:00",
+    "killer": "Collette",
+    "earliest_spawn": "2026-11-25T16:59:31+02:00",
+    "latest_spawn": "2026-11-25T16:59:31+02:00",
+    "min_hours": 84.6,
+    "max_hours": 84.6,
+    "is_fixed": true,
+    "raw_date": "2026-11-21 23:24:31"
   }
 ]
