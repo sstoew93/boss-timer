@@ -48,18 +48,6 @@
     "raw_date": "2026-11-17 06:41:53"
   },
   {
-    "server": "Sv8",
-    "boss": "Core Magriffy",
-    "last_kill": "2026-11-18T15:44:07+02:00",
-    "killer": "NicoLasPan",
-    "earliest_spawn": "2026-11-22T04:19:07+02:00",
-    "latest_spawn": "2026-11-22T04:19:07+02:00",
-    "min_hours": 84.6,
-    "max_hours": 84.6,
-    "is_fixed": true,
-    "raw_date": "2026-11-18 10:44:07"
-  },
-  {
     "server": "Sv7",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-18T15:44:53+02:00",
@@ -1402,5 +1390,17 @@
     "max_hours": 84.6,
     "is_fixed": true,
     "raw_date": "2026-11-21 23:18:51"
+  },
+  {
+    "server": "Sv8",
+    "boss": "Core Magriffy",
+    "last_kill": "2026-11-22T04:20:50+02:00",
+    "killer": "JesucristA",
+    "earliest_spawn": "2026-11-25T16:55:50+02:00",
+    "latest_spawn": "2026-11-25T16:55:50+02:00",
+    "min_hours": 84.6,
+    "max_hours": 84.6,
+    "is_fixed": true,
+    "raw_date": "2026-11-21 23:20:50"
   }
 ]
