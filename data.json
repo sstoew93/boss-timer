@@ -48,18 +48,6 @@
     "raw_date": "2026-11-17 06:41:53"
   },
   {
-    "server": "Sv2",
-    "boss": "Core Magriffy",
-    "last_kill": "2026-11-18T15:40:35+02:00",
-    "killer": "Atas",
-    "earliest_spawn": "2026-11-22T04:15:35+02:00",
-    "latest_spawn": "2026-11-22T04:15:35+02:00",
-    "min_hours": 84.6,
-    "max_hours": 84.6,
-    "is_fixed": true,
-    "raw_date": "2026-11-18 10:40:35"
-  },
-  {
     "server": "Sv15",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-18T15:42:14+02:00",
@@ -1402,5 +1390,17 @@
     "max_hours": 84.6,
     "is_fixed": true,
     "raw_date": "2026-11-21 23:16:35"
+  },
+  {
+    "server": "Sv2",
+    "boss": "Core Magriffy",
+    "last_kill": "2026-11-22T04:17:53+02:00",
+    "killer": "TORIANO",
+    "earliest_spawn": "2026-11-25T16:52:53+02:00",
+    "latest_spawn": "2026-11-25T16:52:53+02:00",
+    "min_hours": 84.6,
+    "max_hours": 84.6,
+    "is_fixed": true,
+    "raw_date": "2026-11-21 23:17:53"
   }
 ]
