@@ -120,18 +120,6 @@
     "raw_date": "2026-11-18 10:51:55"
   },
   {
-    "server": "Sv18",
-    "boss": "Nix",
-    "last_kill": "2026-11-18T15:53:45+02:00",
-    "killer": "VAG4BUNDA",
-    "earliest_spawn": "2026-11-22T19:58:45+02:00",
-    "latest_spawn": "2026-11-23T09:53:45+02:00",
-    "min_hours": 100.1,
-    "max_hours": 114.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-18 10:53:45"
-  },
-  {
     "server": "Sv10",
     "boss": "Nix",
     "last_kill": "2026-11-18T15:54:50+02:00",
@@ -1330,6 +1318,18 @@
     "max_hours": 168.0,
     "is_fixed": false,
     "raw_date": "2026-11-22 12:43:26"
+  },
+  {
+    "server": "Sv18",
+    "boss": "Nix",
+    "last_kill": "2026-11-23T00:57:11+02:00",
+    "killer": "SolrakDVDL",
+    "earliest_spawn": "2026-11-27T05:02:11+02:00",
+    "latest_spawn": "2026-11-27T18:57:11+02:00",
+    "min_hours": 100.1,
+    "max_hours": 114.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-22 19:57:11"
   },
   {
     "server": "Sv19",
