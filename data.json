@@ -156,18 +156,6 @@
     "raw_date": "2026-11-18 11:07:09"
   },
   {
-    "server": "Sv5",
-    "boss": "Nix",
-    "last_kill": "2026-11-18T16:15:14+02:00",
-    "killer": "VicSL",
-    "earliest_spawn": "2026-11-22T20:20:14+02:00",
-    "latest_spawn": "2026-11-23T10:15:14+02:00",
-    "min_hours": 100.1,
-    "max_hours": 114.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-18 11:15:14"
-  },
-  {
     "server": "Sv11",
     "boss": "Nix",
     "last_kill": "2026-11-18T16:16:00+02:00",
@@ -1330,6 +1318,18 @@
     "max_hours": 114.0,
     "is_fixed": false,
     "raw_date": "2026-11-22 19:57:11"
+  },
+  {
+    "server": "Sv5",
+    "boss": "Nix",
+    "last_kill": "2026-11-23T01:03:25+02:00",
+    "killer": "SolrakDVDL",
+    "earliest_spawn": "2026-11-27T05:08:25+02:00",
+    "latest_spawn": "2026-11-27T19:03:25+02:00",
+    "min_hours": 100.1,
+    "max_hours": 114.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-22 20:03:25"
   },
   {
     "server": "Sv19",
