@@ -48,18 +48,6 @@
     "raw_date": "2026-11-17 06:41:53"
   },
   {
-    "server": "Sv16",
-    "boss": "Core Magriffy",
-    "last_kill": "2026-11-18T15:51:31+02:00",
-    "killer": "Victor",
-    "earliest_spawn": "2026-11-22T04:26:31+02:00",
-    "latest_spawn": "2026-11-22T04:26:31+02:00",
-    "min_hours": 84.6,
-    "max_hours": 84.6,
-    "is_fixed": true,
-    "raw_date": "2026-11-18 10:51:31"
-  },
-  {
     "server": "Sv11",
     "boss": "Nightmare",
     "last_kill": "2026-11-20T11:41:46+02:00",
@@ -70,18 +58,6 @@
     "max_hours": 40.8,
     "is_fixed": true,
     "raw_date": "2026-11-20 06:41:46"
-  },
-  {
-    "server": "Sv4",
-    "boss": "Core Magriffy",
-    "last_kill": "2026-11-18T15:52:01+02:00",
-    "killer": "Gervasia",
-    "earliest_spawn": "2026-11-22T04:27:01+02:00",
-    "latest_spawn": "2026-11-22T04:27:01+02:00",
-    "min_hours": 84.6,
-    "max_hours": 84.6,
-    "is_fixed": true,
-    "raw_date": "2026-11-18 10:52:01"
   },
   {
     "server": "Sv18",
@@ -1402,5 +1378,29 @@
     "max_hours": 84.6,
     "is_fixed": true,
     "raw_date": "2026-11-21 23:26:07"
+  },
+  {
+    "server": "Sv16",
+    "boss": "Core Magriffy",
+    "last_kill": "2026-11-22T04:28:32+02:00",
+    "killer": "Hommie",
+    "earliest_spawn": "2026-11-25T17:03:32+02:00",
+    "latest_spawn": "2026-11-25T17:03:32+02:00",
+    "min_hours": 84.6,
+    "max_hours": 84.6,
+    "is_fixed": true,
+    "raw_date": "2026-11-21 23:28:32"
+  },
+  {
+    "server": "Sv4",
+    "boss": "Core Magriffy",
+    "last_kill": "2026-11-22T04:29:18+02:00",
+    "killer": "TORIANO",
+    "earliest_spawn": "2026-11-25T17:04:18+02:00",
+    "latest_spawn": "2026-11-25T17:04:18+02:00",
+    "min_hours": 84.6,
+    "max_hours": 84.6,
+    "is_fixed": true,
+    "raw_date": "2026-11-21 23:29:18"
   }
 ]
