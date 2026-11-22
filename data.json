@@ -48,18 +48,6 @@
     "raw_date": "2026-11-17 06:41:53"
   },
   {
-    "server": "Sv4",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-20T09:47:24+02:00",
-    "killer": "SolrakDVDL",
-    "earliest_spawn": "2026-11-22T02:32:24+02:00",
-    "latest_spawn": "2026-11-22T02:32:24+02:00",
-    "min_hours": 40.8,
-    "max_hours": 40.8,
-    "is_fixed": true,
-    "raw_date": "2026-11-20 04:47:24"
-  },
-  {
     "server": "Sv10",
     "boss": "Nightmare",
     "last_kill": "2026-11-20T10:25:03+02:00",
@@ -1402,5 +1390,17 @@
     "max_hours": 40.8,
     "is_fixed": true,
     "raw_date": "2026-11-21 22:15:02"
+  },
+  {
+    "server": "Sv4",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-22T03:24:32+02:00",
+    "killer": "DraftsStun",
+    "earliest_spawn": "2026-11-23T20:09:32+02:00",
+    "latest_spawn": "2026-11-23T20:09:32+02:00",
+    "min_hours": 40.8,
+    "max_hours": 40.8,
+    "is_fixed": true,
+    "raw_date": "2026-11-21 22:24:32"
   }
 ]
