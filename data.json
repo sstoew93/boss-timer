@@ -276,18 +276,6 @@
     "raw_date": "2026-11-18 11:16:00"
   },
   {
-    "server": "Sv6",
-    "boss": "Selupan",
-    "last_kill": "2026-11-21T11:47:35+02:00",
-    "killer": "HaDaBest",
-    "earliest_spawn": "2026-11-22T21:47:35+02:00",
-    "latest_spawn": "2026-11-22T21:47:35+02:00",
-    "min_hours": 34.0,
-    "max_hours": 34.0,
-    "is_fixed": true,
-    "raw_date": "2026-11-21 06:47:35"
-  },
-  {
     "server": "Sv15",
     "boss": "Selupan",
     "last_kill": "2026-11-21T11:48:26+02:00",
@@ -826,6 +814,18 @@
     "max_hours": 34.0,
     "is_fixed": true,
     "raw_date": "2026-11-22 16:54:26"
+  },
+  {
+    "server": "Sv6",
+    "boss": "Selupan",
+    "last_kill": "2026-11-22T21:55:40+02:00",
+    "killer": "ElfCitara",
+    "earliest_spawn": "2026-11-24T07:55:40+02:00",
+    "latest_spawn": "2026-11-24T07:55:40+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "is_fixed": true,
+    "raw_date": "2026-11-22 16:55:40"
   },
   {
     "server": "Sv1",
