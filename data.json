@@ -24,18 +24,6 @@
     "raw_date": "2026-11-18 10:29:33"
   },
   {
-    "server": "Sv5",
-    "boss": "Lord of Ferea",
-    "last_kill": "2026-11-18T15:31:09+02:00",
-    "killer": "Lion8",
-    "earliest_spawn": "2026-11-22T13:31:09+02:00",
-    "latest_spawn": "2026-11-26T05:31:09+02:00",
-    "min_hours": 94.0,
-    "max_hours": 182.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-18 10:31:09"
-  },
-  {
     "server": "Sv8",
     "boss": "Lord of Ferea",
     "last_kill": "2026-11-18T15:38:44+02:00",
@@ -1270,6 +1258,18 @@
     "max_hours": 182.0,
     "is_fixed": false,
     "raw_date": "2026-11-22 18:06:02"
+  },
+  {
+    "server": "Sv5",
+    "boss": "Lord of Ferea",
+    "last_kill": "2026-11-22T23:51:30+02:00",
+    "killer": "TORIANO",
+    "earliest_spawn": "2026-11-26T21:51:30+02:00",
+    "latest_spawn": "2026-11-30T13:51:30+02:00",
+    "min_hours": 94.0,
+    "max_hours": 182.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-22 18:51:30"
   },
   {
     "server": "Sv17",
