@@ -48,18 +48,6 @@
     "raw_date": "2026-11-17 06:41:53"
   },
   {
-    "server": "Sv6",
-    "boss": "Core Magriffy",
-    "last_kill": "2026-11-18T15:47:45+02:00",
-    "killer": "KALIMBA169",
-    "earliest_spawn": "2026-11-22T04:22:45+02:00",
-    "latest_spawn": "2026-11-22T04:22:45+02:00",
-    "min_hours": 84.6,
-    "max_hours": 84.6,
-    "is_fixed": true,
-    "raw_date": "2026-11-18 10:47:45"
-  },
-  {
     "server": "Sv9",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-18T15:48:18+02:00",
@@ -1402,5 +1390,17 @@
     "max_hours": 84.6,
     "is_fixed": true,
     "raw_date": "2026-11-21 23:24:31"
+  },
+  {
+    "server": "Sv6",
+    "boss": "Core Magriffy",
+    "last_kill": "2026-11-22T04:25:20+02:00",
+    "killer": "RomeosMG",
+    "earliest_spawn": "2026-11-25T17:00:20+02:00",
+    "latest_spawn": "2026-11-25T17:00:20+02:00",
+    "min_hours": 84.6,
+    "max_hours": 84.6,
+    "is_fixed": true,
+    "raw_date": "2026-11-21 23:25:20"
   }
 ]
