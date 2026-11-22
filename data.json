@@ -276,18 +276,6 @@
     "raw_date": "2026-11-18 11:16:00"
   },
   {
-    "server": "Sv15",
-    "boss": "Selupan",
-    "last_kill": "2026-11-21T11:48:26+02:00",
-    "killer": "PiperSL",
-    "earliest_spawn": "2026-11-22T21:48:26+02:00",
-    "latest_spawn": "2026-11-22T21:48:26+02:00",
-    "min_hours": 34.0,
-    "max_hours": 34.0,
-    "is_fixed": true,
-    "raw_date": "2026-11-21 06:48:26"
-  },
-  {
     "server": "Sv8",
     "boss": "Selupan",
     "last_kill": "2026-11-21T11:49:18+02:00",
@@ -826,6 +814,18 @@
     "max_hours": 34.0,
     "is_fixed": true,
     "raw_date": "2026-11-22 16:55:40"
+  },
+  {
+    "server": "Sv15",
+    "boss": "Selupan",
+    "last_kill": "2026-11-22T21:57:05+02:00",
+    "killer": "Kaelvyr",
+    "earliest_spawn": "2026-11-24T07:57:05+02:00",
+    "latest_spawn": "2026-11-24T07:57:05+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "is_fixed": true,
+    "raw_date": "2026-11-22 16:57:05"
   },
   {
     "server": "Sv1",
