@@ -60,18 +60,6 @@
     "raw_date": "2026-11-20 06:41:46"
   },
   {
-    "server": "Sv11",
-    "boss": "Core Magriffy",
-    "last_kill": "2026-11-18T16:03:55+02:00",
-    "killer": "LordFobia",
-    "earliest_spawn": "2026-11-22T04:38:55+02:00",
-    "latest_spawn": "2026-11-22T04:38:55+02:00",
-    "min_hours": 84.6,
-    "max_hours": 84.6,
-    "is_fixed": true,
-    "raw_date": "2026-11-18 11:03:55"
-  },
-  {
     "server": "Sv19",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-18T16:34:38+02:00",
@@ -1402,5 +1390,17 @@
     "max_hours": 84.6,
     "is_fixed": true,
     "raw_date": "2026-11-21 23:31:16"
+  },
+  {
+    "server": "Sv11",
+    "boss": "Core Magriffy",
+    "last_kill": "2026-11-22T04:47:20+02:00",
+    "killer": "MacKgorBan",
+    "earliest_spawn": "2026-11-25T17:22:20+02:00",
+    "latest_spawn": "2026-11-25T17:22:20+02:00",
+    "min_hours": 84.6,
+    "max_hours": 84.6,
+    "is_fixed": true,
+    "raw_date": "2026-11-21 23:47:20"
   }
 ]
