@@ -48,18 +48,6 @@
     "raw_date": "2026-11-17 06:41:53"
   },
   {
-    "server": "Sv3",
-    "boss": "Core Magriffy",
-    "last_kill": "2026-11-18T15:39:50+02:00",
-    "killer": "Jurlique",
-    "earliest_spawn": "2026-11-22T04:14:50+02:00",
-    "latest_spawn": "2026-11-22T04:14:50+02:00",
-    "min_hours": 84.6,
-    "max_hours": 84.6,
-    "is_fixed": true,
-    "raw_date": "2026-11-18 10:39:50"
-  },
-  {
     "server": "Sv2",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-18T15:40:35+02:00",
@@ -1402,5 +1390,17 @@
     "max_hours": 84.6,
     "is_fixed": true,
     "raw_date": "2026-11-21 23:13:39"
+  },
+  {
+    "server": "Sv3",
+    "boss": "Core Magriffy",
+    "last_kill": "2026-11-22T04:16:35+02:00",
+    "killer": "JesucristA",
+    "earliest_spawn": "2026-11-25T16:51:35+02:00",
+    "latest_spawn": "2026-11-25T16:51:35+02:00",
+    "min_hours": 84.6,
+    "max_hours": 84.6,
+    "is_fixed": true,
+    "raw_date": "2026-11-21 23:16:35"
   }
 ]
