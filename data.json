@@ -72,18 +72,6 @@
     "raw_date": "2026-11-18 10:48:36"
   },
   {
-    "server": "Sv3",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-22T02:30:14+02:00",
-    "killer": "MrMyzor",
-    "earliest_spawn": "2026-11-23T19:15:14+02:00",
-    "latest_spawn": "2026-11-23T19:15:14+02:00",
-    "min_hours": 40.8,
-    "max_hours": 40.8,
-    "is_fixed": true,
-    "raw_date": "2026-11-21 21:30:14"
-  },
-  {
     "server": "Sv7",
     "boss": "Nightmare",
     "last_kill": "2026-11-22T02:50:40+02:00",
@@ -478,6 +466,18 @@
     "max_hours": 40.8,
     "is_fixed": true,
     "raw_date": "2026-11-23 14:43:36"
+  },
+  {
+    "server": "Sv3",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-23T19:49:45+02:00",
+    "killer": "SolrakDVDL",
+    "earliest_spawn": "2026-11-25T12:34:45+02:00",
+    "latest_spawn": "2026-11-25T12:34:45+02:00",
+    "min_hours": 40.8,
+    "max_hours": 40.8,
+    "is_fixed": true,
+    "raw_date": "2026-11-23 14:49:45"
   },
   {
     "server": "Sv1",
