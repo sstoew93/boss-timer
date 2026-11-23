@@ -72,18 +72,6 @@
     "raw_date": "2026-11-18 10:48:36"
   },
   {
-    "server": "Sv7",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-22T02:50:40+02:00",
-    "killer": "JexusGL",
-    "earliest_spawn": "2026-11-23T19:35:40+02:00",
-    "latest_spawn": "2026-11-23T19:35:40+02:00",
-    "min_hours": 40.8,
-    "max_hours": 40.8,
-    "is_fixed": true,
-    "raw_date": "2026-11-21 21:50:40"
-  },
-  {
     "server": "Sv17",
     "boss": "Nightmare",
     "last_kill": "2026-11-22T02:51:20+02:00",
@@ -478,6 +466,18 @@
     "max_hours": 40.8,
     "is_fixed": true,
     "raw_date": "2026-11-23 14:49:45"
+  },
+  {
+    "server": "Sv7",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-23T19:50:57+02:00",
+    "killer": "PinkKitty",
+    "earliest_spawn": "2026-11-25T12:35:57+02:00",
+    "latest_spawn": "2026-11-25T12:35:57+02:00",
+    "min_hours": 40.8,
+    "max_hours": 40.8,
+    "is_fixed": true,
+    "raw_date": "2026-11-23 14:50:57"
   },
   {
     "server": "Sv1",
