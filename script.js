@@ -31,7 +31,6 @@ function getNextKundun() {
     const now = new Date();
     const nowUTC = now.getTime();
     
-    // Kundun BR times converted to UTC (BR + 3 hours):
     const schedule = [
         { day: 1, hour: 19 }, // Mon 16:00 BR
         { day: 2, hour: 7 },  // Tue 04:00 BR
@@ -100,7 +99,6 @@ function getNextMedusa() {
     }
     return nextSpawn.toISOString();
 }
-// ------------------------------------
 
 // --- APP LOGIC ---
 let allData = []; 
@@ -190,13 +188,10 @@ function buildFilters(containerId, items, type) {
 
 document.getElementById('search-bar').addEventListener('input', renderTable);
 
-// --- NEW: HELPER TO FIND THE CORRECT IMAGE ---
 function getBossImage(bossName) {
-    // Convert "Lord of Ferea" to "lord-of-ferea"
     const fileName = bossName.toLowerCase().replace(/\s+/g, '-');
-    return `images/${fileName}.png`;
+    return `images/bosses/${fileName}.png`;
 }
-// ----------------------------------------------
 
 function renderTable() {
   const tbody = document.getElementById('boss-table-body');
@@ -245,11 +240,10 @@ function renderTable() {
     const statusId = `status-${item.server}-${item.boss}`.replace(/[^a-zA-Z0-9-]/g, '');
     const maxTimeId = `max-${item.server}-${item.boss}`.replace(/[^a-zA-Z0-9-]/g, '');
 
-    // Added the image with an onerror fallback to a default image
     row.innerHTML = `
       <td>
           <div class="boss-info">
-              <img src="${bossImgSrc}" class="boss-avatar" alt="${item.boss}" onerror="this.src='images/bosses/default.png'">
+              <img src="${bossImgSrc}" class="boss-avatar" alt="${item.boss}" onerror="this.onerror=null; this.src='images/bosses/default.png';">
               <div class="boss-text-container">
                   <div class="boss-name">${item.boss}</div>
                   ${item.killer ? `<div class="boss-subtext">Last kill by ${item.killer}</div>` : ''}
