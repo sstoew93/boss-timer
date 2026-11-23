@@ -1,17 +1,5 @@
 [
   {
-    "server": "Sv9",
-    "boss": "Lord of Ferea",
-    "last_kill": "2026-11-18T15:46:09+02:00",
-    "killer": "VAG4BUNDA",
-    "earliest_spawn": "2026-11-22T13:46:09+02:00",
-    "latest_spawn": "2026-11-26T05:46:09+02:00",
-    "min_hours": 94.0,
-    "max_hours": 182.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-18 10:46:09"
-  },
-  {
     "server": "Sv19",
     "boss": "Nix",
     "last_kill": "2026-11-18T16:07:09+02:00",
@@ -1270,6 +1258,18 @@
     "max_hours": 168.0,
     "is_fixed": false,
     "raw_date": "2026-11-22 17:18:35"
+  },
+  {
+    "server": "Sv9",
+    "boss": "Lord of Ferea",
+    "last_kill": "2026-11-23T10:42:38+02:00",
+    "killer": "Crimsum",
+    "earliest_spawn": "2026-11-27T08:42:38+02:00",
+    "latest_spawn": "2026-12-01T00:42:38+02:00",
+    "min_hours": 94.0,
+    "max_hours": 182.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-23 05:42:38"
   },
   {
     "server": "Sv10",
