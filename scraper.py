@@ -7,7 +7,6 @@ from zoneinfo import ZoneInfo
 BRAZIL_TZ = ZoneInfo("America/Sao_Paulo")
 BULGARIA_TZ = ZoneInfo("Europe/Sofia")
 
-# Times in minutes
 BOSS_TIMES = {
     "God of Darkness": {"min": 106 * 60, "max": 168 * 60},
     "Core Magriffy": {"min": (84 * 60) + 35, "max": (84 * 60) + 35},
@@ -18,13 +17,12 @@ BOSS_TIMES = {
     "Nix": {"min": (100 * 60) + 5, "max": 114 * 60}            
 }
 
-# Add any server you want to hide to this list (lowercase, no spaces)
 IGNORED_SERVERS = {"svc", "speed1", "speed2", "speed3", "speed4", "speed5"}
-
 URL = "https://en.megamu.net/boss-log"
 
 def scrape():
-    response = requests.get(URL)
+    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
+    response = requests.get(URL, headers=headers)
     soup = BeautifulSoup(response.text, 'html.parser')
     table = soup.find('table')
     if not table:
@@ -44,10 +42,8 @@ def scrape():
         server = cells[3].get_text(strip=True)
 
         clean_server = server.lower().replace(" ", "")
-        
         if clean_server in IGNORED_SERVERS:
             continue
-
         if monster_name not in BOSS_TIMES:
             continue
 
