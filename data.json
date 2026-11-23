@@ -72,18 +72,6 @@
     "raw_date": "2026-11-18 10:48:36"
   },
   {
-    "server": "Sv19",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-22T03:08:17+02:00",
-    "killer": "SonyaB",
-    "earliest_spawn": "2026-11-23T20:03:17+02:00",
-    "latest_spawn": "2026-11-23T20:03:17+02:00",
-    "min_hours": 40.9,
-    "max_hours": 40.9,
-    "is_fixed": true,
-    "raw_date": "2026-11-21 22:08:17"
-  },
-  {
     "server": "Sv11",
     "boss": "Nightmare",
     "last_kill": "2026-11-22T05:31:32+02:00",
@@ -478,6 +466,18 @@
     "max_hours": 40.9,
     "is_fixed": true,
     "raw_date": "2026-11-23 15:44:58"
+  },
+  {
+    "server": "Sv19",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-23T21:08:39+02:00",
+    "killer": "T4lentO",
+    "earliest_spawn": "2026-11-25T14:03:39+02:00",
+    "latest_spawn": "2026-11-25T14:03:39+02:00",
+    "min_hours": 40.9,
+    "max_hours": 40.9,
+    "is_fixed": true,
+    "raw_date": "2026-11-23 16:08:39"
   },
   {
     "server": "Sv1",
