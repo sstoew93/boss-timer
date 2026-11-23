@@ -84,18 +84,6 @@
     "raw_date": "2026-11-21 22:08:17"
   },
   {
-    "server": "Sv6",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-22T03:08:50+02:00",
-    "killer": "Mgito",
-    "earliest_spawn": "2026-11-23T20:03:50+02:00",
-    "latest_spawn": "2026-11-23T20:03:50+02:00",
-    "min_hours": 40.9,
-    "max_hours": 40.9,
-    "is_fixed": true,
-    "raw_date": "2026-11-21 22:08:50"
-  },
-  {
     "server": "Sv9",
     "boss": "Nightmare",
     "last_kill": "2026-11-22T03:15:02+02:00",
@@ -478,6 +466,18 @@
     "max_hours": 40.9,
     "is_fixed": true,
     "raw_date": "2026-11-23 15:03:17"
+  },
+  {
+    "server": "Sv6",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-23T20:13:15+02:00",
+    "killer": "PinkKitty",
+    "earliest_spawn": "2026-11-25T13:08:15+02:00",
+    "latest_spawn": "2026-11-25T13:08:15+02:00",
+    "min_hours": 40.9,
+    "max_hours": 40.9,
+    "is_fixed": true,
+    "raw_date": "2026-11-23 15:13:15"
   },
   {
     "server": "Sv1",
