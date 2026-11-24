@@ -47,10 +47,10 @@
                                 Twitch Username (Bot account)
                                 <span class="tooltip-container">
                                     <span class="tooltip-icon">?</span>
-                                    <span class="tooltip-text">The Twitch account the bot will log in as. It is recommended to use a separate account for your bot, not your main streamer account.</span>
+                                    <span class="tooltip-text">The Twitch account the bot will log in as.</span>
                                 </span>
                             </label>
-                            <input type="text" id="username" required placeholder="e.g., MyBotName">
+                            <input type="text" id="username" required>
                         </div>
 
                         <div class="form-row">
@@ -58,10 +58,10 @@
                                 OAuth Token (chat:read and chat:edit)
                                 <span class="tooltip-container">
                                     <span class="tooltip-icon">?</span>
-                                    <span class="tooltip-text">You can generate a token using tools like twitchapps.com/tmi/. Make sure it has chat:read and chat:edit permissions.</span>
+                                    <span class="tooltip-text">You can generate a token using twitchtokengenerator.com. Make sure it has chat:read and chat:edit permissions.</span>
                                 </span>
                             </label>
-                            <input type="password" id="token" required placeholder="oauth:xxxxxxxxxxxxxxxxxxxx">
+                            <input type="password" id="token" required>
                         </div>
 
                         <div class="form-row">
@@ -69,10 +69,10 @@
                                 Message to Look For (Trigger)
                                 <span class="tooltip-container">
                                     <span class="tooltip-icon">?</span>
-                                    <span class="tooltip-text">The exact word or phrase the bot will listen for in chat to start the sequence (e.g., !hello).</span>
+                                    <span class="tooltip-text">The exact word or phrase the bot will listen for in chat to start the sequence.</span>
                                 </span>
                             </label>
-                            <input type="text" id="trigger" required placeholder="e.g., !hello">
+                            <input type="text" id="trigger" required>
                         </div>
 
                         <div class="form-row slider-container">
@@ -112,7 +112,7 @@
                                             <span class="tooltip-text">The second message sent.</span>
                                         </span>
                                     </label>
-                                    <input type="text" id="reply2" placeholder="e.g., Welcome to the stream!">
+                                    <input type="text" id="reply2">
                                 </div>
                                 <div class="msg-delay">
                                     <label>
@@ -138,7 +138,7 @@
                                             <span class="tooltip-text">The third and final message sent.</span>
                                         </span>
                                     </label>
-                                    <input type="text" id="reply3" placeholder="e.g., GLHF!">
+                                    <input type="text" id="reply3">
                                 </div>
                                 <div class="msg-delay">
                                     <label>
@@ -169,10 +169,10 @@
                                 Channels to Watch
                                 <span class="tooltip-container">
                                     <span class="tooltip-icon">?</span>
-                                    <span class="tooltip-text">Comma-separated list of Twitch channels to join. Do not include the # symbol (e.g., shroud, xqc).</span>
+                                    <span class="tooltip-text">Comma-separated list of Twitch channels to join. Do not include the # symbol.</span>
                                 </span>
                             </label>
-                            <input type="text" id="channels" required placeholder="e.g., shroud, xqc">
+                            <input type="text" id="channels" required>
                         </div>
 
                         <div class="form-row">
