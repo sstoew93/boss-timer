@@ -1,7 +1,9 @@
 body { 
     font-family: 'Inter', sans-serif; 
-    background: #09090b; 
+    background-color: #09090b; 
     background-image: radial-gradient(circle at 50% 0%, #1c1c22 0%, #09090b 60%);
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* <--- THIS LOCKS THE GRADIENT TO THE SCREEN */
     color: #fafafa; 
     margin: 0;
     padding: 0;
