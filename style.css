@@ -22,24 +22,10 @@ a, button, input, select,
     cursor: url('images/cursor2.cur'), pointer !important;
 }
 
-/* --- SIMPLE PAGE TITLE (Matches Calculator) --- */
-.page-title {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.page-title h1 {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 2rem;
-    font-weight: 900;
-    margin: 0 0 10px 0;
-    color: #fff;
-}
-
-.page-title p {
-    color: #a1a1aa;
-    margin: 0;
-}
+/* --- SIMPLE PAGE TITLE --- */
+.page-title { text-align: center; margin-bottom: 40px; }
+.page-title h1 { font-family: 'Orbitron', sans-serif; font-size: 2rem; font-weight: 900; margin: 0 0 10px 0; color: #fff; }
+.page-title p { color: #a1a1aa; margin: 0; }
 
 /* --- TOP BAR (Search & Filters) --- */
 .top-bar { max-width: 1100px; margin: 0 auto 20px auto; display: flex; gap: 15px; flex-wrap: wrap; }
