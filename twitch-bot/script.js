@@ -1,5 +1,5 @@
 // --- PASSWORD LOGIC ---
-const SECRET_PASSWORD = "alohomora"; 
+const SECRET_PASSWORD = "megamu123"; 
 
 function checkPassword() {
     const input = document.getElementById('password-input').value;
@@ -31,6 +31,7 @@ function initBot() {
     let chatSocket = null;
     let replyTimestamps = [];
     let botConfig = {};
+    let currentMessageIndex = 0; // Tracks which message to send next
 
     const startBtn = document.getElementById('startBtn');
     const stopBtn = document.getElementById('stopBtn');
@@ -47,11 +48,14 @@ function initBot() {
         const val = parseInt(e.target.value);
         msgCountVal.textContent = `${val} Message${val > 1 ? 's' : ''}`;
         
-        // Toggle visibility of inputs based on slider
-        msg2Row.style.display = val >= 2 ? 'block' : 'none';
-        msg3Row.style.display = val >= 3 ? 'block' : 'none';
+        // Toggle the 'collapsed' class for animation
+        if (val >= 2) msg2Row.classList.remove('collapsed');
+        else msg2Row.classList.add('collapsed');
+        
+        if (val >= 3) msg3Row.classList.remove('collapsed');
+        else msg3Row.classList.add('collapsed');
 
-        // If a row is hidden, make sure its input isn't required
+        // Prevent hidden inputs from blocking form submission
         document.getElementById('reply2').required = (val >= 2);
         document.getElementById('reply3').required = (val >= 3);
     });
@@ -76,19 +80,17 @@ function initBot() {
             chatSocket.close();
         }
 
-        // Gather messages based on slider count
         const msgCount = parseInt(msgSlider.value);
         const messages = [];
         if (msgCount >= 1) messages.push(document.getElementById('reply1').value.trim());
         if (msgCount >= 2) messages.push(document.getElementById('reply2').value.trim());
         if (msgCount >= 3) messages.push(document.getElementById('reply3').value.trim());
 
-        // Filter out any empty ones just in case
         botConfig = {
             username: document.getElementById('username').value.trim().toLowerCase(),
             token: document.getElementById('token').value.trim(),
             trigger: document.getElementById('trigger').value.trim(),
-            messages: messages.filter(m => m.length > 0), // Array of messages!
+            messages: messages.filter(m => m.length > 0),
             channels: document.getElementById('channels').value.split(',').map(c => c.trim().replace('#', '').toLowerCase()).filter(c => c),
             rateLimit: parseInt(document.getElementById('rateLimit').value, 10) || 3
         };
@@ -96,6 +98,8 @@ function initBot() {
         if (!botConfig.token.startsWith('oauth:')) {
             botConfig.token = 'oauth:' + botConfig.token;
         }
+
+        currentMessageIndex = 0; // Reset sequence when starting
 
         log(`Connecting to Twitch as ${botConfig.username}...`);
         statusDiv.textContent = 'Status: Connecting...';
@@ -150,13 +154,16 @@ function initBot() {
                         }
 
                         if (canSendReply()) {
-                            // --- PICK RANDOM MESSAGE ---
-                            const randomIndex = Math.floor(Math.random() * botConfig.messages.length);
-                            const chosenMessage = botConfig.messages[randomIndex];
-
+                            // --- SEQUENTIAL SENDING LOGIC ---
+                            const chosenMessage = botConfig.messages[currentMessageIndex];
+                            
                             chatSocket.send(`PRIVMSG #${channel} :${chosenMessage}`);
                             replyTimestamps.push(Date.now());
                             log(`Replied in #${channel} to ${sender}: "${chosenMessage}"`);
+                            
+                            // Increment index and loop back to 0 if at the end
+                            currentMessageIndex = (currentMessageIndex + 1) % botConfig.messages.length;
+                            
                         } else {
                             log(`⚠️ Rate limit hit. Ignored delayed reply in #${channel}.`);
                         }
