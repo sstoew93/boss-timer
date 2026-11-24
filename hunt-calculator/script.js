@@ -22,7 +22,7 @@ function montarAtributos() {
     <div class="atributo-item">
       <label for="${a.id}-perc">${a.label}</label>
       <input type="number" id="${a.id}-perc" class="porcentagem" value="0" min="0" max="100">
-      <span class="valor" id="${a.id}-valor">0 + 0 = 0</span>
+      <span class="valor" id="${a.id}-valor">0.00</span>
       ${a.cap !== null ? `<span class="optimal" id="${a.id}-optimal"></span>` : "<span></span>"}
     </div>
   `).join("");
@@ -83,23 +83,14 @@ function calcular() {
 
     const valorNivel = nivel * (perc / 100) * a.multiplier;
     let valorFinal = valorNivel + bonusQuest[a.id];
-    let isCapped = false;
 
     if (a.cap !== null && valorFinal > a.cap) {
       valorFinal = a.cap;
-      isCapped = true;
+      valorSpan.classList.add("capped");
+    } else {
+      valorSpan.classList.remove("capped");
     }
-
-    // Build the "Base + Quest = Total" string
-    const baseStr = Math.round(valorNivel).toLocaleString('en-US');
-    const questStr = Math.round(bonusQuest[a.id]).toLocaleString('en-US');
-    const finalStr = Math.round(valorFinal).toLocaleString('en-US');
-
-    valorSpan.innerHTML = `
-      <span class="val-base">${baseStr}</span> + 
-      <span class="val-quest">${questStr}</span> = 
-      <span class="val-total ${isCapped ? 'capped' : ''}">${finalStr}</span>
-    `;
+    valorSpan.textContent = valorFinal.toFixed(2);
 
     if (a.cap !== null && optimalSpan) {
       if (nivel > 0) {
@@ -114,6 +105,7 @@ function calcular() {
   });
 }
 
+// Initialize everything when DOM is loaded
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll('input[name="quest-type"]').forEach(r => r.addEventListener("change", atualizarQuestInputs));
     document.getElementById("nivel").addEventListener("input", calcular);
