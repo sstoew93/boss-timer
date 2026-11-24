@@ -1,0 +1,223 @@
+body { 
+    font-family: 'Inter', sans-serif; 
+    background: #09090b; 
+    background-image: radial-gradient(circle at 50% 0%, #1c1c22 0%, #09090b 60%);
+    color: #fafafa; 
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    cursor: url('../../images/cursor.cur'), auto; /* Adjusted path for the cursor */
+}
+
+a, button, input, select {
+    cursor: url('../../images/cursor2.cur'), pointer !important;
+}
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page-title h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    margin: 0 0 10px 0;
+    color: #fff;
+}
+
+.page-title p {
+    color: #a1a1aa;
+    margin: 0;
+}
+
+.layout {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* --- CARDS --- */
+.card {
+    background: #18181b;
+    border: 1px solid #27272a;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.5);
+}
+
+.card-nivel {
+    flex: 2;
+    min-width: 400px;
+}
+
+.card-quest {
+    flex: 1;
+    min-width: 300px;
+}
+
+.card h2 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 20px;
+    color: #fff;
+}
+
+/* --- FORMS & INPUTS --- */
+.form-row {
+    margin-bottom: 16px;
+}
+
+.form-row label {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    color: #a1a1aa;
+    margin-bottom: 8px;
+}
+
+.form-row input[type=number],
+.atributo-item input,
+.quest-grid input {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #27272a;
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    background: #09090b;
+    color: #fff;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-row input[type=number]:focus,
+.atributo-item input:focus,
+.quest-grid input:focus {
+    border-color: #52525b;
+    box-shadow: 0 0 0 3px rgba(255,255,255,0.05);
+}
+
+.quest-grid input:disabled {
+    background: #1f1f23;
+    color: #52525b;
+    cursor: not-allowed;
+}
+
+/* --- ATTRIBUTE ITEMS --- */
+.atributo-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid #27272a;
+    border-radius: 12px;
+    padding: 12px 16px;
+    margin-bottom: 12px;
+    background: #09090b;
+}
+
+.atributo-item label {
+    width: 85px;
+    font-size: 13px;
+    font-weight: 600;
+    flex-shrink: 0;
+    color: #e4e4e7;
+}
+
+.atributo-item input {
+    width: 65px;
+    text-align: center;
+    padding: 8px;
+}
+
+.atributo-item .valor {
+    font-weight: 700;
+    color: #10b981; /* Green */
+    min-width: 80px;
+    text-align: right;
+    font-size: 14px;
+}
+
+.atributo-item .valor.capped {
+    color: #ef4444; /* Red */
+}
+
+.atributo-item .optimal {
+    font-size: 11px;
+    color: #71717a;
+    min-width: 120px;
+    text-align: right;
+}
+
+/* --- TOTAL DISPLAY --- */
+#total-display {
+    font-weight: 600;
+    text-align: center;
+    margin-top: 20px;
+    padding: 14px;
+    border-radius: 12px;
+    background: #1f1f23;
+    font-size: 14px;
+    color: #e4e4e7;
+    transition: all 0.3s;
+}
+
+#total-display.ok {
+    background: rgba(16, 185, 129, 0.1);
+    color: #10b981;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+#total-display.nok {
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+/* --- QUEST OPTIONS --- */
+.quest-options {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.quest-options label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #e4e4e7;
+    cursor: pointer;
+}
+
+.quest-options input[type=radio] {
+    accent-color: #6366f1;
+}
+
+hr.divider {
+    border: none;
+    border-top: 1px solid #27272a;
+    margin: 24px 0;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .card-nivel, .card-quest {
+        min-width: 100%;
+    }
+    .atributo-item {
+        flex-wrap: wrap;
+    }
+    .atributo-item .optimal {
+        width: 100%;
+        text-align: left;
+        margin-top: 8px;
+    }
+}
