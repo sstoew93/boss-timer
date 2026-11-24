@@ -69,7 +69,8 @@
                                 Message to Look For (Trigger)
                                 <span class="tooltip-container">
                                     <span class="tooltip-icon">?</span>
-                                    <span class="tooltip-text">The exact word or phrase the bot will listen for in chat to start the sequence.</span>
+                                    <span class="tooltip-text">The word or phrase the bot will listen for in chat to start the sequence. 
+                                        Separate by commas (e.g., "congratz!", "parabens,", ", nickname!")</span>
                                 </span>
                             </label>
                             <input type="text" id="trigger" required>
@@ -169,7 +170,10 @@
                                 Channels to Watch
                                 <span class="tooltip-container">
                                     <span class="tooltip-icon">?</span>
-                                    <span class="tooltip-text">Comma-separated list of Twitch channels to join. Do not include the # symbol.</span>
+                                    <span class="tooltip-text">Comma-separated list of Twitch channels to join. 
+                                        Channels that require "!" infront of nickname can be solved by type their name with "!" as prefix.
+                                        That way FIRST message will be sent with prefix "!".
+                                    </span>
                                 </span>
                             </label>
                             <input type="text" id="channels" required>
