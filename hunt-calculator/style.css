@@ -9,7 +9,7 @@ body {
     cursor: url('../images/cursor.cur'), auto; /* Adjusted path for the cursor */
 }
 
-a, button, input, select {
+a, button, input, select, label {
     cursor: url('../images/cursor2.cur'), pointer !important;
 }
 
