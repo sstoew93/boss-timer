@@ -37,6 +37,25 @@ function initBot() {
     const statusDiv = document.getElementById('status');
     const logDiv = document.getElementById('log');
 
+    // --- SLIDER LOGIC ---
+    const msgSlider = document.getElementById('msgCount');
+    const msgCountVal = document.getElementById('msgCountVal');
+    const msg2Row = document.getElementById('msg2-row');
+    const msg3Row = document.getElementById('msg3-row');
+
+    msgSlider.addEventListener('input', (e) => {
+        const val = parseInt(e.target.value);
+        msgCountVal.textContent = `${val} Message${val > 1 ? 's' : ''}`;
+        
+        // Toggle visibility of inputs based on slider
+        msg2Row.style.display = val >= 2 ? 'block' : 'none';
+        msg3Row.style.display = val >= 3 ? 'block' : 'none';
+
+        // If a row is hidden, make sure its input isn't required
+        document.getElementById('reply2').required = (val >= 2);
+        document.getElementById('reply3').required = (val >= 3);
+    });
+
     function log(message) {
         const time = new Date().toLocaleTimeString();
         logDiv.innerHTML += `<br>[${time}] ${message}`;
@@ -57,11 +76,19 @@ function initBot() {
             chatSocket.close();
         }
 
+        // Gather messages based on slider count
+        const msgCount = parseInt(msgSlider.value);
+        const messages = [];
+        if (msgCount >= 1) messages.push(document.getElementById('reply1').value.trim());
+        if (msgCount >= 2) messages.push(document.getElementById('reply2').value.trim());
+        if (msgCount >= 3) messages.push(document.getElementById('reply3').value.trim());
+
+        // Filter out any empty ones just in case
         botConfig = {
             username: document.getElementById('username').value.trim().toLowerCase(),
             token: document.getElementById('token').value.trim(),
             trigger: document.getElementById('trigger').value.trim(),
-            reply: document.getElementById('reply').value.trim(),
+            messages: messages.filter(m => m.length > 0), // Array of messages!
             channels: document.getElementById('channels').value.split(',').map(c => c.trim().replace('#', '').toLowerCase()).filter(c => c),
             rateLimit: parseInt(document.getElementById('rateLimit').value, 10) || 3
         };
@@ -123,9 +150,13 @@ function initBot() {
                         }
 
                         if (canSendReply()) {
-                            chatSocket.send(`PRIVMSG #${channel} :${botConfig.reply}`);
+                            // --- PICK RANDOM MESSAGE ---
+                            const randomIndex = Math.floor(Math.random() * botConfig.messages.length);
+                            const chosenMessage = botConfig.messages[randomIndex];
+
+                            chatSocket.send(`PRIVMSG #${channel} :${chosenMessage}`);
                             replyTimestamps.push(Date.now());
-                            log(`Replied in #${channel} to ${sender}: "${botConfig.reply}"`);
+                            log(`Replied in #${channel} to ${sender}: "${chosenMessage}"`);
                         } else {
                             log(`⚠️ Rate limit hit. Ignored delayed reply in #${channel}.`);
                         }
