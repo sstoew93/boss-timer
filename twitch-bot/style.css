@@ -11,7 +11,7 @@ body {
     cursor: url('../images/cursor.cur'), auto; 
 }
 
-a, button, input, select,  {
+a, button, input, select, input[type="range"] {
     cursor: url('../images/cursor2.cur'), pointer !important;
 }
 
@@ -105,7 +105,7 @@ a, button, input, select,  {
 .log-box {
     background: #000; border: 1px solid #27272a; color: #10b981; padding: 16px;
     border-radius: 12px; font-family: monospace; font-size: 13px; 
-    height: 823px; /* Made taller to match the form height */
+    height: 600px; /* Made taller to match the form height */
     overflow-y: auto; line-height: 1.5;
 }
 .log-box::-webkit-scrollbar { width: 8px; }
@@ -152,6 +152,7 @@ a, button, input, select,  {
     font-size: 11px;
     font-weight: bold;
     transition: all 0.2s;
+    cursor: url('../images/cursor.cur'), pointer !important;
 }
 
 .tooltip-container:hover .tooltip-icon {
