@@ -1,81 +1,184 @@
-<script>
-    let chatSocket = null;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitch Bot Control Panel</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 600px; margin: 2rem auto; padding: 0 1rem; color: #333; }
+        h1 { color: #9146FF; }
+        label { display: block; margin-top: 1rem; font-weight: bold; }
+        input { width: 100%; padding: 0.5rem; margin-top: 0.25rem; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        button { margin-top: 1rem; padding: 0.75rem 1.5rem; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; color: white; }
+        #startBtn { background-color: #9146FF; }
+        #startBtn:hover { background-color: #772ce8; }
+        #stopBtn { background-color: #e91916; display: none; }
+        #stopBtn:hover { background-color: #c41210; }
+        #status { margin-top: 1rem; padding: 1rem; background-color: #f4f4f4; border-left: 4px solid #9146FF; font-family: monospace; word-wrap: break-word; }
+        .warning { background-color: #fff3cd; color: #856404; padding: 1rem; border-radius: 4px; margin-bottom: 1rem; font-size: 0.9rem; border: 1px solid #ffeeba; }
+        .log { height: 150px; overflow-y: scroll; background: #222; color: #0f0; padding: 10px; font-family: monospace; font-size: 0.85rem; margin-top: 1rem; border-radius: 4px; }
+    </style>
+</head>
+<body>
 
-    document.getElementById('botForm').addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        const username = document.getElementById('username').value.trim();
-        const token = document.getElementById('token').value.trim();
-        const trigger = document.getElementById('trigger').value.trim();
-        const reply = document.getElementById('reply').value.trim();
-        const channels = document.getElementById('channels').value.split(',').map(c => c.trim().replace('#', ''));
+    <h1>Twitch Bot Control Panel</h1>
+    
+    <div class="warning">
+        <strong>⚠️ Keep this tab open!</strong> The bot runs entirely in your browser. If you close this tab or lose internet connection, the bot will stop replying.
+    </div>
 
-        if (chatSocket) {
-            chatSocket.close();
+    <form id="botForm">
+        <label>Twitch Username (Bot account)</label>
+        <input type="text" id="username" required placeholder="e.g., MyBotName">
+
+        <label>OAuth Token (requires chat:read and chat:edit)</label>
+        <input type="password" id="token" required placeholder="oauth:xxxxxxxxxxxxxxxxxxxx">
+
+        <label>Message to Look For (Trigger)</label>
+        <input type="text" id="trigger" required placeholder="e.g., !hello">
+
+        <label>Reply Message</label>
+        <input type="text" id="reply" required placeholder="e.g., Hello chat!">
+
+        <label>Channels to Watch (comma-separated, no #)</label>
+        <input type="text" id="channels" required placeholder="e.g., shroud, xqc">
+
+        <label>Max Replies per 60 Seconds (Rate Limit)</label>
+        <input type="number" id="rateLimit" value="3" min="1" required>
+
+        <button type="submit" id="startBtn">Start Bot</button>
+        <button type="button" id="stopBtn">Stop Bot</button>
+    </form>
+
+    <div id="status">Status: Offline</div>
+    <div id="log" class="log">[System] Ready.</div>
+
+    <script>
+        let chatSocket = null;
+        let replyTimestamps = [];
+        let botConfig = {};
+
+        const startBtn = document.getElementById('startBtn');
+        const stopBtn = document.getElementById('stopBtn');
+        const statusDiv = document.getElementById('status');
+        const logDiv = document.getElementById('log');
+
+        // Helper to write logs to the screen
+        function log(message) {
+            const time = new Date().toLocaleTimeString();
+            logDiv.innerHTML += `<br>[${time}] ${message}`;
+            logDiv.scrollTop = logDiv.scrollHeight;
         }
 
-        chatSocket = new WebSocket('wss://irc-ws.chat.twitch.tv:443');
+        // Rate limiter logic
+        function canSendReply() {
+            const now = Date.now();
+            const windowMs = 60 * 1000; // 60 seconds
+            // Remove timestamps older than 60s
+            replyTimestamps = replyTimestamps.filter(ts => now - ts < windowMs);
+            return replyTimestamps.length < botConfig.rateLimit;
+        }
 
-        chatSocket.onopen = () => {
-            document.getElementById('status').textContent = 'Connecting to Twitch...';
-            // Authenticate
-            chatSocket.send(`PASS oauth:${token}`);
-            chatSocket.send(`NICK ${username}`);
-            // Join channels
-            channels.forEach(channel => {
-                chatSocket.send(`JOIN #${channel}`);
-            });
-        };
-
-        chatSocket.onmessage = (event) => {
-            const message = event.data;
+        document.getElementById('botForm').addEventListener('submit', (e) => {
+            e.preventDefault();
             
-            // Twitch requires responding to PING to keep the connection alive
-            if (message.includes('PING')) {
-                chatSocket.send('PONG :tmi.twitch.tv');
-                return;
+            if (chatSocket) {
+                chatSocket.close();
             }
 
-            // Parse chat messages
-            if (message.includes('PRIVMSG')) {
-                // Basic parsing: ":user!user@user.tmi.twitch.tv PRIVMSG #channel :message"
-                const match = message.match(/^:(.+)!.+ PRIVMSG #(\S+) :(.+)$/);
+            // Get inputs
+            botConfig = {
+                username: document.getElementById('username').value.trim().toLowerCase(),
+                token: document.getElementById('token').value.trim(),
+                trigger: document.getElementById('trigger').value.trim(),
+                reply: document.getElementById('reply').value.trim(),
+                channels: document.getElementById('channels').value.split(',').map(c => c.trim().replace('#', '').toLowerCase()).filter(c => c),
+                rateLimit: parseInt(document.getElementById('rateLimit').value, 10) || 3
+            };
+
+            if (!botConfig.token.startsWith('oauth:')) {
+                botConfig.token = 'oauth:' + botConfig.token;
+            }
+
+            log(`Connecting to Twitch as ${botConfig.username}...`);
+            statusDiv.textContent = 'Status: Connecting...';
+            startBtn.style.display = 'none';
+            stopBtn.style.display = 'inline-block';
+
+            // Initialize WebSocket
+            chatSocket = new WebSocket('wss://irc-ws.chat.twitch.tv:443');
+
+            chatSocket.onopen = () => {
+                log(`Connected. Authenticating...`);
+                // Authenticate
+                chatSocket.send(`PASS ${botConfig.token}`);
+                chatSocket.send(`NICK ${botConfig.username}`);
+                
+                // Join channels
+                botConfig.channels.forEach(channel => {
+                    chatSocket.send(`JOIN #${channel}`);
+                    log(`Joined channel: #${channel}`);
+                });
+                
+                statusDiv.textContent = 'Status: Online & Listening';
+            };
+
+            chatSocket.onmessage = (event) => {
+                const rawMessage = event.data;
+                
+                // Respond to PING to keep connection alive
+                if (rawMessage.startsWith('PING')) {
+                    chatSocket.send('PONG :tmi.twitch.tv');
+                    return;
+                }
+
+                // Parse chat messages
+                // Format: :user!user@user.tmi.twitch.tv PRIVMSG #channel :message
+                const match = rawMessage.match(/^:([^!]+)![^@]+@[^ ]+ PRIVMSG #([^ ]+) :(.*)/);
+                
                 if (match) {
-                    const sender = match[1];
-                    const channel = match[2];
+                    const sender = match[1].toLowerCase();
+                    const channel = match[2].toLowerCase();
                     const text = match[3];
 
-                    // Ignore messages sent by the bot itself
-                    if (sender.toLowerCase() === username.toLowerCase()) return;
+                    // Ignore messages from the bot itself
+                    if (sender === botConfig.username) return;
 
-                    // Check for trigger
-                    if (text.toLowerCase().includes(trigger.toLowerCase())) {
-                        // Send reply
-                        chatSocket.send(`PRIVMSG #${channel} :${reply}`);
-                        console.log(`Replied in #${channel} to ${sender}`);
-                        document.getElementById('status').textContent = `Replied in #${channel}`;
+                    // Check if message contains the trigger keyword (case-insensitive)
+                    if (text.toLowerCase().includes(botConfig.trigger.toLowerCase())) {
+                        
+                        if (canSendReply()) {
+                            // Send reply
+                            chatSocket.send(`PRIVMSG #${channel} :${botConfig.reply}`);
+                            replyTimestamps.push(Date.now());
+                            log(`Replied in #${channel} to ${sender}: "${botConfig.reply}"`);
+                        } else {
+                            log(`⚠️ Rate limit hit. Ignored message in #${channel}.`);
+                        }
                     }
                 }
+            };
+
+            chatSocket.onclose = () => {
+                log(`Disconnected from Twitch.`);
+                statusDiv.textContent = 'Status: Offline';
+                startBtn.style.display = 'inline-block';
+                stopBtn.style.display = 'none';
+                chatSocket = null;
+            };
+
+            chatSocket.onerror = (error) => {
+                log(`❌ WebSocket Error. Check your token and internet connection.`);
+                console.error(error);
+            };
+        });
+
+        document.getElementById('stopBtn').addEventListener('click', () => {
+            if (chatSocket) {
+                log(`Manually stopping bot...`);
+                chatSocket.close();
             }
-        };
-
-        chatSocket.onclose = () => {
-            document.getElementById('status').textContent = 'Disconnected from Twitch.';
-        };
-
-        chatSocket.onerror = (error) => {
-            console.error('WebSocket Error:', error);
-            document.getElementById('status').textContent = 'Connection Error. Check console.';
-        };
-
-        document.getElementById('status').textContent = 'Bot starting...';
-    });
-
-    document.getElementById('stopBtn').addEventListener('click', () => {
-        if (chatSocket) {
-            chatSocket.close();
-            chatSocket = null;
-            document.getElementById('status').textContent = 'Bot stopped.';
-        }
-    });
-</script>
+        });
+    </script>
+</body>
+</html>
