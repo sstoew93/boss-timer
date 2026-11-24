@@ -1,70 +1,81 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>MEGA Tools - Twitch Bot</title>
-    <style>
-        body { font-family: sans-serif; max-width: 500px; margin: 2rem auto; }
-        label { display: block; margin-top: 1rem; }
-        input, textarea { width: 100%; padding: 0.5rem; margin-top: 0.25rem; }
-        button { margin-top: 1rem; padding: 0.5rem 1rem; }
-    </style>
-</head>
-<body>
-    <h1>Twitch Bot Control Panel</h1>
-    <form id="botForm">
-        <label>Twitch Username (your bot account)</label>
-        <input type="text" id="username" required>
+<script>
+    let chatSocket = null;
 
-        <label>OAuth Token (with chat:read and chat:edit)</label>
-        <input type="password" id="token" required>
+    document.getElementById('botForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        const username = document.getElementById('username').value.trim();
+        const token = document.getElementById('token').value.trim();
+        const trigger = document.getElementById('trigger').value.trim();
+        const reply = document.getElementById('reply').value.trim();
+        const channels = document.getElementById('channels').value.split(',').map(c => c.trim().replace('#', ''));
 
-        <label>Message to Look For</label>
-        <input type="text" id="trigger" required>
+        if (chatSocket) {
+            chatSocket.close();
+        }
 
-        <label>Reply Message</label>
-        <input type="text" id="reply" required>
+        chatSocket = new WebSocket('wss://irc-ws.chat.twitch.tv:443');
 
-        <label>Channels to Watch (comma-separated, no #)</label>
-        <input type="text" id="channels" placeholder="channel1, channel2" required>
-
-        <label>Max Messages to Send (per 60s window)</label>
-        <input type="number" id="rateLimit" value="5" min="1">
-
-        <button type="submit">Start Bot</button>
-        <button type="button" id="stopBtn">Stop Bot</button>
-    </form>
-    <p id="status"></p>
-
-    <script>
-        // ⚠️ REPLACE THIS WITH YOUR PYTHONANYWHERE APP URL
-        const BACKEND_URL = 'https://sstoew93.pythonanywhere.com';
-
-        document.getElementById('botForm').addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const config = {
-                username: document.getElementById('username').value.trim(),
-                token: document.getElementById('token').value.trim(),
-                trigger: document.getElementById('trigger').value.trim(),
-                reply: document.getElementById('reply').value.trim(),
-                channels: document.getElementById('channels').value.split(',').map(c => c.trim()),
-                rateLimit: parseInt(document.getElementById('rateLimit').value, 10) || 5,
-            };
-
-            const res = await fetch(`${BACKEND_URL}/start`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(config),
+        chatSocket.onopen = () => {
+            document.getElementById('status').textContent = 'Connecting to Twitch...';
+            // Authenticate
+            chatSocket.send(`PASS oauth:${token}`);
+            chatSocket.send(`NICK ${username}`);
+            // Join channels
+            channels.forEach(channel => {
+                chatSocket.send(`JOIN #${channel}`);
             });
-            const data = await res.json();
-            document.getElementById('status').textContent = data.message;
-        });
+        };
 
-        document.getElementById('stopBtn').addEventListener('click', async () => {
-            const res = await fetch(`${BACKEND_URL}/stop`, { method: 'POST' });
-            const data = await res.json();
-            document.getElementById('status').textContent = data.message;
-        });
-    </script>
-</body>
-</html>
+        chatSocket.onmessage = (event) => {
+            const message = event.data;
+            
+            // Twitch requires responding to PING to keep the connection alive
+            if (message.includes('PING')) {
+                chatSocket.send('PONG :tmi.twitch.tv');
+                return;
+            }
+
+            // Parse chat messages
+            if (message.includes('PRIVMSG')) {
+                // Basic parsing: ":user!user@user.tmi.twitch.tv PRIVMSG #channel :message"
+                const match = message.match(/^:(.+)!.+ PRIVMSG #(\S+) :(.+)$/);
+                if (match) {
+                    const sender = match[1];
+                    const channel = match[2];
+                    const text = match[3];
+
+                    // Ignore messages sent by the bot itself
+                    if (sender.toLowerCase() === username.toLowerCase()) return;
+
+                    // Check for trigger
+                    if (text.toLowerCase().includes(trigger.toLowerCase())) {
+                        // Send reply
+                        chatSocket.send(`PRIVMSG #${channel} :${reply}`);
+                        console.log(`Replied in #${channel} to ${sender}`);
+                        document.getElementById('status').textContent = `Replied in #${channel}`;
+                    }
+                }
+            }
+        };
+
+        chatSocket.onclose = () => {
+            document.getElementById('status').textContent = 'Disconnected from Twitch.';
+        };
+
+        chatSocket.onerror = (error) => {
+            console.error('WebSocket Error:', error);
+            document.getElementById('status').textContent = 'Connection Error. Check console.';
+        };
+
+        document.getElementById('status').textContent = 'Bot starting...';
+    });
+
+    document.getElementById('stopBtn').addEventListener('click', () => {
+        if (chatSocket) {
+            chatSocket.close();
+            chatSocket = null;
+            document.getElementById('status').textContent = 'Bot stopped.';
+        }
+    });
+</script>
