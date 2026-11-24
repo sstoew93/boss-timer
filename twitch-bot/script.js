@@ -207,18 +207,45 @@ function initBot() {
                 return;
             }
 
-            const match = rawMessage.match(/^:([^!]+)![^@]+@[^ ]+ PRIVMSG #([^ ]+) :(.*)/);
+            // ==========================================
+            // --- PARSE IRC TAGS FOR BADGES ---
+            // ==========================================
+            let tags = {};
+            let actualMessagePart = rawMessage;
+
+            if (rawMessage.startsWith('@')) {
+                const tagsEndIndex = rawMessage.indexOf(' ');
+                const rawTags = rawMessage.substring(1, tagsEndIndex);
+                actualMessagePart = rawMessage.substring(tagsEndIndex + 1);
+                
+                rawTags.split(';').forEach(tag => {
+                    const [key, value] = tag.split('=');
+                    tags[key] = value;
+                });
+            }
+
+            // Parse PRIVMSG (normal) or USERNOTICE (announcement)
+            const match = actualMessagePart.match(/(?:PRIVMSG|USERNOTICE) #([^ ]+) :(.*)/);
             
             if (match) {
-                const sender = match[1].toLowerCase();
-                const channel = match[2].toLowerCase();
-                const text = match[3];
+                const channel = match[1].toLowerCase();
+                const text = match[2];
+                
+                const senderMatch = actualMessagePart.match(/^:([^!]+)!/);
+                const sender = senderMatch ? senderMatch[1].toLowerCase() : 'system';
 
                 // Ignore messages from the bot itself
                 if (sender === botConfig.username) return;
 
+                // Check Auth Status
+                const isAnnouncement = actualMessagePart.includes('USERNOTICE') && tags['msg-id'] === 'announcement';
+                const badges = tags['badges'] || '';
+                const isBroadcaster = badges.includes('broadcaster/1');
+                const isModerator = badges.includes('moderator/1');
+                const isAuthorizedUser = isBroadcaster || isModerator || isAnnouncement;
+
                 // ==========================================
-                // --- CHANNEL-SPECIFIC SPAM TRACKER ---
+                // --- CHANNEL-SPECIFIC SPAM TRACKER (Anyone) ---
                 // ==========================================
                 const cleanText = text.trim();
                 if (cleanText.startsWith('!')) {
@@ -251,10 +278,12 @@ function initBot() {
                 }
 
                 // ==========================================
-                // --- EXISTING: TRIGGER SEQUENCE LOGIC ---
+                // --- SEQUENCE TRIGGER (Authorized ONLY) ---
                 // ==========================================
-                if (text.toLowerCase().includes(botConfig.trigger.toLowerCase()) && !isSequenceRunning) {
-                    runMessageSequence(channel, sender);
+                if (isAuthorizedUser) {
+                    if (text.toLowerCase().includes(botConfig.trigger.toLowerCase()) && !isSequenceRunning) {
+                        runMessageSequence(channel, sender);
+                    }
                 }
             }
         };
