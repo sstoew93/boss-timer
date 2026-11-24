@@ -1,3 +1,36 @@
+// --- PASSWORD LOGIC ---
+const SECRET_PASSWORD = "alohomora"; // Must match the Boss Timer password
+
+function checkPassword() {
+    const input = document.getElementById('password-input').value;
+    const errorMsg = document.getElementById('error-msg');
+
+    if (input === SECRET_PASSWORD) {
+        document.getElementById('login-screen').style.display = 'none';
+        document.getElementById('app-content').style.display = 'block';
+        sessionStorage.setItem('isLoggedIn', 'true');
+        initializeCalculator();
+    } else {
+        errorMsg.style.display = 'block';
+        document.getElementById('password-input').value = ''; 
+    }
+}
+
+// Allow pressing "Enter" to submit password
+document.getElementById('password-input').addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') checkPassword();
+});
+
+// Check if already logged in from the Boss Timer
+document.addEventListener("DOMContentLoaded", () => {
+    if (sessionStorage.getItem('isLoggedIn') === 'true') {
+        document.getElementById('login-screen').style.display = 'none';
+        document.getElementById('app-content').style.display = 'block';
+        initializeCalculator();
+    }
+});
+
+// --- CALCULATOR LOGIC ---
 const FULL_LABEL = "Full:";
 const ATRIBUTOS = [
   { id: "damage",    label: "Damage",    multiplier: 120, cap: 65000 },
@@ -105,12 +138,11 @@ function calcular() {
   });
 }
 
-// Initialize everything when DOM is loaded
-document.addEventListener("DOMContentLoaded", () => {
+function initializeCalculator() {
     document.querySelectorAll('input[name="quest-type"]').forEach(r => r.addEventListener("change", atualizarQuestInputs));
     document.getElementById("nivel").addEventListener("input", calcular);
 
     montarAtributos();
     montarQuestInputs();
     atualizarQuestInputs();
-});
+}
