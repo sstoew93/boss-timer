@@ -11,6 +11,10 @@ body {
     cursor: url('../images/cursor.cur'), auto; 
 }
 
+label {
+    cursor: url('../images/cursor.cur'), pointer !important;
+}
+
 a, button, input, select {
     cursor: url('../images/cursor2.cur'), pointer !important;
 }
@@ -150,3 +154,91 @@ a, button, input, select {
 
 /* --- FOOTER --- */
 .app-footer { text-align: center; padding: 40px 20px 20px 20px; color: #71717a; font-size: 13px; margin-top: 20px; border-top: 1px solid #27272a; letter-spacing: 1px; }
+
+/* ... [KEEP ALL YOUR EXISTING CSS ABOVE THIS POINT] ... */
+
+/* --- RANGE SLIDER --- */
+.slider-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #09090b;
+    padding: 10px 14px;
+    border: 1px solid #27272a;
+    border-radius: 10px;
+}
+
+.slider-wrapper input[type=range] {
+    flex-grow: 1;
+    -webkit-appearance: none;
+    background: transparent;
+    margin: 0;
+    padding: 0;
+}
+
+.slider-wrapper input[type=range]:focus {
+    outline: none;
+}
+
+/* Slider Track */
+.slider-wrapper input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    background: #3f3f46;
+    border-radius: 3px;
+}
+
+/* Slider Thumb (Knob) */
+.slider-wrapper input[type=range]::-webkit-slider-thumb {
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background: #9146FF; /* Twitch Purple */
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -6px; /* Centers thumb on track */
+    box-shadow: 0 0 10px rgba(145, 70, 255, 0.5);
+    transition: transform 0.1s;
+}
+
+.slider-wrapper input[type=range]::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+
+/* For Firefox */
+.slider-wrapper input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    background: #3f3f46;
+    border-radius: 3px;
+}
+
+.slider-wrapper input[type=range]::-moz-range-thumb {
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background: #9146FF;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 0 10px rgba(145, 70, 255, 0.5);
+}
+
+#msgCountVal {
+    font-size: 14px;
+    font-weight: 700;
+    color: #9146FF;
+    min-width: 70px;
+    text-align: right;
+}
+
+/* Smooth appearance for dynamic messages */
+.dynamic-msg {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
