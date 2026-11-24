@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const path = window.location.pathname;
     const isBossTimer = path === '/mega-tools/' || path === '/mega-tools/index.html' || path === '/mega-tools';
     const isHuntCalc = path.includes('/mega-tools/hunt-calculator/');
-    const isTwitchBot = path.includes('/mega-tools/card-tracker/');
+    const isCardTracker = path.includes('/mega-tools/card-tracker/');
     const isTwitchBot = path.includes('/mega-tools/twitch-bot/');
 
     const navHTML = `
