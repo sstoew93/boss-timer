@@ -31,14 +31,13 @@ function initBot() {
     let chatSocket = null;
     let replyTimestamps = [];
     let botConfig = {};
-    let isSequenceRunning = false; // Prevents overlapping sequences
+    let isSequenceRunning = false; 
 
     const startBtn = document.getElementById('startBtn');
     const stopBtn = document.getElementById('stopBtn');
     const statusDiv = document.getElementById('status');
     const logDiv = document.getElementById('log');
 
-    // Helper function for delays
     const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
     // --- SLIDER LOGIC ---
@@ -79,39 +78,68 @@ function initBot() {
         if (isSequenceRunning) return;
         isSequenceRunning = true;
 
-        log(`▶️ Starting sequence for ${sender} in #${channel}...`);
-
-        for (let i = 0; i < botConfig.messages.length; i++) {
-            const msg = botConfig.messages[i];
+        try {
+            // 1. Initial Random Delay (7 to 15 seconds)
+            const minDelay = 7;
+            const maxDelay = 15;
+            const initialDelay = Math.floor(Math.random() * (maxDelay - minDelay + 1)) + minDelay;
             
-            // Wait for the delay
-            await sleep(msg.delay * 1000);
+            log(`▶️ Sequence triggered by ${sender}. First message in ${initialDelay}s...`);
+            await sleep(initialDelay * 1000);
 
-            // Check if bot is still connected
-            if (!chatSocket || chatSocket.readyState !== WebSocket.OPEN) {
-                log(`⚠️ Cancelled sequence (bot disconnected).`);
+            // Send Message 1
+            if (canSendMessage()) {
+                chatSocket.send(`PRIVMSG #${channel} :${botConfig.msg1}`);
+                replyTimestamps.push(Date.now());
+                log(`[1/3] Sent: "${botConfig.msg1}"`);
+            } else {
+                log(`⚠️ Rate limit hit. Skipped Message 1.`);
                 isSequenceRunning = false;
                 return;
             }
 
-            // Check rate limit before sending
-            if (canSendMessage()) {
-                chatSocket.send(`PRIVMSG #${channel} :${msg.text}`);
-                replyTimestamps.push(Date.now());
-                log(`[${i+1}/${botConfig.messages.length}] Sent: "${msg.text}"`);
-            } else {
-                log(`⚠️ Rate limit hit. Skipped: "${msg.text}"`);
-            }
-        }
+            // 2. Wait delay2, Send Message 2
+            if (botConfig.hasMsg2) {
+                await sleep(botConfig.delay2 * 1000);
+                if (!chatSocket || chatSocket.readyState !== WebSocket.OPEN) return;
 
-        // Apply cooldown after sequence finishes
-        if (botConfig.cooldown > 0) {
-            log(`⏳ Sequence complete. Cooling down for ${botConfig.cooldown}s...`);
-            await sleep(botConfig.cooldown * 1000);
+                if (canSendMessage()) {
+                    chatSocket.send(`PRIVMSG #${channel} :${botConfig.msg2}`);
+                    replyTimestamps.push(Date.now());
+                    log(`[2/3] Sent after ${botConfig.delay2}s: "${botConfig.msg2}"`);
+                } else {
+                    log(`⚠️ Rate limit hit. Skipped Message 2.`);
+                }
+            }
+
+            // 3. Wait delay3, Send Message 3
+            if (botConfig.hasMsg3) {
+                await sleep(botConfig.delay3 * 1000);
+                if (!chatSocket || chatSocket.readyState !== WebSocket.OPEN) return;
+
+                if (canSendMessage()) {
+                    chatSocket.send(`PRIVMSG #${channel} :${botConfig.msg3}`);
+                    replyTimestamps.push(Date.now());
+                    log(`[3/3] Sent after ${botConfig.delay3}s: "${botConfig.msg3}"`);
+                } else {
+                    log(`⚠️ Rate limit hit. Skipped Message 3.`);
+                }
+            }
+
+            // 4. Final Cooldown
+            if (botConfig.cooldown > 0) {
+                log(`⏳ Sequence complete. Cooling down for ${botConfig.cooldown}s...`);
+                await sleep(botConfig.cooldown * 1000);
+            }
+            
+            log(`✅ Ready for next trigger.`);
+
+        } catch (error) {
+            console.error(error);
+            log(`❌ Error during sequence.`);
+        } finally {
+            isSequenceRunning = false;
         }
-        
-        log(`✅ Ready for next trigger.`);
-        isSequenceRunning = false;
     }
 
     document.getElementById('botForm').addEventListener('submit', (e) => {
@@ -120,33 +148,18 @@ function initBot() {
         if (chatSocket) chatSocket.close();
 
         const msgCount = parseInt(msgSlider.value);
-        const messages = [];
-
-        // Gather messages and their specific delays
-        if (msgCount >= 1) {
-            messages.push({
-                text: document.getElementById('reply1').value.trim(),
-                delay: parseInt(document.getElementById('delay1').value) || 0
-            });
-        }
-        if (msgCount >= 2) {
-            messages.push({
-                text: document.getElementById('reply2').value.trim(),
-                delay: parseInt(document.getElementById('delay2').value) || 0
-            });
-        }
-        if (msgCount >= 3) {
-            messages.push({
-                text: document.getElementById('reply3').value.trim(),
-                delay: parseInt(document.getElementById('delay3').value) || 0
-            });
-        }
 
         botConfig = {
             username: document.getElementById('username').value.trim().toLowerCase(),
             token: document.getElementById('token').value.trim(),
             trigger: document.getElementById('trigger').value.trim(),
-            messages: messages.filter(m => m.text.length > 0),
+            msg1: document.getElementById('reply1').value.trim(),
+            hasMsg2: msgCount >= 2,
+            msg2: document.getElementById('reply2').value.trim(),
+            delay2: parseInt(document.getElementById('delay2').value) || 0,
+            hasMsg3: msgCount >= 3,
+            msg3: document.getElementById('reply3').value.trim(),
+            delay3: parseInt(document.getElementById('delay3').value) || 0,
             cooldown: parseInt(document.getElementById('cooldown').value) || 0,
             channels: document.getElementById('channels').value.split(',').map(c => c.trim().replace('#', '').toLowerCase()).filter(c => c),
             rateLimit: parseInt(document.getElementById('rateLimit').value, 10) || 10
@@ -193,7 +206,6 @@ function initBot() {
 
                 if (sender === botConfig.username) return;
 
-                // Trigger matches and we aren't currently running a sequence
                 if (text.toLowerCase().includes(botConfig.trigger.toLowerCase()) && !isSequenceRunning) {
                     runMessageSequence(channel, sender);
                 }
