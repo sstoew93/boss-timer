@@ -1,5 +1,5 @@
 // --- PASSWORD LOGIC ---
-const SECRET_PASSWORD = "megamu123"; 
+const SECRET_PASSWORD = "alohomora"; 
 
 function checkPassword() {
     const input = document.getElementById('password-input').value;
@@ -31,12 +31,15 @@ function initBot() {
     let chatSocket = null;
     let replyTimestamps = [];
     let botConfig = {};
-    let currentMessageIndex = 0; // Tracks which message to send next
+    let isSequenceRunning = false; // Prevents overlapping sequences
 
     const startBtn = document.getElementById('startBtn');
     const stopBtn = document.getElementById('stopBtn');
     const statusDiv = document.getElementById('status');
     const logDiv = document.getElementById('log');
+
+    // Helper function for delays
+    const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
     // --- SLIDER LOGIC ---
     const msgSlider = document.getElementById('msgCount');
@@ -48,14 +51,12 @@ function initBot() {
         const val = parseInt(e.target.value);
         msgCountVal.textContent = `${val} Message${val > 1 ? 's' : ''}`;
         
-        // Toggle the 'collapsed' class for animation
         if (val >= 2) msg2Row.classList.remove('collapsed');
         else msg2Row.classList.add('collapsed');
         
         if (val >= 3) msg3Row.classList.remove('collapsed');
         else msg3Row.classList.add('collapsed');
 
-        // Prevent hidden inputs from blocking form submission
         document.getElementById('reply2').required = (val >= 2);
         document.getElementById('reply3').required = (val >= 3);
     });
@@ -66,40 +67,94 @@ function initBot() {
         logDiv.scrollTop = logDiv.scrollHeight;
     }
 
-    function canSendReply() {
+    function canSendMessage() {
         const now = Date.now();
         const windowMs = 60 * 1000; 
         replyTimestamps = replyTimestamps.filter(ts => now - ts < windowMs);
         return replyTimestamps.length < botConfig.rateLimit;
     }
 
+    // --- THE SEQUENCE RUNNER ---
+    async function runMessageSequence(channel, sender) {
+        if (isSequenceRunning) return;
+        isSequenceRunning = true;
+
+        log(`▶️ Starting sequence for ${sender} in #${channel}...`);
+
+        for (let i = 0; i < botConfig.messages.length; i++) {
+            const msg = botConfig.messages[i];
+            
+            // Wait for the delay
+            await sleep(msg.delay * 1000);
+
+            // Check if bot is still connected
+            if (!chatSocket || chatSocket.readyState !== WebSocket.OPEN) {
+                log(`⚠️ Cancelled sequence (bot disconnected).`);
+                isSequenceRunning = false;
+                return;
+            }
+
+            // Check rate limit before sending
+            if (canSendMessage()) {
+                chatSocket.send(`PRIVMSG #${channel} :${msg.text}`);
+                replyTimestamps.push(Date.now());
+                log(`[${i+1}/${botConfig.messages.length}] Sent: "${msg.text}"`);
+            } else {
+                log(`⚠️ Rate limit hit. Skipped: "${msg.text}"`);
+            }
+        }
+
+        // Apply cooldown after sequence finishes
+        if (botConfig.cooldown > 0) {
+            log(`⏳ Sequence complete. Cooling down for ${botConfig.cooldown}s...`);
+            await sleep(botConfig.cooldown * 1000);
+        }
+        
+        log(`✅ Ready for next trigger.`);
+        isSequenceRunning = false;
+    }
+
     document.getElementById('botForm').addEventListener('submit', (e) => {
         e.preventDefault();
         
-        if (chatSocket) {
-            chatSocket.close();
-        }
+        if (chatSocket) chatSocket.close();
 
         const msgCount = parseInt(msgSlider.value);
         const messages = [];
-        if (msgCount >= 1) messages.push(document.getElementById('reply1').value.trim());
-        if (msgCount >= 2) messages.push(document.getElementById('reply2').value.trim());
-        if (msgCount >= 3) messages.push(document.getElementById('reply3').value.trim());
+
+        // Gather messages and their specific delays
+        if (msgCount >= 1) {
+            messages.push({
+                text: document.getElementById('reply1').value.trim(),
+                delay: parseInt(document.getElementById('delay1').value) || 0
+            });
+        }
+        if (msgCount >= 2) {
+            messages.push({
+                text: document.getElementById('reply2').value.trim(),
+                delay: parseInt(document.getElementById('delay2').value) || 0
+            });
+        }
+        if (msgCount >= 3) {
+            messages.push({
+                text: document.getElementById('reply3').value.trim(),
+                delay: parseInt(document.getElementById('delay3').value) || 0
+            });
+        }
 
         botConfig = {
             username: document.getElementById('username').value.trim().toLowerCase(),
             token: document.getElementById('token').value.trim(),
             trigger: document.getElementById('trigger').value.trim(),
-            messages: messages.filter(m => m.length > 0),
+            messages: messages.filter(m => m.text.length > 0),
+            cooldown: parseInt(document.getElementById('cooldown').value) || 0,
             channels: document.getElementById('channels').value.split(',').map(c => c.trim().replace('#', '').toLowerCase()).filter(c => c),
-            rateLimit: parseInt(document.getElementById('rateLimit').value, 10) || 3
+            rateLimit: parseInt(document.getElementById('rateLimit').value, 10) || 10
         };
 
         if (!botConfig.token.startsWith('oauth:')) {
             botConfig.token = 'oauth:' + botConfig.token;
         }
-
-        currentMessageIndex = 0; // Reset sequence when starting
 
         log(`Connecting to Twitch as ${botConfig.username}...`);
         statusDiv.textContent = 'Status: Connecting...';
@@ -138,36 +193,9 @@ function initBot() {
 
                 if (sender === botConfig.username) return;
 
-                if (text.toLowerCase().includes(botConfig.trigger.toLowerCase())) {
-                    
-                    const minDelay = 7;
-                    const maxDelay = 15;
-                    const delaySeconds = Math.floor(Math.random() * (maxDelay - minDelay + 1)) + minDelay;
-                    const delayMs = delaySeconds * 1000;
-
-                    log(`Trigger found in #${channel}. Replying in ${delaySeconds}s...`);
-
-                    setTimeout(() => {
-                        if (!chatSocket || chatSocket.readyState !== WebSocket.OPEN) {
-                            log(`⚠️ Cancelled delayed reply in #${channel} (bot disconnected).`);
-                            return;
-                        }
-
-                        if (canSendReply()) {
-                            // --- SEQUENTIAL SENDING LOGIC ---
-                            const chosenMessage = botConfig.messages[currentMessageIndex];
-                            
-                            chatSocket.send(`PRIVMSG #${channel} :${chosenMessage}`);
-                            replyTimestamps.push(Date.now());
-                            log(`Replied in #${channel} to ${sender}: "${chosenMessage}"`);
-                            
-                            // Increment index and loop back to 0 if at the end
-                            currentMessageIndex = (currentMessageIndex + 1) % botConfig.messages.length;
-                            
-                        } else {
-                            log(`⚠️ Rate limit hit. Ignored delayed reply in #${channel}.`);
-                        }
-                    }, delayMs);
+                // Trigger matches and we aren't currently running a sequence
+                if (text.toLowerCase().includes(botConfig.trigger.toLowerCase()) && !isSequenceRunning) {
+                    runMessageSequence(channel, sender);
                 }
             }
         };
@@ -178,6 +206,7 @@ function initBot() {
             startBtn.style.display = 'block';
             stopBtn.style.display = 'none';
             chatSocket = null;
+            isSequenceRunning = false;
         };
 
         chatSocket.onerror = (error) => {
