@@ -59,21 +59,13 @@
                     </div>
                 </div>
 
-                <!-- MESSAGE 1 -->
+                <!-- MESSAGE 1 (No delay input, uses random 7-15s) -->
                 <div class="form-row" id="msg1-row">
-                    <div class="msg-input-group">
-                        <div class="msg-text">
-                            <label>Reply Message 1</label>
-                            <input type="text" id="reply1" required placeholder="e.g., Hello chat!">
-                        </div>
-                        <div class="msg-delay">
-                            <label>Delay (s)</label>
-                            <input type="number" id="delay1" value="5" min="0" required>
-                        </div>
-                    </div>
+                    <label>Reply Message 1</label>
+                    <input type="text" id="reply1" required placeholder="e.g., Hello chat!">
                 </div>
                 
-                <!-- MESSAGE 2 -->
+                <!-- MESSAGE 2 (Text + Delay side-by-side) -->
                 <div class="form-row dynamic-msg collapsed" id="msg2-row">
                     <div class="msg-input-group">
                         <div class="msg-text">
@@ -82,12 +74,12 @@
                         </div>
                         <div class="msg-delay">
                             <label>Delay (s)</label>
-                            <input type="number" id="delay2" value="5" min="0">
+                            <input type="number" id="delay2" value="1" min="0">
                         </div>
                     </div>
                 </div>
                 
-                <!-- MESSAGE 3 -->
+                <!-- MESSAGE 3 (Text + Delay side-by-side) -->
                 <div class="form-row dynamic-msg collapsed" id="msg3-row">
                     <div class="msg-input-group">
                         <div class="msg-text">
@@ -96,12 +88,11 @@
                         </div>
                         <div class="msg-delay">
                             <label>Delay (s)</label>
-                            <input type="number" id="delay3" value="5" min="0">
+                            <input type="number" id="delay3" value="2" min="0">
                         </div>
                     </div>
                 </div>
 
-                <!-- COOLDOWN -->
                 <div class="form-row" style="margin-top: 20px; border-top: 1px solid #27272a; padding-top: 20px;">
                     <label>Sequence Cooldown (seconds)</label>
                     <input type="number" id="cooldown" value="30" min="0" required placeholder="Wait time after sequence finishes">
