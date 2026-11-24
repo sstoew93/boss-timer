@@ -138,3 +138,34 @@ a, button, input, select {
 #app-content { display: none; }
 
 .app-footer { text-align: center; padding: 40px 20px 20px 20px; color: #71717a; font-size: 13px; margin-top: 20px; border-top: 1px solid #27272a; letter-spacing: 1px; }
+
+/* ... [KEEP ALL YOUR EXISTING CSS] ... */
+
+/* --- MESSAGE INPUT GROUPS --- */
+.msg-input-group {
+    display: flex;
+    gap: 12px;
+    align-items: flex-end;
+}
+
+.msg-text {
+    flex: 1;
+}
+
+.msg-delay {
+    width: 90px; /* Fixed width for the delay input */
+}
+
+.msg-delay input {
+    text-align: center;
+}
+
+/* Hide number arrows for delay inputs */
+.msg-delay input[type=number]::-webkit-inner-spin-button, 
+.msg-delay input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+.msg-delay input[type=number] { 
+    -moz-appearance: textfield; 
+}
