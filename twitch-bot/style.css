@@ -1,0 +1,152 @@
+body { 
+    font-family: 'Inter', sans-serif; 
+    background-color: #09090b; 
+    background-image: radial-gradient(circle at 50% 0%, #1c1c22 0%, #09090b 60%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fafafa; 
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    cursor: url('../images/cursor.cur'), auto; 
+}
+
+a, button, input, select {
+    cursor: url('../images/cursor2.cur'), pointer !important;
+}
+
+.bot-container {
+    max-width: 700px; /* Narrower container for forms */
+    margin: 0 auto;
+    padding: 40px 20px 20px;
+}
+
+.page-title { text-align: center; margin-bottom: 40px; }
+.page-title h1 { font-family: 'Orbitron', sans-serif; font-size: 2rem; font-weight: 900; margin: 0 0 10px 0; color: #fff; }
+.page-title p { color: #a1a1aa; margin: 0; }
+
+/* --- WARNING BOX --- */
+.warning {
+    background: rgba(245, 158, 11, 0.1);
+    color: #f59e0b;
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    padding: 16px;
+    border-radius: 12px;
+    margin-bottom: 24px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* --- FORM --- */
+.bot-form {
+    background: #18181b;
+    border: 1px solid #27272a;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.5);
+    margin-bottom: 24px;
+}
+
+.form-row {
+    margin-bottom: 16px;
+}
+
+.form-row label {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    color: #a1a1aa;
+    margin-bottom: 8px;
+}
+
+.form-row input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #27272a;
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    background: #09090b;
+    color: #fff;
+    outline: none;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+}
+
+.form-row input:focus {
+    border-color: #52525b;
+    box-shadow: 0 0 0 3px rgba(255,255,255,0.05);
+}
+
+/* --- BUTTONS --- */
+.button-group {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.btn-start, .btn-stop {
+    padding: 12px 24px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    flex: 1;
+}
+
+.btn-start {
+    background: #9146FF; /* Twitch Purple */
+    color: #fff;
+}
+.btn-start:hover { background: #772ce8; transform: translateY(-2px); }
+
+.btn-stop {
+    background: #ef4444; /* Red */
+    color: #fff;
+    display: none;
+}
+.btn-stop:hover { background: #dc2626; transform: translateY(-2px); }
+
+/* --- STATUS & LOGS --- */
+.status-box {
+    background: #18181b;
+    border-left: 4px solid #9146FF;
+    padding: 16px;
+    border-radius: 8px;
+    font-family: monospace;
+    font-size: 14px;
+    margin-bottom: 16px;
+    color: #e4e4e7;
+}
+
+.log-box {
+    background: #000;
+    border: 1px solid #27272a;
+    color: #10b981; /* Matrix green */
+    padding: 16px;
+    border-radius: 12px;
+    font-family: monospace;
+    font-size: 13px;
+    height: 250px;
+    overflow-y: auto;
+    line-height: 1.5;
+}
+
+.log-box::-webkit-scrollbar { width: 8px; }
+.log-box::-webkit-scrollbar-track { background: #000; border-radius: 8px; }
+.log-box::-webkit-scrollbar-thumb { background: #27272a; border-radius: 8px; }
+
+/* --- LOGIN SCREEN --- */
+#login-screen { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 80vh; text-align: center; }
+#login-screen h1 { font-family: 'Orbitron', sans-serif; font-size: 2rem; margin-bottom: 10px; font-weight: 900; color: #fff; letter-spacing: 2px;}
+#login-screen input { padding: 12px; font-size: 16px; border-radius: 8px; border: 1px solid #27272a; background: #18181b; color: #fff; margin-bottom: 15px; width: 300px; text-align: center; outline: none; transition: all 0.2s; }
+#login-screen input:focus { border-color: #52525b; box-shadow: 0 0 0 3px rgba(255,255,255,0.05); }
+#login-screen button { padding: 12px 24px; font-size: 16px; font-weight: 600; border-radius: 8px; border: none; background: #fafafa; color: #09090b; cursor: pointer; transition: background 0.2s, transform 0.1s; }
+#login-screen button:hover { background: #e4e4e7; transform: scale(1.02); }
+#error-msg { color: #ef4444; margin-top: 15px; display: none; font-size: 14px; font-weight: 500; }
+#app-content { display: none; }
+
+/* --- FOOTER --- */
+.app-footer { text-align: center; padding: 40px 20px 20px 20px; color: #71717a; font-size: 13px; margin-top: 20px; border-top: 1px solid #27272a; letter-spacing: 1px; }
