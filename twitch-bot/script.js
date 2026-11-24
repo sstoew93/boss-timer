@@ -159,7 +159,6 @@ function initBot() {
 
         const msgCount = parseInt(msgSlider.value);
         
-        // --- PARSE CHANNELS AND '!' PREFIX ---
         const rawChannels = document.getElementById('channels').value;
         let parsedChannels = [];
         let prefixChannels = [];
@@ -173,29 +172,24 @@ function initBot() {
             if (clean) parsedChannels.push(clean);
         });
 
-        // --- PARSE MULTIPLE TRIGGERS (WITH QUOTES) ---
         const rawTriggerInput = document.getElementById('trigger').value;
         let parsedTriggers = [];
 
-        // Check if the user used quotes
         if (rawTriggerInput.includes('"') || rawTriggerInput.includes("'")) {
-            // Extract everything inside the quotes
             const matches = rawTriggerInput.match(/(["'])(.*?)\1/g);
             if (matches) {
                 parsedTriggers = matches.map(m => m.slice(1, -1).trim().toLowerCase());
             }
         } else {
-            // Fallback: If they didn't use quotes, just split by comma
             parsedTriggers = rawTriggerInput.split(',')
                 .map(t => t.trim().toLowerCase())
                 .filter(t => t.length > 0);
         }
-        // ------------------------------------------------
 
         botConfig = {
             username: document.getElementById('username').value.trim().toLowerCase(),
             token: document.getElementById('token').value.trim(),
-            triggers: parsedTriggers, // ARRAY OF TRIGGERS
+            triggers: parsedTriggers,
             msg1: document.getElementById('reply1').value.trim(),
             hasMsg2: msgCount >= 2,
             msg2: document.getElementById('reply2').value.trim(),
@@ -268,6 +262,15 @@ function initBot() {
                 });
             }
 
+            // ==========================================
+            // --- NEW: SHARED CHAT BLOCKER ---
+            // ==========================================
+            // If 'source-room-id' exists and doesn't match 'room-id', it's from another channel in a shared chat.
+            if (tags['source-room-id'] && tags['source-room-id'] !== tags['room-id']) {
+                return; // Ignore it completely
+            }
+            // ==========================================
+
             const match = actualMessagePart.match(/(?:PRIVMSG|USERNOTICE) #([^ ]+) :(.*)/);
             
             if (match) {
@@ -324,7 +327,6 @@ function initBot() {
 
                 // --- SEQUENCE TRIGGER ---
                 if (isAuthorizedUser && !isSequenceRunning) {
-                    // Find which trigger matched
                     const matchedTrigger = botConfig.triggers.find(t => lowerText.includes(t));
                     
                     if (matchedTrigger) {
