@@ -11,6 +11,10 @@ body {
     cursor: url('../images/cursor.cur'), auto; 
 }
 
+label {
+    cursor: url('../images/cursor.cur'), pointer !important;
+}
+
 a, button, input, select, input[type="range"] {
     cursor: url('../images/cursor2.cur'), pointer !important;
 }
