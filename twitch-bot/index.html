@@ -52,28 +52,60 @@
                 </div>
 
                 <div class="form-row slider-container">
-                    <label>Number of Reply Variations</label>
+                    <label>Number of Reply Messages in Sequence</label>
                     <div class="slider-wrapper">
                         <input type="range" id="msgCount" min="1" max="3" value="1" step="1">
                         <span id="msgCountVal">1 Message</span>
                     </div>
                 </div>
 
+                <!-- MESSAGE 1 -->
                 <div class="form-row" id="msg1-row">
-                    <label>Reply Message 1</label>
-                    <input type="text" id="reply1" required placeholder="e.g., Hello chat!">
+                    <div class="msg-input-group">
+                        <div class="msg-text">
+                            <label>Reply Message 1</label>
+                            <input type="text" id="reply1" required placeholder="e.g., Hello chat!">
+                        </div>
+                        <div class="msg-delay">
+                            <label>Delay (s)</label>
+                            <input type="number" id="delay1" value="5" min="0" required>
+                        </div>
+                    </div>
                 </div>
                 
-                <!-- Collapsed class added here -->
+                <!-- MESSAGE 2 -->
                 <div class="form-row dynamic-msg collapsed" id="msg2-row">
-                    <label>Reply Message 2</label>
-                    <input type="text" id="reply2" placeholder="e.g., Welcome to the stream!">
+                    <div class="msg-input-group">
+                        <div class="msg-text">
+                            <label>Reply Message 2</label>
+                            <input type="text" id="reply2" placeholder="e.g., Welcome to the stream!">
+                        </div>
+                        <div class="msg-delay">
+                            <label>Delay (s)</label>
+                            <input type="number" id="delay2" value="5" min="0">
+                        </div>
+                    </div>
                 </div>
                 
-                <!-- Collapsed class added here -->
+                <!-- MESSAGE 3 -->
                 <div class="form-row dynamic-msg collapsed" id="msg3-row">
-                    <label>Reply Message 3</label>
-                    <input type="text" id="reply3" placeholder="e.g., GLHF!">
+                    <div class="msg-input-group">
+                        <div class="msg-text">
+                            <label>Reply Message 3</label>
+                            <input type="text" id="reply3" placeholder="e.g., GLHF!">
+                        </div>
+                        <div class="msg-delay">
+                            <label>Delay (s)</label>
+                            <input type="number" id="delay3" value="5" min="0">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- COOLDOWN -->
+                <div class="form-row" style="margin-top: 20px; border-top: 1px solid #27272a; padding-top: 20px;">
+                    <label>Sequence Cooldown (seconds)</label>
+                    <input type="number" id="cooldown" value="30" min="0" required placeholder="Wait time after sequence finishes">
+                    <small style="color: #71717a; margin-top: 5px; display: block;">Time to wait before the bot can be triggered again.</small>
                 </div>
 
                 <div class="form-row">
@@ -82,8 +114,8 @@
                 </div>
 
                 <div class="form-row">
-                    <label>Max Replies per 60 Seconds (Rate Limit)</label>
-                    <input type="number" id="rateLimit" value="3" min="1" required>
+                    <label>Max Messages per 60 Seconds (Rate Limit)</label>
+                    <input type="number" id="rateLimit" value="10" min="1" required>
                 </div>
 
                 <div class="button-group">
