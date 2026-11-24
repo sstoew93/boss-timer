@@ -33,7 +33,7 @@ function initBot() {
     let botConfig = {};
     let isSequenceRunning = false; 
 
-    // --- NEW: Command Tracker Variables ---
+    // --- NEW: Channel-Specific Trackers ---
     let commandTracker = {}; 
     let commandCooldowns = {}; 
     // -------------------------------------
@@ -45,7 +45,7 @@ function initBot() {
 
     const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
-    // --- NEW: 5-Minute Reset Timer ---
+    // --- 5-Minute Reset Timer ---
     setInterval(() => {
         commandTracker = {};
         commandCooldowns = {};
@@ -92,26 +92,23 @@ function initBot() {
         isSequenceRunning = true;
 
         try {
-            // 1. Initial Random Delay (7 to 15 seconds)
             const minDelay = 7;
             const maxDelay = 15;
             const initialDelay = Math.floor(Math.random() * (maxDelay - minDelay + 1)) + minDelay;
             
-            log(`▶️ Sequence triggered by ${sender}. First message in ${initialDelay}s...`);
+            log(`▶️ Sequence triggered by ${sender} in #${channel}. First message in ${initialDelay}s...`);
             await sleep(initialDelay * 1000);
 
-            // Send Message 1
             if (canSendMessage()) {
                 chatSocket.send(`PRIVMSG #${channel} :${botConfig.msg1}`);
                 replyTimestamps.push(Date.now());
-                log(`[1/3] Sent: "${botConfig.msg1}"`);
+                log(`[1/3] Sent in #${channel}: "${botConfig.msg1}"`);
             } else {
                 log(`⚠️ Rate limit hit. Skipped Message 1.`);
                 isSequenceRunning = false;
                 return;
             }
 
-            // 2. Wait delay2, Send Message 2
             if (botConfig.hasMsg2) {
                 await sleep(botConfig.delay2 * 1000);
                 if (!chatSocket || chatSocket.readyState !== WebSocket.OPEN) return;
@@ -119,13 +116,12 @@ function initBot() {
                 if (canSendMessage()) {
                     chatSocket.send(`PRIVMSG #${channel} :${botConfig.msg2}`);
                     replyTimestamps.push(Date.now());
-                    log(`[2/3] Sent after ${botConfig.delay2}s: "${botConfig.msg2}"`);
+                    log(`[2/3] Sent in #${channel} after ${botConfig.delay2}s: "${botConfig.msg2}"`);
                 } else {
                     log(`⚠️ Rate limit hit. Skipped Message 2.`);
                 }
             }
 
-            // 3. Wait delay3, Send Message 3
             if (botConfig.hasMsg3) {
                 await sleep(botConfig.delay3 * 1000);
                 if (!chatSocket || chatSocket.readyState !== WebSocket.OPEN) return;
@@ -133,13 +129,12 @@ function initBot() {
                 if (canSendMessage()) {
                     chatSocket.send(`PRIVMSG #${channel} :${botConfig.msg3}`);
                     replyTimestamps.push(Date.now());
-                    log(`[3/3] Sent after ${botConfig.delay3}s: "${botConfig.msg3}"`);
+                    log(`[3/3] Sent in #${channel} after ${botConfig.delay3}s: "${botConfig.msg3}"`);
                 } else {
                     log(`⚠️ Rate limit hit. Skipped Message 3.`);
                 }
             }
 
-            // 4. Final Cooldown
             if (botConfig.cooldown > 0) {
                 log(`⏳ Sequence complete. Cooling down for ${botConfig.cooldown}s...`);
                 await sleep(botConfig.cooldown * 1000);
@@ -225,34 +220,38 @@ function initBot() {
                 if (sender === botConfig.username) return;
 
                 // ==========================================
-                // --- NEW: COMMAND SPAM TRACKER LOGIC ---
+                // --- CHANNEL-SPECIFIC SPAM TRACKER ---
                 // ==========================================
                 const cleanText = text.trim();
                 if (cleanText.startsWith('!')) {
                     const command = cleanText.split(' ')[0].toLowerCase();
                     const now = Date.now();
                     
-                    // Check if command is not on cooldown
-                    if (!commandCooldowns[command] || now > commandCooldowns[command]) {
-                        if (!commandTracker[command]) commandTracker[command] = [];
+                    // Create trackers for this specific channel if they don't exist
+                    if (!commandTracker[channel]) commandTracker[channel] = {};
+                    if (!commandCooldowns[channel]) commandCooldowns[channel] = {};
+                    
+                    // Check if command is not on cooldown IN THIS CHANNEL
+                    if (!commandCooldowns[channel][command] || now > commandCooldowns[channel][command]) {
+                        if (!commandTracker[channel][command]) commandTracker[channel][command] = [];
                         
-                        // Filter out commands older than 60 seconds
-                        commandTracker[command] = commandTracker[command].filter(ts => now - ts < 60000);
-                        commandTracker[command].push(now);
+                        // Filter out commands older than 60 seconds in this channel
+                        commandTracker[channel][command] = commandTracker[channel][command].filter(ts => now - ts < 60000);
+                        commandTracker[channel][command].push(now);
                         
-                        // If 5 identical commands seen in 60s
-                        if (commandTracker[command].length >= 5) {
+                        // If 5 identical commands seen in 60s in this channel
+                        if (commandTracker[channel][command].length >= 5) {
                             if (canSendMessage()) {
                                 chatSocket.send(`PRIVMSG #${channel} :${command}`);
                                 replyTimestamps.push(now);
                                 
-                                // Put on 60s cooldown so the bot doesn't spam itself
-                                commandCooldowns[command] = now + 60000; 
-                                commandTracker[command] = []; // Reset tracker for this command
+                                // Put on 60s cooldown for this channel so the bot doesn't spam itself
+                                commandCooldowns[channel][command] = now + 60000; 
+                                commandTracker[channel][command] = []; // Reset tracker for this command
                                 
-                                log(`🚀 Echoed command: "${command}" (Spam detected)`);
+                                log(`🚀 Echoed "${command}" in #${channel} (Spam detected)`);
                             } else {
-                                log(`⚠️ Rate limit hit. Could not echo "${command}"`);
+                                log(`⚠️ Rate limit hit. Could not echo "${command}" in #${channel}`);
                             }
                         }
                     }
