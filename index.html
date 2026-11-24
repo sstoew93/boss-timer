@@ -3,15 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MEGAMU Tools</title>
+    <title>MEGAMU Boss Timer</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
     
-    <!-- External CSS -->
     <link rel="stylesheet" href="style.css">
-    <!-- Shared Nav CSS -->
     <link rel="stylesheet" href="shared/nav.css">
 </head>
 <body>
@@ -28,10 +26,11 @@
     <!-- MAIN APP CONTENT -->
     <div id="app-content">
         
-        <header class="main-header">
-            <h1 class="cool-header" id="main-title">MEGA Mu BOSS Timer</h1>
-        </header>
-        <div class="subtitle">• Respawn times are dynamic •</div>
+        <!-- NEW SIMPLE HEADER -->
+        <div class="page-title">
+            <h1>MEGA Mu BOSS Timer</h1>
+            <p>• Respawn times are dynamic •</p>
+        </div>
         
         <div class="top-bar">
             <div class="search-container">
@@ -69,22 +68,11 @@
         
         <!-- FOOTER -->
         <footer class="app-footer">
-            <p>© 2026 MEGAMU Tools • by sstoew93</p>
+            <p>© 2026 MEGAMU Boss Timer • Data provided by MEGAMU</p>
         </footer>
     </div>
 
     <script src="script.js"></script>
     <script src="shared/nav.js"></script>
-    <script>
-        // Header mouse tracking
-        const title = document.getElementById('main-title');
-        title.addEventListener('mousemove', (e) => {
-            const rect = title.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            title.style.setProperty('--mouse-x', `${x}px`);
-            title.style.setProperty('--mouse-y', `${y}px`);
-        });
-    </script>
 </body>
 </html>
