@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MEGA Tools - Twitch Bot</title>
+    <style>
+        body { font-family: sans-serif; max-width: 500px; margin: 2rem auto; }
+        label { display: block; margin-top: 1rem; }
+        input, textarea { width: 100%; padding: 0.5rem; margin-top: 0.25rem; }
+        button { margin-top: 1rem; padding: 0.5rem 1rem; }
+    </style>
+</head>
+<body>
+    <h1>Twitch Bot Control Panel</h1>
+    <form id="botForm">
+        <label>Twitch Username (your bot account)</label>
+        <input type="text" id="username" required>
+
+        <label>OAuth Token (with chat:read and chat:edit)</label>
+        <input type="password" id="token" required>
+
+        <label>Message to Look For</label>
+        <input type="text" id="trigger" required>
+
+        <label>Reply Message</label>
+        <input type="text" id="reply" required>
+
+        <label>Channels to Watch (comma-separated, no #)</label>
+        <input type="text" id="channels" placeholder="channel1, channel2" required>
+
+        <label>Max Messages to Send (per 60s window)</label>
+        <input type="number" id="rateLimit" value="5" min="1">
+
+        <button type="submit">Start Bot</button>
+        <button type="button" id="stopBtn">Stop Bot</button>
+    </form>
+    <p id="status"></p>
+
+    <script>
+        // ⚠️ REPLACE THIS WITH YOUR PYTHONANYWHERE APP URL
+        const BACKEND_URL = 'https://yourusername.pythonanywhere.com';
+
+        document.getElementById('botForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const config = {
+                username: document.getElementById('username').value.trim(),
+                token: document.getElementById('token').value.trim(),
+                trigger: document.getElementById('trigger').value.trim(),
+                reply: document.getElementById('reply').value.trim(),
+                channels: document.getElementById('channels').value.split(',').map(c => c.trim()),
+                rateLimit: parseInt(document.getElementById('rateLimit').value, 10) || 5,
+            };
+
+            const res = await fetch(`${BACKEND_URL}/start`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(config),
+            });
+            const data = await res.json();
+            document.getElementById('status').textContent = data.message;
+        });
+
+        document.getElementById('stopBtn').addEventListener('click', async () => {
+            const res = await fetch(`${BACKEND_URL}/stop`, { method: 'POST' });
+            const data = await res.json();
+            document.getElementById('status').textContent = data.message;
+        });
+    </script>
+</body>
+</html>
