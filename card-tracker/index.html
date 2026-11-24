@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Tracker - MEGA TOOLS</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../shared/nav.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- LOGIN SCREEN -->
+    <div id="login-screen">
+        <h1>🔒 RESTRICTED ACCESS</h1>
+        <p style="color: #a1a1aa; font-size: 15px; margin-bottom: 20px;">Please enter the password to view the Card Tracker.</p>
+        <input type="password" id="password-input" placeholder="Enter password...">
+        <button onclick="checkPassword()">Unlock</button>
+        <div id="error-msg">Incorrect password. Try again.</div>
+    </div>
+
+    <!-- MAIN APP CONTENT -->
+    <div id="app-content">
+        <main class="tracker-container">
+            <div class="page-title">
+                <h1>Card Tracker</h1>
+                <p>• Click cards to mark them as played •</p>
+            </div>
+
+            <!-- GAME MODE TOGGLE -->
+            <div class="mode-toggle-container">
+                <label class="switch">
+                    <input type="checkbox" id="specialModeToggle">
+                    <span class="slider round"></span>
+                </label>
+                <span class="mode-label" id="modeLabel">Normal Game</span>
+            </div>
+
+            <div class="panel">
+                <button class="reset-btn" id="resetBtn">↻ RESET CARDS</button>
+                
+                <div class="columns" id="board-container">
+                    <div class="column" id="red"></div>
+                    <div class="column" id="blue"></div>
+                    <div class="column" id="gold"></div>
+                    <!-- Pink column for special game -->
+                    <div class="column hidden-column" id="pink"></div>
+                </div>
+            </div>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="app-footer">
+            <p>© 2026 MEGAMU Tools • by sstoew93</p>
+        </footer>
+    </div>
+
+    <script src="../shared/nav.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
