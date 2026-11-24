@@ -51,9 +51,28 @@
                     <input type="text" id="trigger" required placeholder="e.g., !hello">
                 </div>
 
-                <div class="form-row">
-                    <label>Reply Message</label>
-                    <input type="text" id="reply" required placeholder="e.g., Hello chat!">
+                <!-- NEW SLIDER SECTION -->
+                <div class="form-row slider-container">
+                    <label>Number of Reply Variations</label>
+                    <div class="slider-wrapper">
+                        <input type="range" id="msgCount" min="1" max="3" value="1" step="1">
+                        <span id="msgCountVal">1 Message</span>
+                    </div>
+                </div>
+
+                <div class="form-row" id="msg1-row">
+                    <label>Reply Message 1</label>
+                    <input type="text" id="reply1" required placeholder="e.g., Hello chat!">
+                </div>
+                
+                <div class="form-row dynamic-msg" id="msg2-row" style="display: none;">
+                    <label>Reply Message 2</label>
+                    <input type="text" id="reply2" placeholder="e.g., Welcome to the stream!">
+                </div>
+                
+                <div class="form-row dynamic-msg" id="msg3-row" style="display: none;">
+                    <label>Reply Message 3</label>
+                    <input type="text" id="reply3" placeholder="e.g., GLHF!">
                 </div>
 
                 <div class="form-row">
