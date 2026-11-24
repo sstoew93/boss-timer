@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <nav class="nav-links">
                 <a href="/mega-tools/" class="${isBossTimer ? 'active' : ''}">Boss Timer</a>
                 <a href="/mega-tools/hunt-calculator/" class="${isHuntCalc ? 'active' : ''}">Hunt Calculator</a>
+                <a href="/mega-tools/card-tracker/" class="${isCardTracker ? 'active' : ''}">Card Tracker</a>
                 <a href="/mega-tools/twitch-bot/" class="${isTwitchBot ? 'active' : ''}">Twitch Bot</a>
             </nav>
         </header>
