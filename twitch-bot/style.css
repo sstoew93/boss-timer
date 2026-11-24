@@ -206,6 +206,17 @@ a, button, input, select, input[type="range"] {
     bottom: 120%; /* Slight float up animation */
 }
 
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+/* For Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
 /* --- MOBILE RESPONSIVENESS --- */
 @media (max-width: 850px) {
     .bot-layout {
