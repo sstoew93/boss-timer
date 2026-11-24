@@ -175,7 +175,6 @@ function initBot() {
             botConfig.token = 'oauth:' + botConfig.token;
         }
 
-        // Reset trackers on startup
         commandTracker = {};
         commandCooldowns = {};
 
@@ -188,6 +187,11 @@ function initBot() {
 
         chatSocket.onopen = () => {
             log(`Connected. Authenticating...`);
+            
+            // --- THE FIX IS HERE ---
+            // We must request tags (for badges) and commands (for announcements)
+            chatSocket.send('CAP REQ :twitch.tv/tags twitch.tv/commands');
+            
             chatSocket.send(`PASS ${botConfig.token}`);
             chatSocket.send(`NICK ${botConfig.username}`);
             
@@ -207,6 +211,9 @@ function initBot() {
                 return;
             }
 
+            // Ignore CAP ACK messages from Twitch
+            if (rawMessage.includes('CAP * ACK')) return;
+
             // ==========================================
             // --- PARSE IRC TAGS FOR BADGES ---
             // ==========================================
@@ -224,7 +231,6 @@ function initBot() {
                 });
             }
 
-            // Parse PRIVMSG (normal) or USERNOTICE (announcement)
             const match = actualMessagePart.match(/(?:PRIVMSG|USERNOTICE) #([^ ]+) :(.*)/);
             
             if (match) {
@@ -234,14 +240,23 @@ function initBot() {
                 const senderMatch = actualMessagePart.match(/^:([^!]+)!/);
                 const sender = senderMatch ? senderMatch[1].toLowerCase() : 'system';
 
-                // Ignore messages from the bot itself
                 if (sender === botConfig.username) return;
 
-                // Check Auth Status
+                // ==========================================
+                // --- SECURITY CHECKS ---
+                // ==========================================
                 const isAnnouncement = actualMessagePart.includes('USERNOTICE') && tags['msg-id'] === 'announcement';
                 const badges = tags['badges'] || '';
-                const isBroadcaster = badges.includes('broadcaster/1');
+                
+                // 1. Check Badge
+                const isBroadcasterByBadge = badges.includes('broadcaster/1');
+                
+                // 2. Check ID (Bulletproof method for offline/glitchy badges)
+                const isBroadcasterById = tags['user-id'] && tags['room-id'] && (tags['user-id'] === tags['room-id']);
+                
+                const isBroadcaster = isBroadcasterByBadge || isBroadcasterById;
                 const isModerator = badges.includes('moderator/1');
+                
                 const isAuthorizedUser = isBroadcaster || isModerator || isAnnouncement;
 
                 // ==========================================
