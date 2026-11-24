@@ -28,47 +28,67 @@ if (sessionStorage.getItem('isLoggedIn') === 'true') {
 
 // --- CARD TRACKER LOGIC ---
 function initTracker() {
-    const specialToggle = document.getElementById('specialModeToggle');
-    const modeLabel = document.getElementById('modeLabel');
-    const pinkColumn = document.getElementById('pink');
+    const standardBoard = document.getElementById('standardBoard');
+    const pinkBoard = document.getElementById('pinkBoard');
+    const pinkSection = document.getElementById('pinkSection');
+    const specialSection = document.getElementById('specialSection');
+    const specialToggle = document.getElementById('specialToggle');
+    const labelNormal = document.getElementById('labelNormal');
+    const labelSpecial = document.getElementById('labelSpecial');
     const resetBtn = document.getElementById('resetBtn');
 
-    // Generate Cards
-    function createColumn(id, color) {
-        const col = document.getElementById(id);
-        col.innerHTML = ''; // Clear in case of re-generation
-        for (let i = 1; i <= 8; i++) {
+    const standardColors = ['red', 'blue', 'gold'];
+
+    function generateCards() {
+        // 1. Generate Standard Rows
+        standardColors.forEach(color => {
+            const row = document.createElement('div');
+            row.className = 'card-row';
+            for (let i = 1; i <= 9; i++) {
+                const card = document.createElement('div');
+                card.className = `card ${color}`;
+                card.textContent = i;
+                card.onclick = () => card.classList.toggle('used');
+                row.appendChild(card);
+            }
+            standardBoard.appendChild(row);
+        });
+
+        // 2. Generate Pink Row
+        for (let i = 1; i <= 9; i++) {
             const card = document.createElement('div');
-            card.className = `card ${color}`;
-            card.innerHTML = `<span>${i}</span>`;
+            card.className = `card pink`;
+            card.textContent = i;
             card.onclick = () => card.classList.toggle('used');
-            col.appendChild(card);
+            pinkBoard.appendChild(card);
         }
     }
 
-    // Initialize Normal Cards
-    createColumn('red', 'red');
-    createColumn('blue', 'blue');
-    createColumn('gold', 'gold');
-    createColumn('pink', 'pink'); // Pre-generate hidden pink cards
-
-    // Toggle Logic
+    // Toggle Special Mode
     specialToggle.addEventListener('change', (e) => {
         if (e.target.checked) {
-            modeLabel.textContent = "Special Game";
-            modeLabel.style.color = "#ec4899"; // Pink
-            pinkColumn.classList.remove('hidden-column');
-            pinkColumn.style.display = 'flex';
+            labelSpecial.classList.add('active');
+            labelNormal.classList.remove('active');
+            pinkSection.classList.remove('collapsed');
+            specialSection.classList.remove('collapsed');
         } else {
-            modeLabel.textContent = "Normal Game";
-            modeLabel.style.color = "#e4e4e7"; // White
-            pinkColumn.classList.add('hidden-column');
-            pinkColumn.style.display = 'none';
+            labelNormal.classList.add('active');
+            labelSpecial.classList.remove('active');
+            pinkSection.classList.add('collapsed');
+            specialSection.classList.add('collapsed');
+            
+            // Reset special action cards after animation finishes
+            setTimeout(() => {
+                document.querySelectorAll('.action-card').forEach(c => c.classList.remove('used'));
+            }, 400);
         }
     });
 
-    // Reset Logic
+    // Reset All Cards
     resetBtn.addEventListener('click', () => {
-        document.querySelectorAll('.used').forEach(c => c.classList.remove('used'));
+        document.querySelectorAll('.card').forEach(c => c.classList.remove('used'));
+        document.querySelectorAll('.action-card').forEach(c => c.classList.remove('used'));
     });
+
+    generateCards();
 }
