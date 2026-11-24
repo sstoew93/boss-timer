@@ -35,29 +35,54 @@
                 <strong>⚠️ Keep this tab open!</strong> The bot runs entirely in your browser. If you close this tab or lose internet connection, the bot will stop replying.
             </div>
 
-            <!-- NEW TWO-COLUMN LAYOUT -->
+            <!-- TWO-COLUMN LAYOUT -->
             <div class="bot-layout">
                 
                 <!-- LEFT COLUMN: FORM -->
                 <div class="bot-panel-left">
                     <form id="botForm" class="bot-form">
+                        
                         <div class="form-row">
-                            <label>Twitch Username (Bot account)</label>
+                            <label>
+                                Twitch Username (Bot account)
+                                <span class="tooltip-container">
+                                    <span class="tooltip-icon">?</span>
+                                    <span class="tooltip-text">The Twitch account the bot will log in as. It is recommended to use a separate account for your bot, not your main streamer account.</span>
+                                </span>
+                            </label>
                             <input type="text" id="username" required placeholder="e.g., MyBotName">
                         </div>
 
                         <div class="form-row">
-                            <label>OAuth Token (requires chat:read and chat:edit)</label>
+                            <label>
+                                OAuth Token (chat:read and chat:edit)
+                                <span class="tooltip-container">
+                                    <span class="tooltip-icon">?</span>
+                                    <span class="tooltip-text">You can generate a token using tools like twitchapps.com/tmi/. Make sure it has chat:read and chat:edit permissions.</span>
+                                </span>
+                            </label>
                             <input type="password" id="token" required placeholder="oauth:xxxxxxxxxxxxxxxxxxxx">
                         </div>
 
                         <div class="form-row">
-                            <label>Message to Look For (Trigger)</label>
+                            <label>
+                                Message to Look For (Trigger)
+                                <span class="tooltip-container">
+                                    <span class="tooltip-icon">?</span>
+                                    <span class="tooltip-text">The exact word or phrase the bot will listen for in chat to start the sequence (e.g., !hello).</span>
+                                </span>
+                            </label>
                             <input type="text" id="trigger" required placeholder="e.g., !hello">
                         </div>
 
                         <div class="form-row slider-container">
-                            <label>Number of Reply Messages in Sequence</label>
+                            <label>
+                                Number of Reply Messages in Sequence
+                                <span class="tooltip-container">
+                                    <span class="tooltip-icon">?</span>
+                                    <span class="tooltip-text">Choose how many messages the bot will send in a row when it detects the trigger.</span>
+                                </span>
+                            </label>
                             <div class="slider-wrapper">
                                 <input type="range" id="msgCount" min="1" max="3" value="1" step="1">
                                 <span id="msgCountVal">1 Message</span>
@@ -66,7 +91,13 @@
 
                         <!-- MESSAGE 1 -->
                         <div class="form-row" id="msg1-row">
-                            <label>Reply Message 1</label>
+                            <label>
+                                Reply Message 1
+                                <span class="tooltip-container">
+                                    <span class="tooltip-icon">?</span>
+                                    <span class="tooltip-text">The first message sent after a random initial delay of 7-15 seconds. This prevents spam detection.</span>
+                                </span>
+                            </label>
                             <input type="text" id="reply1" required placeholder="e.g., Hello chat!">
                         </div>
                         
@@ -74,11 +105,23 @@
                         <div class="form-row dynamic-msg collapsed" id="msg2-row">
                             <div class="msg-input-group">
                                 <div class="msg-text">
-                                    <label>Reply Message 2</label>
+                                    <label>
+                                        Reply Message 2
+                                        <span class="tooltip-container">
+                                            <span class="tooltip-icon">?</span>
+                                            <span class="tooltip-text">The second message sent.</span>
+                                        </span>
+                                    </label>
                                     <input type="text" id="reply2" placeholder="e.g., Welcome to the stream!">
                                 </div>
                                 <div class="msg-delay">
-                                    <label>Delay (s)</label>
+                                    <label>
+                                        Delay (s)
+                                        <span class="tooltip-container">
+                                            <span class="tooltip-icon">?</span>
+                                            <span class="tooltip-text">Seconds to wait after Message 1 before sending this.</span>
+                                        </span>
+                                    </label>
                                     <input type="number" id="delay2" value="1" min="0">
                                 </div>
                             </div>
@@ -88,29 +131,58 @@
                         <div class="form-row dynamic-msg collapsed" id="msg3-row">
                             <div class="msg-input-group">
                                 <div class="msg-text">
-                                    <label>Reply Message 3</label>
+                                    <label>
+                                        Reply Message 3
+                                        <span class="tooltip-container">
+                                            <span class="tooltip-icon">?</span>
+                                            <span class="tooltip-text">The third and final message sent.</span>
+                                        </span>
+                                    </label>
                                     <input type="text" id="reply3" placeholder="e.g., GLHF!">
                                 </div>
                                 <div class="msg-delay">
-                                    <label>Delay (s)</label>
+                                    <label>
+                                        Delay (s)
+                                        <span class="tooltip-container">
+                                            <span class="tooltip-icon">?</span>
+                                            <span class="tooltip-text">Seconds to wait after Message 2 before sending this.</span>
+                                        </span>
+                                    </label>
                                     <input type="number" id="delay3" value="2" min="0">
                                 </div>
                             </div>
                         </div>
 
                         <div class="form-row" style="margin-top: 20px; border-top: 1px solid #27272a; padding-top: 20px;">
-                            <label>Sequence Cooldown (seconds)</label>
+                            <label>
+                                Sequence Cooldown (seconds)
+                                <span class="tooltip-container">
+                                    <span class="tooltip-icon">?</span>
+                                    <span class="tooltip-text">Time to wait after the final message is sent before the bot can be triggered again. Prevents the bot from spamming.</span>
+                                </span>
+                            </label>
                             <input type="number" id="cooldown" value="30" min="0" required placeholder="Wait time after sequence finishes">
-                            <small style="color: #71717a; margin-top: 5px; display: block;">Time to wait before the bot can be triggered again.</small>
                         </div>
 
                         <div class="form-row">
-                            <label>Channels to Watch (comma-separated, no #)</label>
+                            <label>
+                                Channels to Watch
+                                <span class="tooltip-container">
+                                    <span class="tooltip-icon">?</span>
+                                    <span class="tooltip-text">Comma-separated list of Twitch channels to join. Do not include the # symbol (e.g., shroud, xqc).</span>
+                                </span>
+                            </label>
                             <input type="text" id="channels" required placeholder="e.g., shroud, xqc">
                         </div>
 
                         <div class="form-row">
-                            <label>Max Messages per 60 Seconds (Rate Limit)</label>
+                            <label>
+                                Max Messages per 60 Seconds
+                                <span class="tooltip-container">
+                                    <span class="tooltip-icon">?</span>
+                                    <span class="tooltip-text">The absolute maximum messages the bot can send in one minute. Twitch restricts accounts to 20 per 30 seconds, so keep this safe.</span>
+                                </span>
+                            </label>
                             <input type="number" id="rateLimit" value="10" min="1" required>
                         </div>
 
