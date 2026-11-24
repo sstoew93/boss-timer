@@ -81,7 +81,7 @@ function initBot() {
         return replyTimestamps.length < botConfig.rateLimit;
     }
 
-    async function runMessageSequence(channel, sender) {
+    async function runMessageSequence(channel, sender, matchedTrigger) {
         if (isSequenceRunning) return;
         isSequenceRunning = true;
 
@@ -90,10 +90,10 @@ function initBot() {
             const maxDelay = 15;
             const initialDelay = Math.floor(Math.random() * (maxDelay - minDelay + 1)) + minDelay;
             
-            log(`▶️ Sequence triggered by ${sender} in #${channel}. First message in ${initialDelay}s...`);
+            log(`▶️ Sequence triggered by "${matchedTrigger}" from ${sender} in #${channel}. First message in ${initialDelay}s...`);
             await sleep(initialDelay * 1000);
 
-            // SEND MESSAGE 1 (Apply prefix only if channel is in the prefix list)
+            // SEND MESSAGE 1
             if (canSendMessage()) {
                 let msgToSend = botConfig.msg1;
                 if (botConfig.prefixChannels.includes(channel)) {
@@ -109,7 +109,7 @@ function initBot() {
                 return;
             }
 
-            // SEND MESSAGE 2 (No prefix)
+            // SEND MESSAGE 2
             if (botConfig.hasMsg2) {
                 await sleep(botConfig.delay2 * 1000);
                 if (!chatSocket || chatSocket.readyState !== WebSocket.OPEN) return;
@@ -123,7 +123,7 @@ function initBot() {
                 }
             }
 
-            // SEND MESSAGE 3 (No prefix)
+            // SEND MESSAGE 3
             if (botConfig.hasMsg3) {
                 await sleep(botConfig.delay3 * 1000);
                 if (!chatSocket || chatSocket.readyState !== WebSocket.OPEN) return;
@@ -167,17 +167,35 @@ function initBot() {
         rawChannels.split(',').forEach(c => {
             let clean = c.trim().replace('#', '').toLowerCase();
             if (clean.startsWith('!')) {
-                clean = clean.substring(1); // Remove the '!'
-                prefixChannels.push(clean); // Add to prefix list
+                clean = clean.substring(1);
+                prefixChannels.push(clean);
             }
             if (clean) parsedChannels.push(clean);
         });
-        // ------------------------------------------
+
+        // --- PARSE MULTIPLE TRIGGERS (WITH QUOTES) ---
+        const rawTriggerInput = document.getElementById('trigger').value;
+        let parsedTriggers = [];
+
+        // Check if the user used quotes
+        if (rawTriggerInput.includes('"') || rawTriggerInput.includes("'")) {
+            // Extract everything inside the quotes
+            const matches = rawTriggerInput.match(/(["'])(.*?)\1/g);
+            if (matches) {
+                parsedTriggers = matches.map(m => m.slice(1, -1).trim().toLowerCase());
+            }
+        } else {
+            // Fallback: If they didn't use quotes, just split by comma
+            parsedTriggers = rawTriggerInput.split(',')
+                .map(t => t.trim().toLowerCase())
+                .filter(t => t.length > 0);
+        }
+        // ------------------------------------------------
 
         botConfig = {
             username: document.getElementById('username').value.trim().toLowerCase(),
             token: document.getElementById('token').value.trim(),
-            trigger: document.getElementById('trigger').value.trim(),
+            triggers: parsedTriggers, // ARRAY OF TRIGGERS
             msg1: document.getElementById('reply1').value.trim(),
             hasMsg2: msgCount >= 2,
             msg2: document.getElementById('reply2').value.trim(),
@@ -199,9 +217,12 @@ function initBot() {
         commandCooldowns = {};
 
         log(`Connecting to Twitch as ${botConfig.username}...`);
+        log(`Listening for triggers: [${botConfig.triggers.join('] [')}]`);
+        
         if (prefixChannels.length > 0) {
             log(`Channels requiring '!' prefix: ${prefixChannels.join(', ')}`);
         }
+        
         statusDiv.textContent = 'Status: Connecting...';
         startBtn.style.display = 'none';
         stopBtn.style.display = 'block';
@@ -252,6 +273,7 @@ function initBot() {
             if (match) {
                 const channel = match[1].toLowerCase();
                 const text = match[2];
+                const lowerText = text.toLowerCase();
                 
                 const senderMatch = actualMessagePart.match(/^:([^!]+)!/);
                 const sender = senderMatch ? senderMatch[1].toLowerCase() : 'system';
@@ -301,9 +323,12 @@ function initBot() {
                 }
 
                 // --- SEQUENCE TRIGGER ---
-                if (isAuthorizedUser) {
-                    if (text.toLowerCase().includes(botConfig.trigger.toLowerCase()) && !isSequenceRunning) {
-                        runMessageSequence(channel, sender);
+                if (isAuthorizedUser && !isSequenceRunning) {
+                    // Find which trigger matched
+                    const matchedTrigger = botConfig.triggers.find(t => lowerText.includes(t));
+                    
+                    if (matchedTrigger) {
+                        runMessageSequence(channel, sender, matchedTrigger);
                     }
                 }
             }
