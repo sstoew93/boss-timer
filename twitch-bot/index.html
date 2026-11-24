@@ -16,7 +16,7 @@
         #stopBtn:hover { background-color: #c41210; }
         #status { margin-top: 1rem; padding: 1rem; background-color: #f4f4f4; border-left: 4px solid #9146FF; font-family: monospace; word-wrap: break-word; }
         .warning { background-color: #fff3cd; color: #856404; padding: 1rem; border-radius: 4px; margin-bottom: 1rem; font-size: 0.9rem; border: 1px solid #ffeeba; }
-        .log { height: 150px; overflow-y: scroll; background: #222; color: #0f0; padding: 10px; font-family: monospace; font-size: 0.85rem; margin-top: 1rem; border-radius: 4px; }
+        .log { height: 200px; overflow-y: scroll; background: #222; color: #0f0; padding: 10px; font-family: monospace; font-size: 0.85rem; margin-top: 1rem; border-radius: 4px; }
     </style>
 </head>
 <body>
@@ -67,7 +67,7 @@
         function log(message) {
             const time = new Date().toLocaleTimeString();
             logDiv.innerHTML += `<br>[${time}] ${message}`;
-            logDiv.scrollTop = logDiv.scrollHeight;
+            logDiv.scrollTop = logDiv.scrollHeight; // Auto-scroll to bottom
         }
 
         // Rate limiter logic
@@ -147,14 +147,31 @@
                     // Check if message contains the trigger keyword (case-insensitive)
                     if (text.toLowerCase().includes(botConfig.trigger.toLowerCase())) {
                         
-                        if (canSendReply()) {
-                            // Send reply
-                            chatSocket.send(`PRIVMSG #${channel} :${botConfig.reply}`);
-                            replyTimestamps.push(Date.now());
-                            log(`Replied in #${channel} to ${sender}: "${botConfig.reply}"`);
-                        } else {
-                            log(`⚠️ Rate limit hit. Ignored message in #${channel}.`);
-                        }
+                        // Calculate random delay between 7 and 15 seconds
+                        const minDelay = 7;
+                        const maxDelay = 15;
+                        const delaySeconds = Math.floor(Math.random() * (maxDelay - minDelay + 1)) + minDelay;
+                        const delayMs = delaySeconds * 1000;
+
+                        log(`Trigger found in #${channel}. Replying in ${delaySeconds} seconds...`);
+
+                        // Schedule the reply
+                        setTimeout(() => {
+                            // 1. Make sure the bot is still running and connected
+                            if (!chatSocket || chatSocket.readyState !== WebSocket.OPEN) {
+                                log(`⚠️ Cancelled delayed reply in #${channel} (bot disconnected).`);
+                                return;
+                            }
+
+                            // 2. Check the rate limit at the exact moment of sending
+                            if (canSendReply()) {
+                                chatSocket.send(`PRIVMSG #${channel} :${botConfig.reply}`);
+                                replyTimestamps.push(Date.now()); // Record the actual send time
+                                log(`Replied in #${channel} to ${sender}: "${botConfig.reply}"`);
+                            } else {
+                                log(`⚠️ Rate limit hit. Ignored delayed reply in #${channel}.`);
+                            }
+                        }, delayMs);
                     }
                 }
             };
