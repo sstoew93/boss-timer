@@ -33,12 +33,25 @@ function initBot() {
     let botConfig = {};
     let isSequenceRunning = false; 
 
+    // --- NEW: Command Tracker Variables ---
+    let commandTracker = {}; 
+    let commandCooldowns = {}; 
+    // -------------------------------------
+
     const startBtn = document.getElementById('startBtn');
     const stopBtn = document.getElementById('stopBtn');
     const statusDiv = document.getElementById('status');
     const logDiv = document.getElementById('log');
 
     const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+    // --- NEW: 5-Minute Reset Timer ---
+    setInterval(() => {
+        commandTracker = {};
+        commandCooldowns = {};
+        log(`🔄 Command memory tracker reset (5m interval).`);
+    }, 5 * 60 * 1000);
+    // ---------------------------------
 
     // --- SLIDER LOGIC ---
     const msgSlider = document.getElementById('msgCount');
@@ -169,6 +182,10 @@ function initBot() {
             botConfig.token = 'oauth:' + botConfig.token;
         }
 
+        // Reset trackers on startup
+        commandTracker = {};
+        commandCooldowns = {};
+
         log(`Connecting to Twitch as ${botConfig.username}...`);
         statusDiv.textContent = 'Status: Connecting...';
         startBtn.style.display = 'none';
@@ -204,8 +221,47 @@ function initBot() {
                 const channel = match[2].toLowerCase();
                 const text = match[3];
 
+                // Ignore messages from the bot itself
                 if (sender === botConfig.username) return;
 
+                // ==========================================
+                // --- NEW: COMMAND SPAM TRACKER LOGIC ---
+                // ==========================================
+                const cleanText = text.trim();
+                if (cleanText.startsWith('!')) {
+                    const command = cleanText.split(' ')[0].toLowerCase();
+                    const now = Date.now();
+                    
+                    // Check if command is not on cooldown
+                    if (!commandCooldowns[command] || now > commandCooldowns[command]) {
+                        if (!commandTracker[command]) commandTracker[command] = [];
+                        
+                        // Filter out commands older than 60 seconds
+                        commandTracker[command] = commandTracker[command].filter(ts => now - ts < 60000);
+                        commandTracker[command].push(now);
+                        
+                        // If 5 identical commands seen in 60s
+                        if (commandTracker[command].length >= 5) {
+                            if (canSendMessage()) {
+                                chatSocket.send(`PRIVMSG #${channel} :${command}`);
+                                replyTimestamps.push(now);
+                                
+                                // Put on 60s cooldown so the bot doesn't spam itself
+                                commandCooldowns[command] = now + 60000; 
+                                commandTracker[command] = []; // Reset tracker for this command
+                                
+                                log(`🚀 Echoed command: "${command}" (Spam detected)`);
+                            } else {
+                                log(`⚠️ Rate limit hit. Could not echo "${command}"`);
+                            }
+                        }
+                    }
+                }
+                // ==========================================
+
+                // ==========================================
+                // --- EXISTING: TRIGGER SEQUENCE LOGIC ---
+                // ==========================================
                 if (text.toLowerCase().includes(botConfig.trigger.toLowerCase()) && !isSequenceRunning) {
                     runMessageSequence(channel, sender);
                 }
