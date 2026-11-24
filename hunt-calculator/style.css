@@ -6,11 +6,11 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    cursor: url('../../images/cursor.cur'), auto; /* Adjusted path for the cursor */
+    cursor: url('images/cursor.cur'), auto; 
 }
 
 a, button, input, select {
-    cursor: url('../../images/cursor2.cur'), pointer !important;
+    cursor: url('images/cursor2.cur'), pointer !important;
 }
 
 main {
@@ -54,7 +54,7 @@ main {
 
 .card-nivel {
     flex: 2;
-    min-width: 400px;
+    min-width: 450px; /* Made slightly wider to fit the new text */
 }
 
 .card-quest {
@@ -134,25 +134,43 @@ main {
     width: 65px;
     text-align: center;
     padding: 8px;
+    flex-shrink: 0;
 }
 
+/* New styling for the calculation text */
 .atributo-item .valor {
-    font-weight: 700;
-    color: #10b981; /* Green */
-    min-width: 80px;
+    font-size: 13.5px;
+    min-width: 160px;
     text-align: right;
-    font-size: 14px;
+    font-variant-numeric: tabular-nums;
 }
 
-.atributo-item .valor.capped {
-    color: #ef4444; /* Red */
+.val-base {
+    color: #a1a1aa; /* Gray for base */
 }
 
+.val-quest {
+    color: #10b981; /* Green for quest bonus */
+    font-weight: 600;
+}
+
+.val-total {
+    color: #fff; /* White for total */
+    font-weight: 700;
+}
+
+.val-total.capped {
+    color: #ef4444; /* Red if capped */
+}
+
+/* Pushes the optimal % to the far right */
 .atributo-item .optimal {
     font-size: 11px;
     color: #71717a;
-    min-width: 120px;
+    min-width: 110px;
     text-align: right;
+    margin-left: auto; /* This pushes it to the right */
+    flex-shrink: 0;
 }
 
 /* --- TOTAL DISPLAY --- */
@@ -215,10 +233,16 @@ hr.divider {
     .atributo-item {
         flex-wrap: wrap;
     }
+    .atributo-item .valor {
+        text-align: left;
+        margin-top: 5px;
+        width: 100%;
+    }
     .atributo-item .optimal {
         width: 100%;
         text-align: left;
-        margin-top: 8px;
+        margin-top: 5px;
+        margin-left: 0;
     }
 }
 
