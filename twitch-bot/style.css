@@ -11,7 +11,7 @@ body {
     cursor: url('../images/cursor.cur'), auto; 
 }
 
-a, button, input, select {
+a, button, input, select,  {
     cursor: url('../images/cursor2.cur'), pointer !important;
 }
 
@@ -96,7 +96,7 @@ a, button, input, select {
 .btn-stop { background: #ef4444; color: #fff; display: none; }
 .btn-stop:hover { background: #dc2626; transform: translateY(-2px); }
 
-/* --- STATUS & LOGS (Right Column) --- */
+/* --- STATUS & S (Right Column) --- */
 .status-box {
     background: #18181b; border-left: 4px solid #9146FF; padding: 16px;
     border-radius: 8px; font-family: monospace; font-size: 14px; color: #e4e4e7;
@@ -105,7 +105,7 @@ a, button, input, select {
 .log-box {
     background: #000; border: 1px solid #27272a; color: #10b981; padding: 16px;
     border-radius: 12px; font-family: monospace; font-size: 13px; 
-    height: 600px; /* Made taller to match the form height */
+    height: 823px; /* Made taller to match the form height */
     overflow-y: auto; line-height: 1.5;
 }
 .log-box::-webkit-scrollbar { width: 8px; }
@@ -124,6 +124,83 @@ a, button, input, select {
 
 .app-footer { text-align: center; padding: 40px 20px 20px 20px; color: #71717a; font-size: 13px; margin-top: 20px; border-top: 1px solid #27272a; letter-spacing: 1px; }
 
+/* --- TOOLTIP STYLES --- */
+.form-row label {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between label text and the '?' */
+    flex-wrap: wrap;
+}
+
+.tooltip-container {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: help;
+}
+
+.tooltip-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    background: #3f3f46;
+    color: #a1a1aa;
+    border-radius: 50%;
+    font-size: 11px;
+    font-weight: bold;
+    transition: all 0.2s;
+}
+
+.tooltip-container:hover .tooltip-icon {
+    background: #9146FF; /* Twitch Purple on hover */
+    color: #fff;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    width: 220px;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    padding: 10px;
+    position: absolute;
+    z-index: 100;
+    bottom: 150%; /* Position above the icon */
+    left: 50%;
+    margin-left: -110px; /* Center it */
+    opacity: 0;
+    transition: opacity 0.3s, bottom 0.3s;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.4;
+    border: 1px solid #3f3f46;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.8);
+    pointer-events: none; /* Prevents flickering */
+}
+
+/* The little triangle pointing down */
+.tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%; /* At the bottom of the tooltip */
+    left: 50%;
+    margin-left: -6px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: #000 transparent transparent transparent;
+}
+
+/* Show tooltip on hover */
+.tooltip-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+    bottom: 120%; /* Slight float up animation */
+}
+
 /* --- MOBILE RESPONSIVENESS --- */
 @media (max-width: 850px) {
     .bot-layout {
@@ -133,3 +210,5 @@ a, button, input, select {
         height: 300px;
     }
 }
+
+
