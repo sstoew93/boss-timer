@@ -4,12 +4,11 @@ body {
     background-image: radial-gradient(circle at 50% 0%, #1c1c22 0%, #09090b 60%);
     color: #fafafa; 
     margin: 0;
-    padding: 0; /* Set to 0 so Nav sits at the top */
+    padding: 0; 
     min-height: 100vh;
     cursor: url('images/cursor.cur'), auto; 
 }
 
-/* Push content down so it's not hidden behind the sticky nav */
 #app-content, #login-screen {
     padding: 40px 20px;
 }
@@ -23,24 +22,24 @@ a, button, input, select,
     cursor: url('images/cursor2.cur'), pointer !important;
 }
 
-/* --- COOL STYLIZED HEADER (DARK CHROME THEME) --- */
-.main-header { text-align: center; margin-bottom: 40px; perspective: 1000px; }
-.cool-header {
-    font-family: 'Orbitron', sans-serif; font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900;
-    margin: 0; text-transform: uppercase; letter-spacing: 6px; position: relative; display: inline-block;
-    background: linear-gradient(135deg, #ffffff 0%, #a1a1aa 20%, #3f3f46 50%, #a1a1aa 80%, #ffffff 100%);
-    background-size: 200% auto; color: transparent; -webkit-background-clip: text; background-clip: text;
-    animation: shine 5s linear infinite, float 4s ease-in-out infinite;
-    text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1);
-    --mouse-x: 50%; --mouse-y: 50%;
+/* --- SIMPLE PAGE TITLE (Matches Calculator) --- */
+.page-title {
+    text-align: center;
+    margin-bottom: 40px;
 }
-.cool-header::before {
-    content: "MEGA Mu BOSS Timer"; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-    background: radial-gradient(circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 1) 0%, transparent 40%);
-    -webkit-background-clip: text; background-clip: text; color: transparent; z-index: 1; pointer-events: none; opacity: 0; transition: opacity 0.3s;
+
+.page-title h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    margin: 0 0 10px 0;
+    color: #fff;
 }
-.cool-header:hover::before { opacity: 1; }
-.subtitle { text-align: center; color: #a1a1aa; font-size: 15px; margin-bottom: 30px; letter-spacing: 2px; text-transform: uppercase; font-weight: 500; }
+
+.page-title p {
+    color: #a1a1aa;
+    margin: 0;
+}
 
 /* --- TOP BAR (Search & Filters) --- */
 .top-bar { max-width: 1100px; margin: 0 auto 20px auto; display: flex; gap: 15px; flex-wrap: wrap; }
@@ -90,8 +89,6 @@ td:last-child { border-right: 1px solid #27272a; border-radius: 0 12px 12px 0; t
 @keyframes pulse-red { 0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); } 70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(239, 68, 68, 0); } 100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); } }
 @keyframes pulse-amber { 0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7); } 70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(245, 158, 11, 0); } 100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(245, 158, 11, 0); } }
 @keyframes pulse-green { 0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); } 70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); } 100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); } }
-@keyframes shine { to { background-position: 200% center; } }
-@keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-5px); } 100% { transform: translateY(0px); } }
 
 .timer-main { font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 2px; font-variant-numeric: tabular-nums; }
 .timer-sub { font-size: 12px; color: #71717a; }
