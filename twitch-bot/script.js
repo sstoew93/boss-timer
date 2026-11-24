@@ -33,7 +33,6 @@ function initBot() {
     let botConfig = {};
     let isSequenceRunning = false; 
 
-    // --- Channel-Specific Trackers ---
     let commandTracker = {}; 
     let commandCooldowns = {}; 
 
@@ -44,14 +43,12 @@ function initBot() {
 
     const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
-    // --- 5-Minute Reset Timer ---
     setInterval(() => {
         commandTracker = {};
         commandCooldowns = {};
         log(`🔄 Command memory tracker reset (5m interval).`);
     }, 5 * 60 * 1000);
 
-    // --- SLIDER LOGIC ---
     const msgSlider = document.getElementById('msgCount');
     const msgCountVal = document.getElementById('msgCountVal');
     const msg2Row = document.getElementById('msg2-row');
@@ -84,7 +81,6 @@ function initBot() {
         return replyTimestamps.length < botConfig.rateLimit;
     }
 
-    // --- THE SEQUENCE RUNNER ---
     async function runMessageSequence(channel, sender) {
         if (isSequenceRunning) return;
         isSequenceRunning = true;
@@ -97,16 +93,23 @@ function initBot() {
             log(`▶️ Sequence triggered by ${sender} in #${channel}. First message in ${initialDelay}s...`);
             await sleep(initialDelay * 1000);
 
+            // SEND MESSAGE 1 (Apply prefix only if channel is in the prefix list)
             if (canSendMessage()) {
-                chatSocket.send(`PRIVMSG #${channel} :${botConfig.msg1}`);
+                let msgToSend = botConfig.msg1;
+                if (botConfig.prefixChannels.includes(channel)) {
+                    msgToSend = `!${msgToSend}`;
+                }
+                
+                chatSocket.send(`PRIVMSG #${channel} :${msgToSend}`);
                 replyTimestamps.push(Date.now());
-                log(`[1/3] Sent in #${channel}: "${botConfig.msg1}"`);
+                log(`[1/3] Sent in #${channel}: "${msgToSend}"`);
             } else {
                 log(`⚠️ Rate limit hit. Skipped Message 1.`);
                 isSequenceRunning = false;
                 return;
             }
 
+            // SEND MESSAGE 2 (No prefix)
             if (botConfig.hasMsg2) {
                 await sleep(botConfig.delay2 * 1000);
                 if (!chatSocket || chatSocket.readyState !== WebSocket.OPEN) return;
@@ -120,6 +123,7 @@ function initBot() {
                 }
             }
 
+            // SEND MESSAGE 3 (No prefix)
             if (botConfig.hasMsg3) {
                 await sleep(botConfig.delay3 * 1000);
                 if (!chatSocket || chatSocket.readyState !== WebSocket.OPEN) return;
@@ -154,6 +158,21 @@ function initBot() {
         if (chatSocket) chatSocket.close();
 
         const msgCount = parseInt(msgSlider.value);
+        
+        // --- PARSE CHANNELS AND '!' PREFIX ---
+        const rawChannels = document.getElementById('channels').value;
+        let parsedChannels = [];
+        let prefixChannels = [];
+
+        rawChannels.split(',').forEach(c => {
+            let clean = c.trim().replace('#', '').toLowerCase();
+            if (clean.startsWith('!')) {
+                clean = clean.substring(1); // Remove the '!'
+                prefixChannels.push(clean); // Add to prefix list
+            }
+            if (clean) parsedChannels.push(clean);
+        });
+        // ------------------------------------------
 
         botConfig = {
             username: document.getElementById('username').value.trim().toLowerCase(),
@@ -167,7 +186,8 @@ function initBot() {
             msg3: document.getElementById('reply3').value.trim(),
             delay3: parseInt(document.getElementById('delay3').value) || 0,
             cooldown: parseInt(document.getElementById('cooldown').value) || 0,
-            channels: document.getElementById('channels').value.split(',').map(c => c.trim().replace('#', '').toLowerCase()).filter(c => c),
+            channels: parsedChannels,          
+            prefixChannels: prefixChannels,    
             rateLimit: parseInt(document.getElementById('rateLimit').value, 10) || 10
         };
 
@@ -179,6 +199,9 @@ function initBot() {
         commandCooldowns = {};
 
         log(`Connecting to Twitch as ${botConfig.username}...`);
+        if (prefixChannels.length > 0) {
+            log(`Channels requiring '!' prefix: ${prefixChannels.join(', ')}`);
+        }
         statusDiv.textContent = 'Status: Connecting...';
         startBtn.style.display = 'none';
         stopBtn.style.display = 'block';
@@ -188,10 +211,7 @@ function initBot() {
         chatSocket.onopen = () => {
             log(`Connected. Authenticating...`);
             
-            // --- THE FIX IS HERE ---
-            // We must request tags (for badges) and commands (for announcements)
             chatSocket.send('CAP REQ :twitch.tv/tags twitch.tv/commands');
-            
             chatSocket.send(`PASS ${botConfig.token}`);
             chatSocket.send(`NICK ${botConfig.username}`);
             
@@ -211,12 +231,8 @@ function initBot() {
                 return;
             }
 
-            // Ignore CAP ACK messages from Twitch
             if (rawMessage.includes('CAP * ACK')) return;
 
-            // ==========================================
-            // --- PARSE IRC TAGS FOR BADGES ---
-            // ==========================================
             let tags = {};
             let actualMessagePart = rawMessage;
 
@@ -242,16 +258,10 @@ function initBot() {
 
                 if (sender === botConfig.username) return;
 
-                // ==========================================
-                // --- SECURITY CHECKS ---
-                // ==========================================
                 const isAnnouncement = actualMessagePart.includes('USERNOTICE') && tags['msg-id'] === 'announcement';
                 const badges = tags['badges'] || '';
                 
-                // 1. Check Badge
                 const isBroadcasterByBadge = badges.includes('broadcaster/1');
-                
-                // 2. Check ID (Bulletproof method for offline/glitchy badges)
                 const isBroadcasterById = tags['user-id'] && tags['room-id'] && (tags['user-id'] === tags['room-id']);
                 
                 const isBroadcaster = isBroadcasterByBadge || isBroadcasterById;
@@ -259,9 +269,7 @@ function initBot() {
                 
                 const isAuthorizedUser = isBroadcaster || isModerator || isAnnouncement;
 
-                // ==========================================
-                // --- CHANNEL-SPECIFIC SPAM TRACKER (Anyone) ---
-                // ==========================================
+                // --- SPAM TRACKER ---
                 const cleanText = text.trim();
                 if (cleanText.startsWith('!')) {
                     const command = cleanText.split(' ')[0].toLowerCase();
@@ -292,9 +300,7 @@ function initBot() {
                     }
                 }
 
-                // ==========================================
-                // --- SEQUENCE TRIGGER (Authorized ONLY) ---
-                // ==========================================
+                // --- SEQUENCE TRIGGER ---
                 if (isAuthorizedUser) {
                     if (text.toLowerCase().includes(botConfig.trigger.toLowerCase()) && !isSequenceRunning) {
                         runMessageSequence(channel, sender);
