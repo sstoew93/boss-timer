@@ -33,7 +33,7 @@ function initBot() {
     let botConfig = {};
     let isSequenceRunning = false; 
 
-    // Channel-Specific Trackers
+    // --- Channel-Specific Trackers ---
     let commandTracker = {}; 
     let commandCooldowns = {}; 
 
@@ -207,89 +207,54 @@ function initBot() {
                 return;
             }
 
-            // ==========================================
-            // --- PARSE IRC TAGS FOR SECURITY ---
-            // ==========================================
-            let tags = {};
-            let actualMessagePart = rawMessage;
-
-            if (rawMessage.startsWith('@')) {
-                const tagsEndIndex = rawMessage.indexOf(' ');
-                const rawTags = rawMessage.substring(1, tagsEndIndex);
-                actualMessagePart = rawMessage.substring(tagsEndIndex + 1);
-                
-                rawTags.split(';').forEach(tag => {
-                    const [key, value] = tag.split('=');
-                    tags[key] = value;
-                });
-            }
-
-            // Check if it's an Announcement
-            const isAnnouncement = actualMessagePart.includes('USERNOTICE') && tags['msg-id'] === 'announcement';
-            
-            // Check for Broadcaster or Moderator badges
-            const badges = tags['badges'] || '';
-            const isBroadcaster = badges.includes('broadcaster/1');
-            const isModerator = badges.includes('moderator/1');
-            
-            // Only allow these users (or announcements) to trigger the bot
-            const isAuthorizedUser = isBroadcaster || isModerator || isAnnouncement;
-
-            // Parse Channel and Text (Works for both PRIVMSG and USERNOTICE)
-            const match = actualMessagePart.match(/(?:PRIVMSG|USERNOTICE) #([^ ]+) :(.*)/);
+            const match = rawMessage.match(/^:([^!]+)![^@]+@[^ ]+ PRIVMSG #([^ ]+) :(.*)/);
             
             if (match) {
-                const channel = match[1].toLowerCase();
-                const text = match[2];
-                
-                // Extract sender
-                const senderMatch = actualMessagePart.match(/^:([^!]+)!/);
-                const sender = senderMatch ? senderMatch[1].toLowerCase() : 'system';
+                const sender = match[1].toLowerCase();
+                const channel = match[2].toLowerCase();
+                const text = match[3];
 
                 // Ignore messages from the bot itself
                 if (sender === botConfig.username) return;
 
                 // ==========================================
-                // --- GATEKEEPER: ONLY MODS, STREAMERS, ANNOUNCEMENTS ---
+                // --- CHANNEL-SPECIFIC SPAM TRACKER ---
                 // ==========================================
-                if (isAuthorizedUser) {
+                const cleanText = text.trim();
+                if (cleanText.startsWith('!')) {
+                    const command = cleanText.split(' ')[0].toLowerCase();
+                    const now = Date.now();
                     
-                    // --- 1. TRIGGER SEQUENCE LOGIC ---
-                    if (text.toLowerCase().includes(botConfig.trigger.toLowerCase()) && !isSequenceRunning) {
-                        runMessageSequence(channel, sender);
-                    }
-
-                    // --- 2. CHANNEL-SPECIFIC SPAM TRACKER ---
-                    const cleanText = text.trim();
-                    if (cleanText.startsWith('!')) {
-                        const command = cleanText.split(' ')[0].toLowerCase();
-                        const now = Date.now();
+                    if (!commandTracker[channel]) commandTracker[channel] = {};
+                    if (!commandCooldowns[channel]) commandCooldowns[channel] = {};
+                    
+                    if (!commandCooldowns[channel][command] || now > commandCooldowns[channel][command]) {
+                        if (!commandTracker[channel][command]) commandTracker[channel][command] = [];
                         
-                        if (!commandTracker[channel]) commandTracker[channel] = {};
-                        if (!commandCooldowns[channel]) commandCooldowns[channel] = {};
+                        commandTracker[channel][command] = commandTracker[channel][command].filter(ts => now - ts < 60000);
+                        commandTracker[channel][command].push(now);
                         
-                        if (!commandCooldowns[channel][command] || now > commandCooldowns[channel][command]) {
-                            if (!commandTracker[channel][command]) commandTracker[channel][command] = [];
-                            
-                            commandTracker[channel][command] = commandTracker[channel][command].filter(ts => now - ts < 60000);
-                            commandTracker[channel][command].push(now);
-                            
-                            if (commandTracker[channel][command].length >= 5) {
-                                if (canSendMessage()) {
-                                    chatSocket.send(`PRIVMSG #${channel} :${command}`);
-                                    replyTimestamps.push(now);
-                                    commandCooldowns[channel][command] = now + 60000; 
-                                    commandTracker[channel][command] = []; 
-                                    log(`🚀 Echoed "${command}" in #${channel} (Spam detected)`);
-                                } else {
-                                    log(`⚠️ Rate limit hit. Could not echo "${command}" in #${channel}`);
-                                }
+                        if (commandTracker[channel][command].length >= 5) {
+                            if (canSendMessage()) {
+                                chatSocket.send(`PRIVMSG #${channel} :${command}`);
+                                replyTimestamps.push(now);
+                                
+                                commandCooldowns[channel][command] = now + 60000; 
+                                commandTracker[channel][command] = []; 
+                                
+                                log(`🚀 Echoed "${command}" in #${channel} (Spam detected)`);
+                            } else {
+                                log(`⚠️ Rate limit hit. Could not echo "${command}" in #${channel}`);
                             }
                         }
                     }
-                } else {
-                    // Optional: Log if a normal viewer tries to trigger it
-                    // log(`🛡️ Ignored message from non-mod: ${sender}`);
+                }
+
+                // ==========================================
+                // --- EXISTING: TRIGGER SEQUENCE LOGIC ---
+                // ==========================================
+                if (text.toLowerCase().includes(botConfig.trigger.toLowerCase()) && !isSequenceRunning) {
+                    runMessageSequence(channel, sender);
                 }
             }
         };
