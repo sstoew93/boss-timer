@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hunt Calculator - MEGA TOOLS</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+    
+    <!-- Shared Nav CSS -->
+    <link rel="stylesheet" href="../shared/nav.css">
+    <!-- Calculator Specific CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main>
+        <div class="page-title">
+            <h1>Hunt Calculator</h1>
+            <p>Calculate your optimal attribute distribution and stats.</p>
+        </div>
+
+        <div class="layout">
+            <!-- LEFT CARD: LEVEL & ATTRIBUTES -->
+            <div class="card card-nivel">
+                <div class="form-row">
+                    <label>Character Level</label>
+                    <input type="number" id="nivel" value="0" min="0" step="1">
+                </div>
+                
+                <hr class="divider">
+                
+                <h2>Attribute Distribution (%)</h2>
+                <div id="atributos-grid"></div>
+                
+                <div id="total-display" class="nok">
+                    Total Percentage: <span id="total-valor">0</span>%
+                </div>
+            </div>
+
+            <!-- RIGHT CARD: QUESTS -->
+            <div class="card card-quest">
+                <h2>Quest Item Values</h2>
+                <div class="quest-options">
+                    <label><input type="radio" name="quest-type" value="damage" checked> Damage</label>
+                    <label><input type="radio" name="quest-type" value="wizardry"> Wizardry</label>
+                    <label><input type="radio" name="quest-type" value="custom"> Custom</label>
+                </div>
+                <div id="quest-grid" class="quest-grid"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Shared Nav JS -->
+    <script src="../shared/nav.js"></script>
+    <!-- Calculator Specific JS -->
+    <script src="script.js"></script>
+</body>
+</html>
