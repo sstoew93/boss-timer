@@ -1,16 +1,16 @@
 // shared/nav.js
 document.addEventListener('DOMContentLoaded', () => {
     // Determine active page based on URL
-    const isBossTimer = window.location.pathname === '/mega-tools/' || 
-                        window.location.pathname === '/mega-tools/index.html' || 
-                        window.location.pathname === '/mega-tools';
+    const path = window.location.pathname;
+    const isBossTimer = path === '/mega-tools/' || path === '/mega-tools/index.html' || path === '/mega-tools';
+    const isHuntCalc = path.includes('/mega-tools/hunt-calculator/');
 
     const navHTML = `
         <header class="app-header">
             <a href="/mega-tools/" class="nav-logo">MEGA TOOLS</a>
             <nav class="nav-links">
-                <a href="/mega-tools/" class="${isBossTimer ? 'active' : ''}">🐉 Boss Timers</a>
-                <a href="#" style="opacity: 0.5; cursor: not-allowed;">⚔️ Tool 2 (Soon)</a>
+                <a href="/mega-tools/" class="${isBossTimer ? 'active' : ''}">Boss Timer</a>
+                <a href="/mega-tools/hunt-calculator/" class="${isHuntCalc ? 'active' : ''}">Hunt Calculator</a>
             </nav>
         </header>
     `;
