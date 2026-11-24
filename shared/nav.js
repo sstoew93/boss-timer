@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const navHTML = `
         <header class="app-header">
-            <a href="/mega-tools/#" class="nav-logo">MEGA TOOLS</a>
+            <div class="nav-logo">MEGA TOOLS</div>
             <nav class="nav-links">
                 <a href="/mega-tools/" class="${isBossTimer ? 'active' : ''}">Boss Timer</a>
                 <a href="/mega-tools/hunt-calculator/" class="${isHuntCalc ? 'active' : ''}">Hunt Calculator</a>
