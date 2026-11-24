@@ -234,3 +234,70 @@ input[type=number]::-webkit-outer-spin-button {
 input[type=number] {
     -moz-appearance: textfield; /* Firefox */
 }
+
+/* --- LOGIN SCREEN --- */
+#login-screen { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    height: 80vh; 
+    text-align: center; 
+}
+
+#login-screen h1 { 
+    font-family: 'Orbitron', sans-serif; 
+    font-size: 2rem; 
+    margin-bottom: 10px; 
+    font-weight: 900; 
+    color: #fff; 
+    letter-spacing: 2px;
+}
+
+#login-screen input { 
+    padding: 12px; 
+    font-size: 16px; 
+    border-radius: 8px; 
+    border: 1px solid #27272a; 
+    background: #18181b; 
+    color: #fff; 
+    margin-bottom: 15px; 
+    width: 300px; 
+    text-align: center; 
+    outline: none; 
+    transition: all 0.2s; 
+}
+
+#login-screen input:focus { 
+    border-color: #52525b; 
+    box-shadow: 0 0 0 3px rgba(255,255,255,0.05); 
+}
+
+#login-screen button { 
+    padding: 12px 24px; 
+    font-size: 16px; 
+    font-weight: 600; 
+    border-radius: 8px; 
+    border: none; 
+    background: #fafafa; 
+    color: #09090b; 
+    cursor: pointer; 
+    transition: background 0.2s, transform 0.1s; 
+}
+
+#login-screen button:hover { 
+    background: #e4e4e7; 
+    transform: scale(1.02); 
+}
+
+#error-msg { 
+    color: #ef4444; 
+    margin-top: 15px; 
+    display: none; 
+    font-size: 14px; 
+    font-weight: 500; 
+}
+
+#app-content { 
+    display: none; 
+}
