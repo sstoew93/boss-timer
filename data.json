@@ -552,18 +552,6 @@
     "raw_date": "2026-11-24 04:24:50"
   },
   {
-    "server": "Sv1",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-24T04:12:01+02:00",
-    "killer": "RoxyRM",
-    "earliest_spawn": "2026-11-25T21:07:01+02:00",
-    "latest_spawn": "2026-11-25T21:07:01+02:00",
-    "min_hours": 40.9,
-    "max_hours": 40.9,
-    "is_fixed": true,
-    "raw_date": "2026-11-23 23:12:01"
-  },
-  {
     "server": "Sv19",
     "boss": "Selupan",
     "last_kill": "2026-11-24T11:54:53+02:00",
@@ -1102,6 +1090,18 @@
     "max_hours": 40.9,
     "is_fixed": true,
     "raw_date": "2026-11-25 07:19:13"
+  },
+  {
+    "server": "Sv1",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-25T12:45:44+02:00",
+    "killer": "SLeigh8t",
+    "earliest_spawn": "2026-11-27T05:40:44+02:00",
+    "latest_spawn": "2026-11-27T05:40:44+02:00",
+    "min_hours": 40.9,
+    "max_hours": 40.9,
+    "is_fixed": true,
+    "raw_date": "2026-11-25 07:45:44"
   },
   {
     "server": "Sv3",
