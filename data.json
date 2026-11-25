@@ -1,17 +1,5 @@
 [
   {
-    "server": "Sv18",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-23T18:54:35+02:00",
-    "killer": "CHINOOS0",
-    "earliest_spawn": "2026-11-25T11:49:35+02:00",
-    "latest_spawn": "2026-11-25T11:49:35+02:00",
-    "min_hours": 40.9,
-    "max_hours": 40.9,
-    "is_fixed": true,
-    "raw_date": "2026-11-23 13:54:35"
-  },
-  {
     "server": "Sv14",
     "boss": "Nightmare",
     "last_kill": "2026-11-23T19:05:35+02:00",
@@ -1078,6 +1066,18 @@
     "max_hours": 182.0,
     "is_fixed": false,
     "raw_date": "2026-11-23 01:43:25"
+  },
+  {
+    "server": "Sv18",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-25T11:53:14+02:00",
+    "killer": "DlZot",
+    "earliest_spawn": "2026-11-27T04:48:14+02:00",
+    "latest_spawn": "2026-11-27T04:48:14+02:00",
+    "min_hours": 40.9,
+    "max_hours": 40.9,
+    "is_fixed": true,
+    "raw_date": "2026-11-25 06:53:14"
   },
   {
     "server": "Sv18",
