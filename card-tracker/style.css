@@ -241,3 +241,37 @@ input:checked + .slider:before {
 #app-content { display: none; }
 
 .app-footer { text-align: center; padding: 40px 20px 20px 20px; color: #71717a; font-size: 13px; margin-top: 20px; border-top: 1px solid #27272a; letter-spacing: 1px; }
+
+/* --- MOBILE RESPONSIVENESS FOR CARDS --- */
+@media (max-width: 650px) {
+    .panel {
+        padding: 20px 10px; /* Reduce panel padding to give cards more room */
+    }
+
+    .numbers-grid {
+        gap: 8px;
+    }
+
+    .card-row {
+        flex-wrap: wrap; /* Allows cards to wrap to a second line if they don't fit */
+        justify-content: center;
+        gap: 6px;
+    }
+
+    .card {
+        width: 34px; /* Slightly smaller cards */
+        height: 50px;
+        font-size: 16px; /* Smaller font */
+    }
+
+    .special-actions {
+        flex-direction: column; /* Stack the special x2 and swap cards vertically */
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .action-card {
+        width: 100%; /* Make special cards stretch to fill available width */
+        justify-content: center;
+    }
+}
