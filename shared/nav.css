@@ -49,3 +49,22 @@
     border-bottom: 2px solid #fff;
     text-shadow: 0 0 10px rgba(255,255,255,0.3);
 }
+
+/* --- MOBILE RESPONSIVENESS FOR NAVBAR --- */
+@media (max-width: 768px) {
+    .app-header {
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+    }
+    
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 20px; /* 10px vertical gap, 20px horizontal gap */
+    }
+    
+    .nav-links a {
+        font-size: 14px;
+    }
+}
