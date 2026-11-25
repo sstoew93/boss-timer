@@ -41,6 +41,13 @@ function initBot() {
     const statusDiv = document.getElementById('status');
     const logDiv = document.getElementById('log');
 
+    // --- NEW: CLEAR LOG BUTTON LOGIC ---
+    const clearLogBtn = document.getElementById('clearLogBtn');
+    clearLogBtn.addEventListener('click', () => {
+        logDiv.innerHTML = '[System] Log cleared.';
+    });
+    // ------------------------------------
+
     const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
     setInterval(() => {
