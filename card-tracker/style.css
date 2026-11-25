@@ -271,7 +271,7 @@ input:checked + .slider:before {
     }
     
     .action-card {
-        width: 100%; /* Make special cards stretch to fill available width */
+        width: 70%; /* Make special cards stretch to fill available width */
         justify-content: center;
     }
 }
