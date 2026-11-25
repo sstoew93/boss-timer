@@ -1,17 +1,5 @@
 [
   {
-    "server": "Sv1",
-    "boss": "Core Magriffy",
-    "last_kill": "2026-11-22T04:12:05+02:00",
-    "killer": "Melford",
-    "earliest_spawn": "2026-11-25T16:47:05+02:00",
-    "latest_spawn": "2026-11-25T16:47:05+02:00",
-    "min_hours": 84.6,
-    "max_hours": 84.6,
-    "is_fixed": true,
-    "raw_date": "2026-11-21 23:12:05"
-  },
-  {
     "server": "Sv14",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-22T04:13:39+02:00",
@@ -1366,5 +1354,17 @@
     "max_hours": 168.0,
     "is_fixed": false,
     "raw_date": "2026-11-24 11:06:04"
+  },
+  {
+    "server": "Sv1",
+    "boss": "Core Magriffy",
+    "last_kill": "2026-11-25T16:50:12+02:00",
+    "killer": "GatlingGun",
+    "earliest_spawn": "2026-11-29T05:25:12+02:00",
+    "latest_spawn": "2026-11-29T05:25:12+02:00",
+    "min_hours": 84.6,
+    "max_hours": 84.6,
+    "is_fixed": true,
+    "raw_date": "2026-11-25 11:50:12"
   }
 ]
