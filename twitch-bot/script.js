@@ -93,11 +93,11 @@ function initBot() {
             log(`▶️ Sequence triggered by "${matchedTrigger}" from ${sender} in #${channel}. First message in ${initialDelay}s...`);
             await sleep(initialDelay * 1000);
 
-            // SEND MESSAGE 1
+            // SEND MESSAGE 1 (Apply exact prefix from the map)
             if (canSendMessage()) {
                 let msgToSend = botConfig.msg1;
-                if (botConfig.prefixChannels.includes(channel)) {
-                    msgToSend = `!${msgToSend}`;
+                if (botConfig.prefixMap[channel]) {
+                    msgToSend = `${botConfig.prefixMap[channel]}${msgToSend}`;
                 }
                 
                 chatSocket.send(`PRIVMSG #${channel} :${msgToSend}`);
@@ -109,7 +109,7 @@ function initBot() {
                 return;
             }
 
-            // SEND MESSAGE 2
+            // SEND MESSAGE 2 (No prefix)
             if (botConfig.hasMsg2) {
                 await sleep(botConfig.delay2 * 1000);
                 if (!chatSocket || chatSocket.readyState !== WebSocket.OPEN) return;
@@ -123,7 +123,7 @@ function initBot() {
                 }
             }
 
-            // SEND MESSAGE 3
+            // SEND MESSAGE 3 (No prefix)
             if (botConfig.hasMsg3) {
                 await sleep(botConfig.delay3 * 1000);
                 if (!chatSocket || chatSocket.readyState !== WebSocket.OPEN) return;
@@ -159,18 +159,33 @@ function initBot() {
 
         const msgCount = parseInt(msgSlider.value);
         
+        // --- PARSE CHANNELS AND PREFIXES (! and #) ---
         const rawChannels = document.getElementById('channels').value;
         let parsedChannels = [];
-        let prefixChannels = [];
+        let prefixMap = {}; // Stores { channelName: "!prefix" }
 
         rawChannels.split(',').forEach(c => {
-            let clean = c.trim().replace('#', '').toLowerCase();
-            if (clean.startsWith('!')) {
+            let clean = c.trim().toLowerCase();
+            if (!clean) return;
+
+            let prefix = "";
+            // Keep extracting leading ! or # characters
+            while (clean.startsWith('!') || clean.startsWith('#')) {
+                prefix += clean[0];
                 clean = clean.substring(1);
-                prefixChannels.push(clean);
             }
-            if (clean) parsedChannels.push(clean);
+            
+            // Remove any remaining # symbols (just in case)
+            clean = clean.replace(/#/g, '');
+
+            if (clean) {
+                parsedChannels.push(clean);
+                if (prefix) {
+                    prefixMap[clean] = prefix;
+                }
+            }
         });
+        // ------------------------------------------------
 
         const rawTriggerInput = document.getElementById('trigger').value;
         let parsedTriggers = [];
@@ -189,7 +204,7 @@ function initBot() {
         botConfig = {
             username: document.getElementById('username').value.trim().toLowerCase(),
             token: document.getElementById('token').value.trim(),
-            triggers: parsedTriggers,
+            triggers: parsedTriggers, 
             msg1: document.getElementById('reply1').value.trim(),
             hasMsg2: msgCount >= 2,
             msg2: document.getElementById('reply2').value.trim(),
@@ -199,7 +214,7 @@ function initBot() {
             delay3: parseInt(document.getElementById('delay3').value) || 0,
             cooldown: parseInt(document.getElementById('cooldown').value) || 0,
             channels: parsedChannels,          
-            prefixChannels: prefixChannels,    
+            prefixMap: prefixMap, // Use the new map
             rateLimit: parseInt(document.getElementById('rateLimit').value, 10) || 10
         };
 
@@ -213,8 +228,11 @@ function initBot() {
         log(`Connecting to Twitch as ${botConfig.username}...`);
         log(`Listening for triggers: [${botConfig.triggers.join('] [')}]`);
         
-        if (prefixChannels.length > 0) {
-            log(`Channels requiring '!' prefix: ${prefixChannels.join(', ')}`);
+        const prefixedChannels = Object.keys(prefixMap);
+        if (prefixedChannels.length > 0) {
+            prefixedChannels.forEach(ch => {
+                log(`Channel #${ch} requires prefix: "${prefixMap[ch]}"`);
+            });
         }
         
         statusDiv.textContent = 'Status: Connecting...';
@@ -262,14 +280,10 @@ function initBot() {
                 });
             }
 
-            // ==========================================
-            // --- NEW: SHARED CHAT BLOCKER ---
-            // ==========================================
-            // If 'source-room-id' exists and doesn't match 'room-id', it's from another channel in a shared chat.
+            // --- SHARED CHAT BLOCKER ---
             if (tags['source-room-id'] && tags['source-room-id'] !== tags['room-id']) {
-                return; // Ignore it completely
+                return; 
             }
-            // ==========================================
 
             const match = actualMessagePart.match(/(?:PRIVMSG|USERNOTICE) #([^ ]+) :(.*)/);
             
