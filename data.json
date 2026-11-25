@@ -24,18 +24,6 @@
     "raw_date": "2026-11-21 23:24:14"
   },
   {
-    "server": "Sv10",
-    "boss": "Core Magriffy",
-    "last_kill": "2026-11-22T04:24:31+02:00",
-    "killer": "Collette",
-    "earliest_spawn": "2026-11-25T16:59:31+02:00",
-    "latest_spawn": "2026-11-25T16:59:31+02:00",
-    "min_hours": 84.6,
-    "max_hours": 84.6,
-    "is_fixed": true,
-    "raw_date": "2026-11-21 23:24:31"
-  },
-  {
     "server": "Sv6",
     "boss": "Core Magriffy",
     "last_kill": "2026-11-22T04:25:20+02:00",
@@ -1366,5 +1354,17 @@
     "max_hours": 84.6,
     "is_fixed": true,
     "raw_date": "2026-11-25 12:00:57"
+  },
+  {
+    "server": "Sv10",
+    "boss": "Core Magriffy",
+    "last_kill": "2026-11-25T17:02:04+02:00",
+    "killer": "Collette",
+    "earliest_spawn": "2026-11-29T05:37:04+02:00",
+    "latest_spawn": "2026-11-29T05:37:04+02:00",
+    "min_hours": 84.6,
+    "max_hours": 84.6,
+    "is_fixed": true,
+    "raw_date": "2026-11-25 12:02:04"
   }
 ]
