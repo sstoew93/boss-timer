@@ -41,19 +41,20 @@ function initBot() {
     const statusDiv = document.getElementById('status');
     const logDiv = document.getElementById('log');
 
-    // --- CLEAR LOG BUTTON LOGIC ---
+    // --- NEW: CLEAR LOG BUTTON LOGIC ---
     const clearLogBtn = document.getElementById('clearLogBtn');
     clearLogBtn.addEventListener('click', () => {
         logDiv.innerHTML = '[System] Log cleared.';
     });
+    // ------------------------------------
 
     const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
     setInterval(() => {
         commandTracker = {};
         commandCooldowns = {};
-        log(`🔄 Command memory tracker reset (10m interval).`);
-    }, 10 * 60 * 1000);
+        log(`🔄 Command memory tracker reset (5m interval).`);
+    }, 5 * 60 * 1000);
 
     const msgSlider = document.getElementById('msgCount');
     const msgCountVal = document.getElementById('msgCountVal');
@@ -99,7 +100,7 @@ function initBot() {
             log(`▶️ Sequence triggered by "${matchedTrigger}" from ${sender} in #${channel}. First message in ${initialDelay}s...`);
             await sleep(initialDelay * 1000);
 
-            // SEND MESSAGE 1
+            // SEND MESSAGE 1 (Apply exact prefix from the map)
             if (canSendMessage()) {
                 let msgToSend = botConfig.msg1;
                 if (botConfig.prefixMap[channel]) {
@@ -115,7 +116,7 @@ function initBot() {
                 return;
             }
 
-            // SEND MESSAGE 2
+            // SEND MESSAGE 2 (No prefix)
             if (botConfig.hasMsg2) {
                 await sleep(botConfig.delay2 * 1000);
                 if (!chatSocket || chatSocket.readyState !== WebSocket.OPEN) return;
@@ -129,7 +130,7 @@ function initBot() {
                 }
             }
 
-            // SEND MESSAGE 3
+            // SEND MESSAGE 3 (No prefix)
             if (botConfig.hasMsg3) {
                 await sleep(botConfig.delay3 * 1000);
                 if (!chatSocket || chatSocket.readyState !== WebSocket.OPEN) return;
@@ -165,20 +166,23 @@ function initBot() {
 
         const msgCount = parseInt(msgSlider.value);
         
+        // --- PARSE CHANNELS AND PREFIXES (! and #) ---
         const rawChannels = document.getElementById('channels').value;
         let parsedChannels = [];
-        let prefixMap = {}; 
+        let prefixMap = {}; // Stores { channelName: "!prefix" }
 
         rawChannels.split(',').forEach(c => {
             let clean = c.trim().toLowerCase();
             if (!clean) return;
 
             let prefix = "";
+            // Keep extracting leading ! or # characters
             while (clean.startsWith('!') || clean.startsWith('#')) {
                 prefix += clean[0];
                 clean = clean.substring(1);
             }
             
+            // Remove any remaining # symbols (just in case)
             clean = clean.replace(/#/g, '');
 
             if (clean) {
@@ -188,6 +192,7 @@ function initBot() {
                 }
             }
         });
+        // ------------------------------------------------
 
         const rawTriggerInput = document.getElementById('trigger').value;
         let parsedTriggers = [];
@@ -216,7 +221,7 @@ function initBot() {
             delay3: parseInt(document.getElementById('delay3').value) || 0,
             cooldown: parseInt(document.getElementById('cooldown').value) || 0,
             channels: parsedChannels,          
-            prefixMap: prefixMap,
+            prefixMap: prefixMap, // Use the new map
             rateLimit: parseInt(document.getElementById('rateLimit').value, 10) || 10
         };
 
@@ -282,7 +287,7 @@ function initBot() {
                 });
             }
 
-            // --- LAYER 1: SHARED CHAT BLOCKER ---
+            // --- SHARED CHAT BLOCKER ---
             if (tags['source-room-id'] && tags['source-room-id'] !== tags['room-id']) {
                 return; 
             }
@@ -293,12 +298,6 @@ function initBot() {
                 const channel = match[1].toLowerCase();
                 const text = match[2];
                 const lowerText = text.toLowerCase();
-
-                // --- LAYER 2: EXPLICIT CHANNEL CHECK ---
-                // If the message channel is somehow not in our watch list, ignore it.
-                if (!botConfig.channels.includes(channel)) {
-                    return;
-                }
                 
                 const senderMatch = actualMessagePart.match(/^:([^!]+)!/);
                 const sender = senderMatch ? senderMatch[1].toLowerCase() : 'system';
