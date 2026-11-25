@@ -104,5 +104,5 @@ td:last-child { border-right: 1px solid #27272a; border-radius: 0 12px 12px 0; t
     td:last-child { border-right: none; border-bottom: none; border-radius: 0 0 12px 12px; text-align: left !important; }
     .server-badge { margin-top: 10px; margin-bottom: 10px; }
     .window-text { margin-top: 10px; }
-    .search-container input { width: 100%; }
+    .search-container input { width: 45%; }
 }
