@@ -106,7 +106,7 @@ hr.divider { border: none; border-top: 1px solid #27272a; margin: 24px 0; }
 
 /* Mobile Adjustments */
 @media (max-width: 768px) {
-    .card-nivel, .card-quest { min-width: 100%; }
+    .card-nivel, .card-quest { min-width: 90%; }
     .atributo-item { flex-wrap: wrap; }
     .atributo-item .optimal { width: 100%; text-align: left; margin-top: 8px; }
 }
