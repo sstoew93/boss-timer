@@ -227,4 +227,37 @@ input[type=number] {
     }
 }
 
+/* ... [KEEP ALL YOUR EXISTING CSS] ... */
+
+/* --- CLEAR LOG BUTTON --- */
+.clear-log-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.btn-clear-log {
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
+    letter-spacing: 0.5px;
+}
+
+.btn-clear-log:hover {
+    background: rgba(239, 68, 68, 0.2);
+    box-shadow: 0 0 12px rgba(239, 68, 68, 0.2);
+    transform: translateY(-1px);
+}
+
+.btn-clear-log:active {
+    transform: translateY(0);
+}
+
 
