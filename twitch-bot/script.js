@@ -52,8 +52,8 @@ function initBot() {
     setInterval(() => {
         commandTracker = {};
         commandCooldowns = {};
-        log(`🔄 Command memory tracker reset (5m interval).`);
-    }, 5 * 60 * 1000);
+        log(`🔄 Command memory tracker reset (10m interval).`);
+    }, 10 * 60 * 1000);
 
     const msgSlider = document.getElementById('msgCount');
     const msgCountVal = document.getElementById('msgCountVal');
