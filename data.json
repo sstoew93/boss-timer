@@ -12,42 +12,6 @@
     "raw_date": "2026-11-22 00:15:51"
   },
   {
-    "server": "Sv7",
-    "boss": "Selupan",
-    "last_kill": "2026-11-24T08:04:58+02:00",
-    "killer": "MrMyzor",
-    "earliest_spawn": "2026-11-25T18:04:58+02:00",
-    "latest_spawn": "2026-11-25T18:04:58+02:00",
-    "min_hours": 34.0,
-    "max_hours": 34.0,
-    "is_fixed": true,
-    "raw_date": "2026-11-24 03:04:58"
-  },
-  {
-    "server": "Sv4",
-    "boss": "Selupan",
-    "last_kill": "2026-11-24T08:06:03+02:00",
-    "killer": "Luterkin",
-    "earliest_spawn": "2026-11-25T18:06:03+02:00",
-    "latest_spawn": "2026-11-25T18:06:03+02:00",
-    "min_hours": 34.0,
-    "max_hours": 34.0,
-    "is_fixed": true,
-    "raw_date": "2026-11-24 03:06:03"
-  },
-  {
-    "server": "Sv9",
-    "boss": "Selupan",
-    "last_kill": "2026-11-24T08:09:57+02:00",
-    "killer": "MrMyzor",
-    "earliest_spawn": "2026-11-25T18:09:57+02:00",
-    "latest_spawn": "2026-11-25T18:09:57+02:00",
-    "min_hours": 34.0,
-    "max_hours": 34.0,
-    "is_fixed": true,
-    "raw_date": "2026-11-24 03:09:57"
-  },
-  {
     "server": "Sv1",
     "boss": "Selupan",
     "last_kill": "2026-11-24T08:10:59+02:00",
@@ -670,6 +634,42 @@
     "max_hours": 34.0,
     "is_fixed": true,
     "raw_date": "2026-11-25 13:16:33"
+  },
+  {
+    "server": "Sv7",
+    "boss": "Selupan",
+    "last_kill": "2026-11-25T18:17:45+02:00",
+    "killer": "PinkKitty",
+    "earliest_spawn": "2026-11-27T04:17:45+02:00",
+    "latest_spawn": "2026-11-27T04:17:45+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "is_fixed": true,
+    "raw_date": "2026-11-25 13:17:45"
+  },
+  {
+    "server": "Sv9",
+    "boss": "Selupan",
+    "last_kill": "2026-11-25T18:18:40+02:00",
+    "killer": "ElfCitara",
+    "earliest_spawn": "2026-11-27T04:18:40+02:00",
+    "latest_spawn": "2026-11-27T04:18:40+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "is_fixed": true,
+    "raw_date": "2026-11-25 13:18:40"
+  },
+  {
+    "server": "Sv4",
+    "boss": "Selupan",
+    "last_kill": "2026-11-25T18:19:14+02:00",
+    "killer": "PinkKitty",
+    "earliest_spawn": "2026-11-27T04:19:14+02:00",
+    "latest_spawn": "2026-11-27T04:19:14+02:00",
+    "min_hours": 34.0,
+    "max_hours": 34.0,
+    "is_fixed": true,
+    "raw_date": "2026-11-25 13:19:14"
   },
   {
     "server": "Sv6",
