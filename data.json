@@ -24,18 +24,6 @@
     "raw_date": "2026-11-24 04:24:50"
   },
   {
-    "server": "Sv1",
-    "boss": "Lord Silvester",
-    "last_kill": "2026-11-22T12:38:30+02:00",
-    "killer": "TrangPig",
-    "earliest_spawn": "2026-11-26T09:43:30+02:00",
-    "latest_spawn": "2026-11-26T09:43:30+02:00",
-    "min_hours": 93.1,
-    "max_hours": 93.1,
-    "is_fixed": true,
-    "raw_date": "2026-11-22 07:38:30"
-  },
-  {
     "server": "Sv2",
     "boss": "Lord Silvester",
     "last_kill": "2026-11-22T12:40:12+02:00",
@@ -1366,5 +1354,17 @@
     "max_hours": 84.6,
     "is_fixed": true,
     "raw_date": "2026-11-25 13:43:44"
+  },
+  {
+    "server": "Sv1",
+    "boss": "Lord Silvester",
+    "last_kill": "2026-11-26T09:46:21+02:00",
+    "killer": "TORIANO",
+    "earliest_spawn": "2026-11-30T06:51:21+02:00",
+    "latest_spawn": "2026-11-30T06:51:21+02:00",
+    "min_hours": 93.1,
+    "max_hours": 93.1,
+    "is_fixed": true,
+    "raw_date": "2026-11-26 04:46:21"
   }
 ]
