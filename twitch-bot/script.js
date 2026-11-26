@@ -41,20 +41,19 @@ function initBot() {
     const statusDiv = document.getElementById('status');
     const logDiv = document.getElementById('log');
 
-    // --- NEW: CLEAR LOG BUTTON LOGIC ---
+    // --- CLEAR LOG BUTTON LOGIC ---
     const clearLogBtn = document.getElementById('clearLogBtn');
     clearLogBtn.addEventListener('click', () => {
         logDiv.innerHTML = '[System] Log cleared.';
     });
-    // ------------------------------------
 
     const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
     setInterval(() => {
         commandTracker = {};
         commandCooldowns = {};
-        log(`🔄 Command memory tracker reset (5m interval).`);
-    }, 5 * 60 * 1000);
+        log(`🔄 Command memory tracker reset (10m interval).`);
+    }, 10 * 60 * 1000);
 
     const msgSlider = document.getElementById('msgCount');
     const msgCountVal = document.getElementById('msgCountVal');
@@ -100,7 +99,7 @@ function initBot() {
             log(`▶️ Sequence triggered by "${matchedTrigger}" from ${sender} in #${channel}. First message in ${initialDelay}s...`);
             await sleep(initialDelay * 1000);
 
-            // SEND MESSAGE 1 (Apply exact prefix from the map)
+            // SEND MESSAGE 1
             if (canSendMessage()) {
                 let msgToSend = botConfig.msg1;
                 if (botConfig.prefixMap[channel]) {
@@ -116,7 +115,7 @@ function initBot() {
                 return;
             }
 
-            // SEND MESSAGE 2 (No prefix)
+            // SEND MESSAGE 2
             if (botConfig.hasMsg2) {
                 await sleep(botConfig.delay2 * 1000);
                 if (!chatSocket || chatSocket.readyState !== WebSocket.OPEN) return;
@@ -130,7 +129,7 @@ function initBot() {
                 }
             }
 
-            // SEND MESSAGE 3 (No prefix)
+            // SEND MESSAGE 3
             if (botConfig.hasMsg3) {
                 await sleep(botConfig.delay3 * 1000);
                 if (!chatSocket || chatSocket.readyState !== WebSocket.OPEN) return;
@@ -166,23 +165,21 @@ function initBot() {
 
         const msgCount = parseInt(msgSlider.value);
         
-        // --- PARSE CHANNELS AND PREFIXES (! and #) ---
+        // --- PARSE CHANNELS AND PREFIXES ---
         const rawChannels = document.getElementById('channels').value;
         let parsedChannels = [];
-        let prefixMap = {}; // Stores { channelName: "!prefix" }
+        let prefixMap = {}; 
 
         rawChannels.split(',').forEach(c => {
             let clean = c.trim().toLowerCase();
             if (!clean) return;
 
             let prefix = "";
-            // Keep extracting leading ! or # characters
             while (clean.startsWith('!') || clean.startsWith('#')) {
                 prefix += clean[0];
                 clean = clean.substring(1);
             }
             
-            // Remove any remaining # symbols (just in case)
             clean = clean.replace(/#/g, '');
 
             if (clean) {
@@ -192,7 +189,11 @@ function initBot() {
                 }
             }
         });
-        // ------------------------------------------------
+
+        // --- PARSE IGNORED CHANNELS ---
+        const rawIgnored = document.getElementById('ignoredChannels').value;
+        let ignoredChannels = rawIgnored.split(',').map(c => c.trim().replace('#', '').toLowerCase()).filter(c => c);
+        // ------------------------------
 
         const rawTriggerInput = document.getElementById('trigger').value;
         let parsedTriggers = [];
@@ -221,7 +222,8 @@ function initBot() {
             delay3: parseInt(document.getElementById('delay3').value) || 0,
             cooldown: parseInt(document.getElementById('cooldown').value) || 0,
             channels: parsedChannels,          
-            prefixMap: prefixMap, // Use the new map
+            prefixMap: prefixMap,
+            ignoredChannels: ignoredChannels, // Add to config
             rateLimit: parseInt(document.getElementById('rateLimit').value, 10) || 10
         };
 
@@ -240,6 +242,10 @@ function initBot() {
             prefixedChannels.forEach(ch => {
                 log(`Channel #${ch} requires prefix: "${prefixMap[ch]}"`);
             });
+        }
+        
+        if (ignoredChannels.length > 0) {
+            log(`Ignoring channels: [${ignoredChannels.join('] [')}]`);
         }
         
         statusDiv.textContent = 'Status: Connecting...';
@@ -299,6 +305,12 @@ function initBot() {
                 const text = match[2];
                 const lowerText = text.toLowerCase();
                 
+                // --- NEW: IGNORED CHANNEL BLOCKER ---
+                if (botConfig.ignoredChannels.includes(channel)) {
+                    return; // Completely ignore any message from this channel
+                }
+                // ------------------------------------
+
                 const senderMatch = actualMessagePart.match(/^:([^!]+)!/);
                 const sender = senderMatch ? senderMatch[1].toLowerCase() : 'system';
 
