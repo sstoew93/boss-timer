@@ -60,18 +60,6 @@
     "raw_date": "2026-11-23 01:01:05"
   },
   {
-    "server": "Sv9",
-    "boss": "Nix",
-    "last_kill": "2026-11-23T06:49:23+02:00",
-    "killer": "SolrakDVDL",
-    "earliest_spawn": "2026-11-27T10:54:23+02:00",
-    "latest_spawn": "2026-11-28T00:49:23+02:00",
-    "min_hours": 100.1,
-    "max_hours": 114.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-23 01:49:23"
-  },
-  {
     "server": "Sv5",
     "boss": "God of Darkness",
     "last_kill": "2026-11-23T03:41:27+02:00",
@@ -1366,5 +1354,17 @@
     "max_hours": 168.0,
     "is_fixed": false,
     "raw_date": "2026-11-27 11:05:23"
+  },
+  {
+    "server": "Sv9",
+    "boss": "Nix",
+    "last_kill": "2026-11-27T22:39:55+02:00",
+    "killer": "SicooBET",
+    "earliest_spawn": "2026-12-02T02:44:55+02:00",
+    "latest_spawn": "2026-12-02T16:39:55+02:00",
+    "min_hours": 100.1,
+    "max_hours": 114.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-27 17:39:55"
   }
 ]
