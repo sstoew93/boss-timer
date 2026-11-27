@@ -37,6 +37,20 @@ main {
 .card-quest { flex: 1; min-width: 300px; }
 .card h2 { font-size: 16px; font-weight: 600; margin: 0 0 20px; color: #fff; }
 
+/* --- ATTRIBUTE HEADER ROW --- */
+.attr-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.attr-header-row h2 {
+    margin: 0; /* Remove margin since the wrapper handles it */
+}
+
 /* --- FORMS & INPUTS --- */
 .form-row { margin-bottom: 16px; }
 .form-row label { display: block; font-size: 13px; font-weight: 500; color: #a1a1aa; margin-bottom: 8px; }
@@ -80,9 +94,29 @@ main {
 .atributo-item .optimal { font-size: 11px; color: #71717a; min-width: 120px; text-align: right; }
 
 /* --- TOTAL DISPLAY --- */
-#total-display { font-weight: 600; text-align: center; margin-top: 20px; padding: 14px; border-radius: 12px; background: #1f1f23; font-size: 14px; color: #e4e4e7; transition: all 0.3s; }
-#total-display.ok { background: rgba(16, 185, 129, 0.1); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3); }
-#total-display.nok { background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.3); }
+/* --- TOTAL DISPLAY (Header Badge) --- */
+#total-display {
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 8px;
+    background: #1f1f23;
+    font-size: 13px;
+    color: #e4e4e7;
+    transition: all 0.3s;
+    white-space: nowrap;
+}
+
+#total-display.ok {
+    background: rgba(16, 185, 129, 0.1);
+    color: #10b981;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+#total-display.nok {
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+}
 
 /* --- QUEST OPTIONS --- */
 .quest-options { display: flex; gap: 16px; margin-bottom: 20px; flex-wrap: wrap; }
