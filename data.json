@@ -120,18 +120,6 @@
     "raw_date": "2026-11-23 05:42:38"
   },
   {
-    "server": "Sv11",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-25T16:16:42+02:00",
-    "killer": "ElfCitara",
-    "earliest_spawn": "2026-11-27T09:11:42+02:00",
-    "latest_spawn": "2026-11-27T09:11:42+02:00",
-    "min_hours": 40.9,
-    "max_hours": 40.9,
-    "is_fixed": true,
-    "raw_date": "2026-11-25 11:16:42"
-  },
-  {
     "server": "Sv10",
     "boss": "Nix",
     "last_kill": "2026-11-23T05:11:56+02:00",
@@ -718,6 +706,18 @@
     "max_hours": 40.9,
     "is_fixed": true,
     "raw_date": "2026-11-27 05:59:50"
+  },
+  {
+    "server": "Sv11",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-27T12:21:43+02:00",
+    "killer": "SolrakDVDL",
+    "earliest_spawn": "2026-11-29T05:16:43+02:00",
+    "latest_spawn": "2026-11-29T05:16:43+02:00",
+    "min_hours": 40.9,
+    "max_hours": 40.9,
+    "is_fixed": true,
+    "raw_date": "2026-11-27 07:21:43"
   },
   {
     "server": "Sv1",
