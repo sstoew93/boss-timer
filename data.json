@@ -204,18 +204,6 @@
     "raw_date": "2026-11-22 21:10:30"
   },
   {
-    "server": "Sv10",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-25T13:49:52+02:00",
-    "killer": "XxVILLEGAS",
-    "earliest_spawn": "2026-11-27T06:44:52+02:00",
-    "latest_spawn": "2026-11-27T06:44:52+02:00",
-    "min_hours": 40.9,
-    "max_hours": 40.9,
-    "is_fixed": true,
-    "raw_date": "2026-11-25 08:49:52"
-  },
-  {
     "server": "Sv19",
     "boss": "Nightmare",
     "last_kill": "2026-11-25T14:15:58+02:00",
@@ -802,6 +790,18 @@
     "max_hours": 40.9,
     "is_fixed": true,
     "raw_date": "2026-11-27 01:48:05"
+  },
+  {
+    "server": "Sv10",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-27T07:01:17+02:00",
+    "killer": "Collette",
+    "earliest_spawn": "2026-11-28T23:56:17+02:00",
+    "latest_spawn": "2026-11-28T23:56:17+02:00",
+    "min_hours": 40.9,
+    "max_hours": 40.9,
+    "is_fixed": true,
+    "raw_date": "2026-11-27 02:01:17"
   },
   {
     "server": "Sv2",
