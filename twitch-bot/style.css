@@ -11,13 +11,8 @@ body {
     cursor: url('../images/cursor.cur'), auto; 
 }
 
-label {
-    cursor: url('../images/cursor.cur'), pointer !important;
-}
-
-a, button, input, select, input[type="range"] {
-    cursor: url('../images/cursor2.cur'), pointer !important;
-}
+label { cursor: url('../images/cursor.cur'), pointer !important; }
+a, button, input, select, input[type="range"] { cursor: url('../images/cursor2.cur'), pointer !important; }
 
 /* WIDER CONTAINER FOR 2 COLUMNS */
 .bot-container {
@@ -38,16 +33,12 @@ a, button, input, select, input[type="range"] {
 /* --- TWO COLUMN LAYOUT --- */
 .bot-layout {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* 50% / 50% split */
+    grid-template-columns: 1fr 1fr;
     gap: 24px;
     align-items: start;
 }
 
-.bot-panel-left, .bot-panel-right {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
+.bot-panel-left, .bot-panel-right { display: flex; flex-direction: column; gap: 16px; }
 
 /* --- FORM --- */
 .bot-form {
@@ -69,6 +60,8 @@ a, button, input, select, input[type="range"] {
 .msg-text { flex: 1; }
 .msg-delay { width: 90px; }
 .msg-delay input { text-align: center; }
+
+/* Hide number arrows */
 .msg-delay input[type=number]::-webkit-inner-spin-button, 
 .msg-delay input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
 .msg-delay input[type=number] { -moz-appearance: textfield; }
@@ -92,142 +85,65 @@ a, button, input, select, input[type="range"] {
 .dynamic-msg { max-height: 100px; opacity: 1; overflow: hidden; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
 .dynamic-msg.collapsed { max-height: 0; opacity: 0; margin-bottom: 0; padding-top: 0; padding-bottom: 0; pointer-events: none; }
 
-/* --- BUTTONS --- */
+/* --- BUTTONS (Styled like Clear Log) --- */
 .button-group { display: flex; gap: 12px; margin-top: 24px; }
-.btn-start, .btn-stop { padding: 12px 24px; font-size: 15px; font-weight: 600; border-radius: 10px; border: none; cursor: pointer; transition: all 0.2s; flex: 1; }
-.btn-start { background: #9146FF; color: #fff; }
-.btn-start:hover { background: #772ce8; transform: translateY(-2px); }
-.btn-stop { background: #ef4444; color: #fff; display: none; }
-.btn-stop:hover { background: #dc2626; transform: translateY(-2px); }
 
-/* --- STATUS & S (Right Column) --- */
-.status-box {
-    background: #18181b; border-left: 4px solid #9146FF; padding: 16px;
-    border-radius: 8px; font-family: monospace; font-size: 14px; color: #e4e4e7;
+.btn-start, .btn-stop {
+    padding: 12px 24px; font-size: 14px; font-weight: 700; border-radius: 8px;
+    cursor: pointer; transition: all 0.2s; flex: 1; letter-spacing: 0.5px;
 }
 
+/* Start Button (Green) */
+.btn-start { 
+    background: rgba(16, 185, 129, 0.1); 
+    color: #10b981; 
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+.btn-start:hover { 
+    background: rgba(16, 185, 129, 0.2); 
+    box-shadow: 0 0 12px rgba(16, 185, 129, 0.2);
+    transform: translateY(-1px); 
+}
+
+/* Stop Button (Red) */
+.btn-stop { 
+    background: rgba(239, 68, 68, 0.1); 
+    color: #ef4444; 
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    display: none; 
+}
+.btn-stop:hover { 
+    background: rgba(239, 68, 68, 0.2); 
+    box-shadow: 0 0 12px rgba(239, 68, 68, 0.2);
+    transform: translateY(-1px); 
+}
+
+/* --- STATUS BOX (Dynamic Borders) --- */
+.status-box {
+    background: #18181b; 
+    border-left: 4px solid #3f3f46; /* Default grey */
+    padding: 16px;
+    border-radius: 8px; 
+    font-family: monospace; 
+    font-size: 14px; 
+    color: #e4e4e7;
+    transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.status-box.online { border-left-color: #10b981; color: #10b981; }
+.status-box.offline { border-left-color: #ef4444; color: #ef4444; }
+.status-box.connecting { border-left-color: #f59e0b; color: #f59e0b; }
+
+/* --- LOG BOX --- */
 .log-box {
     background: #000; border: 1px solid #27272a; color: #10b981; padding: 16px;
     border-radius: 12px; font-family: monospace; font-size: 13px; 
-    height: 600px; /* Made taller to match the form height */
+    height: 600px; /* Matches form height */
     overflow-y: auto; line-height: 1.5;
 }
 .log-box::-webkit-scrollbar { width: 8px; }
 .log-box::-webkit-scrollbar-track { background: #000; border-radius: 8px; }
 .log-box::-webkit-scrollbar-thumb { background: #27272a; border-radius: 8px; }
-
-/* --- LOGIN SCREEN --- */
-#login-screen { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 80vh; text-align: center; }
-#login-screen h1 { font-family: 'Orbitron', sans-serif; font-size: 2rem; margin-bottom: 10px; font-weight: 900; color: #fff; letter-spacing: 2px;}
-#login-screen input { padding: 12px; font-size: 16px; border-radius: 8px; border: 1px solid #27272a; background: #18181b; color: #fff; margin-bottom: 15px; width: 300px; text-align: center; outline: none; transition: all 0.2s; }
-#login-screen input:focus { border-color: #52525b; box-shadow: 0 0 0 3px rgba(255,255,255,0.05); }
-#login-screen button { padding: 12px 24px; font-size: 16px; font-weight: 600; border-radius: 8px; border: none; background: #fafafa; color: #09090b; cursor: pointer; transition: background 0.2s, transform 0.1s; }
-#login-screen button:hover { background: #e4e4e7; transform: scale(1.02); }
-#error-msg { color: #ef4444; margin-top: 15px; display: none; font-size: 14px; font-weight: 500; }
-#app-content { display: none; }
-
-.app-footer { text-align: center; padding: 40px 20px 20px 20px; color: #71717a; font-size: 13px; margin-top: 20px; border-top: 1px solid #27272a; letter-spacing: 1px; }
-
-/* --- TOOLTIP STYLES --- */
-.form-row label {
-    display: flex;
-    align-items: center;
-    gap: 8px; /* Space between label text and the '?' */
-    flex-wrap: wrap;
-}
-
-.tooltip-container {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    cursor: help;
-}
-
-.tooltip-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 16px;
-    height: 16px;
-    background: #3f3f46;
-    color: #a1a1aa;
-    border-radius: 50%;
-    font-size: 11px;
-    font-weight: bold;
-    transition: all 0.2s;
-    cursor: url('../images/cursor.cur'), pointer !important;
-}
-
-.tooltip-container:hover .tooltip-icon {
-    background: #9146FF; /* Twitch Purple on hover */
-    color: #fff;
-}
-
-.tooltip-text {
-    visibility: hidden;
-    width: 220px;
-    background: #000;
-    color: #fff;
-    text-align: center;
-    border-radius: 8px;
-    padding: 10px;
-    position: absolute;
-    z-index: 100;
-    bottom: 150%; /* Position above the icon */
-    left: 50%;
-    margin-left: -110px; /* Center it */
-    opacity: 0;
-    transition: opacity 0.3s, bottom 0.3s;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 1.4;
-    border: 1px solid #3f3f46;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.8);
-    pointer-events: none; /* Prevents flickering */
-}
-
-/* The little triangle pointing down */
-.tooltip-text::after {
-    content: "";
-    position: absolute;
-    top: 100%; /* At the bottom of the tooltip */
-    left: 50%;
-    margin-left: -6px;
-    border-width: 6px;
-    border-style: solid;
-    border-color: #000 transparent transparent transparent;
-}
-
-/* Show tooltip on hover */
-.tooltip-container:hover .tooltip-text {
-    visibility: visible;
-    opacity: 1;
-    bottom: 120%; /* Slight float up animation */
-}
-
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-    -webkit-appearance: none; 
-    margin: 0; 
-}
-
-/* For Firefox */
-input[type=number] {
-    -moz-appearance: textfield;
-}
-
-/* --- MOBILE RESPONSIVENESS --- */
-@media (max-width: 850px) {
-    .bot-layout {
-        grid-template-columns: 1fr; /* Stack on smaller screens */
-    }
-    .log-box {
-        height: 300px;
-    }
-}
-
-/* ... [KEEP ALL YOUR EXISTING CSS] ... */
 
 /* --- CLEAR LOG BUTTON --- */
 .clear-log-container {
@@ -256,8 +172,39 @@ input[type=number] {
     transform: translateY(-1px);
 }
 
-.btn-clear-log:active {
-    transform: translateY(0);
+.btn-clear-log:active { transform: translateY(0); }
+
+/* --- LOGIN SCREEN --- */
+#login-screen { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 80vh; text-align: center; }
+#login-screen h1 { font-family: 'Orbitron', sans-serif; font-size: 2rem; margin-bottom: 10px; font-weight: 900; color: #fff; letter-spacing: 2px;}
+#login-screen input { padding: 12px; font-size: 16px; border-radius: 8px; border: 1px solid #27272a; background: #18181b; color: #fff; margin-bottom: 15px; width: 300px; text-align: center; outline: none; transition: all 0.2s; }
+#login-screen input:focus { border-color: #52525b; box-shadow: 0 0 0 3px rgba(255,255,255,0.05); }
+#login-screen button { padding: 12px 24px; font-size: 16px; font-weight: 600; border-radius: 8px; border: none; background: #fafafa; color: #09090b; cursor: pointer; transition: background 0.2s, transform 0.1s; }
+#login-screen button:hover { background: #e4e4e7; transform: scale(1.02); }
+#error-msg { color: #ef4444; margin-top: 15px; display: none; font-size: 14px; font-weight: 500; }
+#app-content { display: none; }
+
+.app-footer { text-align: center; padding: 40px 20px 20px 20px; color: #71717a; font-size: 13px; margin-top: 20px; border-top: 1px solid #27272a; letter-spacing: 1px; }
+
+/* --- TOOLTIP STYLES --- */
+.form-row label { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.tooltip-container { position: relative; display: inline-flex; align-items: center; justify-content: center; cursor: help; }
+.tooltip-icon { display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; background: #3f3f46; color: #a1a1aa; border-radius: 50%; font-size: 11px; font-weight: bold; transition: all 0.2s; cursor: url('../images/cursor.cur'), pointer !important; }
+.tooltip-container:hover .tooltip-icon { background: #9146FF; color: #fff; }
+.tooltip-text {
+    visibility: hidden; width: 220px; background: #000; color: #fff; text-align: center; border-radius: 8px; padding: 10px;
+    position: absolute; z-index: 100; bottom: 150%; left: 50%; margin-left: -110px; opacity: 0;
+    transition: opacity 0.3s, bottom 0.3s; font-size: 12px; font-weight: 400; line-height: 1.4;
+    border: 1px solid #3f3f46; box-shadow: 0 4px 15px rgba(0,0,0,0.8); pointer-events: none;
 }
+.tooltip-text::after { content: ""; position: absolute; top: 100%; left: 50%; margin-left: -6px; border-width: 6px; border-style: solid; border-color: #000 transparent transparent transparent; }
+.tooltip-container:hover .tooltip-text { visibility: visible; opacity: 1; bottom: 120%; }
 
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+input[type=number] { -moz-appearance: textfield; }
 
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 850px) {
+    .bot-layout { grid-template-columns: 1fr; }
+    .log-box { height: 300px; }
+}
