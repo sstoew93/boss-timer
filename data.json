@@ -12,18 +12,6 @@
     "raw_date": "2026-11-24 04:03:16"
   },
   {
-    "server": "Sv17",
-    "boss": "Lord of Ferea",
-    "last_kill": "2026-11-22T13:46:29+02:00",
-    "killer": "SolrakDVDL",
-    "earliest_spawn": "2026-11-26T11:46:29+02:00",
-    "latest_spawn": "2026-11-30T03:46:29+02:00",
-    "min_hours": 94.0,
-    "max_hours": 182.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-22 08:46:29"
-  },
-  {
     "server": "Sv19",
     "boss": "Lord of Ferea",
     "last_kill": "2026-11-22T23:06:02+02:00",
@@ -1342,6 +1330,18 @@
     "max_hours": 182.0,
     "is_fixed": false,
     "raw_date": "2026-11-27 01:54:38"
+  },
+  {
+    "server": "Sv17",
+    "boss": "Lord of Ferea",
+    "last_kill": "2026-11-27T07:25:48+02:00",
+    "killer": "Babayaga98",
+    "earliest_spawn": "2026-12-01T05:25:48+02:00",
+    "latest_spawn": "2026-12-04T21:25:48+02:00",
+    "min_hours": 94.0,
+    "max_hours": 182.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-27 02:25:48"
   },
   {
     "server": "Sv14",
