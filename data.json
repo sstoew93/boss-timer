@@ -13,18 +13,6 @@
   },
   {
     "server": "Sv4",
-    "boss": "Nix",
-    "last_kill": "2026-11-22T20:53:43+02:00",
-    "killer": "SolrakDVDL",
-    "earliest_spawn": "2026-11-27T00:58:43+02:00",
-    "latest_spawn": "2026-11-27T14:53:43+02:00",
-    "min_hours": 100.1,
-    "max_hours": 114.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-22 15:53:43"
-  },
-  {
-    "server": "Sv4",
     "boss": "Lord of Ferea",
     "last_kill": "2026-11-23T05:17:44+02:00",
     "killer": "TORIANO",
@@ -1366,5 +1354,17 @@
     "max_hours": 114.0,
     "is_fixed": false,
     "raw_date": "2026-11-27 08:32:11"
+  },
+  {
+    "server": "Sv4",
+    "boss": "Nix",
+    "last_kill": "2026-11-27T13:58:01+02:00",
+    "killer": "Babayaga98",
+    "earliest_spawn": "2026-12-01T18:03:01+02:00",
+    "latest_spawn": "2026-12-02T07:58:01+02:00",
+    "min_hours": 100.1,
+    "max_hours": 114.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-27 08:58:01"
   }
 ]
