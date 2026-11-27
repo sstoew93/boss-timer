@@ -228,18 +228,6 @@
     "raw_date": "2026-11-22 20:45:14"
   },
   {
-    "server": "Sv7",
-    "boss": "Nightmare",
-    "last_kill": "2026-11-25T12:56:07+02:00",
-    "killer": "Azuna1993",
-    "earliest_spawn": "2026-11-27T05:51:07+02:00",
-    "latest_spawn": "2026-11-27T05:51:07+02:00",
-    "min_hours": 40.9,
-    "max_hours": 40.9,
-    "is_fixed": true,
-    "raw_date": "2026-11-25 07:56:07"
-  },
-  {
     "server": "Sv16",
     "boss": "Nightmare",
     "last_kill": "2026-11-25T13:02:52+02:00",
@@ -850,6 +838,18 @@
     "max_hours": 40.9,
     "is_fixed": true,
     "raw_date": "2026-11-27 00:52:56"
+  },
+  {
+    "server": "Sv7",
+    "boss": "Nightmare",
+    "last_kill": "2026-11-27T06:01:44+02:00",
+    "killer": "DraftsStun",
+    "earliest_spawn": "2026-11-28T22:56:44+02:00",
+    "latest_spawn": "2026-11-28T22:56:44+02:00",
+    "min_hours": 40.9,
+    "max_hours": 40.9,
+    "is_fixed": true,
+    "raw_date": "2026-11-27 01:01:44"
   },
   {
     "server": "Sv2",
