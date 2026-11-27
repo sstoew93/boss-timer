@@ -248,6 +248,7 @@ function initBot() {
             log(`Ignoring channels: [${ignoredChannels.join('] [')}]`);
         }
         
+        statusDiv.className = 'status-box connecting';
         statusDiv.textContent = 'Status: Connecting...';
         startBtn.style.display = 'none';
         stopBtn.style.display = 'block';
@@ -266,6 +267,7 @@ function initBot() {
                 log(`Joined channel: #${channel}`);
             });
             
+            statusDiv.className = 'status-box online';
             statusDiv.textContent = 'Status: Online & Listening';
         };
 
@@ -371,6 +373,7 @@ function initBot() {
 
         chatSocket.onclose = () => {
             log(`Disconnected from Twitch.`);
+            statusDiv.className = 'status-box offline';
             statusDiv.textContent = 'Status: Offline';
             startBtn.style.display = 'block';
             stopBtn.style.display = 'none';
@@ -388,6 +391,8 @@ function initBot() {
         if (chatSocket) {
             log(`Manually stopping bot...`);
             chatSocket.close();
+            statusDiv.className = 'status-box offline';
+            statusDiv.textContent = 'Status: Offline';
         }
     });
 }
