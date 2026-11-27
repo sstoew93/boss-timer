@@ -13,18 +13,6 @@
   },
   {
     "server": "Sv4",
-    "boss": "Lord of Ferea",
-    "last_kill": "2026-11-23T05:17:44+02:00",
-    "killer": "TORIANO",
-    "earliest_spawn": "2026-11-27T03:17:44+02:00",
-    "latest_spawn": "2026-11-30T19:17:44+02:00",
-    "min_hours": 94.0,
-    "max_hours": 182.0,
-    "is_fixed": false,
-    "raw_date": "2026-11-23 00:17:44"
-  },
-  {
-    "server": "Sv4",
     "boss": "God of Darkness",
     "last_kill": "2026-11-22T17:43:26+02:00",
     "killer": "Kasperiano",
@@ -1282,6 +1270,18 @@
     "max_hours": 114.0,
     "is_fixed": false,
     "raw_date": "2026-11-27 03:12:20"
+  },
+  {
+    "server": "Sv4",
+    "boss": "Lord of Ferea",
+    "last_kill": "2026-11-27T14:27:12+02:00",
+    "killer": "SolrakDVDL",
+    "earliest_spawn": "2026-12-01T12:27:12+02:00",
+    "latest_spawn": "2026-12-05T04:27:12+02:00",
+    "min_hours": 94.0,
+    "max_hours": 182.0,
+    "is_fixed": false,
+    "raw_date": "2026-11-27 09:27:12"
   },
   {
     "server": "Sv18",
