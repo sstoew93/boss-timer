@@ -164,7 +164,8 @@ function initBot() {
         if (chatSocket) chatSocket.close();
 
         const msgCount = parseInt(msgSlider.value);
-        
+        const botUsername = document.getElementById('username').value.trim().toLowerCase();
+
         // --- PARSE CHANNELS AND PREFIXES ---
         const rawChannels = document.getElementById('channels').value;
         let parsedChannels = [];
@@ -190,6 +191,24 @@ function initBot() {
             }
         });
 
+        // --- SPECIFIC BOT RESTRICTION ---
+        const authorizedBots = ["cheaponess", "misskittyy777"];
+        const protectedChannel = "sstoew93";
+
+        // If the bot is NOT one of the authorized ones, remove the protected channel
+        if (!authorizedBots.includes(botUsername)) {
+            if (parsedChannels.includes(protectedChannel)) {
+                parsedChannels = parsedChannels.filter(ch => ch !== protectedChannel);
+                log(`⚠️ RESTRICTION: "${protectedChannel}" channel removed.`);
+                
+                // Also remove it from the prefix map just in case it was set
+                if (prefixMap[protectedChannel]) {
+                    delete prefixMap[protectedChannel];
+                }
+            }
+        }
+        // ---------------------------------
+
         // --- PARSE IGNORED CHANNELS ---
         const rawIgnored = document.getElementById('ignoredChannels').value;
         let ignoredChannels = rawIgnored.split(',').map(c => c.trim().replace('#', '').toLowerCase()).filter(c => c);
@@ -210,7 +229,7 @@ function initBot() {
         }
 
         botConfig = {
-            username: document.getElementById('username').value.trim().toLowerCase(),
+            username: botUsername,
             token: document.getElementById('token').value.trim(),
             triggers: parsedTriggers, 
             msg1: document.getElementById('reply1').value.trim(),
@@ -223,7 +242,7 @@ function initBot() {
             cooldown: parseInt(document.getElementById('cooldown').value) || 0,
             channels: parsedChannels,          
             prefixMap: prefixMap,
-            ignoredChannels: ignoredChannels, // Add to config
+            ignoredChannels: ignoredChannels,
             rateLimit: parseInt(document.getElementById('rateLimit').value, 10) || 10
         };
 
@@ -235,18 +254,6 @@ function initBot() {
         commandCooldowns = {};
 
         log(`Connecting to Twitch as ${botConfig.username}...`);
-        log(`Listening for triggers: [${botConfig.triggers.join('] [')}]`);
-        
-        const prefixedChannels = Object.keys(prefixMap);
-        if (prefixedChannels.length > 0) {
-            prefixedChannels.forEach(ch => {
-                log(`Channel #${ch} requires prefix: "${prefixMap[ch]}"`);
-            });
-        }
-        
-        if (ignoredChannels.length > 0) {
-            log(`Ignoring channels: [${ignoredChannels.join('] [')}]`);
-        }
         
         statusDiv.className = 'status-box connecting';
         statusDiv.textContent = 'Status: Connecting...';
@@ -295,7 +302,6 @@ function initBot() {
                 });
             }
 
-            // --- SHARED CHAT BLOCKER ---
             if (tags['source-room-id'] && tags['source-room-id'] !== tags['room-id']) {
                 return; 
             }
@@ -307,11 +313,9 @@ function initBot() {
                 const text = match[2];
                 const lowerText = text.toLowerCase();
                 
-                // --- NEW: IGNORED CHANNEL BLOCKER ---
                 if (botConfig.ignoredChannels.includes(channel)) {
-                    return; // Completely ignore any message from this channel
+                    return; 
                 }
-                // ------------------------------------
 
                 const senderMatch = actualMessagePart.match(/^:([^!]+)!/);
                 const sender = senderMatch ? senderMatch[1].toLowerCase() : 'system';
@@ -329,7 +333,6 @@ function initBot() {
                 
                 const isAuthorizedUser = isBroadcaster || isModerator || isAnnouncement;
 
-                // --- SPAM TRACKER ---
                 const cleanText = text.trim();
                 if (cleanText.startsWith('!')) {
                     const command = cleanText.split(' ')[0].toLowerCase();
@@ -360,7 +363,6 @@ function initBot() {
                     }
                 }
 
-                // --- SEQUENCE TRIGGER ---
                 if (isAuthorizedUser && !isSequenceRunning) {
                     const matchedTrigger = botConfig.triggers.find(t => lowerText.includes(t));
                     
@@ -391,8 +393,6 @@ function initBot() {
         if (chatSocket) {
             log(`Manually stopping bot...`);
             chatSocket.close();
-            statusDiv.className = 'status-box offline';
-            statusDiv.textContent = 'Status: Offline';
         }
     });
 }
